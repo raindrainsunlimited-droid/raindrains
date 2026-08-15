@@ -225,6 +225,16 @@ body:has(.drawer.open){overflow:hidden}
 .sidebar-list a:last-child{border-bottom:none}
 .sidebar-list a:hover{color:var(--blue)}
 
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.info-card{background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);padding:24px;box-shadow:var(--shadow)}
+.info-card .num{width:36px;height:36px;border-radius:50%;background:var(--surface);color:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;margin-bottom:14px}
+.info-card h4{font-size:16px;margin-bottom:8px;color:var(--navy);font-weight:800;line-height:1.35}
+.info-card p{font-size:14px;color:var(--text-muted);line-height:1.6}
+
+.area-chips{display:flex;flex-wrap:wrap;gap:10px}
+.area-chip{display:inline-block;padding:9px 18px;border-radius:100px;border:1px solid var(--border);background:#fff;font-weight:700;font-size:13.5px;color:var(--navy)}
+a.area-chip:hover{border-color:var(--blue);color:var(--blue);box-shadow:var(--shadow)}
+
 .crumbs{font-size:13px;color:#a9c1da;margin-bottom:14px}
 .crumbs a{color:#a9c1da;font-weight:700}
 .crumbs a:hover{color:#fff}

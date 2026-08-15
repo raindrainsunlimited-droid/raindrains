@@ -264,12 +264,75 @@ ${ctaSection()}
 }
 
 // ---------- Service detail pages ----------
+function infoGrid(items) {
+  return `<div class="info-grid">${items.map((it, i) => `
+    <div class="info-card"><div class="num">${i + 1}</div><h4>${it.title}</h4><p>${it.text}</p></div>`).join('')}</div>`
+}
+
 function servicePages() {
   for (const s of SERVICES) {
     const others = SERVICES.filter((x) => x.slug !== s.slug).slice(0, 8)
     const bullets = s.bullets.map((b) => `<li>${icon('check', 18)} ${b}</li>`).join('')
     const body = s.body.map((p) => `<p>${p}</p>`).join('')
     const otherLinks = others.map((o) => `<a href="/${o.slug}/">${o.name}</a>`).join('')
+
+    const challengesHtml = s.challenges ? `
+<section class="section bg-surface">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Local Conditions</span>
+      <h2 style="margin:16px 0 14px">${s.challenges.heading}</h2>
+      <p class="lead">${s.challenges.intro}</p>
+      <div class="rule"></div>
+    </div>
+    ${infoGrid(s.challenges.items)}
+  </div>
+</section>` : ''
+
+    const processHtml = s.process ? `
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Our Process</span>
+      <h2 style="margin:16px 0 14px">${s.process.heading}</h2>
+      <p class="lead">${s.process.intro}</p>
+      <div class="rule"></div>
+    </div>
+    ${infoGrid(s.process.items)}
+  </div>
+</section>` : ''
+
+    const faqHtml = s.faqs ? `
+<section class="section bg-surface">
+  <div class="wrap" style="max-width:880px">
+    <div class="section-head" style="text-align:center;margin:0 auto 40px">
+      <span class="eyebrow">FAQ</span>
+      <h2 style="margin:16px 0 14px">Frequently Asked Local Drainage Questions</h2>
+    </div>
+    ${s.faqs.map((f, i) => `
+    <div class="faq-item${i === 0 ? ' open' : ''}">
+      <button class="faq-q" type="button">${f.q}<span class="ic">+</span></button>
+      <div class="faq-a"><p>${f.a}</p></div>
+    </div>`).join('')}
+  </div>
+</section>` : ''
+
+    const areaListHtml = s.areaList ? `
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Service Areas</span>
+      <h2 style="margin:16px 0 14px">${s.areaList.heading}</h2>
+      <p class="lead">${s.areaList.intro}</p>
+      <div class="rule"></div>
+    </div>
+    <div class="area-chips">${s.areaList.areas.map((name) => {
+      const match = AREAS.find((a) => a.name === name)
+      return match ? `<a class="area-chip" href="/${match.slug}/">${name}</a>` : `<span class="area-chip">${name}</span>`
+    }).join('')}</div>
+  </div>
+</section>` : ''
+
     const content = `
 ${pageHero({ eyebrow: 'Services', title: s.name, lead: s.short, tight: true })}
 <section class="section">
@@ -285,6 +348,10 @@ ${pageHero({ eyebrow: 'Services', title: s.name, lead: s.short, tight: true })}
     </aside>
   </div>
 </section>
+${challengesHtml}
+${processHtml}
+${faqHtml}
+${areaListHtml}
 ${ctaSection(`Ready to solve your ${s.name.toLowerCase()} problem?`)}
 `
     page(s.slug, layout({ title: `${s.name} | Rain Drains LLC — Hampton Roads`, description: `${s.short} Serving Chesapeake, Virginia Beach, Norfolk & Hampton Roads. Free estimates, ${SITE.rating}★ rated.`, path: `/${s.slug}/`, content }))
