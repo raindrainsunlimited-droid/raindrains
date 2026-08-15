@@ -26,7 +26,7 @@ export function jsonLd() {
     '@context': 'https://schema.org',
     '@type': 'HomeAndConstructionBusiness',
     name: SITE.name,
-    description: 'Professional French drains, yard grading and drainage installation across Chesapeake, Virginia Beach, Norfolk and northeastern NC. Veteran owned. Free estimates. 4.9★ from 105 reviews.',
+    description: 'Professional French drains, yard grading and drainage installation across Chesapeake, Virginia Beach, Norfolk and northeastern NC. Veteran owned. Free estimates. 5.0★ from 105 reviews.',
     url: SITE.domain + '/',
     telephone: SITE.phone,
     email: SITE.email,

@@ -10,7 +10,7 @@ export const SITE = {
   addressRegion: 'VA',
   postalCode: '23322',
   license: 'VA Lic. 2705193711',
-  rating: 4.9,
+  rating: 5.0,
   reviewCount: 105,
   year: 2026,
 }
