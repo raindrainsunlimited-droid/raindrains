@@ -1,6 +1,6 @@
 [build]
   command = "node scripts/build.js"
-  publish = "dist"
+  publish = "public"
 
 [[headers]]
   for = "/css/*"

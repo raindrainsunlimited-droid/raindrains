@@ -8,7 +8,7 @@ import { icon, iconFilled } from '../src/icons.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
-const DIST = join(ROOT, 'dist')
+const DIST = join(ROOT, 'public')
 
 function write(path, html) {
   const full = join(DIST, path)
@@ -424,7 +424,7 @@ function main() {
     cpSync(join(ROOT, 'src/_redirects'), join(DIST, '_redirects'))
   }
 
-  console.log('Built site to /dist')
+  console.log('Built site to /public')
 }
 
 main()
