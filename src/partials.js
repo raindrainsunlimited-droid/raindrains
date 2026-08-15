@@ -63,43 +63,10 @@ export function quoteForm() {
   formCounter += 1
   const id = `qf${formCounter}`
   return `<div class="form-card">
-  <div id="${id}-ok" class="form-ok" role="status">
-    <div class="tick">✓</div>
-    <h3>Thanks — we've got it.</h3>
-    <p style="color:var(--text-muted);font-size:15px">Bryson will be in touch shortly to arrange your free on-site estimate.</p>
-  </div>
-  <div id="${id}-fail" class="form-fail" role="alert">
-    <strong>That didn't send.</strong>
-    <p>Sorry — something went wrong our end. Please call <a href="tel:${SITE.phoneTel}">${SITE.phone}</a> and we'll sort it out straight away.</p>
-  </div>
-  <form data-netlify="true" netlify-honeypot="botcheck" enctype="multipart/form-data" id="${id}" method="POST" name="quote" novalidate>
     <h3>Get Your Free Estimate</h3>
     <p class="sub">Tell us what is happening and we will come take a look. No obligation.</p>
-    <input type="hidden" name="form-name" value="quote">
-    <input type="hidden" name="subject" value="New estimate request — raindrainsva.com">
-    <div class="hp"><label>Leave blank<input type="text" name="botcheck" tabindex="-1" autocomplete="off"></label></div>
-    <div class="field-row">
-      <div class="field" data-req>
-        <label for="${id}-name">Full Name *</label>
-        <input id="${id}-name" name="name" type="text" placeholder="John Smith" autocomplete="name">
-        <div class="err">Please enter your name</div>
-      </div>
-      <div class="field" data-req>
-        <label for="${id}-phone">Cell Number *</label>
-        <input id="${id}-phone" name="phone" type="tel" placeholder="(757) 555-0134" autocomplete="tel">
-        <div class="err">Please enter a phone number</div>
-      </div>
-    </div>
-    <div class="field" data-req>
-      <label for="${id}-msg">Tell us about your drainage problem *</label>
-      <textarea id="${id}-msg" name="message" placeholder="Water pools along the back of the house every time it rains…"></textarea>
-      <div class="err">Please tell us briefly what's happening</div>
-    </div>
-    <button type="submit" class="btn btn-green btn-lg btn-block" id="${id}-btn">Request My Free Estimate</button>
-    <p class="form-note">Free estimates · No obligation · We usually reply the same day</p>
-  </form>
-</div>
-<script>quoteFormInit("${id}")</script>`
+    <iframe id="markate-widget-contact-iframe-${id}" title="Request a free estimate" src="https://www.markate.com/public/widget/contact?id=0b44f8bf20c7002c4de1e97412db9aca:70944:82a413a6" width="100%" height="1800" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;display:block"></iframe>
+  </div>`
 }
 
 export function footer() {
