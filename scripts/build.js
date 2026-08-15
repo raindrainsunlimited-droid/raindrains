@@ -79,7 +79,6 @@ function homePage() {
       <div class="hero-badges">
         <div>${iconFilled('shield')} ${SITE.license}</div>
         <div>${iconFilled('check')} NDS Certified</div>
-        <div>${iconFilled('check')} 2-Year Warranty</div>
       </div>
     </div>
     <div class="desktop-only" id="estimate-desktop">${quoteForm()}</div>
@@ -158,7 +157,7 @@ ${trustbar()}
     <div class="guar">
       <span class="eyebrow" style="background:rgba(255,255,255,.18);color:#fff">Our Promise</span>
       <h2 style="margin:16px 0 0">100% Satisfaction Guarantee</h2>
-      <p style="margin-top:16px">Craftsmanship and quality are our promise to you in each one of our drainage systems. Our drainage systems are backed by a two-year warranty, with a lifetime warranty on select systems.</p>
+      <p style="margin-top:16px">Craftsmanship and quality are our promise to you in each one of our drainage systems, with a lifetime warranty on select systems.</p>
       <ul><li>NDS piping rated for a 100-year lifetime</li><li>Permits researched and obtained for you</li><li>Any utility damage repaired at no cost to you</li><li>Care Guide supplied with every installation</li></ul>
     </div>
   </div>
@@ -227,7 +226,7 @@ ${pageHero({ eyebrow: 'About Us', title: 'A humble company born out of service t
       <p>Rain Drains LLC was born in 2019 from an idea that started as a home improvement project. Bryson noticed one of his neighbour's downspouts was washing out his pool concrete. Eager to save his friend from a concrete disaster, he designed his first downspout system to fix the drainage issue.</p>
       <p>As a Navy Veteran and an Old Dominion University graduate with a degree in Engineering, he has spent over 17 years in the engineering field. He has been certified by NDS as a Professional Drainage Contractor and is a Licensed Landscaping Service Contractor in the state of Virginia.</p>
       <p>At Rain Drains LLC, we pride ourselves on craftsmanship, quality in design, and reliable professional service. We strive to treat all of our customers like our neighbours. We look forward to serving Hampton Roads now and into the future.</p>
-      <p>Every system we design is sized for the specific soil, slope and water volume of your property — not a one-size-fits-all fix. That approach, backed by NDS-rated materials and a two-year warranty, is why homeowners and businesses across southeastern Virginia and northeastern North Carolina trust us with their drainage.</p>
+      <p>Every system we design is sized for the specific soil, slope and water volume of your property — not a one-size-fits-all fix. That approach, backed by NDS-rated materials, is why homeowners and businesses across southeastern Virginia and northeastern North Carolina trust us with their drainage.</p>
       <ul class="detail-bullets">
         <li>${icon('check', 18)} Navy Veteran owned and operated</li>
         <li>${icon('check', 18)} ODU Engineering graduate, 17+ years in the field</li>
@@ -320,12 +319,11 @@ ${pageHero({ eyebrow: 'Service Area', title: `Drainage Contractor in ${a.name}, 
     <div class="detail-body">
       <p>Rain Drains LLC provides professional drainage design and installation throughout ${a.name}, ${a.state} — from French drains and yard grading to downspout extensions and commercial site drainage. Our crews know the local soil, water table and permitting requirements, so your system is built right the first time.</p>
       <p>Whether you're dealing with standing water after every storm, a soggy lawn, or water pushing against your foundation, we'll walk your ${a.name} property in person, diagnose the actual cause, and design a system sized for it — most residential jobs are installed and cleaned up in a single day.</p>
-      <p>We're fully insured, NDS Certified, and back every installation with a two-year warranty.</p>
+      <p>We're fully insured and NDS Certified.</p>
       <ul class="detail-bullets">
         <li>${icon('check', 18)} Free on-site estimates in ${a.name}</li>
         <li>${icon('check', 18)} Local permits researched & obtained</li>
         <li>${icon('check', 18)} Most residential jobs done in one day</li>
-        <li>${icon('check', 18)} 2-year workmanship warranty</li>
       </ul>
     </div>
     <aside class="sidebar-card">

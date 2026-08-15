@@ -158,7 +158,7 @@ export function ctaSection(heading = 'Ready to keep your property dry?', sub = '
 }
 
 export function trustbar() {
-  return `<div class="trustbar"><div class="wrap"><ul><li>Veteran Owned</li><li>Fully Insured</li><li>NDS Certified</li><li>Free Estimates</li><li>2-Year Warranty</li></ul></div></div>`
+  return `<div class="trustbar"><div class="wrap"><ul><li>Veteran Owned</li><li>Fully Insured</li><li>NDS Certified</li><li>Free Estimates</li></ul></div></div>`
 }
 
 export function pageHero({ eyebrow, title, lead, tight = false }) {

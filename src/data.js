@@ -36,7 +36,7 @@ export const SERVICES = [
       'We design every French drain around your property’s slope, soil type and water volume — sizing the pipe, the gravel bed and the outfall so the system keeps up with Hampton Roads’ heaviest storms, not just a light rain.',
       'All piping is NDS-rated for a 100-year service life, and we restore your lawn or landscaping to its original condition before we leave.',
     ],
-    bullets: ['Custom-sized for your soil and water volume', 'NDS-rated piping, 100-year lifespan', 'Lawn restored after installation', '2-year workmanship warranty'],
+    bullets: ['Custom-sized for your soil and water volume', 'NDS-rated piping, 100-year lifespan', 'Lawn restored after installation'],
   },
   {
     slug: 'lawn-drainage-1',
@@ -48,7 +48,7 @@ export const SERVICES = [
       'We walk every residential property in person, identify where the water is actually coming from, and design a system — French drains, grading, downspout tie-ins, or a combination — that solves the root cause.',
       'Most residential drainage installations are completed and cleaned up in a single business day.',
     ],
-    bullets: ['Free on-site evaluation', 'Systems designed for your specific yard', 'Most jobs completed in one day', 'Backed by a 2-year warranty'],
+    bullets: ['Free on-site evaluation', 'Systems designed for your specific yard', 'Most jobs completed in one day'],
   },
   {
     slug: 'commercial-drainage',
@@ -105,7 +105,7 @@ export const SERVICES = [
       'Some yards sit too low, or too flat, for a gravity-fed drain to keep up. In those cases we install an outdoor sump pump system — a buried basin and pump that actively moves water uphill or over long distances to a safe discharge point.',
       'We size the pump and basin for your property’s worst-case rainfall, not just an average storm.',
     ],
-    bullets: ['For low or flat yards gravity can’t drain', 'Sized for worst-case rainfall', 'Buried basin, discreet discharge line', 'Backed by our 2-year warranty'],
+    bullets: ['For low or flat yards gravity can’t drain', 'Sized for worst-case rainfall', 'Buried basin, discreet discharge line'],
   },
   {
     slug: 'exterior-waterproofing',
@@ -229,5 +229,5 @@ export const PROCESS_STEPS = [
   { n: '01', title: 'Free On-Site Estimate', text: 'We walk the property, find where the water is actually coming from, and talk through the options with you face to face.' },
   { n: '02', title: 'Custom System Design', text: 'We design a system sized for your soil, slope and water volume — then handle any permits the city requires.' },
   { n: '03', title: 'One-Day Installation', text: 'Most residential installations are completed in a single business day, with your lawn restored before we leave.' },
-  { n: '04', title: 'Warranty & Care Guide', text: 'You get a two-year warranty, a Care Guide for your system, and a team that answers the phone afterwards.' },
+  { n: '04', title: 'Care Guide & Support', text: 'You get a Care Guide for your system, and a team that answers the phone afterwards.' },
 ]
