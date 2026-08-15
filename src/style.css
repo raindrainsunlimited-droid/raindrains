@@ -232,7 +232,7 @@ body:has(.drawer.open){overflow:hidden}
 /* Responsive */
 @media (max-width:1080px){
   .hero-in{grid-template-columns:1fr}
-  #estimate-desktop{max-width:520px}
+  #estimate{max-width:520px}
   .grid-4{grid-template-columns:repeat(3,1fr)}
   .gal{grid-template-columns:repeat(5,1fr)}
   .detail-grid{grid-template-columns:1fr}

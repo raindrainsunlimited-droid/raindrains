@@ -58,15 +58,11 @@ export function header() {
 </div>`
 }
 
-let formCounter = 0
 export function quoteForm() {
-  formCounter += 1
-  const id = `qf${formCounter}`
-  const containerId = `markate-widget-contact-${id}`
   return `<div class="form-card">
     <h3>Get Your Free Estimate</h3>
     <p class="sub">Tell us what is happening and we will come take a look. No obligation.</p>
-    <div id="${containerId}"></div>
+    <div id="markate-widget-contact"></div>
     <script>(function () {
       function loadMarkateWidget() {
         var s = document.createElement('script')
@@ -75,7 +71,7 @@ export function quoteForm() {
         var u = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.markate.com/public/widget/contact/js'
         var t = Math.random() * 10000000000000000
         s.src = u + '?id=0b44f8bf20c7002c4de1e97412db9aca:70944:82a413a6&ref=' + encodeURIComponent(window.location.href) + '&t=' + t
-        var w = document.getElementById('${containerId}')
+        var w = document.getElementById('markate-widget-contact')
         w.parentNode.insertBefore(s, w)
       }
       if (window.attachEvent) { window.attachEvent('onload', loadMarkateWidget) } else { window.addEventListener('load', loadMarkateWidget, false) }

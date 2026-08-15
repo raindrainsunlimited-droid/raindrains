@@ -81,12 +81,8 @@ function homePage() {
         <div>${iconFilled('check')} NDS Certified</div>
       </div>
     </div>
-    <div class="desktop-only" id="estimate-desktop">${quoteForm()}</div>
+    <div id="estimate">${quoteForm()}</div>
   </div>
-</section>
-
-<section class="mobile-only section-tight bg-surface" id="estimate">
-  <div class="wrap">${quoteForm()}</div>
 </section>
 
 ${trustbar()}
