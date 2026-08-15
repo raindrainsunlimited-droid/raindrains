@@ -62,10 +62,24 @@ let formCounter = 0
 export function quoteForm() {
   formCounter += 1
   const id = `qf${formCounter}`
+  const containerId = `markate-widget-contact-${id}`
   return `<div class="form-card">
     <h3>Get Your Free Estimate</h3>
     <p class="sub">Tell us what is happening and we will come take a look. No obligation.</p>
-    <iframe id="markate-widget-contact-iframe-${id}" title="Request a free estimate" src="https://www.markate.com/public/widget/contact?id=0b44f8bf20c7002c4de1e97412db9aca:70944:82a413a6" width="100%" height="1800" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;display:block"></iframe>
+    <div id="${containerId}"></div>
+    <script>(function () {
+      function loadMarkateWidget() {
+        var s = document.createElement('script')
+        s.type = 'text/javascript'
+        s.async = true
+        var u = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.markate.com/public/widget/contact/js'
+        var t = Math.random() * 10000000000000000
+        s.src = u + '?id=0b44f8bf20c7002c4de1e97412db9aca:70944:82a413a6&ref=' + encodeURIComponent(window.location.href) + '&t=' + t
+        var w = document.getElementById('${containerId}')
+        w.parentNode.insertBefore(s, w)
+      }
+      if (window.attachEvent) { window.attachEvent('onload', loadMarkateWidget) } else { window.addEventListener('load', loadMarkateWidget, false) }
+    })();</script>
   </div>`
 }
 
