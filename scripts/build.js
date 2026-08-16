@@ -281,7 +281,7 @@ function servicePages() {
 <section class="section bg-surface">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">How It Works</span>
+      <span class="eyebrow">${s.subServices.eyebrow || 'How It Works'}</span>
       <h2 style="margin:16px 0 14px">${s.subServices.heading}</h2>
       <div class="rule"></div>
     </div>
@@ -289,7 +289,8 @@ function servicePages() {
       <div class="subserv-item">
         <h3>${it.title}</h3>
         <p>${it.intro}</p>
-        <ul class="detail-bullets">${it.bullets.map((b) => `<li>${icon('check', 18)} ${b}</li>`).join('')}</ul>
+        ${it.bullets ? `<ul class="detail-bullets">${it.bullets.map((b) => `<li>${icon('check', 18)} ${b}</li>`).join('')}</ul>` : ''}
+        ${it.outro ? `<p style="margin-top:14px">${it.outro}</p>` : ''}
       </div>`).join('')}
     </div>
   </div>
@@ -380,12 +381,9 @@ ${pageHero({ eyebrow: 'Services', title: s.name, lead: s.short, tight: true })}
     </aside>
   </div>
 </section>
-${subServicesHtml}
-${challengesHtml}
-${featuresHtml}
-${processHtml}
-${faqHtml}
-${areaListHtml}
+${(s.sectionOrder || ['subServices', 'challenges', 'features', 'process', 'faqs', 'areaList'])
+  .map((key) => ({ subServices: subServicesHtml, challenges: challengesHtml, features: featuresHtml, process: processHtml, faqs: faqHtml, areaList: areaListHtml }[key]))
+  .join('')}
 ${ctaSection(s.cta?.heading || `Ready to solve your ${s.name.toLowerCase()} problem?`, s.cta?.sub)}
 `
     page(s.slug, layout({ title: `${s.name} | Rain Drains — Hampton Roads`, description: `${s.short} Serving Chesapeake, Virginia Beach, Norfolk & Hampton Roads. Free estimates, ${SITE.rating}★ rated.`, path: `/${s.slug}/`, content }))

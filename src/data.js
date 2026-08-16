@@ -254,13 +254,75 @@ export const SERVICES = [
   {
     slug: 'grading-services',
     name: 'Grading Services',
-    short: 'Re-slope your yard so water moves away from your home instead of pooling against it.',
+    short: 'Commercial-grade earth-moving and precision leveling that permanently corrects pitch issues so heavy coastal runoff flows safely away from your property.',
     icon: 'grade',
     body: [
-      'Sometimes the fix isn’t more pipe — it’s getting the slope of your yard right in the first place. We regrade lawns, beds and drainage swales so water flows away from your foundation by gravity.',
-      'Grading is often combined with a French drain or downspout system for a complete, long-term solution.',
+      'If your lawn has uneven ruts, a bumpy terrain, or slopes that direct rainwater straight toward your home’s foundation, standard landscaping fixes won’t solve the problem. Proper yard grading and precision leveling form the literal foundation of all successful stormwater management.',
+      'We provide commercial-grade earth-moving, land leveling, and structural re-grading services designed to permanently correct pitch issues, stabilize your topsoil, and guarantee that heavy coastal runoff flows safely away from your investment.',
     ],
     bullets: ['Corrects negative slope toward the home', 'Often paired with French drains', 'Restores lawn after grading', 'Prevents erosion and pooling'],
+    sectionOrder: ['subServices', 'challenges', 'features', 'faqs', 'process', 'areaList'],
+    subServices: {
+      eyebrow: 'Our Services',
+      heading: 'Our Chesapeake Grading & Land Leveling Services',
+      items: [
+        { title: '1. Yard Regrading & Slope Correction', intro: 'We correct negative slopes and uneven terrain to promote proper drainage away from your home. Our drainage grading services ensure effective water management and erosion control around your property.' },
+        { title: '2. Land Leveling & Soil Reshaping', intro: 'From filling depressions to cutting down high spots, we create a clean, even-grade surface ready for any landscaping or construction project. Our land leveling services help ensure your project starts on the right foot.' },
+        {
+          title: '3. Drainage-Integrated Grading',
+          intro: 'Hampton Roads’ clayey soil holds water longer, so we blend grading with engineered drainage options such as:',
+          bullets: ['French drains', 'Downspout extensions', 'Sump pump systems', 'Swales', 'Surface drains'],
+          outro: 'This creates a complete solution, not just a temporary fix for your drainage needs.',
+        },
+        { title: '4. Rough & Finish Grading for New Builds', intro: 'We work with homeowners, builders, and contractors across the seven cities to perform both initial grading and final precision grading for lawns and landscaping.' },
+        { title: '5. Erosion Control & Stabilization', intro: 'We address soil movement caused by rain or slope issues, providing effective erosion control. We install proper soil or groundcover solutions where needed to stabilize your landscape.' },
+      ],
+    },
+    challenges: {
+      eyebrow: 'Grading vs. Leveling',
+      heading: 'The Critical Difference Between "Leveling" and "Grading"',
+      intro: 'Many property owners use these terms interchangeably, but they serve completely different, vital roles in protecting your property:',
+      items: [
+        { title: 'Rough & Final Grading (Water Direction)', text: 'This process reshapes the slope of your land. The goal isn’t to make the ground perfectly flat; it’s to create a calculated, intentional pitch (ideally a 1% minimum drop away from foundation walls) so gravity can safely shed water toward natural drainage ditches, swales, or municipal storm mains.' },
+        { title: 'Precision Leveling (Surface Uniformity)', text: 'Once the correct slope is structurally established, leveling smooths out the surface. We eliminate dangerous holes, ankle-twisting ruts, and low depressions where standing water would otherwise pool and oversaturate your lawn’s root systems.' },
+      ],
+    },
+    features: {
+      eyebrow: 'Coastal Soil',
+      heading: 'Why Coastal Soil Dynamics Demand Engineered Grading',
+      items: [
+        { title: 'Foundation Hydrostatic Pressure', text: 'In flat, low-lying coastal cities like Virginia Beach, Norfolk, Portsmouth, and Hampton, there is very little natural elevation to help water move. A negative grade (sloping back toward the house) forces water against your foundation walls or crawlspace vents, causing structural bowing, rot, and severe mold.' },
+        { title: 'The Flat Clay Pan Effect', text: 'In Chesapeake and Suffolk, heavy clay soils don’t absorb water quickly. Without a perfectly calculated positive grade to shed sheet-flow water horizontally across the turf, rainwater simply sits on top of the clay, creating permanent marsh zones in your yard.' },
+        { title: 'New Construction Alterations', text: 'In rapidly growing areas like Moyock, Carrollton, Smithfield, and Currituck County, clear-cutting trees and adding massive roofs or driveways completely changes how water behaves. We execute precise grading to ensure your new structures or large lots don’t shed destructive runoff onto your own property — or your neighbors’.' },
+      ],
+    },
+    faqHeading: 'Frequently Asked Grading Questions',
+    faqs: [
+      { q: 'How much does yard grading cost?', a: 'Most residential grading projects, including our drainage grading services, range from $1,000–$6,500, depending on soil conditions, yard size, and the amount of earthmoving required.' },
+      { q: 'Do you handle grading for new construction?', a: 'Yes — we provide rough and final grading for new builds throughout Chesapeake, including land leveling Chesapeake services to ensure your property is perfectly graded.' },
+      { q: 'Can you fix drainage problems from poor grading?', a: 'Absolutely. We specialize in correcting negative slope, pooling water, and soggy areas caused by improper grading, including effective erosion control solutions.' },
+      { q: 'How long does the process take?', a: 'Most grading projects are completed in 1–3 days, depending on scope and weather.' },
+    ],
+    process: {
+      heading: 'Our Laser-Guided Grading & Leveling Process',
+      intro: 'We don’t eyeball slopes or guess pitches. We utilize commercial grade mini skid steers, compact excavators and advanced laser-transit leveling equipment to move dirt with surgical precision.',
+      items: [
+        { title: 'Laser-Transit Topographic Mapping: Site Audit', text: 'We utilize precision laser levels to shoot elevations across your property, locating the exact high points, low points, and structural obstacles to plan a flawless exit route for surface water.' },
+        { title: 'Rough Grading & Cut-and-Fill: Earth Moving', text: 'Using specialized turf-friendly machinery, we mechanically cut down high ridges and fill in deep depressions, structurally re-sculpting the sub-base dirt to establish a permanent positive slope away from all structures.' },
+        { title: 'Topsoil Conditioning & Tilling: Soil Preparation', text: 'We scarify and break up compacted clay layers with specialized machinery, and upon request can import premium organic topsoil or sand blends tailored to your specific regional soil needs, ensuring a healthy foundation for new turf growth.' },
+        { title: 'Final Precision Leveling & Smoothing: The Clean Finish', text: 'Using specialized leveling rakes and commercial soil conditioners, we smooth the surface to a clean, uniform finish, completely eliminating all minor ruts, bumps, and localized micro-depressions.' },
+        { title: 'Stabilization & Seed Prep: Erosion Shielding', text: 'To protect your newly engineered slopes from washing away during the next heavy coastal storm, we compact the soil to optimal densities and prepare it for immediate sod installation or hydroseeding.' },
+      ],
+    },
+    areaList: {
+      heading: 'Serving the Entire Hampton Roads & NE North Carolina Region',
+      intro: 'Commercial-grade grading and leveling across the Tidewater and northeastern North Carolina corridor.',
+      areas: ['Virginia Beach', 'Chesapeake', 'Suffolk', 'Norfolk', 'Portsmouth', 'Smithfield', 'Carrollton', 'Hampton', 'Yorktown', 'Moyock', 'Currituck County', 'Camden County'],
+    },
+    cta: {
+      heading: 'Take control of your land',
+      sub: 'Don’t wait for a heavy seasonal downpour or a coastal Nor’easter to prove your yard’s slope is working against your home. Contact us today to schedule an expert on-site laser topographic assessment.',
+    },
   },
   {
     slug: 'outdoor-sump-pumps-1',
