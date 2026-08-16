@@ -228,7 +228,7 @@ ${pageHero({ eyebrow: 'About Us', title: 'A humble company born out of service t
         <li>${icon('check', 18)} Navy Veteran owned and operated</li>
         <li>${icon('check', 18)} ODU Engineering graduate, 17+ years in the field</li>
         <li>${icon('check', 18)} NDS Certified Professional Drainage Contractor</li>
-        <li>${icon('check', 18)} Licensed Landscaping Service Contractor, Virginia (2705193711)</li>
+        <li>${icon('check', 18)} Licensed Landscaping Service Contractor, Virginia (2705198697)</li>
         <li>${icon('check', 18)} Fully insured, ${SITE.rating}★ from ${SITE.reviewCount} reviews</li>
       </ul>
     </div>

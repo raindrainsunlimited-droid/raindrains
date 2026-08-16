@@ -9,7 +9,7 @@ export const SITE = {
   addressLocality: 'Chesapeake',
   addressRegion: 'VA',
   postalCode: '23322',
-  license: 'VA Lic. 2705193711',
+  license: 'VA Lic. 2705198697',
   rating: 5.0,
   reviewCount: 105,
   year: 2026,
