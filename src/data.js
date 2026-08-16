@@ -77,14 +77,60 @@ export const SERVICES = [
   {
     slug: 'lawn-drainage-1',
     name: 'Residential Drainage Solutions',
-    short: 'Standing water, soggy lawns and water against the foundation — solved permanently.',
+    short: 'Catch basins, buried downspout extensions and condensate drainage networks that intercept surface water before it saturates your lawn.',
     icon: 'home',
     body: [
-      'Standing water in the yard, a soggy lawn that never dries out, or water pooling against your foundation are all signs your property needs a properly engineered drainage system, not just a patch job.',
-      'We walk every residential property in person, identify where the water is actually coming from, and design a system — French drains, grading, downspout tie-ins, or a combination — that solves the root cause.',
-      'Most residential drainage installations are completed and cleaned up in a single business day.',
+      'When heavy rain hits the Hampton Roads and Northeast North Carolina coastlines, your roof and HVAC systems generate thousands of gallons of water. If that volume isn’t explicitly managed, it collects right next to your foundation, drowns your turf, and turns your yard into an unusable marsh.',
+      'While French drains handle underground water tables, surface lawn drainage networks are built to intercept torrents of water before they can saturate your soil. We design and install catch basins, buried downspout extensions, and custom condensate drainage lines to keep your property dry, solid, and safe.',
     ],
     bullets: ['Free on-site evaluation', 'Systems designed for your specific yard', 'Most jobs completed in one day'],
+    subServices: {
+      heading: 'Catch Basins, Downspout Extensions & Condensate Networks',
+      items: [
+        {
+          title: 'Catch Basins: Eliminating Low-Spot Standing Water',
+          intro: 'If you have a clear low point in your lawn where water naturally pools after a downpour, a catch basin is the standard solution. A catch basin sits flush with your grass or hardscape, acting as a direct drain for localized pooling.',
+          bullets: [
+            'Debris Trapping — As water pours through the grate, sediment and leaves settle to the bottom of the basin instead of rushing into your underground lines, preventing clogs deep inside your discharge pipes.',
+            'Strategic Placement — We position these in low spots across lawns in Chesapeake and Suffolk, where clay soil prevents fast surface infiltration, giving pooling water an immediate escape route.',
+          ],
+        },
+        {
+          title: 'Buried Downspout Extensions: Moving Roof Water Away',
+          intro: 'A single inch of rain on a 2,000-square-foot roof produces nearly 1,200 gallons of water. If your gutters simply dump that volume out of standard elbows at the corners of your home, you are actively washing away your foundation’s soil and flooding your crawlspace or basement. We permanently solve this by tying your downspouts directly into clean, smooth-wall rigid PVC or heavy-duty smooth-interior or corrugated ADS pipe buried underground.',
+          bullets: [
+            'Pipe Clogs — We avoid cheap, thin corrugated piping that traps debris, collapses under the weight of lawnmowers, and rots out. We use rigid and smooth-interior piping that maximizes water velocity and lasts for decades. Ask about our downspout filters for an even cleaner drainage system.',
+            'Safe Discharge — We route your roof runoff 20, 50, or 100+ feet away from your home, daylighting the lines into a localized drainage ditch or a clean pop-up emitter near the property line — a critical defense for high-risk foundation zones like the older historic homes in Norfolk and Portsmouth, or rapidly developing lots in Virginia Beach, Chesapeake, Moyock, and Camden County.',
+          ],
+        },
+        {
+          title: 'Condensate Catch Basin Networks: Fixing Summer Mud Holes',
+          intro: 'In the peak of a hot, humid Virginia or North Carolina summer, your home’s air conditioning system runs around the clock. Your HVAC unit and high-efficiency furnace continually dump gallons of water out of a small condensate line right next to your home’s foundation. During months without rain, this constant trickle keeps a localized patch of your yard permanently muddy, killing grass and creating a breeding ground for pests.',
+          bullets: [
+            'Continuous Low-Volume Drainage — We engineer catch basin networks or direct line tie-ins specifically to capture this persistent mechanical runoff.',
+            'Foundation Shielding — Instead of letting AC condensate pool against your slab or crawlspace block, we route it safely into your main lawn drainage grid, keeping your foundation perimeter bone-dry even in July and August.',
+          ],
+        },
+      ],
+    },
+    process: {
+      heading: 'Engineered to Outperform Local Climate Pressures',
+      intro: 'Our drainage networks are custom-built to match the exact topography and soil dynamics of your specific community:',
+      items: [
+        { title: 'Laser-Guided Pitch Analysis: Elevation Targeting', text: 'We calculate the exact slope from your home’s foundation to your property’s natural exit point, ensuring all underground lines maintain a strict downward pitch so water can never back up.' },
+        { title: 'Smooth-Wall Trenching & Piping: Excavation', text: 'We trench clean lines and lay heavy-duty, smooth-interior rigid piping. Smooth pipes prevent debris accumulation and maintain maximum flow rate even during torrential downpours.' },
+        { title: 'Inline Cleanouts & Basins: Component Integration', text: 'We install integrated inline cleanout ports (when selected) and structural catch basins, making the entire network fully accessible and easy to maintain for decades to come.' },
+      ],
+    },
+    areaList: {
+      heading: 'Localized Service Area Footprint',
+      intro: 'Custom surface drainage grids for lawns across the Tidewater and northeastern North Carolina corridor.',
+      areas: ['Virginia Beach', 'Chesapeake', 'Suffolk', 'Norfolk', 'Portsmouth', 'Smithfield', 'Carrollton', 'Hampton', 'Yorktown', 'Moyock', 'Currituck County', 'Camden County'],
+    },
+    cta: {
+      heading: 'Stop fighting a muddy lawn',
+      sub: 'Secure your foundation and reclaim your outdoor space before the next heavy storm system rolls through the coast. Contact us today to map out a custom surface drainage grid for your property.',
+    },
   },
   {
     slug: 'commercial-drainage',

@@ -277,6 +277,24 @@ function servicePages() {
     const body = s.body.map((p) => `<p>${p}</p>`).join('')
     const otherLinks = others.map((o) => `<a href="/${o.slug}/">${o.name}</a>`).join('')
 
+    const subServicesHtml = s.subServices ? `
+<section class="section bg-surface">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">How It Works</span>
+      <h2 style="margin:16px 0 14px">${s.subServices.heading}</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="subserv-list">${s.subServices.items.map((it) => `
+      <div class="subserv-item">
+        <h3>${it.title}</h3>
+        <p>${it.intro}</p>
+        <ul class="detail-bullets">${it.bullets.map((b) => `<li>${icon('check', 18)} ${b}</li>`).join('')}</ul>
+      </div>`).join('')}
+    </div>
+  </div>
+</section>` : ''
+
     const challengesHtml = s.challenges ? `
 <section class="section bg-surface">
   <div class="wrap">
@@ -349,11 +367,12 @@ ${pageHero({ eyebrow: 'Services', title: s.name, lead: s.short, tight: true })}
     </aside>
   </div>
 </section>
+${subServicesHtml}
 ${challengesHtml}
 ${processHtml}
 ${faqHtml}
 ${areaListHtml}
-${ctaSection(`Ready to solve your ${s.name.toLowerCase()} problem?`)}
+${ctaSection(s.cta?.heading || `Ready to solve your ${s.name.toLowerCase()} problem?`, s.cta?.sub)}
 `
     page(s.slug, layout({ title: `${s.name} | Rain Drains — Hampton Roads`, description: `${s.short} Serving Chesapeake, Virginia Beach, Norfolk & Hampton Roads. Free estimates, ${SITE.rating}★ rated.`, path: `/${s.slug}/`, content }))
   }
