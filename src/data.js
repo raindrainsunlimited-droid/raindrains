@@ -135,14 +135,46 @@ export const SERVICES = [
   {
     slug: 'commercial-drainage',
     name: 'Commercial Drainage',
-    short: 'Parking lots, apartment complexes, office and retail sites kept dry, safe and compliant.',
+    short: 'Commercial-grade PVC and HDPE stormwater networks for HOA communities, multi-family complexes and commercial properties — one accountable team from site survey to final restoration.',
     icon: 'building',
     body: [
-      'Standing water on commercial property is a liability, safety and compliance issue, not just an inconvenience. We design and install drainage systems for parking lots, apartment complexes, retail centers and office parks across Hampton Roads.',
-      'Our team handles the permitting, works around your operating hours, and builds systems sized for large impervious surfaces and heavy storm flow.',
-      'We work with property managers, GCs and HOAs to keep tenants, customers and insurers happy.',
+      'Managing commercial properties, multi-family complexes, and HOA communities across Hampton Roads requires a fast, reliable, and specialized civil contracting partner. Whether you are dealing with flooded retention pond access roads, failing parking lot catch basins, or unmanaged surface runoff destroying common areas, you don’t need a heavy municipal highway contractor to get the job done right.',
+      'We specialize in commercial-grade PVC and HDPE (ADS N-12) stormwater networks, serving as a true one-stop shop for HOA board members, property management firms, and commercial facility managers. From diagnostic site surveys to final surface restoration, we handle every stage of your community’s drainage infrastructure under a single, fully accountable roof.',
+      'Instead of juggling separate utility operators, excavation crews, and hardscape contractors, we streamline commercial stormwater management into a single, cohesive workflow.',
     ],
     bullets: ['Scoped for property managers, HOAs & GCs', 'Permits handled for you', 'Scheduled around business operations', 'Fully insured crews'],
+    challenges: {
+      eyebrow: 'Materials',
+      heading: 'Heavy-Duty Commercial Piping Standards: Why PVC & N-12?',
+      intro: 'While massive municipal highway jobs require heavy concrete (RCP) pipe, modern commercial footprints, apartment networks, and residential HOAs run far more efficiently on heavy-duty SDR-35 / Schedule 40 PVC and dual-wall corrugated HDPE (ADS N-12) systems.',
+      items: [
+        { title: 'Superior Hydraulic Efficiency', text: 'Smooth-wall interior PVC and N-12 conduits feature extremely low friction coefficients. Water moves significantly faster through these lines than rough concrete, flushing silt, sand, and organic debris out of your community’s grid before it can settle and clog.' },
+        { title: 'Watertight, Root-Proof Joints', text: 'Concrete pipe joints easily separate over time under regional soil shifting, allowing tree roots to penetrate and destroy the line. Our heavy-duty PVC and dual-wall N-12 pipes utilize high-grade engineered gasket connections that resist root intrusion and structural soil movement.' },
+        { title: 'Rapid Installation with Minimal Community Disruption', text: 'Heavy RCP requires massive cranes and broad site shut-downs that block HOA roads and parking stalls for weeks. Our targeted rubber-track excavation fleets allow us to install large-diameter commercial lines quickly, safely, and with minimal impact on resident traffic and parking spaces.' },
+      ],
+    },
+    features: {
+      eyebrow: 'Our Services',
+      heading: 'Commercial & HOA Infrastructure Services',
+      intro: 'We handle every component of your property’s exterior water management system:',
+      items: [
+        { title: 'HOA Common Area & Swale Grading', text: 'Eliminating standing water in community parks, dog runs, and shared green spaces using precision laser transit mapping and heavy-duty turf restructuring.' },
+        { title: 'Commercial Parking Lot & Catch Basin Networks', text: 'Installing high-load catch basins, curb inlet connections, and trench channel drains designed to keep parking aprons, garage entrances, and drive lanes completely dry.' },
+        { title: 'Retention Pond Outfall & Overflow Pipes', text: 'Replacing failed or crushed corrugated metal outfalls with smooth-wall N-12 or solid PVC lines to keep your storm ponds discharging at legal, engineered capacities.' },
+        { title: 'Underground Roof Runoff Mains', text: 'Linking multi-building downspout networks into centralized subterranean storm mains to keep foundation zones bone dry across commercial strips and condo units.' },
+        { title: 'Turnkey Site Restoration', text: 'We don’t leave open trenches or ruined grounds. We complete the job with full asphalt patching, concrete curb restoration, and multi-lift soil compaction.' },
+      ],
+    },
+    faqHeading: 'Commercial Property & HOA Management Q&A',
+    faqs: [
+      { q: 'Why should our HOA choose PVC or N-12 over traditional concrete (RCP) pipe?', a: 'For residential HOAs, commercial strips, and private multi-family sites, dual-wall HDPE (ADS N-12) and solid SDR-35 PVC offer equal or superior load-bearing strength at a fraction of the installation time and cost. Concrete pipe is prone to joint separation and internal erosion in acidic coastal soils. N-12 and PVC feature smooth, chemically inert interiors that maximize water velocity and structural longevity without requiring heavy crane equipment that destroys community roads.' },
+      { q: 'How do you handle work around active residents and business traffic?', a: 'We prioritize site safety and property access. We utilize compact, high-flotation rubber-track machinery that leaves minimal turf disturbance, and we stage all work to maintain continuous vehicular access for residents, emergency vehicles, and delivery trucks. Work areas are securely barricaded at the end of every shift.' },
+      { q: 'Can you handle both the excavation and the asphalt/concrete repair?', a: 'Yes. That is the core of our one-stop shop commitment. Property managers don’t have to hire a utility contractor to lay the pipe and a separate paving contractor to fix the driveway or curb. We handle the site excavation, pipe installation, aggregate base compaction, and final asphalt/concrete surface restoration in-house.' },
+    ],
+    cta: {
+      heading: 'Ready to solve your HOA or commercial property’s drainage issues?',
+      sub: 'Contact us today to schedule a comprehensive site evaluation and commercial project estimate.',
+    },
   },
   {
     slug: 'downspout-extensions-1',
