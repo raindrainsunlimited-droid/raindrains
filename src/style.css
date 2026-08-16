@@ -71,8 +71,7 @@ button{font-family:inherit}
 .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .2s ease,box-shadow .2s ease}
 body.scrolled .nav{border-bottom-color:var(--border);box-shadow:0 2px 12px rgba(11,43,74,.06)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
-.nav-logo{display:flex;align-items:center;gap:10px;color:var(--navy);font-weight:900;font-size:19px;flex-shrink:0}
-.nav-logo svg{color:var(--blue)}
+.nav-logo{display:flex;align-items:center;flex-shrink:0}
 .nav-links{display:flex;gap:30px}
 .nav-links a{font-weight:700;font-size:14.5px;color:var(--navy);opacity:.82;transition:opacity .15s}
 .nav-links a:hover{opacity:1}
@@ -86,8 +85,6 @@ body.scrolled .nav{border-bottom-color:var(--border);box-shadow:0 2px 12px rgba(
 .drawer{position:fixed;inset:0 0 0 auto;width:82%;max-width:340px;background:var(--navy);z-index:100;transform:translateX(100%);transition:transform .28s ease;display:flex;flex-direction:column;padding:22px 24px;gap:4px;box-shadow:var(--shadow-lg)}
 .drawer.open{transform:translateX(0)}
 .drawer-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
-.drawer-top svg{color:#fff}
-.drawer-word{color:#fff;font-weight:900;font-size:17px;margin-right:auto;margin-left:10px}
 .drawer-close{background:none;border:none;color:#fff;font-size:28px;cursor:pointer;line-height:1}
 .drawer a{color:#fff;padding:13px 4px;font-weight:700;border-bottom:1px solid rgba(255,255,255,.1);font-size:15px}
 .drawer .btn{margin-top:18px}

@@ -42,9 +42,14 @@ export function iconFilled(name, size = 15) {
   return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">${body}</svg>`
 }
 
-export function logoMark(size = 40) {
-  return `<svg width="${size}" height="${size}" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-    <circle cx="20" cy="20" r="20" fill="#1c6fd6"/>
-    <path d="M20 8c0 0-8 10-8 15.5a8 8 0 0016 0C28 18 20 8 20 8Z" fill="#fff"/>
+// Hand-recreated vector approximation of the Rain Drains wordmark logo,
+// pending the source file. Swap for a real <img> once we have the asset.
+export function wordmark(height = 40, onDark = false) {
+  const width = Math.round(height * (560 / 120))
+  const badge = onDark ? '' : `<g transform="skewX(-10)"><rect x="14" y="0" width="536" height="120" fill="#0b2b4a"/></g>`
+  return `<svg width="${width}" height="${height}" viewBox="0 0 560 120" role="img" aria-label="Rain Drains">
+    ${badge}
+    <text x="290" y="90" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="900" font-size="66" fill="#3aa3e0" letter-spacing="0.5" transform="skewX(-10)">RAIN DRAINS</text>
+    <g transform="translate(188,6)"><path d="M0 3 C0 3 -11 17 -11 25 a11 11 0 0022 0 C11 17 0 3 0 3 Z" fill="#5bc0f0" stroke="#fff" stroke-width="3"/></g>
   </svg>`
 }
