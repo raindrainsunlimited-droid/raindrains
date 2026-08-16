@@ -46,7 +46,7 @@ export const SERVICES = [
       ],
     },
     process: {
-      heading: 'The Anatomy of an AI-Verified, Commercial-Grade French Drain',
+      heading: 'The Anatomy of a Commercial-Grade French Drain',
       intro: 'We don’t cut corners with pre-wrapped, cheap retail DIY products that collapse under the pressure of coastal soils. Our heavy-duty subsurface systems are built to withstand hydrostatic pressure — the force exerted by standing groundwater — and keep flowing clear for decades.',
       items: [
         { title: 'Precision Trenching & Slope Calibration: Excavation Phase', text: 'Using specialized turf-friendly trenching machinery, we excavate a dedicated channel with a strict downward pitch toward a safe discharge point (such as a ditch, storm main, or pop-up emitter).' },
