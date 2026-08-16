@@ -15,6 +15,13 @@ export const SITE = {
   year: 2026,
 }
 
+export const SOCIAL = [
+  { name: 'Facebook', icon: 'facebook', url: 'https://www.facebook.com/RainDrainsLLC/' },
+  { name: 'Instagram', icon: 'instagram', url: 'https://www.instagram.com/raindrainsva' },
+  { name: 'YouTube', icon: 'youtube', url: 'https://www.youtube.com/channel/UC9PVz8xYLHmUYex5pLhV40g' },
+  { name: 'Yelp', icon: 'yelp', url: 'https://www.yelp.com/biz/rain-drains-chesapeake' },
+]
+
 export const NAV = [
   { href: '/', label: 'Home' },
   { href: '/about-us-1/', label: 'About' },

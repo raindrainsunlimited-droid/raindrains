@@ -1,5 +1,9 @@
-import { SITE, NAV, HOURS, SERVICES, AREAS } from './data.js'
+import { SITE, NAV, HOURS, SERVICES, AREAS, SOCIAL } from './data.js'
 import { icon, iconFilled, logoMark } from './icons.js'
+
+export function socialLinks(size = 18, cls = '') {
+  return SOCIAL.map((s) => `<a class="${cls}" href="${s.url}" target="_blank" rel="noopener noreferrer" aria-label="Rain Drains on ${s.name}">${iconFilled(s.icon, size)}</a>`).join('')
+}
 
 export function head({ title, description, path = '/' }) {
   const url = SITE.domain + path
@@ -40,7 +44,13 @@ export function jsonLd() {
 
 export function header() {
   const links = NAV.map((n) => `<a href="${n.href}">${n.label}</a>`).join('')
-  return `<header class="nav">
+  return `<div class="topbar">
+  <div class="wrap-wide topbar-in">
+    <a class="topbar-phone" href="tel:${SITE.phoneTel}">${iconFilled('phone', 13)} ${SITE.phone}</a>
+    <div class="social-links">${socialLinks(16)}</div>
+  </div>
+</div>
+<header class="nav">
   <div class="wrap-wide nav-in">
     <a href="/" class="nav-logo" aria-label="${SITE.name} home">${logoMark(38)}<span>Rain Drains</span></a>
     <nav class="nav-links" aria-label="Main">${links}</nav>
@@ -55,6 +65,7 @@ export function header() {
   <div class="drawer-top">${logoMark(34)}<span class="drawer-word">Rain Drains</span><button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button></div>
   ${links}
   <a class="btn btn-primary btn-lg" href="tel:${SITE.phoneTel}">Call ${SITE.phone}</a>
+  <div class="social-links drawer-social">${socialLinks(20)}</div>
 </div>`
 }
 
@@ -91,6 +102,8 @@ export function footer() {
         <p>Professional drainage design and installation across southeastern Virginia and northeastern North Carolina. Veteran owned and operated.</p>
         <p><a href="tel:${SITE.phoneTel}" style="color:#fff;font-weight:800;font-size:18px;padding:0">${SITE.phone}</a></p>
         <p><a href="mailto:${SITE.email}" style="padding:0">${SITE.email}</a></p>
+        <h4 style="margin:20px 0 12px">Follow Us</h4>
+        <div class="social-links lg">${socialLinks(22)}</div>
       </div>
       <div>
         <h4>Services</h4>

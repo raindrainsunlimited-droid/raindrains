@@ -53,6 +53,20 @@ button{font-family:inherit}
 .btn-lg{padding:16px 30px;font-size:16px}
 .btn-block{width:100%}
 
+/* Top bar (contact + social) */
+.topbar{background:var(--navy);color:#cfe0f5}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;height:38px;gap:16px}
+.topbar-phone{display:flex;align-items:center;gap:6px;color:#cfe0f5;font-weight:700;font-size:12.5px}
+.topbar-phone:hover{color:#fff}
+.topbar-phone svg{color:#5ec98a}
+
+.social-links{display:flex;align-items:center;gap:8px}
+.social-links a{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;background:rgba(255,255,255,.12);transition:background .15s ease,transform .15s ease}
+.social-links a:hover{background:var(--blue);transform:translateY(-2px)}
+.social-links.lg a{width:42px;height:42px}
+.drawer-social{margin-top:22px;justify-content:flex-start}
+.drawer-social a{background:rgba(255,255,255,.14)}
+
 /* Header / nav */
 .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .2s ease,box-shadow .2s ease}
 body.scrolled .nav{border-bottom-color:var(--border);box-shadow:0 2px 12px rgba(11,43,74,.06)}
