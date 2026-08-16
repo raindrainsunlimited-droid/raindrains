@@ -178,13 +178,46 @@ export const SERVICES = [
   {
     slug: 'concrete-drains-1',
     name: 'Concrete Drains',
-    short: 'Trench drains and channel systems cut into driveways, patios and walkways.',
+    short: 'Continuous concrete channel drains and heavy-duty surface interceptor grates that catch sheet-flow across driveways, patios and parking lots before it reaches your structures.',
     icon: 'trench',
     body: [
-      'Concrete driveways, patios and walkways can trap and pool water if they weren’t graded or drained correctly when they were poured. We cut in channel and trench drains that capture that water at the surface and carry it away.',
-      'Every concrete drain is tied into the rest of your drainage system so water is moved off the property, not just off the slab.',
+      'When massive rainstorms or flash flooding hit wide concrete surfaces — like driveways, patio decks, commercial loading bays, and parking aprons — gravity causes water to rapidly sheet across the smooth stone. Left unchecked, this rushing surface water slams into garage doors, floods low-lying entryways, pools against foundation slabs, and washes out adjacent turf.',
+      'Traditional lawn drains or small catch basins cannot keep up with high-velocity sheet-flow. Protecting large hardscape footprints requires continuous concrete channel drains and heavy-duty surface interceptor grates built to catch water across the entire width of a paved span before it reaches your structures.',
+      'We design and install commercial-grade surface interception networks across Southside Virginia and Northeast North Carolina, utilizing reinforced concrete trench channels, high-load cast iron or stainless grates, and smooth PVC storm mains engineered to handle extreme storm events.',
     ],
     bullets: ['Channel & trench drain installation', 'Ties into full-property drainage', 'Clean concrete cuts and finishing', 'Grates rated for foot & vehicle traffic'],
+    challenges: {
+      eyebrow: 'Applications',
+      heading: 'Critical Applications for Surface Interception Networks',
+      intro: 'Installing engineered trench drainage solves specific hardscape water issues that standard grading alone cannot fix:',
+      items: [
+        { title: 'Driveway Slopes & Garage Entryways', text: 'Driveways that pitch downward toward a garage or home create an immediate flood hazard. A heavy-duty channel drain cut directly across the driveway in front of the garage door acts as a structural barrier, catching 100% of the downhill runoff before it breaches the threshold.' },
+        { title: 'Pool Decks & Patio Enclosures', text: 'Flat concrete pool surrounds and hardscape patios frequently trap water against home foundations or back up into pool water during torrential downpours. Slotted channel drains installed flush with the concrete flush away deck water while keeping deck surfaces slip-free.' },
+        { title: 'Retaining Wall Bases & Walkway Traps', text: 'Retaining walls and concrete walkways can act like dams, trapping surface water behind them. Interceptor channels collect this trapped water instantly, relieving hydraulic pressure and preventing structural cracking.' },
+        { title: 'Commercial Parking & Loading Bays', text: 'Heavy equipment and vehicles require high-load-class trench systems (Class C or D) that can withstand thousands of pounds of wheel pressure while rapidly draining massive paved footprints.' },
+      ],
+    },
+    features: {
+      eyebrow: 'Construction Standards',
+      heading: 'Commercial-Grade Construction Standards',
+      intro: 'A channel drain is only as durable as its channel encasement and grating material. We construct surface drainage networks using rigid civil engineering specifications:',
+      items: [
+        { title: 'Reinforced Concrete Encasement', text: 'We set our channels inside a dedicated concrete pour. Encasing the channel in high-strength concrete prevents the trench walls from flexing, cracking, or bowing inward when heavy trucks or vehicles drive over the line.' },
+        { title: 'High-Load Grating Options', text: 'Depending on traffic requirements, we install corrosion-resistant cast iron, ductile iron, or heavy-gauge stainless steel grates. For coastal areas exposed to salt spray or pool chemicals, rustproof stainless steel or high-density polymer grates ensure decades of zero maintenance.' },
+        { title: 'Sloped Sub-Trench Channels', text: 'To keep water moving continuously and prevent standing puddle smells or mosquito breeding, we utilize pre-sloped channels that force water downhill toward the discharge pipe even on flat ground.' },
+        { title: 'Integrated Inline Cleanout Baskets', text: 'Every channel system includes accessible catch basins with removable sediment baskets. This catches sand, lawn debris, and gravel before it can enter your main subterranean drainage pipes.' },
+      ],
+    },
+    faqHeading: 'Concrete & Channel Drain Q&A',
+    faqs: [
+      { q: 'Can a channel drain be retrofitted into an existing concrete driveway or patio?', a: 'Yes. We frequently install channel drains in existing concrete. We use diamond-blade concrete saws to cut a precise trench through the existing slab, excavate the underlying base, install the channel grid with solid PVC discharge piping, and pour a fresh concrete collar around the new trench so it ties seamlessly into your existing hardscape.' },
+      { q: 'What load rating do I need for a driveway channel drain?', a: 'For standard residential driveways where cars, SUVs, and light trucks drive over the grate, a Class B (up to 174 psi / 27,500 lbs) load-rated grate is ideal. If your driveway experiences heavy commercial traffic, delivery trucks, or large RVs, we step up to Class C or Class D heavy-duty ductile iron grates to ensure zero bending or structural cracking under weight.' },
+      { q: 'How do you keep leaves and dirt from clogging a long channel drain?', a: 'Our trench systems utilize slotted or decorative grates designed to block large leaves and twigs while allowing water to drop through. Inside the channel end-cap or inline junction box, an integrated sediment trap basket captures fine debris. You simply lift off the grate section once or twice a year and dump out the basket to keep the system flowing at peak capacity.' },
+    ],
+    cta: {
+      heading: 'Stop sheet-flow from damaging your hardscape',
+      sub: 'Is surface water flooding your garage, pooling on your patio, or washing across your driveway? Don’t let unchecked sheet-flow damage your hardscape investment. Contact us today to schedule an on-site laser grade assessment and trench drain consultation.',
+    },
   },
   {
     slug: 'grading-services',

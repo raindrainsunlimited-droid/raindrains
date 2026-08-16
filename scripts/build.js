@@ -299,7 +299,7 @@ function servicePages() {
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Key Features</span>
+      <span class="eyebrow">${s.features.eyebrow || 'Key Features'}</span>
       <h2 style="margin:16px 0 14px">${s.features.heading}</h2>
       ${s.features.intro ? `<p class="lead">${s.features.intro}</p>` : ''}
       <div class="rule"></div>
@@ -312,7 +312,7 @@ function servicePages() {
 <section class="section bg-surface">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Local Conditions</span>
+      <span class="eyebrow">${s.challenges.eyebrow || 'Local Conditions'}</span>
       <h2 style="margin:16px 0 14px">${s.challenges.heading}</h2>
       <p class="lead">${s.challenges.intro}</p>
       <div class="rule"></div>
@@ -381,8 +381,8 @@ ${pageHero({ eyebrow: 'Services', title: s.name, lead: s.short, tight: true })}
   </div>
 </section>
 ${subServicesHtml}
-${featuresHtml}
 ${challengesHtml}
+${featuresHtml}
 ${processHtml}
 ${faqHtml}
 ${areaListHtml}
