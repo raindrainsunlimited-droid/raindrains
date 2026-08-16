@@ -295,6 +295,19 @@ function servicePages() {
   </div>
 </section>` : ''
 
+    const featuresHtml = s.features ? `
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Key Features</span>
+      <h2 style="margin:16px 0 14px">${s.features.heading}</h2>
+      ${s.features.intro ? `<p class="lead">${s.features.intro}</p>` : ''}
+      <div class="rule"></div>
+    </div>
+    ${infoGrid(s.features.items)}
+  </div>
+</section>` : ''
+
     const challengesHtml = s.challenges ? `
 <section class="section bg-surface">
   <div class="wrap">
@@ -326,7 +339,7 @@ function servicePages() {
   <div class="wrap" style="max-width:880px">
     <div class="section-head" style="text-align:center;margin:0 auto 40px">
       <span class="eyebrow">FAQ</span>
-      <h2 style="margin:16px 0 14px">Frequently Asked Local Drainage Questions</h2>
+      <h2 style="margin:16px 0 14px">${s.faqHeading || 'Frequently Asked Local Drainage Questions'}</h2>
     </div>
     ${s.faqs.map((f, i) => `
     <div class="faq-item${i === 0 ? ' open' : ''}">
@@ -368,6 +381,7 @@ ${pageHero({ eyebrow: 'Services', title: s.name, lead: s.short, tight: true })}
   </div>
 </section>
 ${subServicesHtml}
+${featuresHtml}
 ${challengesHtml}
 ${processHtml}
 ${faqHtml}

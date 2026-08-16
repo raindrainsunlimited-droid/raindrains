@@ -147,14 +147,33 @@ export const SERVICES = [
   {
     slug: 'downspout-extensions-1',
     name: 'Downspout Extensions',
-    short: 'Route roof runoff safely away from your foundation, siding and pool concrete.',
+    short: 'Commercial-grade, smooth-wall underground downspout systems that carry roof runoff hundreds of feet from your foundation — not just a few inches.',
     icon: 'downspout',
     body: [
-      'An improperly discharging downspout is one of the most common causes of foundation erosion, cracked concrete and washed-out landscaping — it’s actually how Rain Drains got started.',
-      'We tie your downspouts into buried, solid-pipe extensions that carry roof runoff well away from your home and discharge it at a safe, code-compliant point on your property.',
-      'A simple fix that prevents a lot of expensive damage down the line.',
+      'Your roof is the single largest water-collection surface on your entire property. During a typical coastal storm, thousands of gallons of rainwater pour off your shingles in a matter of minutes. If your downspouts simply dump that water right at the base of your foundation or into cheap, flexible plastic tubes, you are actively inviting foundation settlement, crawlspace flooding, and severe yard erosion.',
+      'A splash block or standard garden extension only pushes water a few inches away from your walls — allowing it to sink straight down into the loose fill soil around your home. Underground downspout extension networks capture roof water instantly at the gutter line and transport it hundreds of feet away to a safe, legal discharge point.',
+      'We engineer commercial-grade, smooth-wall subterranean downspout systems across Southside Virginia and Northeast North Carolina to keep your foundation bone dry and your lawn completely free of standing water.',
     ],
     bullets: ['Buried, solid-pipe extensions', 'Protects foundations, siding & concrete', 'Ties into existing gutters', 'Clean, mulched-over finish'],
+    features: {
+      heading: 'Key Engineering Features of Our Downspout Networks',
+      items: [
+        { title: 'Ultra-Thick Smooth-Wall Pipe', text: 'We offer thick, rigid, smooth-wall PVC or HDPE pipe. The glass-smooth interior maximizes water velocity, allowing leaves, silt, and shingle grit to flush completely out of the pipe without stopping.' },
+        { title: 'Integrated Cleanout & Leaf Adapter Ports', text: 'We offer custom leaf-diverters or cleanout adapters directly below your gutter transitions. This acts as a primary defense line, preventing large debris from ever getting into your subterranean pipes while giving you an easy access point to flush the lines if needed.' },
+        { title: 'Industrial Stainless Steel Hardware', text: 'All cleanouts, transition fittings, and adaptors are mechanically secured using high-grade stainless steel fasteners or glued joints that will never rust, corrode, or rot underground.' },
+        { title: 'Dynamic Termination Emitters', text: 'At the discharge point, we install heavy-duty pop-up emitters or curb hole cuts. When the downspout fills with rushing water, the lid pops up to release flow onto your curb. When the flow stops, the lid snaps shut tightly. Our curb hole cuts are perfect 4-inch outlets for our solid pipe.' },
+      ],
+    },
+    faqHeading: 'Subterranean Downspout & Roof Runoff Q&A',
+    faqs: [
+      { q: 'How far away from my home’s foundation should downspouts discharge?', a: 'At an absolute minimum, roof water should be discharged at least 10 to 15 feet away from your foundation walls. Our standard is a 30-foot minimum. Dumping water any closer allows it to soak directly into the loosened backfill soil surrounding your foundation footings, creating intense hydrostatic pressure that leads to cracked masonry, flooded crawlspaces, and basement leaks. For properties with severe clay or flat elevation, we often extend lines 20 to 50+ feet to reach natural slope drops or street swales.' },
+      { q: 'Can underground downspout lines freeze or burst during winter?', a: 'When installed correctly with positive downhill slope, smooth-wall PVC lines will not burst because water continuously drains out via gravity rather than sitting trapped in the pipe.' },
+      { q: 'Can you tie my downspouts directly into my French drain system?', a: 'No, and no reputable drainage engineer will ever do this. Roof downspouts collect massive volumes of water along with roof shingle grit, twigs, and organic debris. If you tie a downspout directly into a perforated French drain line, you will rapidly flood the French drain with surface debris, clogging the gravel envelope and forcing dirty roof water into your groundwater grid. Downspout lines must always remain solid, non-perforated conduits kept completely separate from subterranean groundwater collection networks.' },
+    ],
+    cta: {
+      heading: 'Stop losing your landscaping to roof runoff',
+      sub: 'Is overflowing roof water washing away your landscaping or flooding your foundation? Don’t settle for collapsing corrugated tubes — contact us today to schedule an on-site evaluation and get a permanent, commercial-grade downspout network installed.',
+    },
   },
   {
     slug: 'concrete-drains-1',
