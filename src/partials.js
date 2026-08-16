@@ -9,7 +9,7 @@ const LOGO_RATIO = 900 / 187
 export function logoImg(height = 40, onDark = false) {
   const width = Math.round(height * LOGO_RATIO)
   const src = onDark ? '/img/logo-transparent.png' : '/img/logo.png'
-  return `<img src="${src}" alt="Rain Drains LLC" width="${width}" height="${height}" style="height:${height}px;width:auto">`
+  return `<img src="${src}" alt="Rain Drains" width="${width}" height="${height}" style="height:${height}px;width:auto">`
 }
 
 export function head({ title, description, path = '/' }) {

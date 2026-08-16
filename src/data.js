@@ -1,7 +1,7 @@
 // Central content data for the site generator (scripts/build.js).
 
 export const SITE = {
-  name: 'Rain Drains LLC',
+  name: 'Rain Drains',
   domain: 'https://raindrainsva.com',
   phone: '757-807-0080',
   phoneTel: '+17578070080',

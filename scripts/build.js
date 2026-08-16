@@ -109,9 +109,9 @@ ${trustbar()}
     <div>
       <span class="eyebrow">About Rain Drains</span>
       <h2 style="margin:16px 0 18px;color:var(--navy)">A humble company born out of service to others.</h2>
-      <p class="lead" style="margin-bottom:16px">Rain Drains LLC was born in 2019 from an idea that started as a home improvement project. Bryson noticed one of his neighbour's downspouts was washing out his pool concrete. Eager to save his friend from a concrete disaster, he designed his first downspout system to fix the drainage issue.</p>
+      <p class="lead" style="margin-bottom:16px">Rain Drains was born in 2019 from an idea that started as a home improvement project. Bryson noticed one of his neighbour's downspouts was washing out his pool concrete. Eager to save his friend from a concrete disaster, he designed his first downspout system to fix the drainage issue.</p>
       <p class="lead" style="margin-bottom:16px">As a Navy Veteran and an Old Dominion University graduate with a degree in Engineering, he has spent over 17 years in the engineering field. He has been certified by NDS as a Professional Drainage Contractor and is a Licensed Landscaping Service Contractor in the state of Virginia.</p>
-      <p class="lead" style="margin-bottom:16px">At Rain Drains LLC, we pride ourselves on craftsmanship, quality in design, and reliable professional service. We strive to treat all of our customers like our neighbours. We look forward to serving Hampton Roads now and into the future.</p>
+      <p class="lead" style="margin-bottom:16px">At Rain Drains, we pride ourselves on craftsmanship, quality in design, and reliable professional service. We strive to treat all of our customers like our neighbours. We look forward to serving Hampton Roads now and into the future.</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px">
         <a class="btn btn-primary" href="/about-us-1/">More About Us</a>
         <a class="btn btn-ghost" style="color:var(--navy);border-color:var(--border)" href="/past-projects/">See Our Work</a>
@@ -220,9 +220,9 @@ ${pageHero({ eyebrow: 'About Us', title: 'A humble company born out of service t
 <section class="section">
   <div class="wrap detail-grid">
     <div class="detail-body">
-      <p>Rain Drains LLC was born in 2019 from an idea that started as a home improvement project. Bryson noticed one of his neighbour's downspouts was washing out his pool concrete. Eager to save his friend from a concrete disaster, he designed his first downspout system to fix the drainage issue.</p>
+      <p>Rain Drains was born in 2019 from an idea that started as a home improvement project. Bryson noticed one of his neighbour's downspouts was washing out his pool concrete. Eager to save his friend from a concrete disaster, he designed his first downspout system to fix the drainage issue.</p>
       <p>As a Navy Veteran and an Old Dominion University graduate with a degree in Engineering, he has spent over 17 years in the engineering field. He has been certified by NDS as a Professional Drainage Contractor and is a Licensed Landscaping Service Contractor in the state of Virginia.</p>
-      <p>At Rain Drains LLC, we pride ourselves on craftsmanship, quality in design, and reliable professional service. We strive to treat all of our customers like our neighbours. We look forward to serving Hampton Roads now and into the future.</p>
+      <p>At Rain Drains, we pride ourselves on craftsmanship, quality in design, and reliable professional service. We strive to treat all of our customers like our neighbours. We look forward to serving Hampton Roads now and into the future.</p>
       <p>Every system we design is sized for the specific soil, slope and water volume of your property — not a one-size-fits-all fix. That approach, backed by NDS-rated materials, is why homeowners and businesses across southeastern Virginia and northeastern North Carolina trust us with their drainage.</p>
       <ul class="detail-bullets">
         <li>${icon('check', 18)} Navy Veteran owned and operated</li>
@@ -242,7 +242,7 @@ ${pageHero({ eyebrow: 'About Us', title: 'A humble company born out of service t
 </section>
 ${ctaSection()}
 `
-  page('about-us-1', layout({ title: 'About Us | Rain Drains LLC — Veteran Owned Drainage Contractor', description: "Meet Bryson Goforth, Navy Veteran, ODU engineer and founder of Rain Drains LLC — Hampton Roads' NDS Certified drainage contractor.", path: '/about-us-1/', content }))
+  page('about-us-1', layout({ title: 'About Us | Rain Drains — Veteran Owned Drainage Contractor', description: "Meet Bryson Goforth, Navy Veteran, ODU engineer and founder of Rain Drains — Hampton Roads' NDS Certified drainage contractor.", path: '/about-us-1/', content }))
 }
 
 // ---------- Services index ----------
@@ -261,7 +261,7 @@ ${pageHero({ eyebrow: 'Services', title: 'Drainage solutions for every kind of p
 <section class="section"><div class="wrap"><div class="grid-3">${cards}</div></div></section>
 ${ctaSection()}
 `
-  page('services-1', layout({ title: 'All Services | Rain Drains LLC', description: 'French drains, grading, downspout extensions, sump pumps and more — every drainage service Rain Drains LLC offers across Hampton Roads.', path: '/services-1/', content }))
+  page('services-1', layout({ title: 'All Services | Rain Drains', description: 'French drains, grading, downspout extensions, sump pumps and more — every drainage service Rain Drains offers across Hampton Roads.', path: '/services-1/', content }))
 }
 
 // ---------- Service detail pages ----------
@@ -355,7 +355,7 @@ ${faqHtml}
 ${areaListHtml}
 ${ctaSection(`Ready to solve your ${s.name.toLowerCase()} problem?`)}
 `
-    page(s.slug, layout({ title: `${s.name} | Rain Drains LLC — Hampton Roads`, description: `${s.short} Serving Chesapeake, Virginia Beach, Norfolk & Hampton Roads. Free estimates, ${SITE.rating}★ rated.`, path: `/${s.slug}/`, content }))
+    page(s.slug, layout({ title: `${s.name} | Rain Drains — Hampton Roads`, description: `${s.short} Serving Chesapeake, Virginia Beach, Norfolk & Hampton Roads. Free estimates, ${SITE.rating}★ rated.`, path: `/${s.slug}/`, content }))
   }
 }
 
@@ -367,7 +367,7 @@ ${pageHero({ eyebrow: 'Service Areas', title: 'Serving southeastern Virginia & n
 <section class="section"><div class="wrap"><div class="areas">${areaCards}</div></div></section>
 ${ctaSection()}
 `
-  page('service-areas', layout({ title: 'Service Areas | Rain Drains LLC', description: 'Rain Drains LLC serves Virginia Beach, Chesapeake, Norfolk, Portsmouth, Suffolk, Hampton, Newport News, Smithfield, Carrollton, and Currituck & Camden Counties, NC.', path: '/service-areas/', content }))
+  page('service-areas', layout({ title: 'Service Areas | Rain Drains', description: 'Rain Drains serves Virginia Beach, Chesapeake, Norfolk, Portsmouth, Suffolk, Hampton, Newport News, Smithfield, Carrollton, and Currituck & Camden Counties, NC.', path: '/service-areas/', content }))
 }
 
 // ---------- Area detail pages ----------
@@ -381,7 +381,7 @@ ${pageHero({ eyebrow: 'Service Area', title: `Drainage Contractor in ${a.name}, 
 <section class="section">
   <div class="wrap detail-grid">
     <div class="detail-body">
-      <p>Rain Drains LLC provides professional drainage design and installation throughout ${a.name}, ${a.state} — from French drains and yard grading to downspout extensions and commercial site drainage. Our crews know the local soil, water table and permitting requirements, so your system is built right the first time.</p>
+      <p>Rain Drains provides professional drainage design and installation throughout ${a.name}, ${a.state} — from French drains and yard grading to downspout extensions and commercial site drainage. Our crews know the local soil, water table and permitting requirements, so your system is built right the first time.</p>
       <p>Whether you're dealing with standing water after every storm, a soggy lawn, or water pushing against your foundation, we'll walk your ${a.name} property in person, diagnose the actual cause, and design a system sized for it — most residential jobs are installed and cleaned up in a single day.</p>
       <p>We're fully insured and NDS Certified.</p>
       <ul class="detail-bullets">
@@ -405,7 +405,7 @@ ${pageHero({ eyebrow: 'Service Area', title: `Drainage Contractor in ${a.name}, 
 </section>
 ${ctaSection(`Ready to fix your drainage in ${a.name}?`)}
 `
-    page(a.slug, layout({ title: `Drainage Contractor in ${a.name}, ${a.state} | Rain Drains LLC`, description: `Professional French drains, grading and drainage installation in ${a.name}, ${a.state}. Veteran owned, NDS Certified, free estimates.`, path: `/${a.slug}/`, content }))
+    page(a.slug, layout({ title: `Drainage Contractor in ${a.name}, ${a.state} | Rain Drains`, description: `Professional French drains, grading and drainage installation in ${a.name}, ${a.state}. Veteran owned, NDS Certified, free estimates.`, path: `/${a.slug}/`, content }))
   }
 }
 
@@ -417,7 +417,7 @@ ${pageHero({ eyebrow: 'Our Work', title: 'Browse our completed drainage projects
 <section class="section"><div class="wrap"><div class="gal">${items}</div></div></section>
 ${ctaSection('Want your property to look this good?', 'Free on-site estimate. No obligation.')}
 `
-  page('past-projects', layout({ title: 'Our Work | Rain Drains LLC Past Projects', description: 'Browse completed French drain, grading and drainage installation projects by Rain Drains LLC across Hampton Roads and northeastern NC.', path: '/past-projects/', content }))
+  page('past-projects', layout({ title: 'Our Work | Rain Drains Past Projects', description: 'Browse completed French drain, grading and drainage installation projects by Rain Drains across Hampton Roads and northeastern NC.', path: '/past-projects/', content }))
 }
 
 // ---------- FAQ ----------
@@ -434,7 +434,7 @@ ${pageHero({ eyebrow: 'FAQ', title: 'Frequently asked questions', lead: "Got que
 </div></section>
 ${ctaSection()}
 `
-  page('faq', layout({ title: 'FAQ | Rain Drains LLC', description: 'Answers to common questions about permits, timelines, utility safety, lawn restoration and drainage system lifespan.', path: '/faq/', content }))
+  page('faq', layout({ title: 'FAQ | Rain Drains', description: 'Answers to common questions about permits, timelines, utility safety, lawn restoration and drainage system lifespan.', path: '/faq/', content }))
 }
 
 // ---------- Contact ----------
@@ -456,7 +456,7 @@ ${pageHero({ eyebrow: 'Contact', title: 'Get Your Free Estimate', lead: 'Tell us
   </div>
 </section>
 `
-  page('contact-1', layout({ title: 'Contact Us | Rain Drains LLC — Free Drainage Estimate', description: 'Request your free on-site drainage estimate from Rain Drains LLC. Call 757-807-0080 or send us your details — we usually reply the same day.', path: '/contact-1/', content }))
+  page('contact-1', layout({ title: 'Contact Us | Rain Drains — Free Drainage Estimate', description: 'Request your free on-site drainage estimate from Rain Drains. Call 757-807-0080 or send us your details — we usually reply the same day.', path: '/contact-1/', content }))
 }
 
 // ---------- run ----------
