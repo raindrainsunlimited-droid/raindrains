@@ -327,13 +327,37 @@ export const SERVICES = [
   {
     slug: 'outdoor-sump-pumps-1',
     name: 'Outdoor Sump Pumps',
-    short: 'Powered pumping for low spots that gravity drainage alone can’t solve.',
+    short: 'Commercial-grade outdoor sump pump systems that mechanically lift rising groundwater off flat, low-lying coastal properties where gravity alone can’t drain.',
     icon: 'pump',
     body: [
-      'Some yards sit too low, or too flat, for a gravity-fed drain to keep up. In those cases we install an outdoor sump pump system — a buried basin and pump that actively moves water uphill or over long distances to a safe discharge point.',
-      'We size the pump and basin for your property’s worst-case rainfall, not just an average storm.',
+      'When dealing with a naturally high water table, flat coastal topography, or a low-lying property that sits lower than the surrounding municipal drainage lines, gravity alone isn’t always enough to protect your yard and foundation. When water has nowhere else to go, a heavy-duty outdoor sump pump system is the ultimate, engineered line of defense.',
+      'Unlike standard indoor basement pumps, an outdoor crawlspace or yard sump pump system is designed to intercept massive volumes of rising groundwater and surface sheet-flow, mechanically lifting it and forcing it completely off your property to a safe, legal discharge point.',
+      'We construct commercial-grade, subsurface outdoor basin and pumping stations built specifically to withstand the extreme environmental pressures and soil dynamics of the Hampton Roads and Northeast North Carolina coastlines.',
     ],
     bullets: ['For low or flat yards gravity can’t drain', 'Sized for worst-case rainfall', 'Buried basin, discreet discharge line'],
+    process: {
+      heading: 'The Anatomy of an Engineered Outdoor Pumping Station',
+      items: [
+        { title: 'Subsurface Infiltration Basin Excavation', text: 'We excavate a deep structural pit at the lowest logical convergence point of your drainage network. We install a heavy-walled, perforated or solid dual wall polyethylene basin wrap-encapsulated in #57 drainage stone and non-woven geotextile fabric. This creates a massive subsurface collection reservoir that relieves the surrounding soil’s hydrostatic pressure (when required).' },
+        { title: 'Cast-Iron Commercial Pump Integration', text: 'We install premium, continuous-duty Zoeller cast-iron submersible pumps (featuring stainless steel hardware and non-clogging vortex impellers). These pumps easily handle heavy solids up to 1/2" and pump thousands of gallons per hour without overheating. We only use the highest quality outdoor rated pumps complete with a manufacturer’s warranty.' },
+        { title: 'Rigid Discharge Piping & Backflow Prevention', text: 'The pump is plumbed using heavy-wall 1-1/2" schedule 40 solid PVC. We install specialized inline check valves to prevent pumped water from draining backward into the pit when the pump cycles off, maximizing mechanical efficiency of the system.' },
+        { title: 'High Quality Design', text: 'We don’t use cheap, retail-grade plastics or standard exterior screws that corrode and snap over time. Every sump basin we build utilizes heavy-duty, septic-grade components designed to withstand constant moisture and severe underground soil pressures. To guarantee absolute structural longevity in our high-salinity coastal environments, we lock everything together using industrial-grade stainless steel fasteners that will never rust, degrade, or fail under pressure. When we bury a system on your property, it is engineered to stay locked, clear, and fully operational for decades.' },
+      ],
+    },
+    faqHeading: 'Outdoor Sump Pump & Groundwater Engineering Q&A',
+    faqs: [
+      { q: 'Why can’t I just rely on a standard drain without a pump?', a: 'Traditional drains are a gravity-fed highway. For a gravity drain to work, the discharge end must be lower than the collection end. In flat or low-lying coastal cities like Virginia Beach, Norfolk, and Portsmouth, or low points in Chesapeake, there is often zero natural elevation change. If your yard sits lower than the roadside ditch or the municipal storm main, a gravity drain will simply fill up with water and back up. An outdoor sump pump acts as a mechanical elevator — it collects the gravity-fed water in a deep subterranean basin and physically lifts it up and out, creating an artificial slope where nature didn’t provide one.' },
+      { q: 'Will an outdoor pump basin float or pop out of the ground when the soil saturates?', a: 'Yes, if it is installed incorrectly. This is a massive issue in regions with high water tables and dense clay soils like Suffolk and Moyock. A hollow plastic basin buried in water-logged soil acts exactly like a boat hull — hydrostatic pressure will literally pop the entire basin out of the ground, destroying your pipes and landscaping. We take special care to ensure this will never happen to your sump pump basin by designing the basin specifically for your property and your exact soil type.' },
+    ],
+    areaList: {
+      heading: 'Custom Engineered for Regional Soil Conditions',
+      intro: 'From handling the fine sand infiltration common in Currituck and Virginia Beach to managing the sluggish, high-friction water movement through the clay layers of Smithfield and Carrollton, we tailor every basin to match the exact earth mechanics of your property.',
+      areas: ['Virginia Beach', 'Chesapeake', 'Suffolk', 'Norfolk', 'Portsmouth', 'Smithfield', 'Carrollton', 'Hampton', 'Yorktown', 'Moyock', 'Currituck County', 'Camden County'],
+    },
+    cta: {
+      heading: 'Don’t let a rising water table dictate your property',
+      sub: 'Keep your yard dry and your crawlspace secure with a heavy-duty mechanical drainage system. Contact us today to schedule a comprehensive on-site laser grade and subsurface water table evaluation.',
+    },
   },
   {
     slug: 'exterior-waterproofing',

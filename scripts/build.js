@@ -328,7 +328,7 @@ function servicePages() {
     <div class="section-head">
       <span class="eyebrow">Our Process</span>
       <h2 style="margin:16px 0 14px">${s.process.heading}</h2>
-      <p class="lead">${s.process.intro}</p>
+      ${s.process.intro ? `<p class="lead">${s.process.intro}</p>` : ''}
       <div class="rule"></div>
     </div>
     ${infoGrid(s.process.items)}
