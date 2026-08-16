@@ -1,8 +1,15 @@
 import { SITE, NAV, HOURS, SERVICES, AREAS, SOCIAL } from './data.js'
-import { icon, iconFilled, wordmark } from './icons.js'
+import { icon, iconFilled } from './icons.js'
 
 export function socialLinks(size = 18, cls = '') {
   return SOCIAL.map((s) => `<a class="${cls}" href="${s.url}" target="_blank" rel="noopener noreferrer" aria-label="Rain Drains on ${s.name}">${iconFilled(s.icon, size)}</a>`).join('')
+}
+
+const LOGO_RATIO = 900 / 187
+export function logoImg(height = 40, onDark = false) {
+  const width = Math.round(height * LOGO_RATIO)
+  const src = onDark ? '/img/logo-transparent.png' : '/img/logo.png'
+  return `<img src="${src}" alt="Rain Drains LLC" width="${width}" height="${height}" style="height:${height}px;width:auto">`
 }
 
 export function head({ title, description, path = '/' }) {
@@ -52,7 +59,7 @@ export function header() {
 </div>
 <header class="nav">
   <div class="wrap-wide nav-in">
-    <a href="/" class="nav-logo" aria-label="${SITE.name} home">${wordmark(40)}</a>
+    <a href="/" class="nav-logo" aria-label="${SITE.name} home">${logoImg(40)}</a>
     <nav class="nav-links" aria-label="Main">${links}</nav>
     <div class="nav-cta">
       <a class="nav-phone desktop-only" href="tel:${SITE.phoneTel}">${iconFilled('phone')} ${SITE.phone}</a>
@@ -62,7 +69,7 @@ export function header() {
   </div>
 </header>
 <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu">
-  <div class="drawer-top">${wordmark(32, true)}<button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button></div>
+  <div class="drawer-top">${logoImg(32, true)}<button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button></div>
   ${links}
   <a class="btn btn-primary btn-lg" href="tel:${SITE.phoneTel}">Call ${SITE.phone}</a>
   <div class="social-links drawer-social">${socialLinks(20)}</div>
@@ -98,7 +105,7 @@ export function footer() {
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <div class="foot-logo">${wordmark(36, true)}</div>
+        <div class="foot-logo">${logoImg(36, true)}</div>
         <p>Professional drainage design and installation across southeastern Virginia and northeastern North Carolina. Veteran owned and operated.</p>
         <p><a href="tel:${SITE.phoneTel}" style="color:#fff;font-weight:800;font-size:18px;padding:0">${SITE.phone}</a></p>
         <p><a href="mailto:${SITE.email}" style="padding:0">${SITE.email}</a></p>

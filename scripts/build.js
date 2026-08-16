@@ -482,6 +482,9 @@ function main() {
   if (existsSync(join(ROOT, 'src/favicon.svg'))) {
     cpSync(join(ROOT, 'src/favicon.svg'), join(DIST, 'favicon.svg'))
   }
+  if (existsSync(join(ROOT, 'src/img'))) {
+    cpSync(join(ROOT, 'src/img'), join(DIST, 'img'), { recursive: true })
+  }
   if (existsSync(join(ROOT, 'src/_redirects'))) {
     cpSync(join(ROOT, 'src/_redirects'), join(DIST, '_redirects'))
   }
