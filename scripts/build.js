@@ -356,13 +356,25 @@ function servicePages() {
     <div class="section-head">
       <span class="eyebrow">Service Areas</span>
       <h2 style="margin:16px 0 14px">${s.areaList.heading}</h2>
-      <p class="lead">${s.areaList.intro}</p>
+      ${s.areaList.intro ? `<p class="lead">${s.areaList.intro}</p>` : ''}
       <div class="rule"></div>
     </div>
     <div class="area-chips">${s.areaList.areas.map((name) => {
       const match = AREAS.find((a) => a.name === name)
       return match ? `<a class="area-chip" href="/${match.slug}/">${name}</a>` : `<span class="area-chip">${name}</span>`
     }).join('')}</div>
+  </div>
+</section>` : ''
+
+    const noteHtml = s.note ? `
+<section class="section bg-surface">
+  <div class="wrap" style="max-width:820px">
+    <div class="section-head">
+      <span class="eyebrow">${s.note.eyebrow || 'Good to Know'}</span>
+      <h2 style="margin:16px 0 14px">${s.note.heading}</h2>
+      <p class="lead">${s.note.text}</p>
+      <div class="rule"></div>
+    </div>
   </div>
 </section>` : ''
 
@@ -382,7 +394,7 @@ ${pageHero({ eyebrow: 'Services', title: s.name, lead: s.short, tight: true })}
   </div>
 </section>
 ${(s.sectionOrder || ['subServices', 'challenges', 'features', 'process', 'faqs', 'areaList'])
-  .map((key) => ({ subServices: subServicesHtml, challenges: challengesHtml, features: featuresHtml, process: processHtml, faqs: faqHtml, areaList: areaListHtml }[key]))
+  .map((key) => ({ subServices: subServicesHtml, challenges: challengesHtml, features: featuresHtml, process: processHtml, faqs: faqHtml, areaList: areaListHtml, note: noteHtml }[key]))
   .join('')}
 ${ctaSection(s.cta?.heading || `Ready to solve your ${s.name.toLowerCase()} problem?`, s.cta?.sub)}
 `

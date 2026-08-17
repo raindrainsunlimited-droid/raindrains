@@ -407,13 +407,58 @@ export const SERVICES = [
   {
     slug: 'culvert-pipe-installation-1',
     name: 'Culvert Pipe Installation',
-    short: 'Move water safely under driveways, roads and access points.',
+    short: 'Commercial-grade culvert pipe installation and structural re-engineering built to handle heavy coastal runoff and withstand heavy vehicle traffic for decades.',
     icon: 'pipe',
     body: [
-      'Culvert pipes carry ditch and stormwater safely underneath driveways, private roads and property access points, keeping the flow of water moving instead of damming it up against your drive.',
-      'We size and install culverts to code, including any permitting required by your county or city.',
+      'A properly installed driveway culvert is the single most critical element of your property’s exterior drainage system. In rural, suburban, and rapidly growing coastal communities, roadside ditches and swales act as the municipal highway for stormwater.',
+      'If your driveway crossing has a collapsed, undersized, or improperly pitched pipe, it acts like a dam — backing up thousands of gallons of water, flooding your front yard, eroding your driveway, and potentially creating severe legal and structural liabilities.',
+      'We provide commercial-grade culvert pipe installation, replacement, and structural re-engineering designed to handle heavy coastal runoff and withstand heavy vehicle traffic for decades.',
     ],
     bullets: ['Sized to handle ditch & storm flow', 'Permits researched and obtained', 'Prevents driveway washouts', 'Durable, code-compliant pipe'],
+    sectionOrder: ['challenges', 'features', 'process', 'note', 'areaList'],
+    challenges: {
+      heading: 'Why Culvert Installations Fail in Our Coastal Districts',
+      intro: 'Culvert installation requires exact engineering. Because of our unique local geography and high water tables, simple DIY approaches or cut-corner installations fail rapidly due to three primary regional factors:',
+      items: [
+        { title: 'Improper Pipe Sizing (The Bottleneck Effect)', text: 'In expanding rural-suburban corridors like Chesapeake, Suffolk, and Currituck County, regional storm volumes can increase dramatically as new homes are built up the road. Installing an undersized pipe causes immediate upstream pooling and dangerous localized flooding during heavy storms.' },
+        { title: 'Saturated Soil Settling & Crushing', text: 'In low-lying, soft-soil areas like Virginia Beach, Norfolk, Portsmouth, and parts of Camden County, cheap thin-walled plastic pipes easily deform and bow under the weight of heavy delivery trucks or construction equipment if they lack a properly compacted aggregate foundation.' },
+        { title: 'Erosion and "Scouring" at the Ends', text: 'Without concrete headwalls, rip-rap stone reinforcement, or proper soil stabilization, rushing water will slowly scour out the dirt around the pipe’s mouth. This creates hollow cavities beneath your driveway that eventually lead to a catastrophic cave-in.' },
+      ],
+    },
+    features: {
+      eyebrow: 'Materials',
+      heading: 'Commercial-Grade Materials Built for Heavy Loads',
+      intro: 'We do not use flimsy, single-wall residential pipes that warp or split over time. We install long-lasting, heavy-duty drainage materials specified to meet local municipal standards and handle heavy-axle vehicle traffic:',
+      items: [
+        { title: 'Dual-Wall High-Density Polyethylene (HDPE)', text: 'These pipes feature a corrugated exterior shell for massive structural load-bearing strength and a smooth interior lining that maximizes water velocity, preventing silt and debris from settling and clogging the line.' },
+        { title: 'Reinforced Concrete Pipe (RCP)', text: 'The ultimate permanent standard for heavy commercial crossings, large-scale rural ditches, and areas requiring minimal soil cover over the pipe.' },
+      ],
+    },
+    process: {
+      heading: 'Our Laser-Guided Culvert Installation Process',
+      intro: 'Every culvert crossing we build follows a strict structural blueprint to guarantee it maintains perfect flow alignment and never shifts under heavy pressure.',
+      items: [
+        { title: 'Laser-Transit Grade Setting', text: 'We calculate the exact upstream and downstream elevations of your roadside ditch using laser transits. We ensure the new pipe perfectly matches the natural flow line of the channel so water never idles or backs up.' },
+        { title: 'Ditch Clearing & Trenching: Excavation', text: 'We excavate the existing failed pipe, clearing out accumulated silt, invasive roots, and collapsed dirt to completely restore the original design width of the water channel.' },
+        { title: 'Crushed Stone Aggregates: Foundational Bedding', text: 'We lay a foundational bedding of washed #57 drainage stone or dense-grade aggregate. This solid bed prevents the pipe from settling unevenly over time and shifting out of pitch.' },
+        { title: 'Pipe Placement & Mechanical Fitting: Setting the Line', text: 'The heavy-duty culvert pipe is mechanically set onto the stone bed. We double-check the downward pitch with digital levels before locking it into its permanent position.' },
+        { title: 'Lifts of Compacted Aggregate Backfill: Structural Integrity', text: 'We backfill around the sides and top of the pipe in tight, 6-inch layers ("lifts"). Each lift is mechanically compacted with heavy tamping equipment to create a bridge that absorbs vehicle wheel loads.' },
+        { title: 'Erosion Control & Headwall Armor: Flank Protection', text: 'To prevent future scouring, we secure both ends of the culvert with heavy rip-rap stone stabilization to permanently lock the soil in place.' },
+      ],
+    },
+    note: {
+      eyebrow: 'Permits & Codes',
+      heading: 'Navigating Municipal Codes & Drainage Permits',
+      text: 'Installing a driveway culvert isn’t just about moving dirt — it frequently requires navigating strict municipal guidelines, utility location clearances, and right-of-way permitting. Whether you are dealing with VDOT requirements in Hampton, Yorktown, and Smithfield, city engineering specs in Chesapeake and Suffolk, or county drainage board codes down in Moyock and Currituck, we ensure your installation meets or exceeds all local structural codes.',
+    },
+    areaList: {
+      heading: 'Serving All Local Districts & Crossings',
+      areas: ['Virginia Beach', 'Chesapeake', 'Suffolk', 'Norfolk', 'Portsmouth', 'Smithfield', 'Carrollton', 'Hampton', 'Yorktown', 'Moyock', 'Currituck County', 'Camden County'],
+    },
+    cta: {
+      heading: 'Is a failing culvert pipe threatening your driveway?',
+      sub: 'Don’t wait for the city to issue a citation or for the next coastal storm to wash out your access point. Contact us today to schedule an expert on-site structural evaluation and laser grade audit.',
+    },
   },
   {
     slug: 'gravel-driveways',
