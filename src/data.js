@@ -362,13 +362,47 @@ export const SERVICES = [
   {
     slug: 'exterior-waterproofing',
     name: 'Exterior Waterproofing',
-    short: 'Keep water from reaching your foundation walls in the first place.',
+    short: 'Commercial-grade exterior waterproofing — a multi-layer membrane, drainage mat and footing drain system that stops groundwater before it ever reaches your foundation walls.',
     icon: 'shield',
     body: [
-      'Exterior waterproofing works alongside drainage to keep moisture from reaching your foundation walls at all — sealing, membranes and drainage board applied below grade, paired with a French drain to carry away anything that does get through.',
-      'It’s the most effective long-term defense against basement and crawlspace moisture.',
+      'When groundwater saturates the soil surrounding your home, it exerts a relentless physical force known as hydrostatic pressure. This pressure pushes thousands of gallons of water directly against your below-grade foundation walls. If your home relies on simple interior fixes like paints or French drains inside the crawlspace, you are merely managing water after it has already breached your home’s structure.',
+      'True structural protection requires exterior waterproofing — the only permanent method that stops water from ever touching your foundation in the first place. We design and install commercial-grade exterior waterproofing systems that intercept groundwater, shield your foundation walls, and route moisture safely away from your structure.',
     ],
     bullets: ['Below-grade sealing & membranes', 'Paired with French drain systems', 'Reduces basement & crawlspace moisture', 'Protects foundation walls long-term'],
+    challenges: {
+      heading: 'Why Foundations Leak and Rot in the Tidewater Region',
+      intro: 'Our local geography presents a combination of environmental pressures that can rapidly break down standard residential foundation coatings:',
+      items: [
+        { title: 'Continuous Hydrostatic Pressure', text: 'In flat, low-lying coastal cities like Virginia Beach, Norfolk, Portsmouth, and Hampton, a naturally high water table means the soil surrounding your crawlspace block or basement is permanently water-logged. Without an exterior barrier, water will seep right through porous concrete blocks and mortar joints.' },
+        { title: 'The Clay Bathtub Effect', text: 'In Chesapeake and Suffolk, dense clay soils trap water right next to your foundation. When your home was built, the dirt excavated around the foundation was loosened. Rainwater naturally fills this loose backfill zone first, creating an underground "bathtub" of water trapped against your walls by the surrounding unexcavated clay.' },
+        { title: 'Corrosive Coastal Soils', text: 'In rapid growth areas like Moyock, Carrollton, and Currituck County, high soil acidity and shifting water tables accelerate the breakdown of cheap, builder-grade "dampproofing" tar, leaving your foundation exposed to water intrusion within just a few years.' },
+      ],
+    },
+    process: {
+      heading: 'Engineered Multi-Layer Foundation Drain Process',
+      intro: 'We don’t just spray a thin coat of black paint and call it waterproofed. We follow a strict commercial-grade protocol to create an impenetrable, multi-layer envelope around your structure.',
+      items: [
+        { title: 'Excavation & Wall Preparation', text: 'We carefully excavate the earth down to your concrete footings, exposing the entire subsurface foundation wall. The wall is mechanically cleaned, power-washed, and inspected for hidden structural cracks or missing mortar joints.' },
+        { title: 'Hydraulic Cement Parging (Basement/Crawlspace Only)', text: 'Every structural crack, tie hole, and failing mortar joint is deeply chiseled out and packed tight with high-strength hydraulic cement to structurally seal the masonry surface.' },
+        { title: 'Dimpled Drainage Mat', text: 'We hang a heavy-duty dimpled poly-matrix drainage mat over the membrane. The dimples create a permanent structural air gap, instantly relieving hydrostatic pressure by letting water drop straight down to the base of the wall instead of pushing inward.' },
+        { title: 'Footing Drain Installation & Encapsulation', text: 'At the base of the wall, we lay an engineered footing pipe wrapped in washed #57 drainage stone and premium non-woven geotextile fabric. This collection highway catches the falling water and routes it safely to a gravity outlet or an outdoor sump pump station.' },
+      ],
+    },
+    faqHeading: 'Foundation Waterproofing & Soil Mechanics Q&A',
+    faqs: [
+      { q: 'What is the difference between "dampproofing" and "waterproofing"?', a: 'Dampproofing is a cheap, thin asphalt spray applied to almost all new homes during construction to meet bare-minimum building codes. It is designed only to resist incidental soil vapor — not hydrostatic water pressure. Over a few years, it dries out, becomes brittle, and decomposes. True exterior waterproofing involves a thick, elastomeric rubber membrane combined with structural drainage mats that can actively span concrete cracks, resist constant standing water pressure, and flex with the home without tearing.' },
+      { q: 'Why do you use septic-grade components and stainless steel fasteners?', a: 'The environment beneath your lawn is highly corrosive, especially with the brackish groundwater and high soil-salinity levels found throughout the Hampton Roads and Northeast North Carolina corridors. Standard exterior screws and cheap, retail-grade PVC basins quickly degrade, rust, or crack under underground earth pressures. We build our systems out of heavy-duty, septic-grade components designed to handle permanent subterranean stress, and lock our protection boards and fittings in place with industrial-grade stainless steel fasteners that will never rust or fail.' },
+      { q: 'Can I just fix my wet crawlspace or basement from the inside?', a: 'While interior drainage systems (like interior French drains and sump pumps) are excellent at catching water after it gets inside, they do not stop the water from migrating through your foundation walls. When water passes through concrete block, it causes a chemical breakdown called efflorescence, slowly dissolving the lime and mortar that holds your foundation together. Exterior waterproofing stops the water on the outside of the house, keeping your foundation walls dry, stable, and structurally sound for the life of the property.' },
+    ],
+    areaList: {
+      heading: 'Serving the Entire Hampton Roads & NE North Carolina Region',
+      intro: 'Whether you are looking to protect a historic brick foundation in Norfolk or Portsmouth, solve a heavy clay water issue in Chesapeake or Suffolk, or secure a new build along the coastal corridors of Virginia Beach, Moyock, or Camden, we custom-engineer every project to perfectly match your local water table dynamics.',
+      areas: ['Virginia Beach', 'Chesapeake', 'Suffolk', 'Norfolk', 'Portsmouth', 'Smithfield', 'Carrollton', 'Hampton', 'Yorktown', 'Moyock', 'Currituck County', 'Camden County'],
+    },
+    cta: {
+      heading: 'Stop fighting a losing battle against groundwater',
+      sub: 'Don’t let hydrostatic pressure slowly compromise your home’s structural integrity. Contact us today to schedule an expert on-site foundation inspection and drainage audit.',
+    },
   },
   {
     slug: 'culvert-pipe-installation-1',
