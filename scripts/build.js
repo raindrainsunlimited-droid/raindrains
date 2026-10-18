@@ -107,18 +107,6 @@ function homePage() {
 
 ${trustbar()}
 
-<section class="section bg-navy">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Our Process</span>
-      <h2 style="margin:16px 0 14px">Simple, and done in a day</h2>
-      <p class="lead">Most residential drainage systems are designed, installed and cleaned up inside one business day.</p>
-      <div class="rule"></div>
-    </div>
-    <div class="steps">${stepsHtml}</div>
-  </div>
-</section>
-
 <section class="section">
   <div class="wrap">
     <div class="grid-3">${svcCards}</div>
@@ -133,6 +121,18 @@ ${trustbar()}
       <p style="margin-top:16px">Craftsmanship and quality are our promise to you in each one of our drainage systems, with a lifetime warranty on select systems.</p>
       <ul><li>NDS piping rated for a 100-year lifetime</li><li>Permits researched and obtained for you</li><li>Any utility damage repaired at no cost to you</li><li>Care Guide supplied with every installation</li></ul>
     </div>
+  </div>
+</section>
+
+<section class="section bg-navy">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Our Process</span>
+      <h2 style="margin:16px 0 14px">Simple, and done in a day</h2>
+      <p class="lead">Most residential drainage systems are designed, installed and cleaned up inside one business day.</p>
+      <div class="rule"></div>
+    </div>
+    <div class="steps">${stepsHtml}</div>
   </div>
 </section>
 
