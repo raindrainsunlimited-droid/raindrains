@@ -2,7 +2,7 @@ import { mkdirSync, writeFileSync, rmSync, cpSync, existsSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { SITE, SERVICES, AREAS, REVIEWS, FAQS, PROCESS_STEPS } from '../src/data.js'
+import { SITE, SERVICES, AREAS, REVIEWS, FAQS, PROCESS_STEPS, PAST_PROJECTS } from '../src/data.js'
 import { layout, quoteForm, footer, header, pageScripts, ctaSection, trustbar, pageHero, jsonLd, head } from '../src/partials.js'
 import { icon, iconFilled } from '../src/icons.js'
 
@@ -478,7 +478,7 @@ ${ctaSection(a.cta?.heading || `Ready to fix your drainage in ${a.name}?`, a.cta
 
 // ---------- Past Projects ----------
 function pastProjectsPage() {
-  const items = Array.from({ length: 24 }).map(() => `<a href="/contact-1/" aria-label="Completed Rain Drains drainage project">${icon('drop', 26)}</a>`).join('')
+  const items = PAST_PROJECTS.map((p) => `<a href="/contact-1/" aria-label="${p.alt}"><img src="${p.src}" alt="${p.alt}" loading="lazy" width="320" height="320"></a>`).join('')
   const content = `
 ${pageHero({ eyebrow: 'Our Work', title: 'Browse our completed drainage projects', lead: "See how we've helped homeowners and businesses across Hampton Roads solve their water issues." })}
 <section class="section"><div class="wrap"><div class="gal">${items}</div></div></section>

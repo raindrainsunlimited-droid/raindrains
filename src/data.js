@@ -935,6 +935,33 @@ export const AREAS = [
   },
 ]
 
+export const PAST_PROJECTS = [
+  { src: '/img/gallery/g01.jpg', alt: 'French drain trench dug along a home\'s foundation' },
+  { src: '/img/gallery/g02.jpg', alt: 'Backyard graded and leveled near a wooded pond property' },
+  { src: '/img/gallery/g03.jpg', alt: 'Rain Drains crew installing drainage pipe at a commercial building' },
+  { src: '/img/gallery/g04.jpg', alt: 'New culvert pipe outlet beneath a sidewalk' },
+  { src: '/img/gallery/g05.jpg', alt: 'Culvert pipe and rip-rap stone at a driveway entrance' },
+  { src: '/img/gallery/g06.jpg', alt: 'Front yard drainage trench with pipe run to the curb' },
+  { src: '/img/gallery/g07.jpg', alt: 'Catch basin drain installed in a concrete patio slab' },
+  { src: '/img/gallery/g08.jpg', alt: 'Compacted gravel parking pad installation' },
+  { src: '/img/gallery/g09.jpg', alt: 'Utility trench with pipe laid along a backyard' },
+  { src: '/img/gallery/g10.jpg', alt: 'Fresh sod laid along a driveway after drainage work' },
+  { src: '/img/gallery/g11.jpg', alt: 'New drain installed in a stamped concrete pool deck' },
+  { src: '/img/gallery/g12.jpg', alt: 'Catch basin and pipe fittings staged for a drainage install' },
+  { src: '/img/gallery/g13.jpg', alt: 'Rain Drains crew operating an excavator in a front yard' },
+  { src: '/img/gallery/g14.jpg', alt: 'Commercial drainage trenching with excavation equipment on site' },
+  { src: '/img/gallery/g15.jpg', alt: 'Rip-rap lined erosion control channel' },
+  { src: '/img/gallery/g16.jpg', alt: 'Mini excavator installing culvert pipe and rip-rap stone' },
+  { src: '/img/gallery/g17.jpg', alt: 'Finished gravel driveway through wooded property' },
+  { src: '/img/gallery/g18.jpg', alt: 'Drainage piping routed around HVAC units' },
+  { src: '/img/gallery/g19.jpg', alt: 'Concrete channel drain with metal grate along a driveway' },
+  { src: '/img/gallery/g20.jpg', alt: 'Drainage swale with rip-rap outlet at dusk' },
+  { src: '/img/gallery/g21.jpg', alt: 'Excavation work along a home\'s foundation' },
+  { src: '/img/gallery/g22.jpg', alt: 'Freshly graded residential lot between homes' },
+  { src: '/img/gallery/g23.jpg', alt: 'Lot graded and leveled ahead of sod installation' },
+  { src: '/img/gallery/g24.jpg', alt: 'Backyard drainage trench and catch basin near a patio' },
+]
+
 export const REVIEWS = [
   { name: 'James LaZar', when: '1 month ago', text: 'Bryson is the true deal! He came out next day and got me situated. The workers that came out were honestly hands down the best. Communication and Execution just top notch!' },
   { name: 'Amber Morgan', when: '4 weeks ago', text: 'Bryson listened to our problem and set up an appointment. We received an extremely reasonable quote and a work date. The crew arrived on time and finished the job in one day. They were efficient and respectful of my property. I HIGHLY recommend their services.' },
