@@ -827,7 +827,17 @@ export const AREAS = [
   },
   { slug: 'smithfield', name: 'Smithfield', state: 'VA' },
   { slug: 'carrolton', name: 'Carrollton', state: 'VA' },
-  { slug: 'currituck-county', name: 'Currituck County', state: 'NC' },
+  {
+    slug: 'currituck-county',
+    name: 'Currituck County',
+    state: 'NC',
+    ...regionalStormwaterTemplate('Currituck County', ['Moyock', 'Panther Landing', 'Caratoke Highway Corridor', 'Cypress Landing', 'Maple', 'Grandy']),
+    body: [
+      'If you own a home, commercial property, or coastal estate in Moyock or Currituck County your property sits directly on the front lines of the Atlantic water table. This region is defined by highly dynamic sandy topsoils, expansive master-planned developments, and immediate proximity to sea-level sounds, bays, and rivers.',
+      'When heavy downpours, seasonal hurricanes, or coastal Nor’easters hit this corridor, water doesn’t just pool on top of the grass — it saturates the earth from the bottom up. True property protection requires holistic stormwater management — an engineered approach that treats your roof runoff, surface sheet-flow, rising subsurface groundwater, and pool structures as a single, unified ecosystem.',
+      'We provide commercial-grade, comprehensive drainage infrastructures built specifically for coastal soil mechanics. We build our integrated systems using thick, septic-grade components and industrial stainless steel fasteners so they stay locked, clear, and fully operational for decades.',
+    ],
+  },
   { slug: 'camden-county', name: 'Camden County', state: 'NC' },
 ]
 
