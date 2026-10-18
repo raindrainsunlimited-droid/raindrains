@@ -682,7 +682,59 @@ export const SERVICES = [
 ]
 
 export const AREAS = [
-  { slug: 'virginia-beach', name: 'Virginia Beach', state: 'VA' },
+  {
+    slug: 'virginia-beach',
+    name: 'Virginia Beach',
+    state: 'VA',
+    heroTitle: 'Stormwater Management in Virginia Beach',
+    short: 'Holistic stormwater management engineered for Virginia Beach’s sandy, high-water-table coastal terrain — from roof runoff to rising groundwater to pool protection.',
+    body: [
+      'If you own a home, commercial property, or coastal estate in Virginia Beach your property sits directly on the front lines of the Atlantic water table. This region is defined by highly dynamic sandy topsoils, expansive master-planned developments, and immediate proximity to sea-level sounds, bays, and rivers.',
+      'When heavy downpours, seasonal hurricanes, or coastal Nor’easters hit this corridor, water doesn’t just pool on top of the grass — it saturates the earth from the bottom up. True property protection requires holistic stormwater management — an engineered approach that treats your roof runoff, surface sheet-flow, rising subsurface groundwater, and pool structures as a single, unified ecosystem.',
+      'We provide commercial-grade, comprehensive drainage infrastructures built specifically for coastal soil mechanics. We build our integrated systems using thick, septic-grade components and industrial stainless steel fasteners so they stay locked, clear, and fully operational for decades.',
+    ],
+    bullets: ['Free on-site estimates in Virginia Beach', 'Engineered for sandy, high-water-table coastal soil', 'Holistic roof-to-groundwater system design'],
+    note: {
+      heading: 'The Holistic Stormwater Architecture for Coastal Terrains',
+      text: 'An effective water management strategy must control water at every stage of a storm event. In sandy, high-water-table zones, surface water routes must work in perfect harmony with subsurface water evacuation to prevent localized flooding and structural failures.',
+    },
+    challenges: {
+      heading: 'The Reality of Coastal Soil & Water: Why Your Property Floods',
+      intro: 'Properties in the Chesapeake, Virginia Beach, and Northeast North Carolina footprints face strict environmental factors that demand specialized engineering:',
+      items: [
+        { title: 'The Tidal High Water Table', text: 'In low-lying and ocean-facing districts, the natural water table sits just a few feet below your turf. During prolonged downpours or high-tide cycles, the ground completely saturates from beneath, leaving rainwater with absolutely nowhere to soak into.' },
+        { title: 'Sandy Soil Infiltration & Cave-Ins', text: 'While sand allows water to pass through initially, loose coastal sand is highly volatile. Heavy storms wash fine sand straight into unsealed drainage pipe joints, packing lines solid like cement and choking off water flow.' },
+        { title: 'The Clay Transition Zone', text: 'Parts of Southern Chesapeake, Moyock, and Camden hit dense, heavy native clay layers just beneath the topsoil. This clay traps water on the surface, creating an underground "bathtub effect" around foundation blocks, crawlspaces, and concrete pool shells.' },
+      ],
+    },
+    process: {
+      heading: 'High-Performance Structural Drainage Solutions',
+      intro: 'We engineer custom, subsurface networks designed to isolate your foundation and landscape from high groundwater pressures, forcing water completely off your property.',
+      items: [
+        { title: 'Elevation & Flow Evaluation', text: 'We map your property’s exact elevation drops using high-precision digital laser transits. We locate the precise structural low-points where surface water and groundwater converge.' },
+        { title: 'Non-Woven Geotextile Armor Layout', text: 'We excavate deep collection channels or foundation footprints and line the raw earth with heavy-duty non-woven geotextile fabric. This allows groundwater to seep in freely while blocking fine sand and silt from clogging your system.' },
+        { title: 'Septic-Grade PVC & Aggregate Setting', text: 'We install ultra-thick, smooth-wall perforated or solid septic-grade PVC conduits enveloped in clean #57 washed drainage stone. These lines resist extreme subterranean pressures and maximize water velocity.' },
+        { title: 'Outdoor Sump Station Integration', text: 'Because our regional terrain is incredibly flat, we tie our drainage grids directly into heavy-duty outdoor sump pump basins featuring commercial cast-iron pumps to mechanically lift and push water to a legal discharge main.' },
+        { title: 'Precision Grading & Multi-Lift Compaction', text: 'We backfill our trenches or driveways in strategic layers ("lifts"), mechanically packing the earth with vibratory rollers and shaping a subtle center crown or outward slope so surface water sheds immediately.' },
+      ],
+    },
+    faqHeading: 'Regional Drainage & Engineering Q&A',
+    faqs: [
+      { q: 'What does "holistic stormwater management" actually mean for my property?', a: 'It means treating all water as part of a connected ecosystem. For example, capturing your roof runoff through underground downspout lines does no good if your yard grading forces surface water right back against your foundation. Similarly, a French drain meant to lower the groundwater table will quickly fail if it gets overwhelmed by surface mud or has nowhere to discharge. Our holistic approach connects your roof drainage, surface grading, sub-surface French drains, and foundation waterproofing membranes into a single fluid highway that routes all water to its proper termination point without bottlenecks.' },
+      { q: 'What is the permanent solution to prevent a vinyl pool liner from floating during a heavy rain event?', a: 'The only permanent, definitive solution to a floating pool liner is to dynamically control the groundwater table directly around the pool. Vinyl pools act exactly like a hollow boat hull; when intense rainstorms hit our flat coastal developments, the groundwater table rises instantly, creating massive upward pressure. If that pressure exceeds the weight of the water inside your pool, it forces its way underneath, causing your liner to stretch, float, and wrinkle. Our Linerlock Pool Drainage System solves this permanently. We install a deep subsurface aggregate highway around your pool structure to collect rising groundwater before it touches your vinyl, routing it to an automated cast-iron sump station. Even if a storm knocks out your power grid and causes the liner to float temporarily, the moment power returns or your backup generator kicks in, the system draws the water table back down, vacuum-securing the liner tightly against the pool walls again.' },
+      { q: 'Will your heavy excavation equipment destroy my yard, driveway, or landscape?', a: 'Many homeowners dread hiring an excavation contractor because massive dump trucks and standard wheeled backhoes leave deep, destructive ruts across grass and crack established concrete. We protect your property by intentionally operating compact, high-flotation rubber-track machinery (like specialized mini-excavators and stand-on skid steers). These continuous rubber tracks spread the machine’s weight evenly across a large surface area, giving us maximum pushing and lifting power while leaving an exceptionally light footprint that preserves your topsoil and turf.' },
+    ],
+    areaList: {
+      eyebrow: 'Neighborhoods',
+      heading: 'Local Neighborhoods & Subdivisions We Serve',
+      intro: 'We provide direct drainage for residential, commercial, and trade-subcontracting services throughout all local zip codes, master-planned developments, and coastal corridors across Virginia Beach, including:',
+      areas: ['Little Neck', 'North End', 'Sandbridge', 'Oceanfront', 'Pungo', 'Thoroughgood', 'Red Mill', 'Landstown', 'Kempsville'],
+    },
+    cta: {
+      heading: 'Is standing water destroying your yard or foundation?',
+      sub: 'Don’t waste money throwing loose gravel into failing mud holes. Contact us today to schedule a comprehensive on-site laser grade assessment and engineering consultation.',
+    },
+  },
   { slug: 'chesapeake', name: 'Chesapeake', state: 'VA' },
   { slug: 'norfolk', name: 'Norfolk', state: 'VA' },
   { slug: 'portsmouth', name: 'Portsmouth', state: 'VA' },

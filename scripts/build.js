@@ -264,28 +264,22 @@ ${ctaSection()}
   page('services-1', layout({ title: 'All Services | Rain Drains', description: 'French drains, grading, downspout extensions, sump pumps and more — every drainage service Rain Drains offers across Hampton Roads.', path: '/services-1/', content }))
 }
 
-// ---------- Service detail pages ----------
+// ---------- Shared rich-content sections (used by service + area pages) ----------
 function infoGrid(items) {
   return `<div class="info-grid">${items.map((it, i) => `
     <div class="info-card"><div class="num">${i + 1}</div><h4>${it.title}</h4><p>${it.text}</p></div>`).join('')}</div>`
 }
 
-function servicePages() {
-  for (const s of SERVICES) {
-    const others = SERVICES.filter((x) => x.slug !== s.slug).slice(0, 8)
-    const bullets = s.bullets.map((b) => `<li>${icon('check', 18)} ${b}</li>`).join('')
-    const body = s.body.map((p) => `<p>${p}</p>`).join('')
-    const otherLinks = others.map((o) => `<a href="/${o.slug}/">${o.name}</a>`).join('')
-
-    const subServicesHtml = s.subServices ? `
+function renderContentSections(entry, defaultOrder) {
+  const subServicesHtml = entry.subServices ? `
 <section class="section bg-surface">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">${s.subServices.eyebrow || 'How It Works'}</span>
-      <h2 style="margin:16px 0 14px">${s.subServices.heading}</h2>
+      <span class="eyebrow">${entry.subServices.eyebrow || 'How It Works'}</span>
+      <h2 style="margin:16px 0 14px">${entry.subServices.heading}</h2>
       <div class="rule"></div>
     </div>
-    <div class="subserv-list">${s.subServices.items.map((it) => `
+    <div class="subserv-list">${entry.subServices.items.map((it) => `
       <div class="subserv-item">
         <h3>${it.title}</h3>
         <p>${it.intro}</p>
@@ -296,53 +290,53 @@ function servicePages() {
   </div>
 </section>` : ''
 
-    const featuresHtml = s.features ? `
+  const featuresHtml = entry.features ? `
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">${s.features.eyebrow || 'Key Features'}</span>
-      <h2 style="margin:16px 0 14px">${s.features.heading}</h2>
-      ${s.features.intro ? `<p class="lead">${s.features.intro}</p>` : ''}
+      <span class="eyebrow">${entry.features.eyebrow || 'Key Features'}</span>
+      <h2 style="margin:16px 0 14px">${entry.features.heading}</h2>
+      ${entry.features.intro ? `<p class="lead">${entry.features.intro}</p>` : ''}
       <div class="rule"></div>
     </div>
-    ${infoGrid(s.features.items)}
+    ${infoGrid(entry.features.items)}
   </div>
 </section>` : ''
 
-    const challengesHtml = s.challenges ? `
+  const challengesHtml = entry.challenges ? `
 <section class="section bg-surface">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">${s.challenges.eyebrow || 'Local Conditions'}</span>
-      <h2 style="margin:16px 0 14px">${s.challenges.heading}</h2>
-      <p class="lead">${s.challenges.intro}</p>
+      <span class="eyebrow">${entry.challenges.eyebrow || 'Local Conditions'}</span>
+      <h2 style="margin:16px 0 14px">${entry.challenges.heading}</h2>
+      <p class="lead">${entry.challenges.intro}</p>
       <div class="rule"></div>
     </div>
-    ${infoGrid(s.challenges.items)}
+    ${infoGrid(entry.challenges.items)}
   </div>
 </section>` : ''
 
-    const processHtml = s.process ? `
+  const processHtml = entry.process ? `
 <section class="section">
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Our Process</span>
-      <h2 style="margin:16px 0 14px">${s.process.heading}</h2>
-      ${s.process.intro ? `<p class="lead">${s.process.intro}</p>` : ''}
+      <h2 style="margin:16px 0 14px">${entry.process.heading}</h2>
+      ${entry.process.intro ? `<p class="lead">${entry.process.intro}</p>` : ''}
       <div class="rule"></div>
     </div>
-    ${infoGrid(s.process.items)}
+    ${infoGrid(entry.process.items)}
   </div>
 </section>` : ''
 
-    const faqHtml = s.faqs ? `
+  const faqHtml = entry.faqs ? `
 <section class="section bg-surface">
   <div class="wrap" style="max-width:880px">
     <div class="section-head" style="text-align:center;margin:0 auto 40px">
       <span class="eyebrow">FAQ</span>
-      <h2 style="margin:16px 0 14px">${s.faqHeading || 'Frequently Asked Local Drainage Questions'}</h2>
+      <h2 style="margin:16px 0 14px">${entry.faqHeading || 'Frequently Asked Local Drainage Questions'}</h2>
     </div>
-    ${s.faqs.map((f, i) => `
+    ${entry.faqs.map((f, i) => `
     <div class="faq-item${i === 0 ? ' open' : ''}">
       <button class="faq-q" type="button">${f.q}<span class="ic">+</span></button>
       <div class="faq-a"><p>${f.a}</p></div>
@@ -350,33 +344,45 @@ function servicePages() {
   </div>
 </section>` : ''
 
-    const areaListHtml = s.areaList ? `
+  const areaListHtml = entry.areaList ? `
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Service Areas</span>
-      <h2 style="margin:16px 0 14px">${s.areaList.heading}</h2>
-      ${s.areaList.intro ? `<p class="lead">${s.areaList.intro}</p>` : ''}
+      <span class="eyebrow">${entry.areaList.eyebrow || 'Service Areas'}</span>
+      <h2 style="margin:16px 0 14px">${entry.areaList.heading}</h2>
+      ${entry.areaList.intro ? `<p class="lead">${entry.areaList.intro}</p>` : ''}
       <div class="rule"></div>
     </div>
-    <div class="area-chips">${s.areaList.areas.map((name) => {
+    <div class="area-chips">${entry.areaList.areas.map((name) => {
       const match = AREAS.find((a) => a.name === name)
       return match ? `<a class="area-chip" href="/${match.slug}/">${name}</a>` : `<span class="area-chip">${name}</span>`
     }).join('')}</div>
   </div>
 </section>` : ''
 
-    const noteHtml = s.note ? `
+  const noteHtml = entry.note ? `
 <section class="section bg-surface">
   <div class="wrap" style="max-width:820px">
     <div class="section-head">
-      <span class="eyebrow">${s.note.eyebrow || 'Good to Know'}</span>
-      <h2 style="margin:16px 0 14px">${s.note.heading}</h2>
-      <p class="lead">${s.note.text}</p>
+      <span class="eyebrow">${entry.note.eyebrow || 'Good to Know'}</span>
+      <h2 style="margin:16px 0 14px">${entry.note.heading}</h2>
+      <p class="lead">${entry.note.text}</p>
       <div class="rule"></div>
     </div>
   </div>
 </section>` : ''
+
+  const sections = { subServices: subServicesHtml, challenges: challengesHtml, features: featuresHtml, process: processHtml, faqs: faqHtml, areaList: areaListHtml, note: noteHtml }
+  return (entry.sectionOrder || defaultOrder).map((key) => sections[key]).join('')
+}
+
+// ---------- Service detail pages ----------
+function servicePages() {
+  for (const s of SERVICES) {
+    const others = SERVICES.filter((x) => x.slug !== s.slug).slice(0, 8)
+    const bullets = s.bullets.map((b) => `<li>${icon('check', 18)} ${b}</li>`).join('')
+    const body = s.body.map((p) => `<p>${p}</p>`).join('')
+    const otherLinks = others.map((o) => `<a href="/${o.slug}/">${o.name}</a>`).join('')
 
     const content = `
 ${pageHero({ eyebrow: 'Services', title: s.name, lead: s.short, tight: true })}
@@ -393,9 +399,7 @@ ${pageHero({ eyebrow: 'Services', title: s.name, lead: s.short, tight: true })}
     </aside>
   </div>
 </section>
-${(s.sectionOrder || ['subServices', 'challenges', 'features', 'process', 'faqs', 'areaList'])
-  .map((key) => ({ subServices: subServicesHtml, challenges: challengesHtml, features: featuresHtml, process: processHtml, faqs: faqHtml, areaList: areaListHtml, note: noteHtml }[key]))
-  .join('')}
+${renderContentSections(s, ['subServices', 'challenges', 'features', 'process', 'faqs', 'areaList'])}
 ${ctaSection(s.cta?.heading || `Ready to solve your ${s.name.toLowerCase()} problem?`, s.cta?.sub)}
 `
     page(s.slug, layout({ title: `${s.name} | Rain Drains — Hampton Roads`, description: `${s.short} Serving Chesapeake, Virginia Beach, Norfolk & Hampton Roads. Free estimates, ${SITE.rating}★ rated.`, path: `/${s.slug}/`, content }))
@@ -419,19 +423,25 @@ function areaPages() {
     const others = AREAS.filter((x) => x.slug !== a.slug).slice(0, 8)
     const otherLinks = others.map((o) => `<a href="/${o.slug}/">${o.name}, ${o.state}</a>`).join('')
     const svcLinks = SERVICES.slice(0, 8).map((s) => `<a href="/${s.slug}/">${s.name}</a>`).join('')
+
+    const body = a.body
+      ? a.body.map((p) => `<p>${p}</p>`).join('')
+      : `<p>Rain Drains provides professional drainage design and installation throughout ${a.name}, ${a.state} — from French drains and yard grading to downspout extensions and commercial site drainage. Our crews know the local soil, water table and permitting requirements, so your system is built right the first time.</p>
+      <p>Whether you're dealing with standing water after every storm, a soggy lawn, or water pushing against your foundation, we'll walk your ${a.name} property in person, diagnose the actual cause, and design a system sized for it — most residential jobs are installed and cleaned up in a single day.</p>
+      <p>We're fully insured and NDS Certified.</p>`
+    const bullets = a.bullets
+      ? a.bullets.map((b) => `<li>${icon('check', 18)} ${b}</li>`).join('')
+      : `<li>${icon('check', 18)} Free on-site estimates in ${a.name}</li>
+        <li>${icon('check', 18)} Local permits researched & obtained</li>
+        <li>${icon('check', 18)} Most residential jobs done in one day</li>`
+
     const content = `
-${pageHero({ eyebrow: 'Service Area', title: `Drainage Contractor in ${a.name}, ${a.state}`, lead: `Free on-site drainage estimates for homes and businesses in ${a.name}.`, tight: true })}
+${pageHero({ eyebrow: 'Service Area', title: a.heroTitle || `Drainage Contractor in ${a.name}, ${a.state}`, lead: a.short || `Free on-site drainage estimates for homes and businesses in ${a.name}.`, tight: true })}
 <section class="section">
   <div class="wrap detail-grid">
     <div class="detail-body">
-      <p>Rain Drains provides professional drainage design and installation throughout ${a.name}, ${a.state} — from French drains and yard grading to downspout extensions and commercial site drainage. Our crews know the local soil, water table and permitting requirements, so your system is built right the first time.</p>
-      <p>Whether you're dealing with standing water after every storm, a soggy lawn, or water pushing against your foundation, we'll walk your ${a.name} property in person, diagnose the actual cause, and design a system sized for it — most residential jobs are installed and cleaned up in a single day.</p>
-      <p>We're fully insured and NDS Certified.</p>
-      <ul class="detail-bullets">
-        <li>${icon('check', 18)} Free on-site estimates in ${a.name}</li>
-        <li>${icon('check', 18)} Local permits researched & obtained</li>
-        <li>${icon('check', 18)} Most residential jobs done in one day</li>
-      </ul>
+      ${body}
+      <ul class="detail-bullets">${bullets}</ul>
     </div>
     <aside class="sidebar-card">
       <h3>Services in ${a.name}</h3>
@@ -440,13 +450,14 @@ ${pageHero({ eyebrow: 'Service Area', title: `Drainage Contractor in ${a.name}, 
     </aside>
   </div>
 </section>
+${renderContentSections(a, ['note', 'challenges', 'features', 'process', 'faqs', 'areaList'])}
 <section class="section bg-surface">
   <div class="wrap">
     <div class="section-head"><span class="eyebrow">Nearby Areas</span><h2 style="margin:16px 0 0">We also serve</h2></div>
     <div class="areas">${AREAS.filter((x) => x.slug !== a.slug).map((o) => `<a class="area" href="/${o.slug}/">${o.name}<em>${o.state}</em></a>`).join('')}</div>
   </div>
 </section>
-${ctaSection(`Ready to fix your drainage in ${a.name}?`)}
+${ctaSection(a.cta?.heading || `Ready to fix your drainage in ${a.name}?`, a.cta?.sub)}
 `
     page(a.slug, layout({ title: `Drainage Contractor in ${a.name}, ${a.state} | Rain Drains`, description: `Professional French drains, grading and drainage installation in ${a.name}, ${a.state}. Veteran owned, NDS Certified, free estimates.`, path: `/${a.slug}/`, content }))
   }
