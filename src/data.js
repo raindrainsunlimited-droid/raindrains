@@ -216,6 +216,7 @@ export const SERVICES = [
     name: 'Concrete Drains',
     short: 'Continuous concrete channel drains and heavy-duty surface interceptor grates that catch sheet-flow across driveways, patios and parking lots before it reaches your structures.',
     icon: 'trench',
+    image: { src: '/img/concrete-drains.jpg', alt: 'Concrete channel drain with metal grate installed along a garage driveway' },
     body: [
       'When massive rainstorms or flash flooding hit wide concrete surfaces — like driveways, patio decks, commercial loading bays, and parking aprons — gravity causes water to rapidly sheet across the smooth stone. Left unchecked, this rushing surface water slams into garage doors, floods low-lying entryways, pools against foundation slabs, and washes out adjacent turf.',
       'Traditional lawn drains or small catch basins cannot keep up with high-velocity sheet-flow. Protecting large hardscape footprints requires continuous concrete channel drains and heavy-duty surface interceptor grates built to catch water across the entire width of a paved span before it reaches your structures.',
@@ -653,6 +654,7 @@ export const SERVICES = [
     name: 'Hydrojet Cleanout',
     short: 'Commercial-grade hydrojetting that blasts away compacted silt, sand and invasive roots to restore clogged drainage lines to 100% capacity.',
     icon: 'jet',
+    image: { src: '/img/hydrojet-cleanout.jpg', alt: 'Hydrojet nozzle spraying high-pressure water to clear a clogged drainage line' },
     body: [
       'When a heavy-duty yard drain, French drain, downspout extension, or culvert pipe becomes packed solid with mud, invasive roots, sand, or thick organic debris, a standard plumbing snake or mechanical auger will not solve the problem. A traditional metal cable snake merely punches a temporary hole through the blockage, leaving the surrounding walls caked in silt, which leads to immediate re-clogging during the next heavy storm.',
       'True restoration requires professional hydrojet drainage system cleanout services. Hydrojetting utilizes commercial-grade, multi-directional high-pressure water streams to blast away compressed sediment, slice cleanly through invasive roots, and completely scrub the interior walls of your underground pipes. We specialize in clearing and flushing out subsurface stormwater grids to restore your property’s drainage infrastructure to 100% capacity.',
