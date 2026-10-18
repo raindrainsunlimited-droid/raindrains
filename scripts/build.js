@@ -119,7 +119,7 @@ ${trustbar()}
       </div>
     </div>
     <div>
-      <div style="border-radius:var(--r-lg);box-shadow:var(--shadow-lg);width:100%;aspect-ratio:4/3;background:linear-gradient(135deg,var(--navy),var(--blue));display:flex;align-items:center;justify-content:center;color:#fff">${icon('home', 88)}</div>
+      <img src="/img/bryson.jpg" alt="Bryson Goforth, owner of Rain Drains" loading="lazy" style="border-radius:var(--r-lg);box-shadow:var(--shadow-lg);width:100%;height:auto;display:block" width="768" height="1364">
       <p style="text-align:center;margin-top:14px;font-size:14px;color:var(--text-muted);font-weight:600">Bryson Goforth — Owner · Navy Veteran · ODU Engineering</p>
     </div>
   </div>
@@ -234,6 +234,7 @@ ${pageHero({ eyebrow: 'About Us', title: 'A humble company born out of service t
       </ul>
     </div>
     <aside class="sidebar-card">
+      <img src="/img/bryson.jpg" alt="Bryson Goforth, owner of Rain Drains" loading="lazy" style="border-radius:var(--r-md);width:100%;height:auto;display:block;margin-bottom:18px" width="768" height="1364">
       <h3>Talk to Bryson</h3>
       <p style="color:var(--text-muted);font-size:14px;margin-bottom:16px">Free on-site estimates, no obligation.</p>
       <a class="btn btn-green btn-block" href="/contact-1/" style="margin-bottom:10px">Get a Free Estimate</a>
