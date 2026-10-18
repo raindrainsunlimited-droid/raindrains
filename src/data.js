@@ -14,7 +14,7 @@ export const SITE = {
   reviewCount: 105,
   reviewCountDisplay: '100+',
   year: 2026,
-  googleReviewsUrl: 'https://share.google/s1ax4TM35ErhaA5Bi',
+  googleReviewsUrl: 'https://share.google/X7ZOL8DGKSsuZ2Xfe',
 }
 
 export const CARE_GUIDE_URL = '/files/care-guide.pdf'
