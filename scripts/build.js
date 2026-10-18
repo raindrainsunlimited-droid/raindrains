@@ -21,11 +21,17 @@ function page(slug, html) {
   write(path, html)
 }
 
+function svcImg(s) {
+  return s.image
+    ? `<img src="${s.image.src}" alt="${s.image.alt}" loading="lazy" width="400" height="260">`
+    : icon(s.icon, 46)
+}
+
 // ---------- Home ----------
 function homePage() {
   const svcCards = [SERVICES[1], SERVICES[2], SERVICES[12]].map((s) => `
   <a class="svc" href="/${s.slug}/">
-    <div class="svc-img">${icon(s.icon, 46)}</div>
+    <div class="svc-img${s.image ? ' svc-img-photo' : ''}">${svcImg(s)}</div>
     <div class="svc-body">
       <h3>${s.name}</h3>
       <p>${s.short}</p>
@@ -251,7 +257,7 @@ ${ctaSection()}
 function servicesIndexPage() {
   const cards = SERVICES.map((s) => `
   <a class="svc" href="/${s.slug}/">
-    <div class="svc-img">${icon(s.icon, 46)}</div>
+    <div class="svc-img${s.image ? ' svc-img-photo' : ''}">${svcImg(s)}</div>
     <div class="svc-body">
       <h3>${s.name}</h3>
       <p>${s.short}</p>
@@ -386,11 +392,16 @@ function servicePages() {
     const body = s.body.map((p) => `<p>${p}</p>`).join('')
     const otherLinks = others.map((o) => `<a href="/${o.slug}/">${o.name}</a>`).join('')
 
+    const photo = s.image
+      ? `<img class="detail-photo" src="${s.image.src}" alt="${s.image.alt}" loading="lazy" width="1000" height="750">`
+      : ''
+
     const content = `
 ${pageHero({ eyebrow: 'Services', title: s.name, lead: s.short, tight: true })}
 <section class="section">
   <div class="wrap detail-grid">
     <div class="detail-body">
+      ${photo}
       ${body}
       <ul class="detail-bullets">${bullets}</ul>
     </div>

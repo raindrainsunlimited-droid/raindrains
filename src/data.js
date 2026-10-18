@@ -38,6 +38,7 @@ export const SERVICES = [
     name: 'French Drain Installation',
     short: 'Standing water and foundation protection — a custom-engineered French drain redirects groundwater safely off your property, permanently.',
     icon: 'drop',
+    image: { src: '/img/french-drain.jpg', alt: 'French drain pipe and gravel trench installed along a home foundation' },
     body: [
       'A soggy lawn, muddy paws, and standing water against your foundation aren’t just frustrating — they’re active threats to your home’s structural integrity. Across the Hampton Roads region and northeastern North Carolina, our unique coastal climate, heavy seasonal downpours, and challenging soil types make proper subsurface water management absolutely critical.',
       'If you have areas of your yard that stay wet for days after a storm, a custom-engineered French drain system is the most reliable, permanent solution to redirect groundwater safely off your property.',
@@ -79,6 +80,7 @@ export const SERVICES = [
     name: 'Residential Drainage Solutions',
     short: 'Catch basins, buried downspout extensions and condensate drainage networks that intercept surface water before it saturates your lawn.',
     icon: 'home',
+    image: { src: '/img/residential-drainage.jpg', alt: 'Rain Drains crew installing a residential drainage system with a mini excavator' },
     body: [
       'When heavy rain hits the Hampton Roads and Northeast North Carolina coastlines, your roof and HVAC systems generate thousands of gallons of water. If that volume isn’t explicitly managed, it collects right next to your foundation, drowns your turf, and turns your yard into an unusable marsh.',
       'While French drains handle underground water tables, surface lawn drainage networks are built to intercept torrents of water before they can saturate your soil. We design and install catch basins, buried downspout extensions, and custom condensate drainage lines to keep your property dry, solid, and safe.',
@@ -137,6 +139,7 @@ export const SERVICES = [
     name: 'Commercial Drainage',
     short: 'Commercial-grade PVC and HDPE stormwater networks for HOA communities, multi-family complexes and commercial properties — one accountable team from site survey to final restoration.',
     icon: 'building',
+    image: { src: '/img/commercial-drainage.jpg', alt: 'Rain Drains technician installing commercial stormwater drainage pipe at a brick commercial building' },
     body: [
       'Managing commercial properties, multi-family complexes, and HOA communities across Hampton Roads requires a fast, reliable, and specialized civil contracting partner. Whether you are dealing with flooded retention pond access roads, failing parking lot catch basins, or unmanaged surface runoff destroying common areas, you don’t need a heavy municipal highway contractor to get the job done right.',
       'We specialize in commercial-grade PVC and HDPE (ADS N-12) stormwater networks, serving as a true one-stop shop for HOA board members, property management firms, and commercial facility managers. From diagnostic site surveys to final surface restoration, we handle every stage of your community’s drainage infrastructure under a single, fully accountable roof.',
@@ -181,6 +184,7 @@ export const SERVICES = [
     name: 'Downspout Extensions',
     short: 'Commercial-grade, smooth-wall underground downspout systems that carry roof runoff hundreds of feet from your foundation — not just a few inches.',
     icon: 'downspout',
+    image: { src: '/img/downspout-extensions.jpg', alt: 'Downspout extended underground into a catch basin to carry roof runoff away from a home' },
     body: [
       'Your roof is the single largest water-collection surface on your entire property. During a typical coastal storm, thousands of gallons of rainwater pour off your shingles in a matter of minutes. If your downspouts simply dump that water right at the base of your foundation or into cheap, flexible plastic tubes, you are actively inviting foundation settlement, crawlspace flooding, and severe yard erosion.',
       'A splash block or standard garden extension only pushes water a few inches away from your walls — allowing it to sink straight down into the loose fill soil around your home. Underground downspout extension networks capture roof water instantly at the gutter line and transport it hundreds of feet away to a safe, legal discharge point.',
@@ -256,6 +260,7 @@ export const SERVICES = [
     name: 'Grading Services',
     short: 'Commercial-grade earth-moving and precision leveling that permanently corrects pitch issues so heavy coastal runoff flows safely away from your property.',
     icon: 'grade',
+    image: { src: '/img/grading-services.jpg', alt: 'Freshly graded and leveled backyard ready for sod, pitched to carry water away from the home' },
     body: [
       'If your lawn has uneven ruts, a bumpy terrain, or slopes that direct rainwater straight toward your home’s foundation, standard landscaping fixes won’t solve the problem. Proper yard grading and precision leveling form the literal foundation of all successful stormwater management.',
       'We provide commercial-grade earth-moving, land leveling, and structural re-grading services designed to permanently correct pitch issues, stabilize your topsoil, and guarantee that heavy coastal runoff flows safely away from your investment.',
@@ -329,6 +334,7 @@ export const SERVICES = [
     name: 'Outdoor Sump Pumps',
     short: 'Commercial-grade outdoor sump pump systems that mechanically lift rising groundwater off flat, low-lying coastal properties where gravity alone can’t drain.',
     icon: 'pump',
+    image: { src: '/img/outdoor-sump-pumps.jpg', alt: 'Outdoor sump pump discharge basin installed beside a home entrance' },
     body: [
       'When dealing with a naturally high water table, flat coastal topography, or a low-lying property that sits lower than the surrounding municipal drainage lines, gravity alone isn’t always enough to protect your yard and foundation. When water has nowhere else to go, a heavy-duty outdoor sump pump system is the ultimate, engineered line of defense.',
       'Unlike standard indoor basement pumps, an outdoor crawlspace or yard sump pump system is designed to intercept massive volumes of rising groundwater and surface sheet-flow, mechanically lifting it and forcing it completely off your property to a safe, legal discharge point.',
@@ -364,6 +370,7 @@ export const SERVICES = [
     name: 'Exterior Waterproofing',
     short: 'Commercial-grade exterior waterproofing — a multi-layer membrane, drainage mat and footing drain system that stops groundwater before it ever reaches your foundation walls.',
     icon: 'shield',
+    image: { src: '/img/exterior-waterproofing.jpg', alt: 'Excavation along a home foundation wall to install an exterior waterproofing and footing drain system' },
     body: [
       'When groundwater saturates the soil surrounding your home, it exerts a relentless physical force known as hydrostatic pressure. This pressure pushes thousands of gallons of water directly against your below-grade foundation walls. If your home relies on simple interior fixes like paints or French drains inside the crawlspace, you are merely managing water after it has already breached your home’s structure.',
       'True structural protection requires exterior waterproofing — the only permanent method that stops water from ever touching your foundation in the first place. We design and install commercial-grade exterior waterproofing systems that intercept groundwater, shield your foundation walls, and route moisture safely away from your structure.',
@@ -409,6 +416,7 @@ export const SERVICES = [
     name: 'Culvert Pipe Installation',
     short: 'Commercial-grade culvert pipe installation and structural re-engineering built to handle heavy coastal runoff and withstand heavy vehicle traffic for decades.',
     icon: 'pipe',
+    image: { src: '/img/culvert-pipe-installation.jpg', alt: 'Newly installed culvert pipe with rip-rap stone at a driveway entrance' },
     body: [
       'A properly installed driveway culvert is the single most critical element of your property’s exterior drainage system. In rural, suburban, and rapidly growing coastal communities, roadside ditches and swales act as the municipal highway for stormwater.',
       'If your driveway crossing has a collapsed, undersized, or improperly pitched pipe, it acts like a dam — backing up thousands of gallons of water, flooding your front yard, eroding your driveway, and potentially creating severe legal and structural liabilities.',
@@ -465,6 +473,7 @@ export const SERVICES = [
     name: 'Gravel Driveways',
     short: 'Commercial-grade gravel driveway construction with multi-layer stone bases, laser-guided slopes and heavy compaction so your driveway stays solid instead of rutting or washing out.',
     icon: 'gravel',
+    image: { src: '/img/gravel-driveways.jpg', alt: 'Finished gravel driveway winding through wooded property' },
     body: [
       'A beautiful, functional gravel driveway is an excellent, cost-effective alternative to concrete or asphalt — but it requires far more than just dumping stone on top of bare dirt. Without proper engineering, a gravel driveway will quickly develop deep ruts, wash away during heavy coastal storms, and turn into a muddy swamp.',
       'We provide commercial-grade gravel driveway construction, structural re-grading, and stone resurfacing services throughout the Hampton Roads and Northeast North Carolina corridors. We build our driveways with correct multi-layer stone bases, precise laser-guided slopes, and heavy compaction so your driveway stays solid, smooth, and clear for decades.',
@@ -500,6 +509,7 @@ export const SERVICES = [
     name: 'Trenching Service',
     short: 'Professional mechanical utility trenching for electrical, water, gas and fiber lines — engineered to municipal depth codes with minimal disruption to your property.',
     icon: 'dig',
+    image: { src: '/img/trenching-service.jpg', alt: 'Utility trench with conduit laid along a backyard, ready for backfill' },
     body: [
       'Whether you are an electrical contractor running heavy commercial conduit, a plumber laying a main water line, or a homeowner extending power to a detached garage, cutting a clean trench requires the right machinery, exact depth calibration, and structural precision.',
       'We provide professional, mechanical utility trenching services engineered to meet strict municipal depth codes while minimizing disruption to the surrounding property. We operate as both a specialized subcontractor for local trades and a direct service provider for residential and agricultural property upgrades throughout Chesapeake, Virginia Beach, Norfolk, Suffolk, Portsmouth, Hampton, and Newport News.',
@@ -543,6 +553,7 @@ export const SERVICES = [
     name: 'Landscape Excavation',
     short: 'Commercial-grade landscape excavation, site clearing and structural dirt work with laser-guided accuracy — built to handle both weight and water.',
     icon: 'excavate',
+    image: { src: '/img/landscape-excavation.jpg', alt: 'Rip-rap stone drainage channel excavated through a wooded landscape' },
     body: [
       'A spectacular outdoor space requires far more than just planting grass and dropping mulch — it requires proper structural earthwork. Before you can build a new outdoor living area, a dirt bike track, a multi-tiered playground, or a patio, you must ensure the underlying ground is cleared, excavated, and structurally prepared to handle both weight and water.',
       'We provide commercial-grade landscape excavation, site clearing, and structural dirt work services throughout Hampton Roads and Northeastern North Carolina. Whether you need an overgrown lot cleared, large-scale earth moved for a recreational property layout, or precision grading for a hardscape project, we bring the right machinery and laser-guided accuracy to get the job done right.',
@@ -595,6 +606,7 @@ export const SERVICES = [
     name: 'Pool Liner Protection',
     short: 'Linerlock subsurface hydrostatic relief systems that intercept rising groundwater before it can float, stretch or tear your vinyl pool liner.',
     icon: 'pool',
+    image: { src: '/img/pool-liner-protection.jpg', alt: 'New drain access cover installed in a stamped concrete pool deck beside a vinyl liner pool' },
     body: [
       'For homeowners with inground vinyl liner pools across the coastal Tidewater and Northeast North Carolina corridors, heavy rain events bring a hidden, expensive threat: floating pool liners.',
       'When massive rainstorms or coastal Nor’easters dump inches of water onto flat, low-lying ground, the water table beneath your yard rises rapidly. This creates intense hydrostatic pressure beneath your pool. If the groundwater pressure outside the pool becomes greater than the weight of the water inside the pool, the water forces its way under the vinyl, causing it to float, stretch, wrinkle, and potentially tear or shift completely out of its track.',
