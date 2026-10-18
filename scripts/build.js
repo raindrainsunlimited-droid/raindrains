@@ -100,6 +100,12 @@ function homePage() {
         <div class="grid-4">${miniGridShort}</div>
         <a class="hero-whatwedo-link" href="/services-1/">View all 14 services →</a>
       </div>
+      <div class="guar hero-guar">
+        <span class="eyebrow" style="background:rgba(255,255,255,.18);color:#fff">Our Promise</span>
+        <h2 style="margin:16px 0 0">100% Satisfaction Guarantee</h2>
+        <p style="margin-top:16px">Craftsmanship and quality are our promise to you in each one of our drainage systems, with a lifetime warranty on select systems.</p>
+        <ul><li>NDS piping rated for a 100-year lifetime</li><li>Permits researched and obtained for you</li><li>Any utility damage repaired at no cost to you</li><li>Care Guide supplied with every installation</li></ul>
+      </div>
     </div>
     <div id="estimate">${quoteForm()}</div>
   </div>
@@ -110,17 +116,6 @@ ${trustbar()}
 <section class="section">
   <div class="wrap">
     <div class="grid-3">${svcCards}</div>
-  </div>
-</section>
-
-<section class="section-tight">
-  <div class="wrap">
-    <div class="guar">
-      <span class="eyebrow" style="background:rgba(255,255,255,.18);color:#fff">Our Promise</span>
-      <h2 style="margin:16px 0 0">100% Satisfaction Guarantee</h2>
-      <p style="margin-top:16px">Craftsmanship and quality are our promise to you in each one of our drainage systems, with a lifetime warranty on select systems.</p>
-      <ul><li>NDS piping rated for a 100-year lifetime</li><li>Permits researched and obtained for you</li><li>Any utility damage repaired at no cost to you</li><li>Care Guide supplied with every installation</li></ul>
-    </div>
   </div>
 </section>
 

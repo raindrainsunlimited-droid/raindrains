@@ -195,6 +195,11 @@ body:has(.lightbox.open){overflow:hidden}
 .guar ul{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 28px;margin-top:24px}
 .guar li{font-weight:700;font-size:14px;position:relative;padding-left:22px}
 .guar li::before{content:"✓";position:absolute;left:0;font-weight:900}
+.hero-guar{margin-top:34px;padding:28px;text-align:left}
+.hero-guar h2{font-size:22px}
+.hero-guar p{margin-left:0;margin-right:0}
+.hero-guar ul{justify-content:flex-start;gap:10px 22px;margin-top:18px}
+.hero-guar li{font-size:13.5px}
 
 /* Reviews */
 .rating-hero{display:flex;align-items:center;gap:14px;margin-top:18px}
