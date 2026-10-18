@@ -593,13 +593,48 @@ export const SERVICES = [
   {
     slug: 'pool-liner-protection-1',
     name: 'Pool Liner Protection',
-    short: 'Protect pool decks, liners and surrounds from hydrostatic pressure and runoff damage.',
+    short: 'Linerlock subsurface hydrostatic relief systems that intercept rising groundwater before it can float, stretch or tear your vinyl pool liner.',
     icon: 'pool',
     body: [
-      'Water pressure building up behind a pool wall or under a liner — hydrostatic pressure — can push, float or tear a liner and crack surrounding concrete. We install drainage systems specifically designed to relieve that pressure and route runoff away from the pool entirely.',
+      'For homeowners with inground vinyl liner pools across the coastal Tidewater and Northeast North Carolina corridors, heavy rain events bring a hidden, expensive threat: floating pool liners.',
+      'When massive rainstorms or coastal Nor’easters dump inches of water onto flat, low-lying ground, the water table beneath your yard rises rapidly. This creates intense hydrostatic pressure beneath your pool. If the groundwater pressure outside the pool becomes greater than the weight of the water inside the pool, the water forces its way under the vinyl, causing it to float, stretch, wrinkle, and potentially tear or shift completely out of its track.',
+      'We design and install advanced, heavy-duty Linerlock pool drainage systems — subsurface hydrostatic relief systems engineered to intercept rising groundwater before it can lift your pool liner, routing it safely away to a mechanical discharge point.',
       'A downspout washing out onto pool concrete is exactly the problem that led Bryson to start Rain Drains in the first place.',
     ],
     bullets: ['Relieves hydrostatic pressure', 'Protects liners & surrounding concrete', 'Routes downspout runoff away from the pool', 'Prevents costly liner failures'],
+    challenges: {
+      heading: 'Why Coastal Pool Liners Float and Fail',
+      intro: 'Vinyl liner pools act exactly like a boat hull buried in the ground. When the earth saturates, it creates an intense upward buoyancy force that targets the weakest structural points:',
+      items: [
+        { title: 'The Saturated Clay Bathtub Effect', text: 'In Chesapeake, Suffolk, and Moyock, heavy clay soils don’t absorb water quickly. Rainwater pools in the loose backfill zone directly around your pool walls, filling up like an underground bathtub and putting instant pressure on the vinyl walls.' },
+        { title: 'The Tidal High Water Table', text: 'In low-lying coastal areas like Virginia Beach, Norfolk, Portsmouth, and Currituck County, the water table naturally rests just a few feet below the surface. During high tides or prolonged downpours, groundwater rises instantly beneath pool floors.' },
+        { title: 'Surface Deck Runoff', text: 'If your pool deck or patio isn’t graded correctly, thousands of gallons of surface sheet-flow water will run straight off the concrete and seep directly down behind the pool coping, trapping water behind the liner.' },
+      ],
+    },
+    process: {
+      heading: 'Anatomy of an Engineered Pool Liner Relief System',
+      intro: 'We don’t rely on basic residential fixes. We build a commercial-grade subterranean protection grid around your pool framework to ensure your liner stays locked flat against the pool walls.',
+      items: [
+        { title: 'Perimeter Excavation and Sump Tank Installation', text: 'We carefully excavate a deep, localized drainage channel around the exterior perimeter of the pool framework, cutting down below the level of the liner support to intercept rising groundwater early.' },
+        { title: 'Non-Woven Geotextile Fabric Lining', text: 'The raw trench is lined with premium, non-woven geotextile filter fabric. This allows groundwater to seep into the system freely while blocking fine sand, silt, and clay particles from clogging the drainage core.' },
+        { title: '#57 Clean Aggregate & Drainage Grate', text: 'We lay a deep bed of washed #57 drainage stone to backfill the sump tank. This subsurface grid constantly draws groundwater down and away from the vinyl walls. We make a surgical cut in the liner support wall and install a drain that sits flush on the back side of your liner.' },
+        { title: 'Heavy-Duty Outdoor Sump Station Tie-In', text: 'Because gravity alone can’t push water uphill in flat coastal terrains, the collection line routes directly into a dedicated outdoor sump pump basin. A continuous-duty cast-iron pump mechanically lifts the water and forces it completely off your property to a storm drainage system, nearby body of water, or a ditch.' },
+      ],
+    },
+    faqHeading: 'Pool Drainage & Hydrostatic Engineering Q&A',
+    faqs: [
+      { q: 'What happens to the pool drainage system if the power goes out during a major storm?', a: 'Severe coastal storms and Nor’easters across the Tidewater region often bring power grid failures. If the electrical grid drops and you do not have a backup power source, the main sump pump will temporarily stop running. Without mechanical extraction, the subsurface water table will rise, the groundwater will exert intense hydrostatic pressure, and the pool liner will float until power returns. To prevent this altogether, we recommend integrating your pumping station directly into an existing whole-home backup generator system. However, if your pump does lose power and the liner floats, there is a reassuring mechanical fail-safe built into our system’s engineering: once power is fully restored, the pump kicks back on and will naturally draw the groundwater table back down around the liner, vacuum-securing the vinyl liner tightly against the pool framework once again.' },
+      { q: 'What is the permanent solution to prevent a pool liner from floating?', a: 'The only permanent, definitive solution to a floating pool liner is to control the groundwater table dynamically around the pool. It is a physical impossibility for a liner to float if the water table beneath the pool deck is kept lower than the pool floor. Our Linerlock Pool Drainage System acts as a permanent, automatic underground defense system. By supporting the pool structure with a deep network of washed #57 stone and a drainage grate in the liner support, groundwater is constantly drawn into a dedicated subsurface highway before it can push against the vinyl. That water is routed directly to a heavy-duty, continuous-duty cast-iron outdoor sump pump station that mechanically lifts and evacuates the water from your property. Once installed, it runs completely on its own, keeping the subterranean hydrostatic pressure on your liner at zero and locking your liner flat for life.' },
+      { q: 'Can a pool drainage system be installed around an existing pool?', a: 'Yes. While it is easiest to install a hydrostatic relief network during new pool construction, we routinely retrofit existing pools that are suffering from chronic liner floating issues. We carefully excavate along the edge of your existing concrete pool deck or softscape to drop in our perimeter collection lines, tying them into a main mechanical pumping station.' },
+    ],
+    areaList: {
+      heading: 'Serving All Swimming Pool Communities Across the Tidewater Areas and Beyond',
+      areas: ['Virginia Beach', 'Chesapeake', 'Suffolk', 'Norfolk', 'Portsmouth', 'Smithfield', 'Carrollton', 'Hampton', 'Yorktown', 'Moyock', 'Currituck County', 'Camden County'],
+    },
+    cta: {
+      heading: 'Don’t let the next heavy coastal downpour ruin your pool',
+      sub: 'Protect your vinyl investment and keep your liner permanently locked in place. Contact us today to schedule an expert on-site pool perimeter drainage audit and water table assessment.',
+    },
   },
   {
     slug: 'hydrojet-cleanout-1',
