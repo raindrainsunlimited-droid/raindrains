@@ -838,7 +838,12 @@ export const AREAS = [
       'We provide commercial-grade, comprehensive drainage infrastructures built specifically for coastal soil mechanics. We build our integrated systems using thick, septic-grade components and industrial stainless steel fasteners so they stay locked, clear, and fully operational for decades.',
     ],
   },
-  { slug: 'camden-county', name: 'Camden County', state: 'NC' },
+  {
+    slug: 'camden-county',
+    name: 'Camden County',
+    state: 'NC',
+    ...regionalStormwaterTemplate('Camden County', ['South Mills', 'Camden', 'Shiloh', 'Surrounding Rural Acreage Tracts']),
+  },
 ]
 
 export const REVIEWS = [
