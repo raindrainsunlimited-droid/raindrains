@@ -1,4 +1,4 @@
-import { SITE, NAV, HOURS, SERVICES, AREAS, SOCIAL } from './data.js'
+import { SITE, NAV, HOURS, SERVICES, AREAS, SOCIAL, CARE_GUIDE_URL } from './data.js'
 import { icon, iconFilled } from './icons.js'
 
 export function socialLinks(size = 18, cls = '') {
@@ -109,6 +109,7 @@ export function footer() {
         <p>Professional drainage design and installation across southeastern Virginia and northeastern North Carolina. Veteran owned and operated.</p>
         <p><a href="tel:${SITE.phoneTel}" style="color:#fff;font-weight:800;font-size:18px;padding:0">${SITE.phone}</a></p>
         <p><a href="mailto:${SITE.email}" style="padding:0">${SITE.email}</a></p>
+        <p><a href="${CARE_GUIDE_URL}" download style="padding:0;display:inline-flex;align-items:center;gap:6px">${icon('document', 15)} Download Care Guide (PDF)</a></p>
         <h4 style="margin:20px 0 12px">Follow Us</h4>
         <div class="social-links lg">${socialLinks(22)}</div>
       </div>

@@ -2,7 +2,7 @@ import { mkdirSync, writeFileSync, rmSync, cpSync, existsSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { SITE, SERVICES, AREAS, REVIEWS, FAQS, PROCESS_STEPS, PAST_PROJECTS } from '../src/data.js'
+import { SITE, SERVICES, AREAS, REVIEWS, FAQS, PROCESS_STEPS, PAST_PROJECTS, CARE_GUIDE_URL } from '../src/data.js'
 import { layout, quoteForm, footer, header, pageScripts, ctaSection, trustbar, pageHero, jsonLd, head } from '../src/partials.js'
 import { icon, iconFilled } from '../src/icons.js'
 
@@ -25,6 +25,23 @@ function svcImg(s) {
   return s.image
     ? `<img src="${s.image.src}" alt="${s.image.alt}" loading="lazy" width="400" height="260">`
     : icon(s.icon, 46)
+}
+
+function careGuideCallout() {
+  return `
+<section class="section">
+  <div class="wrap">
+    <div class="resource-card">
+      <div class="resource-ic">${icon('document', 30)}</div>
+      <div class="resource-body">
+        <h3>Every installation comes with a Care Guide</h3>
+        <p>A free, plain-English guide to keeping your new drainage system working for decades — what to check, what to avoid, and who to call if something ever looks off.</p>
+      </div>
+      <a class="btn btn-primary resource-btn" href="${CARE_GUIDE_URL}" download>Download Care Guide (PDF) →</a>
+    </div>
+  </div>
+</section>
+`
 }
 
 function reviewsSection(heading = 'What our neighbours say') {
@@ -104,7 +121,7 @@ function homePage() {
         <span class="eyebrow" style="background:rgba(255,255,255,.18);color:#fff">Our Promise</span>
         <h2 style="margin:16px 0 0">100% Satisfaction Guarantee</h2>
         <p style="margin-top:16px">Craftsmanship and quality are our promise to you in each one of our drainage systems, with a lifetime warranty on select systems.</p>
-        <ul><li>NDS piping rated for a 100-year lifetime</li><li>Permits researched and obtained for you</li><li>Any utility damage repaired at no cost to you</li><li>Care Guide supplied with every installation</li></ul>
+        <ul><li>NDS piping rated for a 100-year lifetime</li><li>Permits researched and obtained for you</li><li>Any utility damage repaired at no cost to you</li><li><a class="inline-link" href="${CARE_GUIDE_URL}" download>Care Guide</a> supplied with every installation</li></ul>
       </div>
     </div>
     <div id="estimate">${quoteForm()}</div>
@@ -130,6 +147,8 @@ ${trustbar()}
     <div class="steps">${stepsHtml}</div>
   </div>
 </section>
+
+${careGuideCallout()}
 
 ${reviewsSection()}
 
@@ -495,6 +514,9 @@ function main() {
   }
   if (existsSync(join(ROOT, 'src/img'))) {
     cpSync(join(ROOT, 'src/img'), join(DIST, 'img'), { recursive: true })
+  }
+  if (existsSync(join(ROOT, 'src/files'))) {
+    cpSync(join(ROOT, 'src/files'), join(DIST, 'files'), { recursive: true })
   }
   if (existsSync(join(ROOT, 'src/_redirects'))) {
     cpSync(join(ROOT, 'src/_redirects'), join(DIST, '_redirects'))

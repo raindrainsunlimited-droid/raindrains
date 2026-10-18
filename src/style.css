@@ -28,6 +28,7 @@ body{
 }
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
+.inline-link{font-weight:800;text-decoration:underline;text-underline-offset:3px}
 h1,h2,h3,h4{margin:0;font-weight:800;color:var(--navy);letter-spacing:-.01em}
 p{margin:0}
 ul{margin:0;padding:0;list-style:none}
@@ -200,6 +201,18 @@ body:has(.lightbox.open){overflow:hidden}
 .hero-guar p{margin-left:0;margin-right:0}
 .hero-guar ul{justify-content:flex-start;gap:10px 22px;margin-top:18px}
 .hero-guar li{font-size:13.5px}
+
+/* Resource callout */
+.resource-card{display:flex;align-items:center;gap:26px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:34px;box-shadow:var(--shadow)}
+.resource-ic{width:60px;height:60px;border-radius:50%;background:#fff;border:1px solid var(--border);color:var(--blue);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.resource-body{flex:1}
+.resource-body h3{font-size:19px;margin-bottom:6px;color:var(--navy)}
+.resource-body p{color:var(--text-muted);font-size:14.5px;line-height:1.55}
+.resource-btn{flex-shrink:0;white-space:nowrap}
+@media (max-width:640px){
+  .resource-card{flex-direction:column;text-align:center;padding:28px}
+  .resource-btn{width:100%}
+}
 
 /* Reviews */
 .rating-hero{display:flex;align-items:center;gap:14px;margin-top:18px}

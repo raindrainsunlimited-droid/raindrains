@@ -16,6 +16,8 @@ export const SITE = {
   googleReviewsUrl: 'https://share.google/s1ax4TM35ErhaA5Bi',
 }
 
+export const CARE_GUIDE_URL = '/files/care-guide.pdf'
+
 export const SOCIAL = [
   { name: 'Facebook', icon: 'facebook', url: 'https://www.facebook.com/RainDrainsLLC/' },
   { name: 'Instagram', icon: 'instagram', url: 'https://www.instagram.com/raindrainsva' },
@@ -986,7 +988,7 @@ export const FAQS = [
   { q: 'Will my utilities be damaged?', a: 'We always aim to never disturb utilities and have an excellent track record of keeping them safe. On occasion, some utilities can get damaged. Have no fear — our installers are trained to call 811 right away to get the utility repaired or replaced as soon as possible. This will come at no expense to the owner. We cover any damage to utilities and are fully insured.' },
   { q: 'Will my lawn be okay?', a: 'Yes, we can preserve the integrity of your lawn. We use techniques designed to restore the appearance and functionality of your lawn during installation. Be sure to ask about this during your consultation to ensure your lawn meets the criteria.' },
   { q: 'How long will my drainage system last?', a: 'We only use the highest quality materials. Our NDS piping has a rated lifetime of 100 years. It’s likely your drainage system will outlive your home. To ensure you get the longest life and greatest functionality from your system, schedule an annual hydrojet cleanout.' },
-  { q: 'How do I maintain my drainage system?', a: 'Our drainage systems are designed to be inherently low maintenance. However, a little maintenance goes a long way. All installations come with a Care Guide that will instruct you on how to care for your system.' },
+  { q: 'How do I maintain my drainage system?', a: `Our drainage systems are designed to be inherently low maintenance. However, a little maintenance goes a long way. All installations come with a <a class="inline-link" href="${CARE_GUIDE_URL}" download>Care Guide</a> that will instruct you on how to care for your system.` },
 ]
 
 export const HOURS = [
@@ -1003,5 +1005,5 @@ export const PROCESS_STEPS = [
   { n: '01', title: 'Free On-Site Estimate', text: 'We walk the property, find where the water is actually coming from, and talk through the options with you face to face.' },
   { n: '02', title: 'Custom System Design', text: 'We design a system sized for your soil, slope and water volume — then handle any permits the city requires.' },
   { n: '03', title: 'One-Day Installation', text: 'Most residential installations are completed in a single business day, with your lawn restored before we leave.' },
-  { n: '04', title: 'Care Guide & Support', text: 'You get a Care Guide for your system, and a team that answers the phone afterwards.' },
+  { n: '04', title: 'Care Guide & Support', text: `You get a <a class="inline-link" href="${CARE_GUIDE_URL}" download>Care Guide</a> for your system, and a team that answers the phone afterwards.` },
 ]
