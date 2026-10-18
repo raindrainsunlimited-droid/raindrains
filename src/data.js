@@ -684,6 +684,27 @@ export const SERVICES = [
 // Shared "holistic stormwater management" content used across several
 // service-area pages — identical boilerplate per raindrainsva.com except
 // the city name and its local neighborhood/subdivision list.
+
+// The structural-drainage process and regional FAQ are verbatim-identical
+// across every variant of this template seen so far (coastal and urban-core).
+const STORMWATER_PROCESS = {
+  heading: 'High-Performance Structural Drainage Solutions',
+  intro: 'We engineer custom, subsurface networks designed to isolate your foundation and landscape from high groundwater pressures, forcing water completely off your property.',
+  items: [
+    { title: 'Elevation & Flow Evaluation', text: 'We map your property’s exact elevation drops using high-precision digital laser transits. We locate the precise structural low-points where surface water and groundwater converge.' },
+    { title: 'Non-Woven Geotextile Armor Layout', text: 'We excavate deep collection channels or foundation footprints and line the raw earth with heavy-duty non-woven geotextile fabric. This allows groundwater to seep in freely while blocking fine sand and silt from clogging your system.' },
+    { title: 'Septic-Grade PVC & Aggregate Setting', text: 'We install ultra-thick, smooth-wall perforated or solid septic-grade PVC conduits enveloped in clean #57 washed drainage stone. These lines resist extreme subterranean pressures and maximize water velocity.' },
+    { title: 'Outdoor Sump Station Integration', text: 'Because our regional terrain is incredibly flat, we tie our drainage grids directly into heavy-duty outdoor sump pump basins featuring commercial cast-iron pumps to mechanically lift and push water to a legal discharge main.' },
+    { title: 'Precision Grading & Multi-Lift Compaction', text: 'We backfill our trenches or driveways in strategic layers ("lifts"), mechanically packing the earth with vibratory rollers and shaping a subtle center crown or outward slope so surface water sheds immediately.' },
+  ],
+}
+const STORMWATER_FAQ_HEADING = 'Regional Drainage & Engineering Q&A'
+const STORMWATER_FAQS = [
+  { q: 'What does "holistic stormwater management" actually mean for my property?', a: 'It means treating all water as part of a connected ecosystem. For example, capturing your roof runoff through underground downspout lines does no good if your yard grading forces surface water right back against your foundation. Similarly, a French drain meant to lower the groundwater table will quickly fail if it gets overwhelmed by surface mud or has nowhere to discharge. Our holistic approach connects your roof drainage, surface grading, sub-surface French drains, and foundation waterproofing membranes into a single fluid highway that routes all water to its proper termination point without bottlenecks.' },
+  { q: 'What is the permanent solution to prevent a vinyl pool liner from floating during a heavy rain event?', a: 'The only permanent, definitive solution to a floating pool liner is to dynamically control the groundwater table directly around the pool. Vinyl pools act exactly like a hollow boat hull; when intense rainstorms hit our flat coastal developments, the groundwater table rises instantly, creating massive upward pressure. If that pressure exceeds the weight of the water inside your pool, it forces its way underneath, causing your liner to stretch, float, and wrinkle. Our Linerlock Pool Drainage System solves this permanently. We install a deep subsurface aggregate highway around your pool structure to collect rising groundwater before it touches your vinyl, routing it to an automated cast-iron sump station. Even if a storm knocks out your power grid and causes the liner to float temporarily, the moment power returns or your backup generator kicks in, the system draws the water table back down, vacuum-securing the liner tightly against the pool walls again.' },
+  { q: 'Will your heavy excavation equipment destroy my yard, driveway, or landscape?', a: 'Many homeowners dread hiring an excavation contractor because massive dump trucks and standard wheeled backhoes leave deep, destructive ruts across grass and crack established concrete. We protect your property by intentionally operating compact, high-flotation rubber-track machinery (like specialized mini-excavators and stand-on skid steers). These continuous rubber tracks spread the machine’s weight evenly across a large surface area, giving us maximum pushing and lifting power while leaving an exceptionally light footprint that preserves your topsoil and turf.' },
+]
+
 function regionalStormwaterTemplate(cityName, neighborhoods) {
   return {
     heroTitle: `Stormwater Management in ${cityName}`,
@@ -707,23 +728,52 @@ function regionalStormwaterTemplate(cityName, neighborhoods) {
         { title: 'The Clay Transition Zone', text: 'Parts of Southern Chesapeake, Moyock, and Camden hit dense, heavy native clay layers just beneath the topsoil. This clay traps water on the surface, creating an underground "bathtub effect" around foundation blocks, crawlspaces, and concrete pool shells.' },
       ],
     },
-    process: {
-      heading: 'High-Performance Structural Drainage Solutions',
-      intro: 'We engineer custom, subsurface networks designed to isolate your foundation and landscape from high groundwater pressures, forcing water completely off your property.',
+    process: STORMWATER_PROCESS,
+    faqHeading: STORMWATER_FAQ_HEADING,
+    faqs: STORMWATER_FAQS,
+    areaList: {
+      eyebrow: 'Neighborhoods',
+      heading: 'Local Neighborhoods & Subdivisions We Serve',
+      intro: `We provide direct drainage for residential, commercial, and trade-subcontracting services throughout all local zip codes, master-planned developments, and coastal corridors across ${cityName}, including:`,
+      areas: neighborhoods,
+    },
+    cta: {
+      heading: 'Is standing water destroying your yard or foundation?',
+      sub: 'Don’t waste money throwing loose gravel into failing mud holes. Contact us today to schedule a comprehensive on-site laser grade assessment and engineering consultation.',
+    },
+  }
+}
+
+// Variant for dense, historic urban cores (Norfolk, Portsmouth, etc.) rather
+// than low-lying suburban/coastal sprawl — shares the process + FAQ content
+// with regionalStormwaterTemplate but has its own intro, note and challenges.
+function urbanCoreStormwaterTemplate(cityName, neighborhoods) {
+  return {
+    heroTitle: `Stormwater Management in ${cityName}`,
+    short: `Holistic stormwater management engineered for ${cityName}’s dense, historic urban core — tight lot lines, aging storm mains and porous historic foundations.`,
+    body: [
+      `If you own a home, historic property, or commercial facility within the urban core of ${cityName}, your land fights an entirely different water battle than the rural outposts. This zone is defined by historic building footprints, dense lot lines, extensive concrete impervious surfaces, and immediate vulnerability to tidal shifts and aging city stormwater mains.`,
+      'When heavy downpours, seasonal Nor’easters, or high-tide backup events hit these historic urban sectors, the water has nowhere to go. A quick surface trench or a cheap interior fix won’t protect your foundation. True structural protection requires holistic stormwater management — an engineered approach that treats your roof runoff, high-volume hardscape sheet-flow, rising subsurface groundwater, and foundation barriers as a single, fully integrated system.',
+      'We provide commercial-grade, comprehensive drainage infrastructures specifically engineered to navigate tight lot lines, utility crossings, and historic masonry structures. We build our integrated systems using thick, septic-grade components and industrial stainless steel fasteners so they stay locked, clear, and fully operational for decades.',
+    ],
+    bullets: [`Free on-site estimates in ${cityName}`, 'Engineered for tight lots & historic foundations', 'Holistic roof-to-groundwater system design'],
+    note: {
+      heading: 'The Holistic Stormwater Architecture for Urban & Historic Terrains',
+      text: 'An effective water management strategy must control water at every stage of a storm event. In dense urban footprints with high concrete coverage, surface runoff control must prevent immediate pooling while subsurface networks dynamically relieve hydrostatic pressure against older foundation walls.',
+    },
+    challenges: {
+      heading: 'The Reality of the Urban Core: Why Your Property Floods',
+      intro: 'Properties in the Norfolk, Portsmouth, Hampton, and Newport News footprints face rigid environmental and structural factors that demand specialized civil engineering standards:',
       items: [
-        { title: 'Elevation & Flow Evaluation', text: 'We map your property’s exact elevation drops using high-precision digital laser transits. We locate the precise structural low-points where surface water and groundwater converge.' },
-        { title: 'Non-Woven Geotextile Armor Layout', text: 'We excavate deep collection channels or foundation footprints and line the raw earth with heavy-duty non-woven geotextile fabric. This allows groundwater to seep in freely while blocking fine sand and silt from clogging your system.' },
-        { title: 'Septic-Grade PVC & Aggregate Setting', text: 'We install ultra-thick, smooth-wall perforated or solid septic-grade PVC conduits enveloped in clean #57 washed drainage stone. These lines resist extreme subterranean pressures and maximize water velocity.' },
-        { title: 'Outdoor Sump Station Integration', text: 'Because our regional terrain is incredibly flat, we tie our drainage grids directly into heavy-duty outdoor sump pump basins featuring commercial cast-iron pumps to mechanically lift and push water to a legal discharge main.' },
-        { title: 'Precision Grading & Multi-Lift Compaction', text: 'We backfill our trenches or driveways in strategic layers ("lifts"), mechanically packing the earth with vibratory rollers and shaping a subtle center crown or outward slope so surface water sheds immediately.' },
+        { title: 'The Tidal & Storm Sewer Backup', text: 'When a heavy rain event coincides with a high tide or storm surge, the local municipal storm drain pipes fill to maximum capacity with river and bay water. Instead of your yard drainage flowing out into the city system, the city’s water pushes backward into your yard, flooding low points and driveway aprons.' },
+        { title: 'High Percentage of Impervious Surfaces', text: 'Dense urban developments mean roofs, asphalt driveways, concrete patios, and city streets cover a huge percentage of the ground. Rainwater cannot soak into concrete, creating massive volumes of rapid surface sheet-flow that quickly overwhelm standard flowerbeds and grass lines.' },
+        { title: 'Historic Foundations & The "Bathtub Effect"', text: 'Many homes in this zone feature historic brick foundations, crawlspaces, or basements. When rain hits the loose soil directly surrounding your house, it forms an underground "bathtub" of trapped water. Because historic brick and mortar are highly porous, this water pulls straight through your walls, causing structural rot, mold, and continuous dampness.' },
+        { title: 'Tight Lot Lines & Utility Crossings', text: 'Working in the urban core means dealing with very tight spaces between neighboring homes, established root systems, and a complex web of buried gas, water, and electrical lines. Standard excavation methods can easily damage property or disrupt utilities.' },
       ],
     },
-    faqHeading: 'Regional Drainage & Engineering Q&A',
-    faqs: [
-      { q: 'What does "holistic stormwater management" actually mean for my property?', a: 'It means treating all water as part of a connected ecosystem. For example, capturing your roof runoff through underground downspout lines does no good if your yard grading forces surface water right back against your foundation. Similarly, a French drain meant to lower the groundwater table will quickly fail if it gets overwhelmed by surface mud or has nowhere to discharge. Our holistic approach connects your roof drainage, surface grading, sub-surface French drains, and foundation waterproofing membranes into a single fluid highway that routes all water to its proper termination point without bottlenecks.' },
-      { q: 'What is the permanent solution to prevent a vinyl pool liner from floating during a heavy rain event?', a: 'The only permanent, definitive solution to a floating pool liner is to dynamically control the groundwater table directly around the pool. Vinyl pools act exactly like a hollow boat hull; when intense rainstorms hit our flat coastal developments, the groundwater table rises instantly, creating massive upward pressure. If that pressure exceeds the weight of the water inside your pool, it forces its way underneath, causing your liner to stretch, float, and wrinkle. Our Linerlock Pool Drainage System solves this permanently. We install a deep subsurface aggregate highway around your pool structure to collect rising groundwater before it touches your vinyl, routing it to an automated cast-iron sump station. Even if a storm knocks out your power grid and causes the liner to float temporarily, the moment power returns or your backup generator kicks in, the system draws the water table back down, vacuum-securing the liner tightly against the pool walls again.' },
-      { q: 'Will your heavy excavation equipment destroy my yard, driveway, or landscape?', a: 'Many homeowners dread hiring an excavation contractor because massive dump trucks and standard wheeled backhoes leave deep, destructive ruts across grass and crack established concrete. We protect your property by intentionally operating compact, high-flotation rubber-track machinery (like specialized mini-excavators and stand-on skid steers). These continuous rubber tracks spread the machine’s weight evenly across a large surface area, giving us maximum pushing and lifting power while leaving an exceptionally light footprint that preserves your topsoil and turf.' },
-    ],
+    process: STORMWATER_PROCESS,
+    faqHeading: STORMWATER_FAQ_HEADING,
+    faqs: STORMWATER_FAQS,
     areaList: {
       eyebrow: 'Neighborhoods',
       heading: 'Local Neighborhoods & Subdivisions We Serve',
@@ -750,7 +800,12 @@ export const AREAS = [
     state: 'VA',
     ...regionalStormwaterTemplate('Chesapeake', ['Great Bridge', 'Hickory', 'Greenbrier', 'Western Branch', 'Deep Creek', 'South Norfolk', 'Edinburgh Corridor']),
   },
-  { slug: 'norfolk', name: 'Norfolk', state: 'VA' },
+  {
+    slug: 'norfolk',
+    name: 'Norfolk',
+    state: 'VA',
+    ...urbanCoreStormwaterTemplate('Norfolk', ['Larchmont', 'Edgewater', 'Ghent', 'Colonial Place', 'Riverview', 'Ocean View', 'Willoughby Spit', 'Lakewood', 'Algonquin Park']),
+  },
   { slug: 'portsmouth', name: 'Portsmouth', state: 'VA' },
   { slug: 'suffolk', name: 'Suffolk', state: 'VA' },
   { slug: 'hampton', name: 'Hampton', state: 'VA' },
