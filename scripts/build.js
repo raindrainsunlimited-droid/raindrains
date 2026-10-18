@@ -478,11 +478,20 @@ ${ctaSection(a.cta?.heading || `Ready to fix your drainage in ${a.name}?`, a.cta
 
 // ---------- Past Projects ----------
 function pastProjectsPage() {
-  const items = PAST_PROJECTS.map((p) => `<a href="/contact-1/" aria-label="${p.alt}"><img src="${p.src}" alt="${p.alt}" loading="lazy" width="320" height="320"></a>`).join('')
+  const items = PAST_PROJECTS.map((p, i) => {
+    const full = p.src.replace('/gallery/', '/gallery/large/')
+    return `<button type="button" class="gal-item" data-full="${full}" data-alt="${p.alt}" data-index="${i}" aria-label="View full-size: ${p.alt}"><img src="${p.src}" alt="${p.alt}" loading="lazy" width="320" height="320"></button>`
+  }).join('')
   const content = `
-${pageHero({ eyebrow: 'Our Work', title: 'Browse our completed drainage projects', lead: "See how we've helped homeowners and businesses across Hampton Roads solve their water issues." })}
+${pageHero({ eyebrow: 'Our Work', title: 'Browse our completed drainage projects', lead: "See how we've helped homeowners and businesses across Hampton Roads solve their water issues. Click any photo to see it full-size." })}
 <section class="section"><div class="wrap"><div class="gal">${items}</div></div></section>
 ${ctaSection('Want your property to look this good?', 'Free on-site estimate. No obligation.')}
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button type="button" class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+  <button type="button" class="lb-nav lb-prev" id="lbPrev" aria-label="Previous photo">&#8249;</button>
+  <img class="lb-img" id="lbImg" src="" alt="">
+  <button type="button" class="lb-nav lb-next" id="lbNext" aria-label="Next photo">&#8250;</button>
+</div>
 `
   page('past-projects', layout({ title: 'Our Work | Rain Drains Past Projects', description: 'Browse completed French drain, grading and drainage installation projects by Rain Drains across Hampton Roads and northeastern NC.', path: '/past-projects/', content }))
 }
