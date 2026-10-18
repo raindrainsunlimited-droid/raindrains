@@ -12,6 +12,7 @@ export const SITE = {
   license: 'VA Lic. 2705198697',
   rating: 5.0,
   reviewCount: 105,
+  reviewCountDisplay: '100+',
   year: 2026,
   googleReviewsUrl: 'https://share.google/s1ax4TM35ErhaA5Bi',
 }
@@ -46,7 +47,7 @@ export const SERVICES = [
       'A soggy lawn, muddy paws, and standing water against your foundation aren’t just frustrating — they’re active threats to your home’s structural integrity. Across the Hampton Roads region and northeastern North Carolina, our unique coastal climate, heavy seasonal downpours, and challenging soil types make proper subsurface water management absolutely critical.',
       'If you have areas of your yard that stay wet for days after a storm, a custom-engineered French drain system is the most reliable, permanent solution to redirect groundwater safely off your property.',
     ],
-    bullets: ['Custom-sized for your soil and water volume', 'NDS-rated piping, 100-year lifespan', 'Lawn restored after installation'],
+    bullets: ['Custom-sized for your soil and water volume', 'ADS-rated piping, 100-year lifespan', 'Lawn restored after installation'],
     challenges: {
       heading: 'Why Standard Yards Flood in Our Region',
       intro: 'Many homeowners assume their pooling water is just a grading issue, but the subsurface reality in our service areas requires a deeper approach. Traditional French drains fail around here if the contractor doesn’t account for local soil conditions:',
@@ -987,7 +988,7 @@ export const FAQS = [
   { q: 'How long will the installation take?', a: 'A typical drainage system installation consisting of 200 linear feet or less of piping will take about half a day. That timeline can vary greatly based on the complexity and size of the system. However, we expect to complete most residential drainage work in one business day.' },
   { q: 'Will my utilities be damaged?', a: 'We always aim to never disturb utilities and have an excellent track record of keeping them safe. On occasion, some utilities can get damaged. Have no fear — our installers are trained to call 811 right away to get the utility repaired or replaced as soon as possible. This will come at no expense to the owner. We cover any damage to utilities and are fully insured.' },
   { q: 'Will my lawn be okay?', a: 'Yes, we can preserve the integrity of your lawn. We use techniques designed to restore the appearance and functionality of your lawn during installation. Be sure to ask about this during your consultation to ensure your lawn meets the criteria.' },
-  { q: 'How long will my drainage system last?', a: 'We only use the highest quality materials. Our NDS piping has a rated lifetime of 100 years. It’s likely your drainage system will outlive your home. To ensure you get the longest life and greatest functionality from your system, schedule an annual hydrojet cleanout.' },
+  { q: 'How long will my drainage system last?', a: 'We only use the highest quality materials. Our ADS piping has a rated lifetime of 100 years. It’s likely your drainage system will outlive your home. To ensure you get the longest life and greatest functionality from your system, schedule an annual hydrojet cleanout.' },
   { q: 'How do I maintain my drainage system?', a: `Our drainage systems are designed to be inherently low maintenance. However, a little maintenance goes a long way. All installations come with a <a class="inline-link" href="${CARE_GUIDE_URL}" download>Care Guide</a> that will instruct you on how to care for your system.` },
 ]
 

@@ -44,6 +44,28 @@ function careGuideCallout() {
 `
 }
 
+function processSection() {
+  const stepsHtml = PROCESS_STEPS.map((s) => `
+  <div class="step">
+    <div class="n">${s.n}</div>
+    <h3>${s.title}</h3>
+    <p>${s.text}</p>
+  </div>`).join('')
+  return `
+<section class="section bg-navy">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Our Process</span>
+      <h2 style="margin:16px 0 14px">Simple, and done in a day</h2>
+      <p class="lead">Most residential drainage systems are designed, installed and cleaned up inside one business day.</p>
+      <div class="rule"></div>
+    </div>
+    <div class="steps">${stepsHtml}</div>
+  </div>
+</section>
+`
+}
+
 function reviewsSection(heading = 'What our neighbours say') {
   const revHtml = REVIEWS.map((r) => `
   <div class="rev">
@@ -57,7 +79,7 @@ function reviewsSection(heading = 'What our neighbours say') {
     <div class="section-head">
       <span class="eyebrow">Reviews</span>
       <h2 style="margin:16px 0 14px">${heading}</h2>
-      <div class="rating-hero"><span class="big">${SITE.rating}</span><div><div class="stars" style="font-size:20px">★★★★★</div><div style="color:var(--text-muted);font-size:14.5px;font-weight:600">Based on ${SITE.reviewCount} verified reviews</div></div></div>
+      <div class="rating-hero"><span class="big">${SITE.rating}</span><div><div class="stars" style="font-size:20px">★★★★★</div><div style="color:var(--text-muted);font-size:14.5px;font-weight:600">Based on ${SITE.reviewCountDisplay} verified reviews</div></div></div>
       <div class="rule"></div>
     </div>
     <div class="grid-3">${revHtml}</div>
@@ -85,20 +107,13 @@ function homePage() {
     <span>${s.name}</span>
   </a>`).join('')
 
-  const stepsHtml = PROCESS_STEPS.map((s) => `
-  <div class="step">
-    <div class="n">${s.n}</div>
-    <h3>${s.title}</h3>
-    <p>${s.text}</p>
-  </div>`).join('')
-
   const content = `
 <section class="hero">
   <div class="hero-bg"><img src="/img/hero-lawn.jpg" alt="A healthy, well-maintained lawn" fetchpriority="high" width="1920" height="960"></div>
   <div class="hero-overlay"></div>
   <div class="wrap hero-in">
     <div class="hero-copy">
-      <div class="hero-trust"><span class="stars">★★★★★</span><span>${SITE.rating} from ${SITE.reviewCount} reviews · Veteran Owned</span></div>
+      <div class="hero-trust"><span class="stars">★★★★★</span><span>${SITE.rating} from ${SITE.reviewCountDisplay} reviews · Veteran Owned</span></div>
       <h1>Hampton Roads' Premier Drainage Contractor</h1>
       <p>Professional drainage design and installation for residential, commercial and pool properties across southeastern Virginia and northeastern North Carolina.</p>
       <p class="hero-areas">Virginia Beach · Chesapeake · Norfolk · Portsmouth · Suffolk · Hampton &amp; more</p>
@@ -121,7 +136,7 @@ function homePage() {
         <span class="eyebrow" style="background:rgba(255,255,255,.18);color:#fff">Our Promise</span>
         <h2 style="margin:16px 0 0">100% Satisfaction Guarantee</h2>
         <p style="margin-top:16px">Craftsmanship and quality are our promise to you in each one of our drainage systems, with a lifetime warranty on select systems.</p>
-        <ul><li>NDS piping rated for a 100-year lifetime</li><li>Permits researched and obtained for you</li><li>Any utility damage repaired at no cost to you</li><li><a class="inline-link" href="${CARE_GUIDE_URL}" download>Care Guide</a> supplied with every installation</li></ul>
+        <ul><li>ADS piping rated for a 100-year lifetime</li><li>Permits researched and obtained for you</li><li>Any utility damage repaired at no cost to you</li><li><a class="inline-link" href="${CARE_GUIDE_URL}" download>Care Guide</a> supplied with every installation</li></ul>
       </div>
     </div>
     <div id="estimate">${quoteForm()}</div>
@@ -136,18 +151,6 @@ ${trustbar()}
   </div>
 </section>
 
-<section class="section bg-navy">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Our Process</span>
-      <h2 style="margin:16px 0 14px">Simple, and done in a day</h2>
-      <p class="lead">Most residential drainage systems are designed, installed and cleaned up inside one business day.</p>
-      <div class="rule"></div>
-    </div>
-    <div class="steps">${stepsHtml}</div>
-  </div>
-</section>
-
 ${careGuideCallout()}
 
 ${reviewsSection()}
@@ -157,7 +160,7 @@ ${ctaSection()}
   page('', `<!doctype html>
 <html lang="en">
 <head>
-${head({ title: "Rain Drains | Hampton Roads' Premier Drainage Contractor — Chesapeake & Virginia Beach", description: "Professional French drains, yard grading and drainage installation across Chesapeake, Virginia Beach, Norfolk and northeastern NC. Veteran owned. Free estimates. 5.0★ from 105 reviews.", path: '/' })}
+${head({ title: "Rain Drains | Hampton Roads' Premier Drainage Contractor — Chesapeake & Virginia Beach", description: `Professional French drains, yard grading and drainage installation across Chesapeake, Virginia Beach, Norfolk and northeastern NC. Veteran owned. Free estimates. 5.0★ from ${SITE.reviewCountDisplay} reviews.`, path: '/' })}
 ${jsonLd()}
 </head>
 <body>
@@ -179,13 +182,13 @@ ${pageHero({ eyebrow: 'About Us', title: 'A humble company born out of service t
       <p>Rain Drains was born in 2019 from an idea that started as a home improvement project. Bryson noticed one of his neighbour's downspouts was washing out his pool concrete. Eager to save his friend from a concrete disaster, he designed his first downspout system to fix the drainage issue.</p>
       <p>As a Navy Veteran and an Old Dominion University graduate with a degree in Engineering, he has spent over 17 years in the engineering field. He has been certified by NDS as a Professional Drainage Contractor and is a Licensed Landscaping Service Contractor in the state of Virginia.</p>
       <p>At Rain Drains, we pride ourselves on craftsmanship, quality in design, and reliable professional service. We strive to treat all of our customers like our neighbours. We look forward to serving Hampton Roads now and into the future.</p>
-      <p>Every system we design is sized for the specific soil, slope and water volume of your property — not a one-size-fits-all fix. That approach, backed by NDS-rated materials, is why homeowners and businesses across southeastern Virginia and northeastern North Carolina trust us with their drainage.</p>
+      <p>Every system we design is sized for the specific soil, slope and water volume of your property — not a one-size-fits-all fix. That approach, backed by ADS-rated materials, is why homeowners and businesses across southeastern Virginia and northeastern North Carolina trust us with their drainage.</p>
       <ul class="detail-bullets">
         <li>${icon('check', 18)} Navy Veteran owned and operated</li>
         <li>${icon('check', 18)} ODU Engineering graduate, 17+ years in the field</li>
         <li>${icon('check', 18)} NDS Certified Professional Drainage Contractor</li>
         <li>${icon('check', 18)} Licensed Landscaping Service Contractor, Virginia (2705198697)</li>
-        <li>${icon('check', 18)} Fully insured, ${SITE.rating}★ from ${SITE.reviewCount} reviews</li>
+        <li>${icon('check', 18)} Fully insured, ${SITE.rating}★ from ${SITE.reviewCountDisplay} reviews</li>
       </ul>
     </div>
     <aside class="sidebar-card">
@@ -438,6 +441,7 @@ function pastProjectsPage() {
   const content = `
 ${pageHero({ eyebrow: 'Our Work', title: 'Browse our completed drainage projects', lead: "See how we've helped homeowners and businesses across Hampton Roads solve their water issues. Click any photo to see it full-size." })}
 <section class="section"><div class="wrap"><div class="gal">${items}</div></div></section>
+${processSection()}
 ${reviewsSection('What our customers say about the work')}
 ${ctaSection('Want your property to look this good?', 'Free on-site estimate. No obligation.')}
 <div class="lightbox" id="lightbox" aria-hidden="true">
