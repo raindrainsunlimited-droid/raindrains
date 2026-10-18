@@ -890,8 +890,18 @@ export const AREAS = [
     state: 'VA',
     ...urbanCoreStormwaterTemplate('Newport News', ['Hilton Village', 'Denbigh', 'Oyster Point', 'Port Warwick', 'Riverside']),
   },
-  { slug: 'smithfield', name: 'Smithfield', state: 'VA' },
-  { slug: 'carrolton', name: 'Carrollton', state: 'VA' },
+  {
+    slug: 'smithfield',
+    name: 'Smithfield',
+    state: 'VA',
+    ...clayRidgeStormwaterTemplate('Smithfield', ['Historic Downtown', 'Cypress Creek', 'Gatling Pointe', 'Moonefield', 'Pagan River Corridor']),
+  },
+  {
+    slug: 'carrolton',
+    name: 'Carrollton',
+    state: 'VA',
+    ...clayRidgeStormwaterTemplate('Carrollton', ['Eagle Harbor', 'Founders Pointe', 'Nike Park Corridor', 'Marsh Road Acreage Tracts']),
+  },
   {
     slug: 'currituck-county',
     name: 'Currituck County',
