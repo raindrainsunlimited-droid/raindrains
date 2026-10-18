@@ -498,13 +498,45 @@ export const SERVICES = [
   {
     slug: 'trenching-service',
     name: 'Trenching Service',
-    short: 'Clean, precise trenching for drainage, utilities and irrigation lines.',
+    short: 'Professional mechanical utility trenching for electrical, water, gas and fiber lines — engineered to municipal depth codes with minimal disruption to your property.',
     icon: 'dig',
     body: [
-      'We offer standalone trenching for drainage, irrigation and utility lines — dug to depth and spec, with 811 utility locates called in before we ever break ground.',
-      'Backfilled and the surface restored once your lines are in.',
+      'Whether you are an electrical contractor running heavy commercial conduit, a plumber laying a main water line, or a homeowner extending power to a detached garage, cutting a clean trench requires the right machinery, exact depth calibration, and structural precision.',
+      'We provide professional, mechanical utility trenching services engineered to meet strict municipal depth codes while minimizing disruption to the surrounding property. We operate as both a specialized subcontractor for local trades and a direct service provider for residential and agricultural property upgrades throughout Chesapeake, Virginia Beach, Norfolk, Suffolk, Portsmouth, Hampton, and Newport News.',
     ],
     bullets: ['811 utility locates called first', 'Dug to your specified depth & width', 'Backfilled and surface restored', 'For drainage, irrigation & utility lines'],
+    challenges: {
+      eyebrow: 'Utility Types',
+      heading: 'High-Performance Trenching for All Utility Frameworks',
+      intro: 'We cut trenches designed to match the exact structural specs and depth requirements of your specific project:',
+      items: [
+        { title: 'Electrical & Gas Conduits', text: 'Clean, deep runs matching national and local code requirements for secondary electrical feeds, standby generator line ties, and propane or natural gas piping.' },
+        { title: 'Water Lines & Plumbing Mains', text: 'Precise excavation below the local frost line to safeguard main water services, irrigation mainlines, and sub-surface sewer force mains.' },
+        { title: 'Low-Voltage & Fiber Networks', text: 'Micro-trenching lines for high-speed fiber internet, outdoor security systems, landscape lighting grids, and data boundaries.' },
+      ],
+    },
+    features: {
+      eyebrow: 'Soil Conditions',
+      heading: 'Navigating the Challenges of Coastal Subsurface Earth',
+      intro: 'Excavating underground lines in our regional footprint involves navigating highly volatile soil profiles that can collapse or flood if handled improperly:',
+      items: [
+        { title: 'The Flat Clay Matrix', text: 'In Chesapeake, Suffolk, and Moyock, heavy, dense clay resists standard digging and holds massive amounts of moisture. Our heavy-duty track equipment cuts through compacted clay without tearing up vast sections of turf.' },
+        { title: 'High Water Table Infiltration', text: 'In low-lying, historic or coastal areas like Norfolk, Portsmouth, Hampton, and Camden County, hitting water just 12 to 24 inches down is incredibly common. We integrate localized dewatering systems or coordinate fast-lay piping grids to ensure lines are placed cleanly before a trench floods.' },
+      ],
+    },
+    faqHeading: 'Utility Engineering & Subcontracting Q&A',
+    faqs: [
+      { q: 'What is your pricing structure for subcontracting to other trades?', a: 'We offer highly competitive, predictable pricing sheets tailored specifically for electrical, plumbing, and mechanical contractors. By acting as your dedicated trenching subcontractor, we save your crew from hauling heavy excavators to the site or wasting manual labor hours with hand shovels. We show up, cut the line cleanly, and step aside so your technicians can lay pipe or pull wire with zero down-time.' },
+      { q: 'How much damage will a mechanical trencher do to my established lawn?', a: 'We intentionally utilize compact, high-flotation rubber track machinery that distributes vehicle weight evenly across the ground. Unlike massive, heavy dump trucks or standard wheeled backhoes that leave deep, destructive ruts across your grass, our equipment leaves an exceptionally light footprint. The resulting trench is tight, straight, and narrow — meaning far less dirt is displaced and your lawn can heal completely within just a few weeks of backfilling.' },
+    ],
+    areaList: {
+      heading: 'Serving All Trade Networks Across Hampton Roads & NE North Carolina',
+      areas: ['Virginia Beach', 'Chesapeake', 'Suffolk', 'Norfolk', 'Portsmouth', 'Smithfield', 'Carrollton', 'Hampton', 'Yorktown', 'Moyock', 'Currituck County', 'Camden County'],
+    },
+    cta: {
+      heading: 'Need a clean, code-compliant line cut for your next project?',
+      sub: 'Don’t risk utility damage or break your back with a shovel. Contact us today to receive our commercial subcontractor pricing sheet or to schedule an on-site path assessment.',
+    },
   },
   {
     slug: 'landscape-excavation',
