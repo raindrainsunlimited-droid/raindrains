@@ -27,6 +27,28 @@ function svcImg(s) {
     : icon(s.icon, 46)
 }
 
+function reviewsSection(heading = 'What our neighbours say') {
+  const revHtml = REVIEWS.map((r) => `
+  <div class="rev">
+    <div class="stars">★★★★★</div>
+    <p>“${r.text}”</p>
+    <div class="who"><strong>${r.name}</strong><span>${r.when}</span></div>
+  </div>`).join('')
+  return `
+<section class="section bg-surface">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Reviews</span>
+      <h2 style="margin:16px 0 14px">${heading}</h2>
+      <div class="rating-hero"><span class="big">${SITE.rating}</span><div><div class="stars" style="font-size:20px">★★★★★</div><div style="color:var(--text-muted);font-size:14.5px;font-weight:600">Based on ${SITE.reviewCount} verified reviews</div></div></div>
+      <div class="rule"></div>
+    </div>
+    <div class="grid-3">${revHtml}</div>
+  </div>
+</section>
+`
+}
+
 // ---------- Home ----------
 function homePage() {
   const svcCards = [SERVICES[1], SERVICES[2], SERVICES[12]].map((s) => `
@@ -52,13 +74,6 @@ function homePage() {
     <div class="n">${s.n}</div>
     <h3>${s.title}</h3>
     <p>${s.text}</p>
-  </div>`).join('')
-
-  const revHtml = REVIEWS.map((r) => `
-  <div class="rev">
-    <div class="stars">★★★★★</div>
-    <p>“${r.text}”</p>
-    <div class="who"><strong>${r.name}</strong><span>${r.when}</span></div>
   </div>`).join('')
 
   const areasHtml = AREAS.map((a) => `<a class="area" href="/${a.slug}/">${a.name}<em>${a.state}</em></a>`).join('')
@@ -167,17 +182,7 @@ ${trustbar()}
   </div>
 </section>
 
-<section class="section bg-surface">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Reviews</span>
-      <h2 style="margin:16px 0 14px">What our neighbours say</h2>
-      <div class="rating-hero"><span class="big">${SITE.rating}</span><div><div class="stars" style="font-size:20px">★★★★★</div><div style="color:var(--text-muted);font-size:14.5px;font-weight:600">Based on ${SITE.reviewCount} verified reviews</div></div></div>
-      <div class="rule"></div>
-    </div>
-    <div class="grid-3">${revHtml}</div>
-  </div>
-</section>
+${reviewsSection()}
 
 <section class="section">
   <div class="wrap grid-2" style="align-items:start">
@@ -489,6 +494,7 @@ function pastProjectsPage() {
   const content = `
 ${pageHero({ eyebrow: 'Our Work', title: 'Browse our completed drainage projects', lead: "See how we've helped homeowners and businesses across Hampton Roads solve their water issues. Click any photo to see it full-size." })}
 <section class="section"><div class="wrap"><div class="gal">${items}</div></div></section>
+${reviewsSection('What our customers say about the work')}
 ${ctaSection('Want your property to look this good?', 'Free on-site estimate. No obligation.')}
 <div class="lightbox" id="lightbox" aria-hidden="true">
   <button type="button" class="lb-close" id="lbClose" aria-label="Close">&times;</button>
