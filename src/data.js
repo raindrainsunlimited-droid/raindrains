@@ -806,7 +806,12 @@ export const AREAS = [
     state: 'VA',
     ...urbanCoreStormwaterTemplate('Norfolk', ['Larchmont', 'Edgewater', 'Ghent', 'Colonial Place', 'Riverview', 'Ocean View', 'Willoughby Spit', 'Lakewood', 'Algonquin Park']),
   },
-  { slug: 'portsmouth', name: 'Portsmouth', state: 'VA' },
+  {
+    slug: 'portsmouth',
+    name: 'Portsmouth',
+    state: 'VA',
+    ...urbanCoreStormwaterTemplate('Portsmouth', ['Olde Towne', 'Westhaven', 'Churchland', 'Cradock', 'Waterview', 'Park View']),
+  },
   { slug: 'suffolk', name: 'Suffolk', state: 'VA' },
   { slug: 'hampton', name: 'Hampton', state: 'VA' },
   { slug: 'newport-news', name: 'Newport News', state: 'VA' },
