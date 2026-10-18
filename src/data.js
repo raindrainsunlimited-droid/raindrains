@@ -639,13 +639,45 @@ export const SERVICES = [
   {
     slug: 'hydrojet-cleanout-1',
     name: 'Hydrojet Cleanout',
-    short: 'High-pressure jetting to clear roots, silt and debris from existing drainage lines.',
+    short: 'Commercial-grade hydrojetting that blasts away compacted silt, sand and invasive roots to restore clogged drainage lines to 100% capacity.',
     icon: 'jet',
     body: [
-      'Even a well-built drainage system needs the occasional cleanout. Our hydrojet service blasts silt, roots and debris out of existing drain lines with high-pressure water, restoring full flow without digging anything up.',
-      'We recommend an annual hydrojet cleanout to get the longest life and best performance out of your system.',
+      'When a heavy-duty yard drain, French drain, downspout extension, or culvert pipe becomes packed solid with mud, invasive roots, sand, or thick organic debris, a standard plumbing snake or mechanical auger will not solve the problem. A traditional metal cable snake merely punches a temporary hole through the blockage, leaving the surrounding walls caked in silt, which leads to immediate re-clogging during the next heavy storm.',
+      'True restoration requires professional hydrojet drainage system cleanout services. Hydrojetting utilizes commercial-grade, multi-directional high-pressure water streams to blast away compressed sediment, slice cleanly through invasive roots, and completely scrub the interior walls of your underground pipes. We specialize in clearing and flushing out subsurface stormwater grids to restore your property’s drainage infrastructure to 100% capacity.',
     ],
-    bullets: ['Clears roots, silt & debris', 'No digging required', 'Recommended annually', 'Extends the life of your system'],
+    bullets: ['Clears roots, silt & debris', 'No digging required', 'Recommended every 2–3 years', 'Extends the life of your system'],
+    challenges: {
+      heading: 'Why Coastal Drainage Systems Get Blocked Up',
+      intro: 'Subsurface exterior drains manage massive volumes of debris-laden runoff, making them uniquely susceptible to specific types of structural blockages over time:',
+      items: [
+        { title: 'The Silt & Clay Pack', text: 'In communities like Chesapeake and Suffolk, stormwater carries fine clay particles into underground lines. Over time, this clay settles to the bottom of horizontal pipes, baking into a dense, rock-hard mud pack that standard water pressure from a garden hose can never move.' },
+        { title: 'The Sandy Coastal Infiltration', text: 'In sandy soil corridors like Virginia Beach and Currituck County, high-volume downpours force fine sand through micro-fissures or unsealed pipe joints. The sand settles inside the lines, acting like heavy cement that chokes off water velocity.' },
+        { title: 'Tree Root Intrusions', text: 'In historic or heavily wooded residential zones like Norfolk, Portsmouth, Hampton, and Yorktown, tree and landscape roots naturally seek out moisture. They break through pipe joins, forming massive, sponge-like root balls inside downspout lines and French drains that trap debris and cause immediate yard flooding.' },
+      ],
+    },
+    process: {
+      heading: 'The Hydrojetting Process: How We Scour the Lines',
+      items: [
+        { title: 'Cleanout Locator & Entry Setup', text: 'We locate your system’s existing inline cleanout ports or strategically access the network from discharge points like catch basins, culverts, or pop-up emitters to establish a clear run into the main lines.' },
+        { title: 'Calibrating Multi-Directional Jets', text: 'We select a specialized jetting nozzle tailored to your specific blockage — such as a forward-penetrating nozzle to split dense mud walls, or a spinning root-cutter head to slice away invasive fibers.' },
+        { title: 'High-Pressure Hydro-Scouring', text: 'The hydrojet hose is mechanically fed up into the line. While traveling, rear-facing water jets propel the nozzle forward with incredible velocity while simultaneously blasting dirt, sand, and roots backward out of the pipe.' },
+        { title: 'System Flush & Mass Evacuation', text: 'We pulse high-pressure streams repeatedly through the entire network, liquefying decades of built-up sediment and completely evacuating it out of the line until the pipe’s smooth-interior is pristine.' },
+      ],
+    },
+    faqHeading: 'High-Pressure Drainage Cleanout Q&A',
+    faqs: [
+      { q: 'Will hydrojetting destroy my underground plastic or PVC drainage pipes?', a: 'Not when executed by an experienced professional. We meticulously tune our jetting rigs to match the exact material profile of your underground lines. For heavy-duty, smooth-wall rigid PVC or corrugated pipes we can apply high-velocity pressures safely to sweep out stubborn sediment. If your property relies on fragile, thin-walled corrugated piping, traditional high-pressure jetting can easily rip through the seams; in those cases, we adapt our system to a low-pressure, high-volume hydraulic flush to safely clear the line without causing structural collapse.' },
+      { q: 'Will you be able to replace or repair components if lines need to be repaired?', a: 'If our jetting process reveals that a pipe has completely collapsed due to tree roots or heavy vehicle compaction, we perform localized excavations to cut out the failure zone. When we rebuild these sections or add brand-new inline access ports, we never use cheap residential plastics. This ensures your newly cleared lines stay perfectly aligned and fully operational for decades.' },
+      { q: 'How often should my property’s drainage system be jet-cleaned?', a: 'For properties with high tree canopy coverage (common in areas like Smithfield, Carrollton, or Camden County), or low-lying sites facing heavy sand runoff near Moyock and Virginia Beach, we recommend a preventative hydrojet maintenance flush every 2 to 3 years. Keeping your underground lines scoured clear prevents sudden, catastrophic backups during major seasonal storms, hurricanes, or coastal Nor’easters when your drainage system needs to perform at 100% capacity.' },
+    ],
+    areaList: {
+      heading: 'Proudly Servicing All Local Coastal & Suburban Trade Corridors',
+      areas: ['Virginia Beach', 'Chesapeake', 'Suffolk', 'Norfolk', 'Portsmouth', 'Smithfield', 'Carrollton', 'Hampton', 'Yorktown', 'Moyock', 'Currituck County', 'Camden County'],
+    },
+    cta: {
+      heading: 'Are your yard drains backed up and bubbling over?',
+      sub: 'Don’t let packed mud and invasive roots ruin your property’s drainage infrastructure. Contact us today to schedule an expert on-site hydrojet cleanout evaluation.',
+    },
   },
 ]
 
