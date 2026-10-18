@@ -463,13 +463,37 @@ export const SERVICES = [
   {
     slug: 'gravel-driveways',
     name: 'Gravel Driveways',
-    short: 'Properly graded and drained gravel driveways that hold up to Hampton Roads weather.',
+    short: 'Commercial-grade gravel driveway construction with multi-layer stone bases, laser-guided slopes and heavy compaction so your driveway stays solid instead of rutting or washing out.',
     icon: 'gravel',
     body: [
-      'A gravel driveway is only as good as the drainage underneath it. We grade, base and install gravel driveways so water sheds off the surface instead of turning it into ruts and mud.',
-      'Great as a standalone project or paired with drainage work already underway on your property.',
+      'A beautiful, functional gravel driveway is an excellent, cost-effective alternative to concrete or asphalt — but it requires far more than just dumping stone on top of bare dirt. Without proper engineering, a gravel driveway will quickly develop deep ruts, wash away during heavy coastal storms, and turn into a muddy swamp.',
+      'We provide commercial-grade gravel driveway construction, structural re-grading, and stone resurfacing services throughout the Hampton Roads and Northeast North Carolina corridors. We build our driveways with correct multi-layer stone bases, precise laser-guided slopes, and heavy compaction so your driveway stays solid, smooth, and clear for decades.',
     ],
     bullets: ['Proper base & grading', 'Sheds water instead of pooling', 'Durable in Hampton Roads clay soil', 'Can be paired with drainage work'],
+    challenges: {
+      heading: 'Why Driveways Wash Out and Rut in Our Region',
+      intro: 'Building a gravel driveway that lasts requires a deep understanding of local coastal soil dynamics and heavy storm runoff:',
+      items: [
+        { title: 'The Mud-Mix Effect', text: 'In Chesapeake, Suffolk, and parts of Moyock, the native soil is packed with heavy clay. If you dump clean gravel directly onto clay dirt without a stabilizing barrier, heavy vehicles will push the gravel down into the mud while forcing the clay up, swallowing your investment within a few seasons.' },
+        { title: 'Sheet-Wash Erosion', text: 'Flat, low-lying coastal lots in Virginia Beach, Norfolk, and Currituck County face massive volumes of sheet-flow rainwater during heavy downpours or seasonal Nor’easters. If a driveway lacks a crowned center or an adjacent bar-ditch, rushing surface water will strip the top stone right off your property.' },
+        { title: 'Pothole Proliferation', text: 'Potholes aren’t just surface holes — they are structural failures caused by standing water soaking into the sub-base dirt. Once the underlying soil softens, every passing vehicle wheel pumps the sub-grade out, creating a permanent structural pocket that will collapse again and again if it isn’t properly excavated and re-engineered.' },
+      ],
+    },
+    faqHeading: 'Gravel Driveway Engineering & Performance Q&A',
+    faqs: [
+      { q: 'Why is my gravel driveway disappearing into the ground?', a: 'This is a classic issue known as the "mud-mix effect," and it’s incredibly common in heavy clay soils like those in Chesapeake and Suffolk, as well as sandy coastal areas. When heavy vehicles drive over gravel placed directly on top of bare dirt, it pushes the rocks down into the soil while forcing mud up to the surface. We prevent this permanently by installing a commercial-grade woven geotextile stabilization fabric between the raw earth and your first layer of stone. It acts as a permanent barrier that keeps your gravel on top where it belongs.' },
+      { q: 'Why do potholes keep coming back in the exact same spots?', a: 'A pothole isn’t just a surface issue; it’s a structural failure underneath. When rainwater pools on a flat driveway, it saturates the sub-base dirt. Every time a car tire drives over that wet spot, it pumps the underlying dirt out from under the gravel, creating a hollow pocket. If you just throw loose gravel into a pothole, it will cave right back in within a few weeks. The right way to fix it is to mechanically excavate the failure zone, establish a proper downward pitch, compact the sub-grade, and re-sculpt a center crown so water sheds off the driveway instantly instead of pooling.' },
+      { q: 'What is the best type of stone for a long-lasting driveway?', a: 'For a high-traffic, durable driveway, Crusher Run is usually the best option for the wear surface. It contains a calculated mix of crushed stone and fine stone dust. When moistened and compacted with a commercial heavy roller, the dust locks the stones together, packing down into a dense, solid crust that minimizes shifting and naturally deters weed growth. If you prefer a clean-stone look without the dust, sharp-edged angular aggregates like #57 Stone or crushed granite are excellent because they lock together tightly when compressed, unlike smooth, rounded river rocks which tend to shift and roll under heavy tires.' },
+    ],
+    areaList: {
+      heading: 'Serving the Entire Tidewater & Northeast NC Footprint',
+      intro: 'Whether you need a brand-new driveway cut through a rural parcel in Smithfield, Yorktown, or Camden County, or a long suburban lane re-graded and resurfaced in Chesapeake, Suffolk, or Virginia Beach, we bring the right machinery and technical expertise to handle the job correctly.',
+      areas: ['Virginia Beach', 'Chesapeake', 'Suffolk', 'Norfolk', 'Portsmouth', 'Smithfield', 'Carrollton', 'Hampton', 'Yorktown', 'Moyock', 'Currituck County', 'Camden County'],
+    },
+    cta: {
+      heading: 'Is your driveway turning into a muddy marsh?',
+      sub: 'Don’t waste money throwing loose stone into failing potholes. Contact us today to schedule a comprehensive on-site laser grade assessment and driveway consultation.',
+    },
   },
   {
     slug: 'trenching-service',
