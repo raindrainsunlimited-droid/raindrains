@@ -65,7 +65,8 @@ function homePage() {
 
   const content = `
 <section class="hero">
-  <div class="hero-bg" style="background:radial-gradient(circle at 30% 20%,rgba(255,255,255,.08),transparent 60%)"></div>
+  <div class="hero-bg"><img src="/img/hero-lawn.jpg" alt="A healthy, well-maintained lawn" fetchpriority="high" width="1920" height="960"></div>
+  <div class="hero-overlay"></div>
   <div class="wrap hero-in">
     <div class="hero-copy">
       <div class="hero-trust"><span class="stars">★★★★★</span><span>${SITE.rating} from ${SITE.reviewCount} reviews · Veteran Owned</span></div>
