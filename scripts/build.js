@@ -447,12 +447,16 @@ function areaPages() {
       : `<li>${icon('check', 18)} Free on-site estimates in ${a.name}</li>
         <li>${icon('check', 18)} Local permits researched & obtained</li>
         <li>${icon('check', 18)} Most residential jobs done in one day</li>`
+    const photo = a.image
+      ? `<img class="detail-photo" src="${a.image.src}" alt="${a.image.alt}" loading="lazy" width="1100" height="825">`
+      : ''
 
     const content = `
 ${pageHero({ eyebrow: 'Service Area', title: a.heroTitle || `Drainage Contractor in ${a.name}, ${a.state}`, lead: a.short || `Free on-site drainage estimates for homes and businesses in ${a.name}.`, tight: true })}
 <section class="section">
   <div class="wrap detail-grid">
     <div class="detail-body">
+      ${photo}
       ${body}
       <ul class="detail-bullets">${bullets}</ul>
     </div>
