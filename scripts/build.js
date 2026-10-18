@@ -67,8 +67,6 @@ function homePage() {
     <span>${s.name}</span>
   </a>`).join('')
 
-  const galItems = Array.from({ length: 16 }).map((_, i) => `<a href="/past-projects/" aria-label="Completed Rain Drains drainage project">${icon('drop', 26)}</a>`).join('')
-
   const stepsHtml = PROCESS_STEPS.map((s) => `
   <div class="step">
     <div class="n">${s.n}</div>
@@ -126,26 +124,6 @@ ${trustbar()}
   </div>
 </section>
 
-<section class="section bg-surface">
-  <div class="wrap grid-2">
-    <div>
-      <span class="eyebrow">About Rain Drains</span>
-      <h2 style="margin:16px 0 18px;color:var(--navy)">A humble company born out of service to others.</h2>
-      <p class="lead" style="margin-bottom:16px">Rain Drains was born in 2019 from an idea that started as a home improvement project. Bryson noticed one of his neighbour's downspouts was washing out his pool concrete. Eager to save his friend from a concrete disaster, he designed his first downspout system to fix the drainage issue.</p>
-      <p class="lead" style="margin-bottom:16px">As a Navy Veteran and an Old Dominion University graduate with a degree in Engineering, he has spent over 17 years in the engineering field. He has been certified by NDS as a Professional Drainage Contractor and is a Licensed Landscaping Service Contractor in the state of Virginia.</p>
-      <p class="lead" style="margin-bottom:16px">At Rain Drains, we pride ourselves on craftsmanship, quality in design, and reliable professional service. We strive to treat all of our customers like our neighbours. We look forward to serving Hampton Roads now and into the future.</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px">
-        <a class="btn btn-primary" href="/about-us-1/">More About Us</a>
-        <a class="btn btn-ghost" style="color:var(--navy);border-color:var(--border)" href="/past-projects/">See Our Work</a>
-      </div>
-    </div>
-    <div>
-      <img src="/img/bryson.jpg" alt="Bryson Goforth, owner of Rain Drains" loading="lazy" style="border-radius:var(--r-lg);box-shadow:var(--shadow-lg);width:100%;height:auto;display:block" width="768" height="1364">
-      <p style="text-align:center;margin-top:14px;font-size:14px;color:var(--text-muted);font-weight:600">Bryson Goforth — Owner · Navy Veteran · ODU Engineering</p>
-    </div>
-  </div>
-</section>
-
 <section class="section bg-navy">
   <div class="wrap">
     <div class="section-head">
@@ -155,19 +133,6 @@ ${trustbar()}
       <div class="rule"></div>
     </div>
     <div class="steps">${stepsHtml}</div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Our Work</span>
-      <h2 style="margin:16px 0 14px">Browse our completed drainage projects</h2>
-      <p class="lead">See how we've helped homeowners and businesses across Hampton Roads solve their water issues.</p>
-      <div class="rule"></div>
-    </div>
-    <div class="gal">${galItems}</div>
-    <div style="text-align:center;margin-top:34px"><a class="btn btn-primary btn-lg" href="/past-projects/">View All Projects</a></div>
   </div>
 </section>
 
