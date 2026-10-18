@@ -75,14 +75,6 @@ function homePage() {
     <p>${s.text}</p>
   </div>`).join('')
 
-  const areasHtml = AREAS.map((a) => `<a class="area" href="/${a.slug}/">${a.name}<em>${a.state}</em></a>`).join('')
-
-  const faqHtml = FAQS.map((f, i) => `
-  <div class="faq-item${i === 0 ? ' open' : ''}">
-    <button class="faq-q" type="button">${f.q}<span class="ic">+</span></button>
-    <div class="faq-a"><p>${f.a}</p></div>
-  </div>`).join('')
-
   const content = `
 <section class="hero">
   <div class="hero-bg"><img src="/img/hero-lawn.jpg" alt="A healthy, well-maintained lawn" fetchpriority="high" width="1920" height="960"></div>
@@ -145,30 +137,6 @@ ${trustbar()}
 </section>
 
 ${reviewsSection()}
-
-<section class="section">
-  <div class="wrap grid-2" style="align-items:start">
-    <div>
-      <span class="eyebrow">Service Areas</span>
-      <h2 style="margin:16px 0 14px;color:var(--navy)">Serving southeastern Virginia &amp; northeastern North Carolina</h2>
-      <p class="lead" style="margin-bottom:26px">Local crews, local permits, local knowledge of the clay and the water table.</p>
-      <div class="areas">${areasHtml}</div>
-    </div>
-    <div style="border-radius:var(--r-lg);border:1px solid var(--border);box-shadow:var(--shadow);aspect-ratio:4/3;background:linear-gradient(135deg,var(--surface),#dbe7f5);display:flex;align-items:center;justify-content:center;color:var(--blue)">${icon('pin', 72)}</div>
-  </div>
-</section>
-
-<section class="section bg-surface">
-  <div class="wrap" style="max-width:880px">
-    <div class="section-head" style="text-align:center;margin:0 auto 40px">
-      <span class="eyebrow">FAQ</span>
-      <h2 style="margin:16px 0 14px">Frequently asked questions</h2>
-      <p class="lead">Got questions about your drainage? We've got answers.</p>
-    </div>
-    ${faqHtml}
-    <p style="text-align:center;margin-top:26px;color:var(--text-muted)">Didn't find what you're looking for? <a href="/contact-1/" style="color:var(--blue);font-weight:800">Get in touch</a></p>
-  </div>
-</section>
 
 ${ctaSection()}
 `
