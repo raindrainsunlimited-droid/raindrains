@@ -13,6 +13,7 @@ export const SITE = {
   rating: 5.0,
   reviewCount: 105,
   year: 2026,
+  googleReviewsUrl: 'https://share.google/s1ax4TM35ErhaA5Bi',
 }
 
 export const SOCIAL = [

@@ -44,6 +44,7 @@ function reviewsSection(heading = 'What our neighbours say') {
       <div class="rule"></div>
     </div>
     <div class="grid-3">${revHtml}</div>
+    <div style="text-align:center;margin-top:34px"><a class="btn btn-ghost" style="color:var(--navy);border-color:var(--border)" href="${SITE.googleReviewsUrl}" target="_blank" rel="noopener">Read all our reviews on Google →</a></div>
   </div>
 </section>
 `
