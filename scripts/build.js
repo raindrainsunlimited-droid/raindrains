@@ -67,6 +67,12 @@ function homePage() {
     <span>${s.name}</span>
   </a>`).join('')
 
+  const miniGridShort = SERVICES.slice(0, 6).map((s) => `
+  <a class="mini" href="/${s.slug}/">
+    <div class="mini-ic">${icon(s.icon, 22)}</div>
+    <span>${s.name}</span>
+  </a>`).join('')
+
   const stepsHtml = PROCESS_STEPS.map((s) => `
   <div class="step">
     <div class="n">${s.n}</div>
@@ -100,6 +106,13 @@ function homePage() {
         <div>${iconFilled('shield')} ${SITE.license}</div>
         <div>${iconFilled('check')} NDS Certified</div>
       </div>
+      <div class="hero-whatwedo">
+        <span class="eyebrow eyebrow-onnavy">What We Do</span>
+        <h2>Drainage solutions for every kind of property</h2>
+        <p class="lead">Excess water isn't just a nuisance — it's a threat to the integrity, safety and value of your property. We design and install systems that move it somewhere else, permanently.</p>
+        <div class="grid-4">${miniGridShort}</div>
+        <a class="hero-whatwedo-link" href="/services-1/">View all 14 services →</a>
+      </div>
     </div>
     <div id="estimate">${quoteForm()}</div>
   </div>
@@ -109,13 +122,7 @@ ${trustbar()}
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">What We Do</span>
-      <h2>Drainage solutions for every kind of property</h2>
-      <p class="lead">Excess water isn't just a nuisance — it's a threat to the integrity, safety and value of your property. We design and install systems that move it somewhere else, permanently.</p>
-      <p style="color:var(--text-muted);font-size:15.5px;line-height:1.7;margin-top:14px">Rain Drains provides professional residential and commercial drainage solutions across southeastern Virginia and northeastern North Carolina. From standing water in lawns to flooded parking lots, overflowing gutter systems, and water intrusion into basements or crawl spaces, unmanaged drainage can lead to costly foundation damage, structural issues, landscape erosion, and liability risks. Our team designs and installs effective systems — including French drains, buried downspout extensions, catch basins, and full property-wide drainage systems — to protect homes, apartment complexes, office buildings, and retail spaces. Whether you're a homeowner or a property manager, Rain Drains delivers customized, code-compliant drainage solutions that keep your property dry, functional, and protected year-round.</p>
-      <div class="rule"></div>
-    </div>
+    <p style="color:var(--text-muted);font-size:15.5px;line-height:1.7;max-width:900px;margin:0 auto 36px;text-align:center">Rain Drains provides professional residential and commercial drainage solutions across southeastern Virginia and northeastern North Carolina. From standing water in lawns to flooded parking lots, overflowing gutter systems, and water intrusion into basements or crawl spaces, unmanaged drainage can lead to costly foundation damage, structural issues, landscape erosion, and liability risks. Our team designs and installs effective systems — including French drains, buried downspout extensions, catch basins, and full property-wide drainage systems — to protect homes, apartment complexes, office buildings, and retail spaces. Whether you're a homeowner or a property manager, Rain Drains delivers customized, code-compliant drainage solutions that keep your property dry, functional, and protected year-round.</p>
     <div class="grid-3">${svcCards}</div>
     <div style="margin-top:44px">
       <h3 style="color:var(--navy);margin-bottom:18px;font-size:19px">Every service we offer</h3>
