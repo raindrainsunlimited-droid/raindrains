@@ -813,7 +813,12 @@ export const AREAS = [
     ...urbanCoreStormwaterTemplate('Portsmouth', ['Olde Towne', 'Westhaven', 'Churchland', 'Cradock', 'Waterview', 'Park View']),
   },
   { slug: 'suffolk', name: 'Suffolk', state: 'VA' },
-  { slug: 'hampton', name: 'Hampton', state: 'VA' },
+  {
+    slug: 'hampton',
+    name: 'Hampton',
+    state: 'VA',
+    ...urbanCoreStormwaterTemplate('Hampton', ['Downtown', 'Phoebus', 'Buckroe Beach', 'Fox Hill', 'Grandview', 'Wythe']),
+  },
   { slug: 'newport-news', name: 'Newport News', state: 'VA' },
   { slug: 'smithfield', name: 'Smithfield', state: 'VA' },
   { slug: 'carrolton', name: 'Carrollton', state: 'VA' },
