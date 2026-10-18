@@ -744,6 +744,66 @@ function regionalStormwaterTemplate(cityName, neighborhoods) {
   }
 }
 
+// Variant for the heavy-clay, rolling-terrain "western ridge" cluster
+// (Suffolk, Smithfield, Carrollton — referred to as "Zone 3" in the source
+// copy). Shares some process steps with the other variants but not all, and
+// carries 5 FAQs instead of 3, so it isn't built from the shared constants.
+function clayRidgeStormwaterTemplate(cityName, neighborhoods) {
+  return {
+    heroTitle: `Stormwater Management in ${cityName}`,
+    short: `Holistic stormwater management engineered for ${cityName}’s heavy clay soil and rolling terrain — from roof runoff to rising groundwater to pool protection.`,
+    body: [
+      `If you own a home, commercial property, or rural acreage along the western ridge in ${cityName}, your land battles a completely different geological adversary than the rest of the Tidewater region. This corridor is defined by expansive agricultural tracts, rapid residential growth on massive lots, rolling hills, and some of the most stubborn, unforgiving soil profiles in Virginia.`,
+      'When heavy downpours, seasonal storms, or sudden shifts in the river basins hit this area, water doesn’t simply soak away. Patchwork drainage fixes like a quick surface trench or a standalone interior pump will fail. True property protection requires holistic stormwater management — an engineered approach that treats your roof runoff, heavy surface sheet-flow, deep subterranean groundwater, and critical foundation defenses as a single, unified system.',
+      'We provide commercial-grade, comprehensive drainage infrastructures engineered specifically to conquer heavy clay and sloping terrain. We build our integrated systems using thick, septic-grade components and industrial stainless steel fasteners so they stay locked, clear, and fully operational for decades.',
+    ],
+    bullets: [`Free on-site estimates in ${cityName}`, 'Engineered for heavy clay soil & rolling terrain', 'Holistic roof-to-groundwater system design'],
+    note: {
+      heading: 'Stormwater Architecture for Clay & Slopes',
+      text: 'An effective water management strategy must control water at every stage of a storm event. In heavy clay and rolling terrain, surface control structures must intercept massive sheet-flow volumes, working in perfect harmony with subsurface networks to relieve hydrostatic pressure before it attacks your foundation or crawlspace.',
+    },
+    challenges: {
+      heading: 'The Reality of Western Ridge Earth: Why Your Property Floods',
+      intro: 'Properties in the Suffolk, Smithfield, and Carrollton footprints face rigid environmental factors that demand heavy-duty civil engineering standards:',
+      items: [
+        { title: 'The Unyielding Clay Barrier', text: 'The native soil here is packed solid with heavy, compact clay. Clay acts like a dense rubber sheet underneath your lawn — it absorbs water incredibly slowly and swells up when wet. Rainwater traps right on the surface, turning your yard into a muddy swamp that can take days or weeks to dry out.' },
+        { title: 'The Clay Bathtub Effect', text: 'When your home was built, the earth directly surrounding your foundation block or crawlspace was dug up and loosened. Rainwater naturally rushes into this loose soil first, creating an underground "bathtub" of trapped water held tightly against your masonry by the surrounding unbroken native clay.' },
+        { title: 'Rolling Hills & Ravine Washouts', text: 'Unlike the flat coastal strips, our western ridge features significant elevation drops and rolling terrain. During a heavy storm, thousands of gallons of water speed down these hillsides as "sheet-flow," quickly eroding topsoil, washing out driveways, and collecting in massive pools at the low points of your yard.' },
+        { title: 'Under-Engineered Driveway Culverts', text: 'Many rural and acreage properties rely on shallow roadside ditches or undersized driveway culverts. When upstream water hits a bottlenecked culvert, it backs up immediately, flooding your driveway base and compromising the structural integrity of your entry point.' },
+      ],
+    },
+    process: {
+      heading: 'High-Performance Structural Drainage Solutions',
+      intro: 'We engineer custom, subsurface networks designed to isolate your foundation and landscape from intense clay water pressures, forcing water completely off your property.',
+      items: [
+        { title: 'Elevation & Flow Evaluation', text: 'We map your property’s exact elevation drops using high-precision digital laser transits. We locate the precise structural low-points where surface water and groundwater converge.' },
+        { title: 'Woven Geotextile Armor Layout', text: 'We excavate deep collection channels or foundation footprints and line the raw earth with heavy-duty woven geotextile fabric. This prevents fine, heavy clay mud from squeezing up and clogging your clean drainage stone over time.' },
+        { title: 'Septic-Grade PVC & Aggregate Setting', text: 'We install ultra-thick, smooth-wall perforated or solid septic-grade PVC conduits enveloped in clean #57 washed drainage stone. These lines resist extreme subterranean pressures and maximize water velocity.' },
+        { title: 'Outdoor Sump Station Integration', text: 'Where gravity discharge isn’t naturally accessible due to terrain pockets, we tie our drainage grids directly into heavy-duty outdoor sump pump basins featuring commercial cast-iron pumps to mechanically lift and push water to a legal discharge main.' },
+        { title: 'Precision Grading & Multi-Lift Compaction', text: 'We backfill our trenches or driveways in strategic layers ("lifts"), mechanically packing the earth with vibratory rollers and shaping a subtle center crown or outward slope so surface water sheds immediately.' },
+      ],
+    },
+    faqHeading: 'Regional Drainage & Engineering Q&A',
+    faqs: [
+      { q: 'What does "holistic stormwater management" actually mean for my property?', a: 'It means treating all water as part of a connected ecosystem. For example, capturing your roof runoff through underground downspout lines does no good if your yard grading forces surface water right back against your foundation. Similarly, a French drain meant to lower the groundwater table will quickly fail if it gets overwhelmed by surface mud or has nowhere to discharge. Our holistic approach connects your roof drainage, surface grading, sub-surface French drains, and foundation waterproofing membranes into a single fluid highway that routes all water to its proper termination point without bottlenecks.' },
+      { q: 'Why are standard retail French drains failing in our local clay soils?', a: 'Most standard residential French drain installations fail within 2 to 4 years because they are built using thin, black corrugated plastic pipe wrapped in cheap fabric socks. In heavy clay regions like Suffolk, Smithfield, and Carrollton, the fine clay silt rapidly plugs up those tiny fabric pores, while the weight of the water-logged clay crushes the flexible pipe. Many landscapers and other DIY "drainage professionals" will overprescribe the use of French drains, which are destined to fail within a short time period. When we install French drains, we ensure the materials and design are built to withstand heavy rains over an extended life, maximizing the effectiveness and the cost of investment.' },
+      { q: 'How do you permanently prevent a vinyl pool liner from floating during a heavy rain event?', a: 'The only permanent, definitive solution to a floating pool liner is to dynamically control the groundwater table directly around the pool. Vinyl pools act exactly like a hollow boat hull; when intense rainstorms hit our developments, the groundwater table rises instantly, creating massive upward pressure. If that pressure exceeds the weight of the water inside your pool, it forces its way underneath, causing your liner to stretch, float, and wrinkle. Our Linerlock Pool Drainage System solves this permanently. We install a deep subsurface aggregate highway around your pool structure to collect rising groundwater before it touches your vinyl, routing it to an automated cast-iron sump station. Even if a storm knocks out your power grid and causes the liner to float temporarily, the moment power returns or your backup generator kicks in, the system draws the water table back down, vacuum-securing the liner tightly against the pool walls again.' },
+      { q: 'What is the difference between builder-grade "dampproofing" and exterior waterproofing?', a: 'If your home has a damp crawlspace or a leaking foundation, it’s likely because the builder applied a cheap, thin coat of asphalt tar ("dampproofing") to meet bare-minimum building codes. Over time, that material dries out, becomes brittle, and cracks. True exterior waterproofing requires excavating down to your concrete footings, sealing cracks with hydraulic cement, applying a thick elastomeric liquid rubber membrane that flexes with your home, and hanging dimpled poly-matrix drainage boards. We secure these heavy-duty armor systems in place using industrial-grade stainless steel fasteners that will never rust or rot in our highly acidic subterranean soils.' },
+      { q: 'Will your heavy excavation equipment destroy my yard, driveway, or landscape?', a: 'Many homeowners dread hiring an excavation contractor because massive dump trucks and standard wheeled backhoes leave deep, destructive ruts across grass and crack established concrete. We protect your property by intentionally operating compact, high-flotation rubber-track machinery (like specialized mini-excavators and skid steers). These continuous rubber tracks spread the machine’s weight evenly across a large surface area, giving us maximum pushing and lifting power while leaving an exceptionally light footprint that preserves your topsoil and turf.' },
+    ],
+    areaList: {
+      eyebrow: 'Neighborhoods',
+      heading: 'Local Neighborhoods & Subdivisions We Serve',
+      intro: 'We provide direct residential, commercial, and trade-subcontracting services throughout all local zip codes, master-planned developments, and rural roads across Zone 3:',
+      areas: neighborhoods,
+    },
+    cta: {
+      heading: 'Is standing water destroying your yard, cracking your foundation, or washing out your driveway?',
+      sub: 'Don’t waste money throwing loose gravel into failing mud holes. Contact us today to schedule a comprehensive on-site laser grade assessment and engineering consultation.',
+    },
+  }
+}
+
 // Variant for dense, historic urban cores (Norfolk, Portsmouth, etc.) rather
 // than low-lying suburban/coastal sprawl — shares the process + FAQ content
 // with regionalStormwaterTemplate but has its own intro, note and challenges.
@@ -812,7 +872,12 @@ export const AREAS = [
     state: 'VA',
     ...urbanCoreStormwaterTemplate('Portsmouth', ['Olde Towne', 'Westhaven', 'Churchland', 'Cradock', 'Waterview', 'Park View']),
   },
-  { slug: 'suffolk', name: 'Suffolk', state: 'VA' },
+  {
+    slug: 'suffolk',
+    name: 'Suffolk',
+    state: 'VA',
+    ...clayRidgeStormwaterTemplate('Suffolk', ['Downtown', 'North Suffolk', 'Harbour View', 'Driver', 'Whaleyville', 'Chuckatuck', 'Holland']),
+  },
   {
     slug: 'hampton',
     name: 'Hampton',
