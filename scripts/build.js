@@ -151,8 +151,6 @@ ${trustbar()}
   </div>
 </section>
 
-${careGuideCallout()}
-
 ${reviewsSection()}
 
 ${ctaSection()}
@@ -442,6 +440,7 @@ function pastProjectsPage() {
 ${pageHero({ eyebrow: 'Our Work', title: 'Browse our completed drainage projects', lead: "See how we've helped homeowners and businesses across Hampton Roads solve their water issues. Click any photo to see it full-size." })}
 <section class="section"><div class="wrap"><div class="gal">${items}</div></div></section>
 ${processSection()}
+${careGuideCallout()}
 ${reviewsSection('What our customers say about the work')}
 ${ctaSection('Want your property to look this good?', 'Free on-site estimate. No obligation.')}
 <div class="lightbox" id="lightbox" aria-hidden="true">
