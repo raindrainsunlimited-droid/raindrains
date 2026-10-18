@@ -819,7 +819,12 @@ export const AREAS = [
     state: 'VA',
     ...urbanCoreStormwaterTemplate('Hampton', ['Downtown', 'Phoebus', 'Buckroe Beach', 'Fox Hill', 'Grandview', 'Wythe']),
   },
-  { slug: 'newport-news', name: 'Newport News', state: 'VA' },
+  {
+    slug: 'newport-news',
+    name: 'Newport News',
+    state: 'VA',
+    ...urbanCoreStormwaterTemplate('Newport News', ['Hilton Village', 'Denbigh', 'Oyster Point', 'Port Warwick', 'Riverside']),
+  },
   { slug: 'smithfield', name: 'Smithfield', state: 'VA' },
   { slug: 'carrolton', name: 'Carrollton', state: 'VA' },
   { slug: 'currituck-county', name: 'Currituck County', state: 'NC' },
