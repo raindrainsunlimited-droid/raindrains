@@ -541,13 +541,54 @@ export const SERVICES = [
   {
     slug: 'landscape-excavation',
     name: 'Landscape Excavation',
-    short: 'Site prep and excavation for landscaping, patios and drainage projects.',
+    short: 'Commercial-grade landscape excavation, site clearing and structural dirt work with laser-guided accuracy — built to handle both weight and water.',
     icon: 'excavate',
     body: [
-      'From clearing and grubbing to cutting in a new patio base or retaining wall footing, we handle the excavation work that has to happen before the landscaping or drainage project can begin.',
-      'Right-sized equipment for residential lots, so we get the work done without tearing up the rest of your yard.',
+      'A spectacular outdoor space requires far more than just planting grass and dropping mulch — it requires proper structural earthwork. Before you can build a new outdoor living area, a dirt bike track, a multi-tiered playground, or a patio, you must ensure the underlying ground is cleared, excavated, and structurally prepared to handle both weight and water.',
+      'We provide commercial-grade landscape excavation, site clearing, and structural dirt work services throughout Hampton Roads and Northeastern North Carolina. Whether you need an overgrown lot cleared, large-scale earth moved for a recreational property layout, or precision grading for a hardscape project, we bring the right machinery and laser-guided accuracy to get the job done right.',
     ],
     bullets: ['Site prep for landscaping & hardscape', 'Right-sized equipment for residential lots', 'Debris & spoil hauled off', 'Paired with grading & drainage'],
+    challenges: {
+      eyebrow: 'Earthwork Services',
+      heading: 'Precision Earthwork for Any Outdoor Project',
+      intro: 'We execute heavy-duty site prep tailored to the exact engineering requirements of your landscape or recreational designs:',
+      items: [
+        { title: 'Hardscape & Patio Prep', text: 'Excavating uniform, packed sub-grades for stone patios, retaining walls, outdoor kitchens, and heavy concrete slabs.' },
+        { title: 'Property Clearing & Brush Removal', text: 'Stripping thick brush, removing invasive root balls, and cleaning up undergrowth to reclaim raw acreage.' },
+        { title: 'Recreational Dirt Work', text: 'Bulk earth-moving, banking, and contouring for custom property developments, including private dirt bike trails, custom jumps, and specialized play structures.' },
+        { title: 'Pond & Water Feature Excavation', text: 'Shaping precision slopes, depths, and containment contours for structural retention ponds or decorative water features.' },
+      ],
+    },
+    features: {
+      eyebrow: 'Soil Conditions',
+      heading: 'Navigating the Subsurface Earth Challenges of the Coast',
+      intro: 'Moving earth in our regional footprint requires specialized machinery and techniques to handle highly unstable, contrasting soil profiles without destroying your property:',
+      items: [
+        { title: 'The Clay Mass Clump', text: 'In Chesapeake, Suffolk, and Moyock, native clay soils turn into a sticky, dense mess when wet and rock-hard when dry. We utilize heavy-duty track machinery and specialized tooth buckets to slice through compacted clay layers effortlessly.' },
+        { title: 'Shifting Sand Formations', text: 'In Virginia Beach, Currituck County, and coastal zones, digging too deeply into sandy soil can cause immediate slope cave-ins. We shape and tier our excavations at correct safety angles to guarantee a stable, non-shifting foundation.' },
+        { title: 'Sub-Surface Water Infiltration', text: 'In low-lying or historic water-front sectors like Norfolk, Portsmouth, and Hampton, hitting the water table can happen just a foot below the turf. We combine our excavations with temporary dewatering arrays to ensure base materials are set and packed on completely dry ground.' },
+      ],
+    },
+    process: {
+      heading: 'Our Commercial-Grade Site Preparation Blueprint',
+      intro: 'We don’t just clear a path and hope for the best. Every excavation project follows a strict structural engineering sequence to guarantee long-term property stability.',
+      items: [
+        { title: '811 Line Tracking & Path Cleared', text: 'Before any tracks spin, we fully map out the excavation footprint and verify all underground utility locations via 811 to guarantee a 100% safe, damage-free project site.' },
+        { title: 'Vegetation Stripping & Tree Removal', text: 'Using heavy-duty land clearing equipment, we strip away unwanted trees, dense brush, and thick surface organic matter, hauling away debris to reveal the clean sub-grade dirt beneath.' },
+        { title: 'Laser-Guided Excavation & Contouring', text: 'We cut down high hummocks and fill in deep ruts, tracking the entire process with digital laser transits to ensure the new terrain matches the exact design elevations and drainage pitches required.' },
+        { title: 'Septic-Grade Aggregate Base & Compaction', text: 'When preparing for heavy structures, we lay down a foundational bed of washed, septic-grade aggregate or clean fill dirt. We then hit the material with commercial-grade vibratory compactor rollers to eliminate any hollow pockets.' },
+        { title: 'Topsoil Dress & Fine-Level Smoothing', text: 'We place a uniform layer of premium, clean topsoil across the final layout, executing a razor-sharp fine grade so the ground is fully primed for immediate sod laying, hydroseeding, or structural landscape building.' },
+      ],
+    },
+    faqHeading: 'Landscape Excavation & Property Engineering Q&A',
+    faqs: [
+      { q: 'What is the advantage of using track machinery over standard wheeled backhoes?', a: 'Standard heavy backhoes with large rubber tires exert an immense amount of localized downward pressure, meaning they will leave massive, ankle-twisting ruts across your grass and permanently compact your lawn’s topsoil structure. We intentionally use high-flotation, compact rubber-track skid steers and excavators. These tracks distribute the machine’s weight across a massive surface area, giving us incredible pushing power while leaving a remarkably light footprint that preserves the health of your remaining lawn.' },
+      { q: 'How do you make sure an excavated site doesn’t wash away during the next heavy storm?', a: 'Erosion control is a critical part of our excavation planning. When we alter slopes or clear heavy vegetation in areas like Smithfield, Yorktown, or Camden County, we don’t leave raw earth exposed to the elements. We immediately track-pack the soil to create micro-ridges that slow down sheet-flow rainwater, construct strategic swales to divert runoff, and can implement temporary straw wattles, silt fencing, or immediate hydroseeding to secure the newly sculpted earth before the next heavy coastal storm rolls through.' },
+    ],
+    cta: {
+      heading: 'Ready to reshape your property?',
+      sub: 'Don’t risk structural shifting or land erosion by cutting corners on the dirt work. Contact us today to schedule a comprehensive on-site laser grade assessment and landscape excavation consultation.',
+    },
   },
   {
     slug: 'pool-liner-protection-1',
