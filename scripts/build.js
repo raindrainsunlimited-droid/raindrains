@@ -51,7 +51,7 @@ function reviewsSection(heading = 'What our neighbours say') {
 
 // ---------- Home ----------
 function homePage() {
-  const svcCards = [SERVICES[1], SERVICES[2], SERVICES[12]].map((s) => `
+  const svcCards = [SERVICES[1], SERVICES[2], SERVICES[5]].map((s) => `
   <a class="svc" href="/${s.slug}/">
     <div class="svc-img${s.image ? ' svc-img-photo' : ''}">${svcImg(s)}</div>
     <div class="svc-body">
