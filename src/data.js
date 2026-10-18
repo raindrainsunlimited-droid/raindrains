@@ -681,19 +681,19 @@ export const SERVICES = [
   },
 ]
 
-export const AREAS = [
-  {
-    slug: 'virginia-beach',
-    name: 'Virginia Beach',
-    state: 'VA',
-    heroTitle: 'Stormwater Management in Virginia Beach',
-    short: 'Holistic stormwater management engineered for Virginia Beach’s sandy, high-water-table coastal terrain — from roof runoff to rising groundwater to pool protection.',
+// Shared "holistic stormwater management" content used across several
+// service-area pages — identical boilerplate per raindrainsva.com except
+// the city name and its local neighborhood/subdivision list.
+function regionalStormwaterTemplate(cityName, neighborhoods) {
+  return {
+    heroTitle: `Stormwater Management in ${cityName}`,
+    short: `Holistic stormwater management engineered for ${cityName}’s sandy, high-water-table coastal terrain — from roof runoff to rising groundwater to pool protection.`,
     body: [
-      'If you own a home, commercial property, or coastal estate in Virginia Beach your property sits directly on the front lines of the Atlantic water table. This region is defined by highly dynamic sandy topsoils, expansive master-planned developments, and immediate proximity to sea-level sounds, bays, and rivers.',
+      `If you own a home, commercial property, or coastal estate in ${cityName} your property sits directly on the front lines of the Atlantic water table. This region is defined by highly dynamic sandy topsoils, expansive master-planned developments, and immediate proximity to sea-level sounds, bays, and rivers.`,
       'When heavy downpours, seasonal hurricanes, or coastal Nor’easters hit this corridor, water doesn’t just pool on top of the grass — it saturates the earth from the bottom up. True property protection requires holistic stormwater management — an engineered approach that treats your roof runoff, surface sheet-flow, rising subsurface groundwater, and pool structures as a single, unified ecosystem.',
       'We provide commercial-grade, comprehensive drainage infrastructures built specifically for coastal soil mechanics. We build our integrated systems using thick, septic-grade components and industrial stainless steel fasteners so they stay locked, clear, and fully operational for decades.',
     ],
-    bullets: ['Free on-site estimates in Virginia Beach', 'Engineered for sandy, high-water-table coastal soil', 'Holistic roof-to-groundwater system design'],
+    bullets: [`Free on-site estimates in ${cityName}`, 'Engineered for sandy, high-water-table coastal soil', 'Holistic roof-to-groundwater system design'],
     note: {
       heading: 'The Holistic Stormwater Architecture for Coastal Terrains',
       text: 'An effective water management strategy must control water at every stage of a storm event. In sandy, high-water-table zones, surface water routes must work in perfect harmony with subsurface water evacuation to prevent localized flooding and structural failures.',
@@ -727,15 +727,29 @@ export const AREAS = [
     areaList: {
       eyebrow: 'Neighborhoods',
       heading: 'Local Neighborhoods & Subdivisions We Serve',
-      intro: 'We provide direct drainage for residential, commercial, and trade-subcontracting services throughout all local zip codes, master-planned developments, and coastal corridors across Virginia Beach, including:',
-      areas: ['Little Neck', 'North End', 'Sandbridge', 'Oceanfront', 'Pungo', 'Thoroughgood', 'Red Mill', 'Landstown', 'Kempsville'],
+      intro: `We provide direct drainage for residential, commercial, and trade-subcontracting services throughout all local zip codes, master-planned developments, and coastal corridors across ${cityName}, including:`,
+      areas: neighborhoods,
     },
     cta: {
       heading: 'Is standing water destroying your yard or foundation?',
       sub: 'Don’t waste money throwing loose gravel into failing mud holes. Contact us today to schedule a comprehensive on-site laser grade assessment and engineering consultation.',
     },
+  }
+}
+
+export const AREAS = [
+  {
+    slug: 'virginia-beach',
+    name: 'Virginia Beach',
+    state: 'VA',
+    ...regionalStormwaterTemplate('Virginia Beach', ['Little Neck', 'North End', 'Sandbridge', 'Oceanfront', 'Pungo', 'Thoroughgood', 'Red Mill', 'Landstown', 'Kempsville']),
   },
-  { slug: 'chesapeake', name: 'Chesapeake', state: 'VA' },
+  {
+    slug: 'chesapeake',
+    name: 'Chesapeake',
+    state: 'VA',
+    ...regionalStormwaterTemplate('Chesapeake', ['Great Bridge', 'Hickory', 'Greenbrier', 'Western Branch', 'Deep Creek', 'South Norfolk', 'Edinburgh Corridor']),
+  },
   { slug: 'norfolk', name: 'Norfolk', state: 'VA' },
   { slug: 'portsmouth', name: 'Portsmouth', state: 'VA' },
   { slug: 'suffolk', name: 'Suffolk', state: 'VA' },
