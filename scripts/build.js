@@ -3,7 +3,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import { SITE, SERVICES, AREAS, REVIEWS, FAQS, PROCESS_STEPS, PAST_PROJECTS, CARE_GUIDE_URL } from '../src/data.js'
-import { layout, quoteForm, footer, header, pageScripts, ctaSection, trustbar, pageHero, jsonLd, head } from '../src/partials.js'
+import { layout, quoteForm, footer, header, pageScripts, ctaSection, pageHero, jsonLd, head } from '../src/partials.js'
 import { icon, iconFilled } from '../src/icons.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -142,8 +142,6 @@ function homePage() {
     <div id="estimate">${quoteForm()}</div>
   </div>
 </section>
-
-${trustbar()}
 
 <section class="section">
   <div class="wrap">

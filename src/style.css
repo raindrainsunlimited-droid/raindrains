@@ -120,11 +120,6 @@ body:has(.drawer.open){overflow:hidden}
 .form-card h3{font-size:21px;margin-bottom:6px}
 .form-card .sub{color:var(--text-muted);font-size:14.5px;margin-bottom:20px}
 
-/* Trust bar */
-.trustbar{background:var(--surface);border-bottom:1px solid var(--border);padding:16px 0}
-.trustbar ul{display:flex;justify-content:center;flex-wrap:wrap;gap:28px}
-.trustbar li{font-size:13px;font-weight:800;color:var(--navy);letter-spacing:.02em;text-transform:uppercase;opacity:.75}
-
 /* Sections */
 .section{padding:76px 0}
 .section-tight{padding:44px 0}
