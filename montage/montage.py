@@ -2,7 +2,6 @@ import glob, subprocess, sys, math
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 REPO = '/home/user/raindrains/src/img'
-OUT = sys.argv[1]
 W, H, FPS = 1080, 1920, 30
 PHOTO_S, XFADE_S, CARD_S = 1.9, 0.4, 2.6
 NAVY, GREEN, WHITE = (11, 43, 74), (24, 150, 83), (255, 255, 255)
@@ -73,42 +72,44 @@ WM = logo.resize((300, int(logo.height * 300 / logo.width)), Image.LANCZOS)
 BAND = Image.new('RGBA', (W, 240), (0, 0, 0, 0))
 for y in range(240):
     ImageDraw.Draw(BAND).line([(0, y), (W, y)], fill=(0, 0, 0, int(140 * (1 - y / 240))))
-photos = sorted(glob.glob(f'{REPO}/gallery/large/*.jpg'))
+if __name__ == '__main__':
+    OUT = sys.argv[1]
+    photos = sorted(glob.glob(f'{REPO}/gallery/large/*.jpg'))
 
-ff = subprocess.Popen(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24',
-                       '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-', '-c:v', 'libx264', '-preset', 'medium',
-                       '-crf', '20', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', OUT], stdin=subprocess.PIPE)
+    ff = subprocess.Popen(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24',
+                           '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-', '-c:v', 'libx264', '-preset', 'medium',
+                           '-crf', '20', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', OUT], stdin=subprocess.PIPE)
 
-# Each segment is a function t(0..1)->frame plus a duration; adjacent segments crossfade
-segs = [(lambda t: intro, CARD_S)]
-for i, p in enumerate(photos):
-    big = prep(p)
-    segs.append(((lambda big, i: (lambda t: watermark(kb(big, t, i))))(big, i), PHOTO_S))
-segs.append((lambda t: outro, CARD_S + 1))
+    # Each segment is a function t(0..1)->frame plus a duration; adjacent segments crossfade
+    segs = [(lambda t: intro, CARD_S)]
+    for i, p in enumerate(photos):
+        big = prep(p)
+        segs.append(((lambda big, i: (lambda t: watermark(kb(big, t, i))))(big, i), PHOTO_S))
+    segs.append((lambda t: outro, CARD_S + 1))
 
-nx = int(XFADE_S * FPS)
-def frames(seg):
-    fn, dur = seg
-    n = int(dur * FPS)
-    return n, (lambda k: fn(k / (n - 1)))
+    nx = int(XFADE_S * FPS)
+    def frames(seg):
+        fn, dur = seg
+        n = int(dur * FPS)
+        return n, (lambda k: fn(k / (n - 1)))
 
-prev_tail = None
-for si, seg in enumerate(segs):
-    n, get = frames(seg)
-    start = 0
-    if prev_tail is not None:
-        for k in range(nx):
-            a = ease((k + 1) / (nx + 1))
-            ff.stdin.write(Image.blend(prev_tail(k), get(k), a).tobytes())
-        start = nx
-    end = n - nx if si < len(segs) - 1 else n
-    for k in range(start, end):
-        f = get(k)
-        if si == 0 and k < 12:
-            f = Image.blend(Image.new('RGB', (W, H), NAVY), f, k / 12)
-        ff.stdin.write(f.tobytes())
-    prev_tail = (lambda get, off: (lambda k: get(off + k)))(get, n - nx)
-    print(f'segment {si + 1}/{len(segs)}', flush=True)
+    prev_tail = None
+    for si, seg in enumerate(segs):
+        n, get = frames(seg)
+        start = 0
+        if prev_tail is not None:
+            for k in range(nx):
+                a = ease((k + 1) / (nx + 1))
+                ff.stdin.write(Image.blend(prev_tail(k), get(k), a).tobytes())
+            start = nx
+        end = n - nx if si < len(segs) - 1 else n
+        for k in range(start, end):
+            f = get(k)
+            if si == 0 and k < 12:
+                f = Image.blend(Image.new('RGB', (W, H), NAVY), f, k / 12)
+            ff.stdin.write(f.tobytes())
+        prev_tail = (lambda get, off: (lambda k: get(off + k)))(get, n - nx)
+        print(f'segment {si + 1}/{len(segs)}', flush=True)
 
-ff.stdin.close()
-ff.wait()
+    ff.stdin.close()
+    ff.wait()
