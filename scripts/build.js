@@ -109,7 +109,12 @@ function homePage() {
 
   const content = `
 <section class="hero">
-  <div class="hero-bg"><img src="/img/hero-lawn.jpg" alt="A healthy, well-maintained lawn" fetchpriority="high" width="1920" height="960"></div>
+  <div class="hero-bg">
+    <img class="hero-slide" src="/img/hero-lawn.jpg" alt="A healthy, well-maintained lawn" fetchpriority="high" width="1920" height="960">
+    <img class="hero-slide" src="/img/hero/residential3.jpg" alt="Rain Drains crew installing residential drainage in a front yard" loading="eager" width="1920" height="960">
+    <img class="hero-slide" src="/img/hero/grading.jpg" alt="Freshly graded residential lot ready for sod" loading="eager" width="1920" height="960">
+    <img class="hero-slide" src="/img/hero/gravel.jpg" alt="Compacted gravel pad installation beside a home" loading="eager" width="1920" height="960">
+  </div>
   <div class="hero-overlay"></div>
   <div class="wrap hero-in">
     <div class="hero-copy">
