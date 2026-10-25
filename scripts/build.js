@@ -140,8 +140,8 @@ function homePage() {
       <div class="guar hero-guar">
         <span class="eyebrow" style="background:rgba(255,255,255,.18);color:#fff">Our Promise</span>
         <h2 style="margin:16px 0 0">100% Satisfaction Guarantee</h2>
-        <p style="margin-top:16px">Craftsmanship and quality are our promise to you — backed by a lifetime warranty on every drainage system we install.</p>
-        <ul><li>Lifetime warranty on all drainage systems</li><li>ADS piping rated for a 100-year lifetime</li><li>Permits researched and obtained for you</li><li>Any utility damage repaired at no cost to you</li><li><a class="inline-link" href="${CARE_GUIDE_URL}" download>Care Guide</a> supplied with every installation</li></ul>
+        <p style="margin-top:16px">Craftsmanship and quality are our promise to you — backed by a lifetime warranty on select installed pipe systems.</p>
+        <ul><li>Lifetime warranty on select installed pipe systems</li><li>ADS piping rated for a 100-year lifetime</li><li>Permits researched and obtained for you</li><li>Any utility damage repaired at no cost to you</li><li><a class="inline-link" href="${CARE_GUIDE_URL}" download>Care Guide</a> supplied with every installation</li></ul>
       </div>
     </div>
     <div id="estimate">${quoteForm()}</div>
