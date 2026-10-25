@@ -495,6 +495,24 @@ ${pageHero({ eyebrow: 'Contact', title: 'Get Your Free Estimate', lead: 'Tell us
   page('contact-1', layout({ title: 'Contact Us | Rain Drains — Free Drainage Estimate', description: 'Request your free on-site drainage estimate from Rain Drains. Call 757-807-0080 or send us your details — we usually reply the same day.', path: '/contact-1/', content }))
 }
 
+// ---------- Sitemap & robots ----------
+function allPageSlugs() {
+  const staticSlugs = ['', 'about-us-1', 'services-1', 'service-areas', 'past-projects', 'faq', 'contact-1']
+  return [...staticSlugs, ...SERVICES.map((s) => s.slug), ...AREAS.map((a) => a.slug)]
+}
+
+function sitemapXml() {
+  const urls = allPageSlugs().map((slug) => {
+    const path = slug === '' ? '/' : `/${slug}/`
+    return `  <url><loc>${SITE.domain}${path}</loc></url>`
+  }).join('\n')
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`
+}
+
+function robotsTxt() {
+  return `User-agent: *\nAllow: /\n\nSitemap: ${SITE.domain}/sitemap.xml\n`
+}
+
 // ---------- run ----------
 function main() {
   rmSync(DIST, { recursive: true, force: true })
@@ -527,6 +545,8 @@ function main() {
   if (existsSync(join(ROOT, 'src/_redirects'))) {
     cpSync(join(ROOT, 'src/_redirects'), join(DIST, '_redirects'))
   }
+  writeFileSync(join(DIST, 'sitemap.xml'), sitemapXml())
+  writeFileSync(join(DIST, 'robots.txt'), robotsTxt())
 
   console.log('Built site to /public')
 }
