@@ -181,12 +181,12 @@ ${pageHero({ eyebrow: 'About Us', title: 'A humble company born out of service t
   <div class="wrap detail-grid">
     <div class="detail-body">
       <p>Rain Drains was born in 2019 from an idea that started as a home improvement project. Bryson noticed one of his neighbour's downspouts was washing out his pool concrete. Eager to save his friend from a concrete disaster, he designed his first downspout system to fix the drainage issue.</p>
-      <p>As a Navy Veteran and an Old Dominion University graduate with a degree in Engineering, he has spent over 17 years in the engineering field. He has been certified by NDS as a Professional Drainage Contractor and is a Licensed Landscaping Service Contractor in the state of Virginia.</p>
+      <p>As a Navy Veteran and an Old Dominion University graduate with a degree in Engineering, he has spent over 18 years in the engineering field. He has been certified by NDS as a Professional Drainage Contractor and is a Licensed Landscaping Service Contractor in the state of Virginia.</p>
       <p>At Rain Drains, we pride ourselves on craftsmanship, quality in design, and reliable professional service. We strive to treat all of our customers like our neighbours. We look forward to serving Hampton Roads now and into the future.</p>
       <p>Every system we design is sized for the specific soil, slope and water volume of your property — not a one-size-fits-all fix. That approach, backed by ADS-rated materials, is why homeowners and businesses across southeastern Virginia and northeastern North Carolina trust us with their drainage.</p>
       <ul class="detail-bullets">
         <li>${icon('check', 18)} Navy Veteran owned and operated</li>
-        <li>${icon('check', 18)} ODU Engineering graduate, 17+ years in the field</li>
+        <li>${icon('check', 18)} ODU Engineering graduate, 18+ years in the field</li>
         <li>${icon('check', 18)} NDS Certified Professional Drainage Contractor</li>
         <li>${icon('check', 18)} Licensed Landscaping Service Contractor, Virginia (2705198697)</li>
         <li>${icon('check', 18)} Fully insured, ${SITE.rating}★ from ${SITE.reviewCountDisplay} reviews</li>
