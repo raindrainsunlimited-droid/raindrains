@@ -12,8 +12,9 @@ export function logoImg(height = 40, onDark = false) {
   return `<img src="${src}" alt="Rain Drains" width="${width}" height="${height}" style="height:${height}px;width:auto">`
 }
 
-export function head({ title, description, path = '/' }) {
+export function head({ title, description, path = '/', image }) {
   const url = SITE.domain + path
+  const imgUrl = image ? (image.startsWith('http') ? image : SITE.domain + image) : SITE.domain + '/img/hero-lawn.jpg'
   return `<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${title}</title>
@@ -24,28 +25,87 @@ export function head({ title, description, path = '/' }) {
 <meta property="og:type" content="website">
 <meta property="og:url" content="${url}">
 <meta property="og:site_name" content="${SITE.name}">
+<meta property="og:image" content="${imgUrl}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${imgUrl}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">`
 }
 
-export function jsonLd() {
-  const data = {
-    '@context': 'https://schema.org',
+function to24h(t) {
+  const m = t.trim().match(/(\d+):(\d+)\s*(AM|PM)/i)
+  if (!m) return null
+  let h = parseInt(m[1], 10)
+  const min = m[2]
+  const ap = m[3].toUpperCase()
+  if (ap === 'PM' && h !== 12) h += 12
+  if (ap === 'AM' && h === 12) h = 0
+  return `${String(h).padStart(2, '0')}:${min}`
+}
+
+function stripHtml(s) {
+  return s.replace(/<[^>]+>/g, '')
+}
+
+function businessJsonLd() {
+  const openingHoursSpecification = HOURS
+    .map(([day, hours]) => {
+      const [openStr, closeStr] = hours.split('–').map((x) => x && x.trim())
+      const opens = openStr && to24h(openStr)
+      const closes = closeStr && to24h(closeStr)
+      if (!opens || !closes) return null
+      return { '@type': 'OpeningHoursSpecification', dayOfWeek: `https://schema.org/${day}`, opens, closes }
+    })
+    .filter(Boolean)
+  return {
     '@type': 'HomeAndConstructionBusiness',
+    '@id': SITE.domain + '/#business',
     name: SITE.name,
     description: `Professional French drains, yard grading and drainage installation across Chesapeake, Virginia Beach, Norfolk and northeastern NC. Veteran owned. Free estimates. 5.0★ from ${SITE.reviewCountDisplay} reviews.`,
     url: SITE.domain + '/',
     telephone: SITE.phone,
     email: SITE.email,
+    image: SITE.domain + '/img/hero-lawn.jpg',
     address: { '@type': 'PostalAddress', addressLocality: SITE.addressLocality, addressRegion: SITE.addressRegion, postalCode: SITE.postalCode, addressCountry: 'US' },
     aggregateRating: { '@type': 'AggregateRating', ratingValue: SITE.rating, reviewCount: SITE.reviewCount },
     areaServed: AREAS.map((a) => ({ '@type': 'City', name: a.name })),
     makesOffer: SERVICES.map((s) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: s.name } })),
+    sameAs: SOCIAL.map((s) => s.url),
+    openingHoursSpecification,
   }
+}
+
+export function faqJsonLd(faqs) {
+  return {
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({ '@type': 'Question', name: stripHtml(f.q), acceptedAnswer: { '@type': 'Answer', text: stripHtml(f.a) } })),
+  }
+}
+
+export function serviceJsonLd(s, path) {
+  return {
+    '@type': 'Service',
+    name: s.name,
+    description: s.short,
+    url: SITE.domain + path,
+    provider: { '@id': SITE.domain + '/#business' },
+    areaServed: AREAS.map((a) => ({ '@type': 'City', name: a.name })),
+  }
+}
+
+export function breadcrumbJsonLd(items) {
+  return {
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, i) => ({ '@type': 'ListItem', position: i + 1, name: item.name, item: SITE.domain + item.path })),
+  }
+}
+
+export function jsonLd(extra = []) {
+  const data = { '@context': 'https://schema.org', '@graph': [businessJsonLd(), ...extra] }
   return `<script type="application/ld+json">${JSON.stringify(data)}</script>`
 }
 
@@ -165,12 +225,12 @@ export function pageHero({ eyebrow, title, lead, tight = false }) {
 </section>`
 }
 
-export function layout({ title, description, path, bodyClass = '', content }) {
+export function layout({ title, description, path, bodyClass = '', content, image, jsonLdExtra = [] }) {
   return `<!doctype html>
 <html lang="en">
 <head>
-${head({ title, description, path })}
-${jsonLd()}
+${head({ title, description, path, image })}
+${jsonLd(jsonLdExtra)}
 </head>
 <body class="${bodyClass}">
 ${header()}

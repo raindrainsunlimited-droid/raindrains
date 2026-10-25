@@ -3,7 +3,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import { SITE, SERVICES, AREAS, REVIEWS, FAQS, PROCESS_STEPS, PAST_PROJECTS, CARE_GUIDE_URL } from '../src/data.js'
-import { layout, quoteForm, footer, header, pageScripts, ctaSection, pageHero, jsonLd, head } from '../src/partials.js'
+import { layout, quoteForm, footer, header, pageScripts, ctaSection, pageHero, jsonLd, head, faqJsonLd, serviceJsonLd, breadcrumbJsonLd } from '../src/partials.js'
 import { icon, iconFilled } from '../src/icons.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -203,7 +203,7 @@ ${pageHero({ eyebrow: 'About Us', title: 'A humble company born out of service t
 </section>
 ${ctaSection()}
 `
-  page('about-us-1', layout({ title: 'About Us | Rain Drains — Veteran Owned Drainage Contractor', description: "Meet Bryson Goforth, Navy Veteran, ODU Engineering graduate and founder of Rain Drains — Hampton Roads' NDS Certified drainage contractor.", path: '/about-us-1/', content }))
+  page('about-us-1', layout({ title: 'About Us | Rain Drains — Veteran Owned Drainage Contractor', description: "Meet Bryson Goforth, Navy Veteran, ODU Engineering graduate and founder of Rain Drains — Hampton Roads' NDS Certified drainage contractor.", path: '/about-us-1/', content, image: '/img/bryson.jpg', jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'About', path: '/about-us-1/' }])] }))
 }
 
 // ---------- Services index ----------
@@ -222,7 +222,7 @@ ${pageHero({ eyebrow: 'Services', title: 'Drainage solutions for every kind of p
 <section class="section"><div class="wrap"><div class="grid-3">${cards}</div></div></section>
 ${ctaSection()}
 `
-  page('services-1', layout({ title: 'All Services | Rain Drains', description: 'French drains, grading, downspout extensions, sump pumps and more — every drainage service Rain Drains offers across Hampton Roads.', path: '/services-1/', content }))
+  page('services-1', layout({ title: 'All Services | Rain Drains', description: 'French drains, grading, downspout extensions, sump pumps and more — every drainage service Rain Drains offers across Hampton Roads.', path: '/services-1/', content, jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Services', path: '/services-1/' }])] }))
 }
 
 // ---------- Shared rich-content sections (used by service + area pages) ----------
@@ -368,7 +368,10 @@ ${pageHero({ eyebrow: 'Services', title: s.name, lead: s.short, tight: true })}
 ${renderContentSections(s, ['subServices', 'challenges', 'features', 'process', 'faqs', 'areaList'])}
 ${ctaSection(s.cta?.heading || `Ready to solve your ${s.name.toLowerCase()} problem?`, s.cta?.sub)}
 `
-    page(s.slug, layout({ title: `${s.name} | Rain Drains — Hampton Roads`, description: `${s.short} Serving Chesapeake, Virginia Beach, Norfolk & Hampton Roads. Free estimates, ${SITE.rating}★ rated.`, path: `/${s.slug}/`, content }))
+    const svcPath = `/${s.slug}/`
+    const svcJsonLdExtra = [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Services', path: '/services-1/' }, { name: s.name, path: svcPath }]), serviceJsonLd(s, svcPath)]
+    if (s.faqs && s.faqs.length) svcJsonLdExtra.push(faqJsonLd(s.faqs))
+    page(s.slug, layout({ title: `${s.name} | Rain Drains — Hampton Roads`, description: `${s.short} Serving Chesapeake, Virginia Beach, Norfolk & Hampton Roads. Free estimates, ${SITE.rating}★ rated.`, path: svcPath, content, image: s.image?.src, jsonLdExtra: svcJsonLdExtra }))
   }
 }
 
@@ -380,7 +383,7 @@ ${pageHero({ eyebrow: 'Service Areas', title: 'Serving southeastern Virginia & n
 <section class="section"><div class="wrap"><div class="areas">${areaCards}</div></div></section>
 ${ctaSection()}
 `
-  page('service-areas', layout({ title: 'Service Areas | Rain Drains', description: 'Rain Drains serves Virginia Beach, Chesapeake, Norfolk, Portsmouth, Suffolk, Hampton, Newport News, Smithfield, Carrollton, and Currituck & Camden Counties, NC.', path: '/service-areas/', content }))
+  page('service-areas', layout({ title: 'Service Areas | Rain Drains', description: 'Rain Drains serves Virginia Beach, Chesapeake, Norfolk, Portsmouth, Suffolk, Hampton, Newport News, Smithfield, Carrollton, and Currituck & Camden Counties, NC.', path: '/service-areas/', content, jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Service Areas', path: '/service-areas/' }])] }))
 }
 
 // ---------- Area detail pages ----------
@@ -429,7 +432,10 @@ ${renderContentSections(a, ['note', 'challenges', 'features', 'process', 'faqs',
 </section>
 ${ctaSection(a.cta?.heading || `Ready to fix your drainage in ${a.name}?`, a.cta?.sub)}
 `
-    page(a.slug, layout({ title: `Drainage Contractor in ${a.name}, ${a.state} | Rain Drains`, description: `Professional French drains, grading and drainage installation in ${a.name}, ${a.state}. Veteran owned, NDS Certified, free estimates.`, path: `/${a.slug}/`, content }))
+    const areaPath = `/${a.slug}/`
+    const areaJsonLdExtra = [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Service Areas', path: '/service-areas/' }, { name: a.name, path: areaPath }])]
+    if (a.faqs && a.faqs.length) areaJsonLdExtra.push(faqJsonLd(a.faqs))
+    page(a.slug, layout({ title: `Drainage Contractor in ${a.name}, ${a.state} | Rain Drains`, description: `Professional French drains, grading and drainage installation in ${a.name}, ${a.state}. Veteran owned, NDS Certified, free estimates.`, path: areaPath, content, image: a.image?.src, jsonLdExtra: areaJsonLdExtra }))
   }
 }
 
@@ -453,7 +459,7 @@ ${ctaSection('Want your property to look this good?', 'Free on-site estimate. No
   <button type="button" class="lb-nav lb-next" id="lbNext" aria-label="Next photo">&#8250;</button>
 </div>
 `
-  page('past-projects', layout({ title: 'Our Work | Rain Drains Past Projects', description: 'Browse completed French drain, grading and drainage installation projects by Rain Drains across Hampton Roads and northeastern NC.', path: '/past-projects/', content }))
+  page('past-projects', layout({ title: 'Our Work | Rain Drains Past Projects', description: 'Browse completed French drain, grading and drainage installation projects by Rain Drains across Hampton Roads and northeastern NC.', path: '/past-projects/', content, jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Our Work', path: '/past-projects/' }])] }))
 }
 
 // ---------- FAQ ----------
@@ -470,7 +476,7 @@ ${pageHero({ eyebrow: 'FAQ', title: 'Frequently asked questions', lead: "Got que
 </div></section>
 ${ctaSection()}
 `
-  page('faq', layout({ title: 'FAQ | Rain Drains', description: 'Answers to common questions about permits, timelines, utility safety, lawn restoration and drainage system lifespan.', path: '/faq/', content }))
+  page('faq', layout({ title: 'FAQ | Rain Drains', description: 'Answers to common questions about permits, timelines, utility safety, lawn restoration and drainage system lifespan.', path: '/faq/', content, jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'FAQ', path: '/faq/' }]), faqJsonLd(FAQS)] }))
 }
 
 // ---------- Contact ----------
@@ -492,7 +498,7 @@ ${pageHero({ eyebrow: 'Contact', title: 'Get Your Free Estimate', lead: 'Tell us
   </div>
 </section>
 `
-  page('contact-1', layout({ title: 'Contact Us | Rain Drains — Free Drainage Estimate', description: 'Request your free on-site drainage estimate from Rain Drains. Call 757-807-0080 or send us your details — we usually reply the same day.', path: '/contact-1/', content }))
+  page('contact-1', layout({ title: 'Contact Us | Rain Drains — Free Drainage Estimate', description: 'Request your free on-site drainage estimate from Rain Drains. Call 757-807-0080 or send us your details — we usually reply the same day.', path: '/contact-1/', content, jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Contact', path: '/contact-1/' }])] }))
 }
 
 // ---------- Sitemap & robots ----------
