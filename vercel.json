@@ -1,4 +1,12 @@
 {
+  "routes": [
+    {
+      "src": "/sitemap.xml",
+      "dest": "/sitemap.xml"
+    }
+  ]
+}
+{
   "buildCommand": "node scripts/build.js",
   "outputDirectory": "public",
   "cleanUrls": true,
