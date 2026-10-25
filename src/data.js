@@ -40,12 +40,12 @@ export const SERVICES = [
   {
     slug: 'french-drain',
     name: 'French Drain Installation',
-    short: 'Standing water and foundation protection — a custom-engineered French drain redirects groundwater safely off your property, permanently.',
+    short: 'Standing water and foundation protection — a custom-designed French drain redirects groundwater safely off your property, permanently.',
     icon: 'drop',
     image: { src: '/img/french-drain.jpg', alt: 'French drain pipe and gravel trench installed along a home foundation' },
     body: [
       'A soggy lawn, muddy paws, and standing water against your foundation aren’t just frustrating — they’re active threats to your home’s structural integrity. Across the Hampton Roads region and northeastern North Carolina, our unique coastal climate, heavy seasonal downpours, and challenging soil types make proper subsurface water management absolutely critical.',
-      'If you have areas of your yard that stay wet for days after a storm, a custom-engineered French drain system is the most reliable, permanent solution to redirect groundwater safely off your property.',
+      'If you have areas of your yard that stay wet for days after a storm, a custom-designed French drain system is the most reliable, permanent solution to redirect groundwater safely off your property.',
     ],
     bullets: ['Custom-sized for your soil and water volume', 'ADS-rated piping, 100-year lifespan', 'Lawn restored after installation'],
     challenges: {
@@ -75,7 +75,7 @@ export const SERVICES = [
     ],
     areaList: {
       heading: 'Serving the Entire Tidewater & NE North Carolina Corridors',
-      intro: 'Because drainage solutions are never one-size-fits-all, we custom-engineer every single system to match the exact topography and soil conditions of your specific municipality.',
+      intro: 'Because drainage solutions are never one-size-fits-all, we custom-design every single system to match the exact topography and soil conditions of your specific municipality.',
       areas: ['Virginia Beach', 'Chesapeake', 'Suffolk', 'Norfolk', 'Portsmouth', 'Smithfield', 'Carrollton', 'Hampton', 'Yorktown', 'Moyock', 'Currituck County', 'Camden County'],
     },
   },
@@ -113,14 +113,14 @@ export const SERVICES = [
           title: 'Condensate Catch Basin Networks: Fixing Summer Mud Holes',
           intro: 'In the peak of a hot, humid Virginia or North Carolina summer, your home’s air conditioning system runs around the clock. Your HVAC unit and high-efficiency furnace continually dump gallons of water out of a small condensate line right next to your home’s foundation. During months without rain, this constant trickle keeps a localized patch of your yard permanently muddy, killing grass and creating a breeding ground for pests.',
           bullets: [
-            'Continuous Low-Volume Drainage — We engineer catch basin networks or direct line tie-ins specifically to capture this persistent mechanical runoff.',
+            'Continuous Low-Volume Drainage — We design catch basin networks or direct line tie-ins specifically to capture this persistent mechanical runoff.',
             'Foundation Shielding — Instead of letting AC condensate pool against your slab or crawlspace block, we route it safely into your main lawn drainage grid, keeping your foundation perimeter bone-dry even in July and August.',
           ],
         },
       ],
     },
     process: {
-      heading: 'Engineered to Outperform Local Climate Pressures',
+      heading: 'Designed to Outperform Local Climate Pressures',
       intro: 'Our drainage networks are custom-built to match the exact topography and soil dynamics of your specific community:',
       items: [
         { title: 'Laser-Guided Pitch Analysis: Elevation Targeting', text: 'We calculate the exact slope from your home’s foundation to your property’s natural exit point, ensuring all underground lines maintain a strict downward pitch so water can never back up.' },
@@ -156,7 +156,7 @@ export const SERVICES = [
       intro: 'While massive municipal highway jobs require heavy concrete (RCP) pipe, modern commercial footprints, apartment networks, and residential HOAs run far more efficiently on heavy-duty SDR-35 / Schedule 40 PVC and dual-wall corrugated HDPE (ADS N-12) systems.',
       items: [
         { title: 'Superior Hydraulic Efficiency', text: 'Smooth-wall interior PVC and N-12 conduits feature extremely low friction coefficients. Water moves significantly faster through these lines than rough concrete, flushing silt, sand, and organic debris out of your community’s grid before it can settle and clog.' },
-        { title: 'Watertight, Root-Proof Joints', text: 'Concrete pipe joints easily separate over time under regional soil shifting, allowing tree roots to penetrate and destroy the line. Our heavy-duty PVC and dual-wall N-12 pipes utilize high-grade engineered gasket connections that resist root intrusion and structural soil movement.' },
+        { title: 'Watertight, Root-Proof Joints', text: 'Concrete pipe joints easily separate over time under regional soil shifting, allowing tree roots to penetrate and destroy the line. Our heavy-duty PVC and dual-wall N-12 pipes utilize high-grade precision-fit gasket connections that resist root intrusion and structural soil movement.' },
         { title: 'Rapid Installation with Minimal Community Disruption', text: 'Heavy RCP requires massive cranes and broad site shut-downs that block HOA roads and parking stalls for weeks. Our targeted rubber-track excavation fleets allow us to install large-diameter commercial lines quickly, safely, and with minimal impact on resident traffic and parking spaces.' },
       ],
     },
@@ -167,7 +167,7 @@ export const SERVICES = [
       items: [
         { title: 'HOA Common Area & Swale Grading', text: 'Eliminating standing water in community parks, dog runs, and shared green spaces using precision laser transit mapping and heavy-duty turf restructuring.' },
         { title: 'Commercial Parking Lot & Catch Basin Networks', text: 'Installing high-load catch basins, curb inlet connections, and trench channel drains designed to keep parking aprons, garage entrances, and drive lanes completely dry.' },
-        { title: 'Retention Pond Outfall & Overflow Pipes', text: 'Replacing failed or crushed corrugated metal outfalls with smooth-wall N-12 or solid PVC lines to keep your storm ponds discharging at legal, engineered capacities.' },
+        { title: 'Retention Pond Outfall & Overflow Pipes', text: 'Replacing failed or crushed corrugated metal outfalls with smooth-wall N-12 or solid PVC lines to keep your storm ponds discharging at legal, properly sized capacities.' },
         { title: 'Underground Roof Runoff Mains', text: 'Linking multi-building downspout networks into centralized subterranean storm mains to keep foundation zones bone dry across commercial strips and condo units.' },
         { title: 'Turnkey Site Restoration', text: 'We don’t leave open trenches or ruined grounds. We complete the job with full asphalt patching, concrete curb restoration, and multi-lift soil compaction.' },
       ],
@@ -192,11 +192,11 @@ export const SERVICES = [
     body: [
       'Your roof is the single largest water-collection surface on your entire property. During a typical coastal storm, thousands of gallons of rainwater pour off your shingles in a matter of minutes. If your downspouts simply dump that water right at the base of your foundation or into cheap, flexible plastic tubes, you are actively inviting foundation settlement, crawlspace flooding, and severe yard erosion.',
       'A splash block or standard garden extension only pushes water a few inches away from your walls — allowing it to sink straight down into the loose fill soil around your home. Underground downspout extension networks capture roof water instantly at the gutter line and transport it hundreds of feet away to a safe, legal discharge point.',
-      'We engineer commercial-grade, smooth-wall subterranean downspout systems across Southside Virginia and Northeast North Carolina to keep your foundation bone dry and your lawn completely free of standing water.',
+      'We design and install commercial-grade, smooth-wall subterranean downspout systems across Southside Virginia and Northeast North Carolina to keep your foundation bone dry and your lawn completely free of standing water.',
     ],
     bullets: ['Buried, solid-pipe extensions', 'Protects foundations, siding & concrete', 'Ties into existing gutters', 'Clean, mulched-over finish'],
     features: {
-      heading: 'Key Engineering Features of Our Downspout Networks',
+      heading: 'Key Design Features of Our Downspout Networks',
       items: [
         { title: 'Ultra-Thick Smooth-Wall Pipe', text: 'We offer thick, rigid, smooth-wall PVC or HDPE pipe. The glass-smooth interior maximizes water velocity, allowing leaves, silt, and shingle grit to flush completely out of the pipe without stopping.' },
         { title: 'Integrated Cleanout & Leaf Adapter Ports', text: 'We offer custom leaf-diverters or cleanout adapters directly below your gutter transitions. This acts as a primary defense line, preventing large debris from ever getting into your subterranean pipes while giving you an easy access point to flush the lines if needed.' },
@@ -208,7 +208,7 @@ export const SERVICES = [
     faqs: [
       { q: 'How far away from my home’s foundation should downspouts discharge?', a: 'At an absolute minimum, roof water should be discharged at least 10 to 15 feet away from your foundation walls. Our standard is a 30-foot minimum. Dumping water any closer allows it to soak directly into the loosened backfill soil surrounding your foundation footings, creating intense hydrostatic pressure that leads to cracked masonry, flooded crawlspaces, and basement leaks. For properties with severe clay or flat elevation, we often extend lines 20 to 50+ feet to reach natural slope drops or street swales.' },
       { q: 'Can underground downspout lines freeze or burst during winter?', a: 'When installed correctly with positive downhill slope, smooth-wall PVC lines will not burst because water continuously drains out via gravity rather than sitting trapped in the pipe.' },
-      { q: 'Can you tie my downspouts directly into my French drain system?', a: 'No, and no reputable drainage engineer will ever do this. Roof downspouts collect massive volumes of water along with roof shingle grit, twigs, and organic debris. If you tie a downspout directly into a perforated French drain line, you will rapidly flood the French drain with surface debris, clogging the gravel envelope and forcing dirty roof water into your groundwater grid. Downspout lines must always remain solid, non-perforated conduits kept completely separate from subterranean groundwater collection networks.' },
+      { q: 'Can you tie my downspouts directly into my French drain system?', a: 'No, and no reputable drainage contractor will ever do this. Roof downspouts collect massive volumes of water along with roof shingle grit, twigs, and organic debris. If you tie a downspout directly into a perforated French drain line, you will rapidly flood the French drain with surface debris, clogging the gravel envelope and forcing dirty roof water into your groundwater grid. Downspout lines must always remain solid, non-perforated conduits kept completely separate from subterranean groundwater collection networks.' },
     ],
     cta: {
       heading: 'Stop losing your landscaping to roof runoff',
@@ -224,13 +224,13 @@ export const SERVICES = [
     body: [
       'When massive rainstorms or flash flooding hit wide concrete surfaces — like driveways, patio decks, commercial loading bays, and parking aprons — gravity causes water to rapidly sheet across the smooth stone. Left unchecked, this rushing surface water slams into garage doors, floods low-lying entryways, pools against foundation slabs, and washes out adjacent turf.',
       'Traditional lawn drains or small catch basins cannot keep up with high-velocity sheet-flow. Protecting large hardscape footprints requires continuous concrete channel drains and heavy-duty surface interceptor grates built to catch water across the entire width of a paved span before it reaches your structures.',
-      'We design and install commercial-grade surface interception networks across Southside Virginia and Northeast North Carolina, utilizing reinforced concrete trench channels, high-load cast iron or stainless grates, and smooth PVC storm mains engineered to handle extreme storm events.',
+      'We design and install commercial-grade surface interception networks across Southside Virginia and Northeast North Carolina, utilizing reinforced concrete trench channels, high-load cast iron or stainless grates, and smooth PVC storm mains designed to handle extreme storm events.',
     ],
     bullets: ['Channel & trench drain installation', 'Ties into full-property drainage', 'Clean concrete cuts and finishing', 'Grates rated for foot & vehicle traffic'],
     challenges: {
       eyebrow: 'Applications',
       heading: 'Critical Applications for Surface Interception Networks',
-      intro: 'Installing engineered trench drainage solves specific hardscape water issues that standard grading alone cannot fix:',
+      intro: 'Installing professionally designed trench drainage solves specific hardscape water issues that standard grading alone cannot fix:',
       items: [
         { title: 'Driveway Slopes & Garage Entryways', text: 'Driveways that pitch downward toward a garage or home create an immediate flood hazard. A heavy-duty channel drain cut directly across the driveway in front of the garage door acts as a structural barrier, catching 100% of the downhill runoff before it breaches the threshold.' },
         { title: 'Pool Decks & Patio Enclosures', text: 'Flat concrete pool surrounds and hardscape patios frequently trap water against home foundations or back up into pool water during torrential downpours. Slotted channel drains installed flush with the concrete flush away deck water while keeping deck surfaces slip-free.' },
@@ -241,7 +241,7 @@ export const SERVICES = [
     features: {
       eyebrow: 'Construction Standards',
       heading: 'Commercial-Grade Construction Standards',
-      intro: 'A channel drain is only as durable as its channel encasement and grating material. We construct surface drainage networks using rigid civil engineering specifications:',
+      intro: 'A channel drain is only as durable as its channel encasement and grating material. We construct surface drainage networks using rigid commercial construction specifications:',
       items: [
         { title: 'Reinforced Concrete Encasement', text: 'We set our channels inside a dedicated concrete pour. Encasing the channel in high-strength concrete prevents the trench walls from flexing, cracking, or bowing inward when heavy trucks or vehicles drive over the line.' },
         { title: 'High-Load Grating Options', text: 'Depending on traffic requirements, we install corrosion-resistant cast iron, ductile iron, or heavy-gauge stainless steel grates. For coastal areas exposed to salt spray or pool chemicals, rustproof stainless steel or high-density polymer grates ensure decades of zero maintenance.' },
@@ -280,7 +280,7 @@ export const SERVICES = [
         { title: '2. Land Leveling & Soil Reshaping', intro: 'From filling depressions to cutting down high spots, we create a clean, even-grade surface ready for any landscaping or construction project. Our land leveling services help ensure your project starts on the right foot.' },
         {
           title: '3. Drainage-Integrated Grading',
-          intro: 'Hampton Roads’ clayey soil holds water longer, so we blend grading with engineered drainage options such as:',
+          intro: 'Hampton Roads’ clayey soil holds water longer, so we blend grading with integrated drainage options such as:',
           bullets: ['French drains', 'Downspout extensions', 'Sump pump systems', 'Swales', 'Surface drains'],
           outro: 'This creates a complete solution, not just a temporary fix for your drainage needs.',
         },
@@ -299,7 +299,7 @@ export const SERVICES = [
     },
     features: {
       eyebrow: 'Coastal Soil',
-      heading: 'Why Coastal Soil Dynamics Demand Engineered Grading',
+      heading: 'Why Coastal Soil Dynamics Demand Precision Grading',
       items: [
         { title: 'Foundation Hydrostatic Pressure', text: 'In flat, low-lying coastal cities like Virginia Beach, Norfolk, Portsmouth, and Hampton, there is very little natural elevation to help water move. A negative grade (sloping back toward the house) forces water against your foundation walls or crawlspace vents, causing structural bowing, rot, and severe mold.' },
         { title: 'The Flat Clay Pan Effect', text: 'In Chesapeake and Suffolk, heavy clay soils don’t absorb water quickly. Without a perfectly calculated positive grade to shed sheet-flow water horizontally across the turf, rainwater simply sits on top of the clay, creating permanent marsh zones in your yard.' },
@@ -321,7 +321,7 @@ export const SERVICES = [
         { title: 'Rough Grading & Cut-and-Fill: Earth Moving', text: 'Using specialized turf-friendly machinery, we mechanically cut down high ridges and fill in deep depressions, structurally re-sculpting the sub-base dirt to establish a permanent positive slope away from all structures.' },
         { title: 'Topsoil Conditioning & Tilling: Soil Preparation', text: 'We scarify and break up compacted clay layers with specialized machinery, and upon request can import premium organic topsoil or sand blends tailored to your specific regional soil needs, ensuring a healthy foundation for new turf growth.' },
         { title: 'Final Precision Leveling & Smoothing: The Clean Finish', text: 'Using specialized leveling rakes and commercial soil conditioners, we smooth the surface to a clean, uniform finish, completely eliminating all minor ruts, bumps, and localized micro-depressions.' },
-        { title: 'Stabilization & Seed Prep: Erosion Shielding', text: 'To protect your newly engineered slopes from washing away during the next heavy coastal storm, we compact the soil to optimal densities and prepare it for immediate sod installation or hydroseeding.' },
+        { title: 'Stabilization & Seed Prep: Erosion Shielding', text: 'To protect your newly graded slopes from washing away during the next heavy coastal storm, we compact the soil to optimal densities and prepare it for immediate sod installation or hydroseeding.' },
       ],
     },
     areaList: {
@@ -341,27 +341,27 @@ export const SERVICES = [
     icon: 'pump',
     image: { src: '/img/outdoor-sump-pumps.jpg', alt: 'Outdoor sump pump discharge basin installed beside a home entrance' },
     body: [
-      'When dealing with a naturally high water table, flat coastal topography, or a low-lying property that sits lower than the surrounding municipal drainage lines, gravity alone isn’t always enough to protect your yard and foundation. When water has nowhere else to go, a heavy-duty outdoor sump pump system is the ultimate, engineered line of defense.',
+      'When dealing with a naturally high water table, flat coastal topography, or a low-lying property that sits lower than the surrounding municipal drainage lines, gravity alone isn’t always enough to protect your yard and foundation. When water has nowhere else to go, a heavy-duty outdoor sump pump system is the ultimate line of defense.',
       'Unlike standard indoor basement pumps, an outdoor crawlspace or yard sump pump system is designed to intercept massive volumes of rising groundwater and surface sheet-flow, mechanically lifting it and forcing it completely off your property to a safe, legal discharge point.',
       'We construct commercial-grade, subsurface outdoor basin and pumping stations built specifically to withstand the extreme environmental pressures and soil dynamics of the Hampton Roads and Northeast North Carolina coastlines.',
     ],
     bullets: ['For low or flat yards gravity can’t drain', 'Sized for worst-case rainfall', 'Buried basin, discreet discharge line'],
     process: {
-      heading: 'The Anatomy of an Engineered Outdoor Pumping Station',
+      heading: 'The Anatomy of a Professionally Built Outdoor Pumping Station',
       items: [
         { title: 'Subsurface Infiltration Basin Excavation', text: 'We excavate a deep structural pit at the lowest logical convergence point of your drainage network. We install a heavy-walled, perforated or solid dual wall polyethylene basin wrap-encapsulated in #57 drainage stone and non-woven geotextile fabric. This creates a massive subsurface collection reservoir that relieves the surrounding soil’s hydrostatic pressure (when required).' },
         { title: 'Cast-Iron Commercial Pump Integration', text: 'We install premium, continuous-duty Zoeller cast-iron submersible pumps (featuring stainless steel hardware and non-clogging vortex impellers). These pumps easily handle heavy solids up to 1/2" and pump thousands of gallons per hour without overheating. We only use the highest quality outdoor rated pumps complete with a manufacturer’s warranty.' },
         { title: 'Rigid Discharge Piping & Backflow Prevention', text: 'The pump is plumbed using heavy-wall 1-1/2" schedule 40 solid PVC. We install specialized inline check valves to prevent pumped water from draining backward into the pit when the pump cycles off, maximizing mechanical efficiency of the system.' },
-        { title: 'High Quality Design', text: 'We don’t use cheap, retail-grade plastics or standard exterior screws that corrode and snap over time. Every sump basin we build utilizes heavy-duty, septic-grade components designed to withstand constant moisture and severe underground soil pressures. To guarantee absolute structural longevity in our high-salinity coastal environments, we lock everything together using industrial-grade stainless steel fasteners that will never rust, degrade, or fail under pressure. When we bury a system on your property, it is engineered to stay locked, clear, and fully operational for decades.' },
+        { title: 'High Quality Design', text: 'We don’t use cheap, retail-grade plastics or standard exterior screws that corrode and snap over time. Every sump basin we build utilizes heavy-duty, septic-grade components designed to withstand constant moisture and severe underground soil pressures. To guarantee absolute structural longevity in our high-salinity coastal environments, we lock everything together using industrial-grade stainless steel fasteners that will never rust, degrade, or fail under pressure. When we bury a system on your property, it is built to stay locked, clear, and fully operational for decades.' },
       ],
     },
-    faqHeading: 'Outdoor Sump Pump & Groundwater Engineering Q&A',
+    faqHeading: 'Outdoor Sump Pump & Groundwater Q&A',
     faqs: [
       { q: 'Why can’t I just rely on a standard drain without a pump?', a: 'Traditional drains are a gravity-fed highway. For a gravity drain to work, the discharge end must be lower than the collection end. In flat or low-lying coastal cities like Virginia Beach, Norfolk, and Portsmouth, or low points in Chesapeake, there is often zero natural elevation change. If your yard sits lower than the roadside ditch or the municipal storm main, a gravity drain will simply fill up with water and back up. An outdoor sump pump acts as a mechanical elevator — it collects the gravity-fed water in a deep subterranean basin and physically lifts it up and out, creating an artificial slope where nature didn’t provide one.' },
       { q: 'Will an outdoor pump basin float or pop out of the ground when the soil saturates?', a: 'Yes, if it is installed incorrectly. This is a massive issue in regions with high water tables and dense clay soils like Suffolk and Moyock. A hollow plastic basin buried in water-logged soil acts exactly like a boat hull — hydrostatic pressure will literally pop the entire basin out of the ground, destroying your pipes and landscaping. We take special care to ensure this will never happen to your sump pump basin by designing the basin specifically for your property and your exact soil type.' },
     ],
     areaList: {
-      heading: 'Custom Engineered for Regional Soil Conditions',
+      heading: 'Custom-Built for Regional Soil Conditions',
       intro: 'From handling the fine sand infiltration common in Currituck and Virginia Beach to managing the sluggish, high-friction water movement through the clay layers of Smithfield and Carrollton, we tailor every basin to match the exact earth mechanics of your property.',
       areas: ['Virginia Beach', 'Chesapeake', 'Suffolk', 'Norfolk', 'Portsmouth', 'Smithfield', 'Carrollton', 'Hampton', 'Yorktown', 'Moyock', 'Currituck County', 'Camden County'],
     },
@@ -391,13 +391,13 @@ export const SERVICES = [
       ],
     },
     process: {
-      heading: 'Engineered Multi-Layer Foundation Drain Process',
+      heading: 'Multi-Layer Foundation Drain Process',
       intro: 'We don’t just spray a thin coat of black paint and call it waterproofed. We follow a strict commercial-grade protocol to create an impenetrable, multi-layer envelope around your structure.',
       items: [
         { title: 'Excavation & Wall Preparation', text: 'We carefully excavate the earth down to your concrete footings, exposing the entire subsurface foundation wall. The wall is mechanically cleaned, power-washed, and inspected for hidden structural cracks or missing mortar joints.' },
         { title: 'Hydraulic Cement Parging (Basement/Crawlspace Only)', text: 'Every structural crack, tie hole, and failing mortar joint is deeply chiseled out and packed tight with high-strength hydraulic cement to structurally seal the masonry surface.' },
         { title: 'Dimpled Drainage Mat', text: 'We hang a heavy-duty dimpled poly-matrix drainage mat over the membrane. The dimples create a permanent structural air gap, instantly relieving hydrostatic pressure by letting water drop straight down to the base of the wall instead of pushing inward.' },
-        { title: 'Footing Drain Installation & Encapsulation', text: 'At the base of the wall, we lay an engineered footing pipe wrapped in washed #57 drainage stone and premium non-woven geotextile fabric. This collection highway catches the falling water and routes it safely to a gravity outlet or an outdoor sump pump station.' },
+        { title: 'Footing Drain Installation & Encapsulation', text: 'At the base of the wall, we lay a footing pipe wrapped in washed #57 drainage stone and premium non-woven geotextile fabric. This collection highway catches the falling water and routes it safely to a gravity outlet or an outdoor sump pump station.' },
       ],
     },
     faqHeading: 'Foundation Waterproofing & Soil Mechanics Q&A',
@@ -408,7 +408,7 @@ export const SERVICES = [
     ],
     areaList: {
       heading: 'Serving the Entire Hampton Roads & NE North Carolina Region',
-      intro: 'Whether you are looking to protect a historic brick foundation in Norfolk or Portsmouth, solve a heavy clay water issue in Chesapeake or Suffolk, or secure a new build along the coastal corridors of Virginia Beach, Moyock, or Camden, we custom-engineer every project to perfectly match your local water table dynamics.',
+      intro: 'Whether you are looking to protect a historic brick foundation in Norfolk or Portsmouth, solve a heavy clay water issue in Chesapeake or Suffolk, or secure a new build along the coastal corridors of Virginia Beach, Moyock, or Camden, we custom-design every project to perfectly match your local water table dynamics.',
       areas: ['Virginia Beach', 'Chesapeake', 'Suffolk', 'Norfolk', 'Portsmouth', 'Smithfield', 'Carrollton', 'Hampton', 'Yorktown', 'Moyock', 'Currituck County', 'Camden County'],
     },
     cta: {
@@ -419,19 +419,19 @@ export const SERVICES = [
   {
     slug: 'culvert-pipe-installation-1',
     name: 'Culvert Pipe Installation',
-    short: 'Commercial-grade culvert pipe installation and structural re-engineering built to handle heavy coastal runoff and withstand heavy vehicle traffic for decades.',
+    short: 'Commercial-grade culvert pipe installation and structural rebuilding built to handle heavy coastal runoff and withstand heavy vehicle traffic for decades.',
     icon: 'pipe',
     image: { src: '/img/culvert-pipe-installation.jpg', alt: 'Newly installed culvert pipe with rip-rap stone at a driveway entrance' },
     body: [
       'A properly installed driveway culvert is the single most critical element of your property’s exterior drainage system. In rural, suburban, and rapidly growing coastal communities, roadside ditches and swales act as the municipal highway for stormwater.',
       'If your driveway crossing has a collapsed, undersized, or improperly pitched pipe, it acts like a dam — backing up thousands of gallons of water, flooding your front yard, eroding your driveway, and potentially creating severe legal and structural liabilities.',
-      'We provide commercial-grade culvert pipe installation, replacement, and structural re-engineering designed to handle heavy coastal runoff and withstand heavy vehicle traffic for decades.',
+      'We provide commercial-grade culvert pipe installation, replacement, and structural rebuilding designed to handle heavy coastal runoff and withstand heavy vehicle traffic for decades.',
     ],
     bullets: ['Sized to handle ditch & storm flow', 'Permits researched and obtained', 'Prevents driveway washouts', 'Durable, code-compliant pipe'],
     sectionOrder: ['challenges', 'features', 'process', 'note', 'areaList'],
     challenges: {
       heading: 'Why Culvert Installations Fail in Our Coastal Districts',
-      intro: 'Culvert installation requires exact engineering. Because of our unique local geography and high water tables, simple DIY approaches or cut-corner installations fail rapidly due to three primary regional factors:',
+      intro: 'Culvert installation requires precise planning. Because of our unique local geography and high water tables, simple DIY approaches or cut-corner installations fail rapidly due to three primary regional factors:',
       items: [
         { title: 'Improper Pipe Sizing (The Bottleneck Effect)', text: 'In expanding rural-suburban corridors like Chesapeake, Suffolk, and Currituck County, regional storm volumes can increase dramatically as new homes are built up the road. Installing an undersized pipe causes immediate upstream pooling and dangerous localized flooding during heavy storms.' },
         { title: 'Saturated Soil Settling & Crushing', text: 'In low-lying, soft-soil areas like Virginia Beach, Norfolk, Portsmouth, and parts of Camden County, cheap thin-walled plastic pipes easily deform and bow under the weight of heavy delivery trucks or construction equipment if they lack a properly compacted aggregate foundation.' },
@@ -462,7 +462,7 @@ export const SERVICES = [
     note: {
       eyebrow: 'Permits & Codes',
       heading: 'Navigating Municipal Codes & Drainage Permits',
-      text: 'Installing a driveway culvert isn’t just about moving dirt — it frequently requires navigating strict municipal guidelines, utility location clearances, and right-of-way permitting. Whether you are dealing with VDOT requirements in Hampton, Yorktown, and Smithfield, city engineering specs in Chesapeake and Suffolk, or county drainage board codes down in Moyock and Currituck, we ensure your installation meets or exceeds all local structural codes.',
+      text: 'Installing a driveway culvert isn’t just about moving dirt — it frequently requires navigating strict municipal guidelines, utility location clearances, and right-of-way permitting. Whether you are dealing with VDOT requirements in Hampton, Yorktown, and Smithfield, city building specs in Chesapeake and Suffolk, or county drainage board codes down in Moyock and Currituck, we ensure your installation meets or exceeds all local structural codes.',
     },
     areaList: {
       heading: 'Serving All Local Districts & Crossings',
@@ -480,7 +480,7 @@ export const SERVICES = [
     icon: 'gravel',
     image: { src: '/img/gravel-driveways.jpg', alt: 'Finished gravel driveway winding through wooded property' },
     body: [
-      'A beautiful, functional gravel driveway is an excellent, cost-effective alternative to concrete or asphalt — but it requires far more than just dumping stone on top of bare dirt. Without proper engineering, a gravel driveway will quickly develop deep ruts, wash away during heavy coastal storms, and turn into a muddy swamp.',
+      'A beautiful, functional gravel driveway is an excellent, cost-effective alternative to concrete or asphalt — but it requires far more than just dumping stone on top of bare dirt. Without proper construction, a gravel driveway will quickly develop deep ruts, wash away during heavy coastal storms, and turn into a muddy swamp.',
       'We provide commercial-grade gravel driveway construction, structural re-grading, and stone resurfacing services throughout the Hampton Roads and Northeast North Carolina corridors. We build our driveways with correct multi-layer stone bases, precise laser-guided slopes, and heavy compaction so your driveway stays solid, smooth, and clear for decades.',
     ],
     bullets: ['Proper base & grading', 'Sheds water instead of pooling', 'Durable in Hampton Roads clay soil', 'Can be paired with drainage work'],
@@ -490,10 +490,10 @@ export const SERVICES = [
       items: [
         { title: 'The Mud-Mix Effect', text: 'In Chesapeake, Suffolk, and parts of Moyock, the native soil is packed with heavy clay. If you dump clean gravel directly onto clay dirt without a stabilizing barrier, heavy vehicles will push the gravel down into the mud while forcing the clay up, swallowing your investment within a few seasons.' },
         { title: 'Sheet-Wash Erosion', text: 'Flat, low-lying coastal lots in Virginia Beach, Norfolk, and Currituck County face massive volumes of sheet-flow rainwater during heavy downpours or seasonal Nor’easters. If a driveway lacks a crowned center or an adjacent bar-ditch, rushing surface water will strip the top stone right off your property.' },
-        { title: 'Pothole Proliferation', text: 'Potholes aren’t just surface holes — they are structural failures caused by standing water soaking into the sub-base dirt. Once the underlying soil softens, every passing vehicle wheel pumps the sub-grade out, creating a permanent structural pocket that will collapse again and again if it isn’t properly excavated and re-engineered.' },
+        { title: 'Pothole Proliferation', text: 'Potholes aren’t just surface holes — they are structural failures caused by standing water soaking into the sub-base dirt. Once the underlying soil softens, every passing vehicle wheel pumps the sub-grade out, creating a permanent structural pocket that will collapse again and again if it isn’t properly excavated and rebuilt.' },
       ],
     },
-    faqHeading: 'Gravel Driveway Engineering & Performance Q&A',
+    faqHeading: 'Gravel Driveway Construction & Performance Q&A',
     faqs: [
       { q: 'Why is my gravel driveway disappearing into the ground?', a: 'This is a classic issue known as the "mud-mix effect," and it’s incredibly common in heavy clay soils like those in Chesapeake and Suffolk, as well as sandy coastal areas. When heavy vehicles drive over gravel placed directly on top of bare dirt, it pushes the rocks down into the soil while forcing mud up to the surface. We prevent this permanently by installing a commercial-grade woven geotextile stabilization fabric between the raw earth and your first layer of stone. It acts as a permanent barrier that keeps your gravel on top where it belongs.' },
       { q: 'Why do potholes keep coming back in the exact same spots?', a: 'A pothole isn’t just a surface issue; it’s a structural failure underneath. When rainwater pools on a flat driveway, it saturates the sub-base dirt. Every time a car tire drives over that wet spot, it pumps the underlying dirt out from under the gravel, creating a hollow pocket. If you just throw loose gravel into a pothole, it will cave right back in within a few weeks. The right way to fix it is to mechanically excavate the failure zone, establish a proper downward pitch, compact the sub-grade, and re-sculpt a center crown so water sheds off the driveway instantly instead of pooling.' },
@@ -512,12 +512,12 @@ export const SERVICES = [
   {
     slug: 'trenching-service',
     name: 'Trenching Service',
-    short: 'Professional mechanical utility trenching for electrical, water, gas and fiber lines — engineered to municipal depth codes with minimal disruption to your property.',
+    short: 'Professional mechanical utility trenching for electrical, water, gas and fiber lines — installed to municipal depth codes with minimal disruption to your property.',
     icon: 'dig',
     image: { src: '/img/trenching-service.jpg', alt: 'Utility trench with conduit laid along a backyard, ready for backfill' },
     body: [
       'Whether you are an electrical contractor running heavy commercial conduit, a plumber laying a main water line, or a homeowner extending power to a detached garage, cutting a clean trench requires the right machinery, exact depth calibration, and structural precision.',
-      'We provide professional, mechanical utility trenching services engineered to meet strict municipal depth codes while minimizing disruption to the surrounding property. We operate as both a specialized subcontractor for local trades and a direct service provider for residential and agricultural property upgrades throughout Chesapeake, Virginia Beach, Norfolk, Suffolk, Portsmouth, Hampton, and Newport News.',
+      'We provide professional, mechanical utility trenching services built to meet strict municipal depth codes while minimizing disruption to the surrounding property. We operate as both a specialized subcontractor for local trades and a direct service provider for residential and agricultural property upgrades throughout Chesapeake, Virginia Beach, Norfolk, Suffolk, Portsmouth, Hampton, and Newport News.',
     ],
     bullets: ['811 utility locates called first', 'Dug to your specified depth & width', 'Backfilled and surface restored', 'For drainage, irrigation & utility lines'],
     challenges: {
@@ -539,7 +539,7 @@ export const SERVICES = [
         { title: 'High Water Table Infiltration', text: 'In low-lying, historic or coastal areas like Norfolk, Portsmouth, Hampton, and Camden County, hitting water just 12 to 24 inches down is incredibly common. We integrate localized dewatering systems or coordinate fast-lay piping grids to ensure lines are placed cleanly before a trench floods.' },
       ],
     },
-    faqHeading: 'Utility Engineering & Subcontracting Q&A',
+    faqHeading: 'Utility Trenching & Subcontracting Q&A',
     faqs: [
       { q: 'What is your pricing structure for subcontracting to other trades?', a: 'We offer highly competitive, predictable pricing sheets tailored specifically for electrical, plumbing, and mechanical contractors. By acting as your dedicated trenching subcontractor, we save your crew from hauling heavy excavators to the site or wasting manual labor hours with hand shovels. We show up, cut the line cleanly, and step aside so your technicians can lay pipe or pull wire with zero down-time.' },
       { q: 'How much damage will a mechanical trencher do to my established lawn?', a: 'We intentionally utilize compact, high-flotation rubber track machinery that distributes vehicle weight evenly across the ground. Unlike massive, heavy dump trucks or standard wheeled backhoes that leave deep, destructive ruts across your grass, our equipment leaves an exceptionally light footprint. The resulting trench is tight, straight, and narrow — meaning far less dirt is displaced and your lawn can heal completely within just a few weeks of backfilling.' },
@@ -567,7 +567,7 @@ export const SERVICES = [
     challenges: {
       eyebrow: 'Earthwork Services',
       heading: 'Precision Earthwork for Any Outdoor Project',
-      intro: 'We execute heavy-duty site prep tailored to the exact engineering requirements of your landscape or recreational designs:',
+      intro: 'We execute heavy-duty site prep tailored to the exact requirements of your landscape or recreational designs:',
       items: [
         { title: 'Hardscape & Patio Prep', text: 'Excavating uniform, packed sub-grades for stone patios, retaining walls, outdoor kitchens, and heavy concrete slabs.' },
         { title: 'Property Clearing & Brush Removal', text: 'Stripping thick brush, removing invasive root balls, and cleaning up undergrowth to reclaim raw acreage.' },
@@ -587,7 +587,7 @@ export const SERVICES = [
     },
     process: {
       heading: 'Our Commercial-Grade Site Preparation Blueprint',
-      intro: 'We don’t just clear a path and hope for the best. Every excavation project follows a strict structural engineering sequence to guarantee long-term property stability.',
+      intro: 'We don’t just clear a path and hope for the best. Every excavation project follows a strict structural construction sequence to guarantee long-term property stability.',
       items: [
         { title: '811 Line Tracking & Path Cleared', text: 'Before any tracks spin, we fully map out the excavation footprint and verify all underground utility locations via 811 to guarantee a 100% safe, damage-free project site.' },
         { title: 'Vegetation Stripping & Tree Removal', text: 'Using heavy-duty land clearing equipment, we strip away unwanted trees, dense brush, and thick surface organic matter, hauling away debris to reveal the clean sub-grade dirt beneath.' },
@@ -596,7 +596,7 @@ export const SERVICES = [
         { title: 'Topsoil Dress & Fine-Level Smoothing', text: 'We place a uniform layer of premium, clean topsoil across the final layout, executing a razor-sharp fine grade so the ground is fully primed for immediate sod laying, hydroseeding, or structural landscape building.' },
       ],
     },
-    faqHeading: 'Landscape Excavation & Property Engineering Q&A',
+    faqHeading: 'Landscape Excavation & Property Preparation Q&A',
     faqs: [
       { q: 'What is the advantage of using track machinery over standard wheeled backhoes?', a: 'Standard heavy backhoes with large rubber tires exert an immense amount of localized downward pressure, meaning they will leave massive, ankle-twisting ruts across your grass and permanently compact your lawn’s topsoil structure. We intentionally use high-flotation, compact rubber-track skid steers and excavators. These tracks distribute the machine’s weight across a massive surface area, giving us incredible pushing power while leaving a remarkably light footprint that preserves the health of your remaining lawn.' },
       { q: 'How do you make sure an excavated site doesn’t wash away during the next heavy storm?', a: 'Erosion control is a critical part of our excavation planning. When we alter slopes or clear heavy vegetation in areas like Smithfield, Yorktown, or Camden County, we don’t leave raw earth exposed to the elements. We immediately track-pack the soil to create micro-ridges that slow down sheet-flow rainwater, construct strategic swales to divert runoff, and can implement temporary straw wattles, silt fencing, or immediate hydroseeding to secure the newly sculpted earth before the next heavy coastal storm rolls through.' },
@@ -615,7 +615,7 @@ export const SERVICES = [
     body: [
       'For homeowners with inground vinyl liner pools across the coastal Tidewater and Northeast North Carolina corridors, heavy rain events bring a hidden, expensive threat: floating pool liners.',
       'When massive rainstorms or coastal Nor’easters dump inches of water onto flat, low-lying ground, the water table beneath your yard rises rapidly. This creates intense hydrostatic pressure beneath your pool. If the groundwater pressure outside the pool becomes greater than the weight of the water inside the pool, the water forces its way under the vinyl, causing it to float, stretch, wrinkle, and potentially tear or shift completely out of its track.',
-      'We design and install advanced, heavy-duty Linerlock pool drainage systems — subsurface hydrostatic relief systems engineered to intercept rising groundwater before it can lift your pool liner, routing it safely away to a mechanical discharge point.',
+      'We design and install advanced, heavy-duty Linerlock pool drainage systems — subsurface hydrostatic relief systems designed to intercept rising groundwater before it can lift your pool liner, routing it safely away to a mechanical discharge point.',
       'A downspout washing out onto pool concrete is exactly the problem that led Bryson to start Rain Drains in the first place.',
     ],
     bullets: ['Relieves hydrostatic pressure', 'Protects liners & surrounding concrete', 'Routes downspout runoff away from the pool', 'Prevents costly liner failures'],
@@ -629,7 +629,7 @@ export const SERVICES = [
       ],
     },
     process: {
-      heading: 'Anatomy of an Engineered Pool Liner Relief System',
+      heading: 'Anatomy of a Pool Liner Relief System',
       intro: 'We don’t rely on basic residential fixes. We build a commercial-grade subterranean protection grid around your pool framework to ensure your liner stays locked flat against the pool walls.',
       items: [
         { title: 'Perimeter Excavation and Sump Tank Installation', text: 'We carefully excavate a deep, localized drainage channel around the exterior perimeter of the pool framework, cutting down below the level of the liner support to intercept rising groundwater early.' },
@@ -638,9 +638,9 @@ export const SERVICES = [
         { title: 'Heavy-Duty Outdoor Sump Station Tie-In', text: 'Because gravity alone can’t push water uphill in flat coastal terrains, the collection line routes directly into a dedicated outdoor sump pump basin. A continuous-duty cast-iron pump mechanically lifts the water and forces it completely off your property to a storm drainage system, nearby body of water, or a ditch.' },
       ],
     },
-    faqHeading: 'Pool Drainage & Hydrostatic Engineering Q&A',
+    faqHeading: 'Pool Drainage & Hydrostatic Pressure Q&A',
     faqs: [
-      { q: 'What happens to the pool drainage system if the power goes out during a major storm?', a: 'Severe coastal storms and Nor’easters across the Tidewater region often bring power grid failures. If the electrical grid drops and you do not have a backup power source, the main sump pump will temporarily stop running. Without mechanical extraction, the subsurface water table will rise, the groundwater will exert intense hydrostatic pressure, and the pool liner will float until power returns. To prevent this altogether, we recommend integrating your pumping station directly into an existing whole-home backup generator system. However, if your pump does lose power and the liner floats, there is a reassuring mechanical fail-safe built into our system’s engineering: once power is fully restored, the pump kicks back on and will naturally draw the groundwater table back down around the liner, vacuum-securing the vinyl liner tightly against the pool framework once again.' },
+      { q: 'What happens to the pool drainage system if the power goes out during a major storm?', a: 'Severe coastal storms and Nor’easters across the Tidewater region often bring power grid failures. If the electrical grid drops and you do not have a backup power source, the main sump pump will temporarily stop running. Without mechanical extraction, the subsurface water table will rise, the groundwater will exert intense hydrostatic pressure, and the pool liner will float until power returns. To prevent this altogether, we recommend integrating your pumping station directly into an existing whole-home backup generator system. However, if your pump does lose power and the liner floats, there is a reassuring mechanical fail-safe built into our system’s design: once power is fully restored, the pump kicks back on and will naturally draw the groundwater table back down around the liner, vacuum-securing the vinyl liner tightly against the pool framework once again.' },
       { q: 'What is the permanent solution to prevent a pool liner from floating?', a: 'The only permanent, definitive solution to a floating pool liner is to control the groundwater table dynamically around the pool. It is a physical impossibility for a liner to float if the water table beneath the pool deck is kept lower than the pool floor. Our Linerlock Pool Drainage System acts as a permanent, automatic underground defense system. By supporting the pool structure with a deep network of washed #57 stone and a drainage grate in the liner support, groundwater is constantly drawn into a dedicated subsurface highway before it can push against the vinyl. That water is routed directly to a heavy-duty, continuous-duty cast-iron outdoor sump pump station that mechanically lifts and evacuates the water from your property. Once installed, it runs completely on its own, keeping the subterranean hydrostatic pressure on your liner at zero and locking your liner flat for life.' },
       { q: 'Can a pool drainage system be installed around an existing pool?', a: 'Yes. While it is easiest to install a hydrostatic relief network during new pool construction, we routinely retrofit existing pools that are suffering from chronic liner floating issues. We carefully excavate along the edge of your existing concrete pool deck or softscape to drop in our perimeter collection lines, tying them into a main mechanical pumping station.' },
     ],
@@ -707,7 +707,7 @@ export const SERVICES = [
 // across every variant of this template seen so far (coastal and urban-core).
 const STORMWATER_PROCESS = {
   heading: 'High-Performance Structural Drainage Solutions',
-  intro: 'We engineer custom, subsurface networks designed to isolate your foundation and landscape from high groundwater pressures, forcing water completely off your property.',
+  intro: 'We design custom, subsurface networks to isolate your foundation and landscape from high groundwater pressures, forcing water completely off your property.',
   items: [
     { title: 'Elevation & Flow Evaluation', text: 'We map your property’s exact elevation drops using high-precision digital laser transits. We locate the precise structural low-points where surface water and groundwater converge.' },
     { title: 'Non-Woven Geotextile Armor Layout', text: 'We excavate deep collection channels or foundation footprints and line the raw earth with heavy-duty non-woven geotextile fabric. This allows groundwater to seep in freely while blocking fine sand and silt from clogging your system.' },
@@ -716,7 +716,7 @@ const STORMWATER_PROCESS = {
     { title: 'Precision Grading & Multi-Lift Compaction', text: 'We backfill our trenches or driveways in strategic layers ("lifts"), mechanically packing the earth with vibratory rollers and shaping a subtle center crown or outward slope so surface water sheds immediately.' },
   ],
 }
-const STORMWATER_FAQ_HEADING = 'Regional Drainage & Engineering Q&A'
+const STORMWATER_FAQ_HEADING = 'Regional Drainage Q&A'
 const STORMWATER_FAQS = [
   { q: 'What does "holistic stormwater management" actually mean for my property?', a: 'It means treating all water as part of a connected ecosystem. For example, capturing your roof runoff through underground downspout lines does no good if your yard grading forces surface water right back against your foundation. Similarly, a French drain meant to lower the groundwater table will quickly fail if it gets overwhelmed by surface mud or has nowhere to discharge. Our holistic approach connects your roof drainage, surface grading, sub-surface French drains, and foundation waterproofing membranes into a single fluid highway that routes all water to its proper termination point without bottlenecks.' },
   { q: 'What is the permanent solution to prevent a vinyl pool liner from floating during a heavy rain event?', a: 'The only permanent, definitive solution to a floating pool liner is to dynamically control the groundwater table directly around the pool. Vinyl pools act exactly like a hollow boat hull; when intense rainstorms hit our flat coastal developments, the groundwater table rises instantly, creating massive upward pressure. If that pressure exceeds the weight of the water inside your pool, it forces its way underneath, causing your liner to stretch, float, and wrinkle. Our Linerlock Pool Drainage System solves this permanently. We install a deep subsurface aggregate highway around your pool structure to collect rising groundwater before it touches your vinyl, routing it to an automated cast-iron sump station. Even if a storm knocks out your power grid and causes the liner to float temporarily, the moment power returns or your backup generator kicks in, the system draws the water table back down, vacuum-securing the liner tightly against the pool walls again.' },
@@ -726,20 +726,20 @@ const STORMWATER_FAQS = [
 function regionalStormwaterTemplate(cityName, neighborhoods) {
   return {
     heroTitle: `Stormwater Management in ${cityName}`,
-    short: `Holistic stormwater management engineered for ${cityName}’s sandy, high-water-table coastal terrain — from roof runoff to rising groundwater to pool protection.`,
+    short: `Holistic stormwater management designed for ${cityName}’s sandy, high-water-table coastal terrain — from roof runoff to rising groundwater to pool protection.`,
     body: [
       `If you own a home, commercial property, or coastal estate in ${cityName} your property sits directly on the front lines of the Atlantic water table. This region is defined by highly dynamic sandy topsoils, expansive master-planned developments, and immediate proximity to sea-level sounds, bays, and rivers.`,
-      'When heavy downpours, seasonal hurricanes, or coastal Nor’easters hit this corridor, water doesn’t just pool on top of the grass — it saturates the earth from the bottom up. True property protection requires holistic stormwater management — an engineered approach that treats your roof runoff, surface sheet-flow, rising subsurface groundwater, and pool structures as a single, unified ecosystem.',
+      'When heavy downpours, seasonal hurricanes, or coastal Nor’easters hit this corridor, water doesn’t just pool on top of the grass — it saturates the earth from the bottom up. True property protection requires holistic stormwater management — a coordinated approach that treats your roof runoff, surface sheet-flow, rising subsurface groundwater, and pool structures as a single, unified ecosystem.',
       'We provide commercial-grade, comprehensive drainage infrastructures built specifically for coastal soil mechanics. We build our integrated systems using thick, septic-grade components and industrial stainless steel fasteners so they stay locked, clear, and fully operational for decades.',
     ],
-    bullets: [`Free on-site estimates in ${cityName}`, 'Engineered for sandy, high-water-table coastal soil', 'Holistic roof-to-groundwater system design'],
+    bullets: [`Free on-site estimates in ${cityName}`, 'Designed for sandy, high-water-table coastal soil', 'Holistic roof-to-groundwater system design'],
     note: {
       heading: 'The Holistic Stormwater Architecture for Coastal Terrains',
       text: 'An effective water management strategy must control water at every stage of a storm event. In sandy, high-water-table zones, surface water routes must work in perfect harmony with subsurface water evacuation to prevent localized flooding and structural failures.',
     },
     challenges: {
       heading: 'The Reality of Coastal Soil & Water: Why Your Property Floods',
-      intro: 'Properties in the Chesapeake, Virginia Beach, and Northeast North Carolina footprints face strict environmental factors that demand specialized engineering:',
+      intro: 'Properties in the Chesapeake, Virginia Beach, and Northeast North Carolina footprints face strict environmental factors that demand specialized expertise:',
       items: [
         { title: 'The Tidal High Water Table', text: 'In low-lying and ocean-facing districts, the natural water table sits just a few feet below your turf. During prolonged downpours or high-tide cycles, the ground completely saturates from beneath, leaving rainwater with absolutely nowhere to soak into.' },
         { title: 'Sandy Soil Infiltration & Cave-Ins', text: 'While sand allows water to pass through initially, loose coastal sand is highly volatile. Heavy storms wash fine sand straight into unsealed drainage pipe joints, packing lines solid like cement and choking off water flow.' },
@@ -757,7 +757,7 @@ function regionalStormwaterTemplate(cityName, neighborhoods) {
     },
     cta: {
       heading: 'Is standing water destroying your yard or foundation?',
-      sub: 'Don’t waste money throwing loose gravel into failing mud holes. Contact us today to schedule a comprehensive on-site laser grade assessment and engineering consultation.',
+      sub: 'Don’t waste money throwing loose gravel into failing mud holes. Contact us today to schedule a comprehensive on-site laser grade assessment and drainage design consultation.',
     },
   }
 }
@@ -769,30 +769,30 @@ function regionalStormwaterTemplate(cityName, neighborhoods) {
 function clayRidgeStormwaterTemplate(cityName, neighborhoods) {
   return {
     heroTitle: `Stormwater Management in ${cityName}`,
-    short: `Holistic stormwater management engineered for ${cityName}’s heavy clay soil and rolling terrain — from roof runoff to rising groundwater to pool protection.`,
+    short: `Holistic stormwater management designed for ${cityName}’s heavy clay soil and rolling terrain — from roof runoff to rising groundwater to pool protection.`,
     body: [
       `If you own a home, commercial property, or rural acreage along the western ridge in ${cityName}, your land battles a completely different geological adversary than the rest of the Tidewater region. This corridor is defined by expansive agricultural tracts, rapid residential growth on massive lots, rolling hills, and some of the most stubborn, unforgiving soil profiles in Virginia.`,
-      'When heavy downpours, seasonal storms, or sudden shifts in the river basins hit this area, water doesn’t simply soak away. Patchwork drainage fixes like a quick surface trench or a standalone interior pump will fail. True property protection requires holistic stormwater management — an engineered approach that treats your roof runoff, heavy surface sheet-flow, deep subterranean groundwater, and critical foundation defenses as a single, unified system.',
-      'We provide commercial-grade, comprehensive drainage infrastructures engineered specifically to conquer heavy clay and sloping terrain. We build our integrated systems using thick, septic-grade components and industrial stainless steel fasteners so they stay locked, clear, and fully operational for decades.',
+      'When heavy downpours, seasonal storms, or sudden shifts in the river basins hit this area, water doesn’t simply soak away. Patchwork drainage fixes like a quick surface trench or a standalone interior pump will fail. True property protection requires holistic stormwater management — a coordinated approach that treats your roof runoff, heavy surface sheet-flow, deep subterranean groundwater, and critical foundation defenses as a single, unified system.',
+      'We provide commercial-grade, comprehensive drainage infrastructures designed specifically to conquer heavy clay and sloping terrain. We build our integrated systems using thick, septic-grade components and industrial stainless steel fasteners so they stay locked, clear, and fully operational for decades.',
     ],
-    bullets: [`Free on-site estimates in ${cityName}`, 'Engineered for heavy clay soil & rolling terrain', 'Holistic roof-to-groundwater system design'],
+    bullets: [`Free on-site estimates in ${cityName}`, 'Designed for heavy clay soil & rolling terrain', 'Holistic roof-to-groundwater system design'],
     note: {
       heading: 'Stormwater Architecture for Clay & Slopes',
       text: 'An effective water management strategy must control water at every stage of a storm event. In heavy clay and rolling terrain, surface control structures must intercept massive sheet-flow volumes, working in perfect harmony with subsurface networks to relieve hydrostatic pressure before it attacks your foundation or crawlspace.',
     },
     challenges: {
       heading: 'The Reality of Western Ridge Earth: Why Your Property Floods',
-      intro: 'Properties in the Suffolk, Smithfield, and Carrollton footprints face rigid environmental factors that demand heavy-duty civil engineering standards:',
+      intro: 'Properties in the Suffolk, Smithfield, and Carrollton footprints face rigid environmental factors that demand heavy-duty construction standards:',
       items: [
         { title: 'The Unyielding Clay Barrier', text: 'The native soil here is packed solid with heavy, compact clay. Clay acts like a dense rubber sheet underneath your lawn — it absorbs water incredibly slowly and swells up when wet. Rainwater traps right on the surface, turning your yard into a muddy swamp that can take days or weeks to dry out.' },
         { title: 'The Clay Bathtub Effect', text: 'When your home was built, the earth directly surrounding your foundation block or crawlspace was dug up and loosened. Rainwater naturally rushes into this loose soil first, creating an underground "bathtub" of trapped water held tightly against your masonry by the surrounding unbroken native clay.' },
         { title: 'Rolling Hills & Ravine Washouts', text: 'Unlike the flat coastal strips, our western ridge features significant elevation drops and rolling terrain. During a heavy storm, thousands of gallons of water speed down these hillsides as "sheet-flow," quickly eroding topsoil, washing out driveways, and collecting in massive pools at the low points of your yard.' },
-        { title: 'Under-Engineered Driveway Culverts', text: 'Many rural and acreage properties rely on shallow roadside ditches or undersized driveway culverts. When upstream water hits a bottlenecked culvert, it backs up immediately, flooding your driveway base and compromising the structural integrity of your entry point.' },
+        { title: 'Undersized Driveway Culverts', text: 'Many rural and acreage properties rely on shallow roadside ditches or undersized driveway culverts. When upstream water hits a bottlenecked culvert, it backs up immediately, flooding your driveway base and compromising the structural integrity of your entry point.' },
       ],
     },
     process: {
       heading: 'High-Performance Structural Drainage Solutions',
-      intro: 'We engineer custom, subsurface networks designed to isolate your foundation and landscape from intense clay water pressures, forcing water completely off your property.',
+      intro: 'We design custom, subsurface networks to isolate your foundation and landscape from intense clay water pressures, forcing water completely off your property.',
       items: [
         { title: 'Elevation & Flow Evaluation', text: 'We map your property’s exact elevation drops using high-precision digital laser transits. We locate the precise structural low-points where surface water and groundwater converge.' },
         { title: 'Woven Geotextile Armor Layout', text: 'We excavate deep collection channels or foundation footprints and line the raw earth with heavy-duty woven geotextile fabric. This prevents fine, heavy clay mud from squeezing up and clogging your clean drainage stone over time.' },
@@ -801,7 +801,7 @@ function clayRidgeStormwaterTemplate(cityName, neighborhoods) {
         { title: 'Precision Grading & Multi-Lift Compaction', text: 'We backfill our trenches or driveways in strategic layers ("lifts"), mechanically packing the earth with vibratory rollers and shaping a subtle center crown or outward slope so surface water sheds immediately.' },
       ],
     },
-    faqHeading: 'Regional Drainage & Engineering Q&A',
+    faqHeading: 'Regional Drainage Q&A',
     faqs: [
       { q: 'What does "holistic stormwater management" actually mean for my property?', a: 'It means treating all water as part of a connected ecosystem. For example, capturing your roof runoff through underground downspout lines does no good if your yard grading forces surface water right back against your foundation. Similarly, a French drain meant to lower the groundwater table will quickly fail if it gets overwhelmed by surface mud or has nowhere to discharge. Our holistic approach connects your roof drainage, surface grading, sub-surface French drains, and foundation waterproofing membranes into a single fluid highway that routes all water to its proper termination point without bottlenecks.' },
       { q: 'Why are standard retail French drains failing in our local clay soils?', a: 'Most standard residential French drain installations fail within 2 to 4 years because they are built using thin, black corrugated plastic pipe wrapped in cheap fabric socks. In heavy clay regions like Suffolk, Smithfield, and Carrollton, the fine clay silt rapidly plugs up those tiny fabric pores, while the weight of the water-logged clay crushes the flexible pipe. Many landscapers and other DIY "drainage professionals" will overprescribe the use of French drains, which are destined to fail within a short time period. When we install French drains, we ensure the materials and design are built to withstand heavy rains over an extended life, maximizing the effectiveness and the cost of investment.' },
@@ -817,7 +817,7 @@ function clayRidgeStormwaterTemplate(cityName, neighborhoods) {
     },
     cta: {
       heading: 'Is standing water destroying your yard, cracking your foundation, or washing out your driveway?',
-      sub: 'Don’t waste money throwing loose gravel into failing mud holes. Contact us today to schedule a comprehensive on-site laser grade assessment and engineering consultation.',
+      sub: 'Don’t waste money throwing loose gravel into failing mud holes. Contact us today to schedule a comprehensive on-site laser grade assessment and drainage design consultation.',
     },
   }
 }
@@ -828,20 +828,20 @@ function clayRidgeStormwaterTemplate(cityName, neighborhoods) {
 function urbanCoreStormwaterTemplate(cityName, neighborhoods) {
   return {
     heroTitle: `Stormwater Management in ${cityName}`,
-    short: `Holistic stormwater management engineered for ${cityName}’s dense, historic urban core — tight lot lines, aging storm mains and porous historic foundations.`,
+    short: `Holistic stormwater management designed for ${cityName}’s dense, historic urban core — tight lot lines, aging storm mains and porous historic foundations.`,
     body: [
       `If you own a home, historic property, or commercial facility within the urban core of ${cityName}, your land fights an entirely different water battle than the rural outposts. This zone is defined by historic building footprints, dense lot lines, extensive concrete impervious surfaces, and immediate vulnerability to tidal shifts and aging city stormwater mains.`,
-      'When heavy downpours, seasonal Nor’easters, or high-tide backup events hit these historic urban sectors, the water has nowhere to go. A quick surface trench or a cheap interior fix won’t protect your foundation. True structural protection requires holistic stormwater management — an engineered approach that treats your roof runoff, high-volume hardscape sheet-flow, rising subsurface groundwater, and foundation barriers as a single, fully integrated system.',
-      'We provide commercial-grade, comprehensive drainage infrastructures specifically engineered to navigate tight lot lines, utility crossings, and historic masonry structures. We build our integrated systems using thick, septic-grade components and industrial stainless steel fasteners so they stay locked, clear, and fully operational for decades.',
+      'When heavy downpours, seasonal Nor’easters, or high-tide backup events hit these historic urban sectors, the water has nowhere to go. A quick surface trench or a cheap interior fix won’t protect your foundation. True structural protection requires holistic stormwater management — a coordinated approach that treats your roof runoff, high-volume hardscape sheet-flow, rising subsurface groundwater, and foundation barriers as a single, fully integrated system.',
+      'We provide commercial-grade, comprehensive drainage infrastructures specifically designed to navigate tight lot lines, utility crossings, and historic masonry structures. We build our integrated systems using thick, septic-grade components and industrial stainless steel fasteners so they stay locked, clear, and fully operational for decades.',
     ],
-    bullets: [`Free on-site estimates in ${cityName}`, 'Engineered for tight lots & historic foundations', 'Holistic roof-to-groundwater system design'],
+    bullets: [`Free on-site estimates in ${cityName}`, 'Designed for tight lots & historic foundations', 'Holistic roof-to-groundwater system design'],
     note: {
       heading: 'The Holistic Stormwater Architecture for Urban & Historic Terrains',
       text: 'An effective water management strategy must control water at every stage of a storm event. In dense urban footprints with high concrete coverage, surface runoff control must prevent immediate pooling while subsurface networks dynamically relieve hydrostatic pressure against older foundation walls.',
     },
     challenges: {
       heading: 'The Reality of the Urban Core: Why Your Property Floods',
-      intro: 'Properties in the Norfolk, Portsmouth, Hampton, and Newport News footprints face rigid environmental and structural factors that demand specialized civil engineering standards:',
+      intro: 'Properties in the Norfolk, Portsmouth, Hampton, and Newport News footprints face rigid environmental and structural factors that demand specialized construction standards:',
       items: [
         { title: 'The Tidal & Storm Sewer Backup', text: 'When a heavy rain event coincides with a high tide or storm surge, the local municipal storm drain pipes fill to maximum capacity with river and bay water. Instead of your yard drainage flowing out into the city system, the city’s water pushes backward into your yard, flooding low points and driveway aprons.' },
         { title: 'High Percentage of Impervious Surfaces', text: 'Dense urban developments mean roofs, asphalt driveways, concrete patios, and city streets cover a huge percentage of the ground. Rainwater cannot soak into concrete, creating massive volumes of rapid surface sheet-flow that quickly overwhelm standard flowerbeds and grass lines.' },
@@ -860,7 +860,7 @@ function urbanCoreStormwaterTemplate(cityName, neighborhoods) {
     },
     cta: {
       heading: 'Is standing water destroying your yard or foundation?',
-      sub: 'Don’t waste money throwing loose gravel into failing mud holes. Contact us today to schedule a comprehensive on-site laser grade assessment and engineering consultation.',
+      sub: 'Don’t waste money throwing loose gravel into failing mud holes. Contact us today to schedule a comprehensive on-site laser grade assessment and drainage design consultation.',
     },
   }
 }
@@ -937,7 +937,7 @@ export const AREAS = [
     ...regionalStormwaterTemplate('Currituck County', ['Moyock', 'Panther Landing', 'Caratoke Highway Corridor', 'Cypress Landing', 'Maple', 'Grandy']),
     body: [
       'If you own a home, commercial property, or coastal estate in Moyock or Currituck County your property sits directly on the front lines of the Atlantic water table. This region is defined by highly dynamic sandy topsoils, expansive master-planned developments, and immediate proximity to sea-level sounds, bays, and rivers.',
-      'When heavy downpours, seasonal hurricanes, or coastal Nor’easters hit this corridor, water doesn’t just pool on top of the grass — it saturates the earth from the bottom up. True property protection requires holistic stormwater management — an engineered approach that treats your roof runoff, surface sheet-flow, rising subsurface groundwater, and pool structures as a single, unified ecosystem.',
+      'When heavy downpours, seasonal hurricanes, or coastal Nor’easters hit this corridor, water doesn’t just pool on top of the grass — it saturates the earth from the bottom up. True property protection requires holistic stormwater management — a coordinated approach that treats your roof runoff, surface sheet-flow, rising subsurface groundwater, and pool structures as a single, unified ecosystem.',
       'We provide commercial-grade, comprehensive drainage infrastructures built specifically for coastal soil mechanics. We build our integrated systems using thick, septic-grade components and industrial stainless steel fasteners so they stay locked, clear, and fully operational for decades.',
     ],
   },
