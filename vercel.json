@@ -1,14 +1,22 @@
 {
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap.xml"
+    }
+  ],
   "routes": [
     {
       "src": "/sitemap.xml",
       "dest": "/sitemap.xml"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/server.js"
     }
   ]
-}
-{
-  "buildCommand": "node scripts/build.js",
-  "outputDirectory": "public",
-  "cleanUrls": true,
-  "trailingSlash": true
 }
