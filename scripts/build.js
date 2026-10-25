@@ -186,7 +186,6 @@ ${pageHero({ eyebrow: 'About Us', title: 'A humble company born out of service t
       <p>Every system we design is sized for the specific soil, slope and water volume of your property — not a one-size-fits-all fix. That approach, backed by the highest quality materials, is why homeowners and businesses across southeastern Virginia and northeastern North Carolina trust us with their drainage.</p>
       <ul class="detail-bullets">
         <li>${icon('check', 18)} Navy Veteran owned and operated</li>
-        <li>${icon('check', 18)} Background in nuclear propulsion</li>
         <li>${icon('check', 18)} ODU Engineering graduate, 18+ years in the field</li>
         <li>${icon('check', 18)} NDS Certified Professional Drainage Contractor</li>
         <li>${icon('check', 18)} Licensed Landscaping Service Contractor, Virginia (2705198697)</li>
