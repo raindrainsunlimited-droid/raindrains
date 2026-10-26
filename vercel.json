@@ -1,14 +1,6 @@
 {
-  "version": 2,
+  "buildCommand": "node scripts/build.js",
+  "outputDirectory": "public",
   "cleanUrls": true,
-  "rewrites": [
-    {
-      "source": "/sitemap.xml",
-      "destination": "/sitemap.xml"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/server.js"
-    }
-  ]
+  "trailingSlash": true
 }
