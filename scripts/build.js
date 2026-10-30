@@ -3,7 +3,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import { SITE, SERVICES, AREAS, REVIEWS, FAQS, PROCESS_STEPS, PAST_PROJECTS, CARE_GUIDE_URL } from '../src/data.js'
-import { layout, quoteForm, footer, header, pageScripts, ctaSection, pageHero, jsonLd, head, faqJsonLd, serviceJsonLd, breadcrumbJsonLd } from '../src/partials.js'
+import { layout, quoteForm, footer, header, pageScripts, ctaSection, pageHero, jsonLd, head, gtmNoscript, faqJsonLd, serviceJsonLd, breadcrumbJsonLd } from '../src/partials.js'
 import { icon, iconFilled } from '../src/icons.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -165,6 +165,7 @@ ${head({ title: "Rain Drains | Hampton Roads' Premier Drainage Contractor — Ch
 ${jsonLd()}
 </head>
 <body>
+${gtmNoscript()}
 ${header()}
 <main>${content}</main>
 ${footer()}
@@ -519,6 +520,33 @@ function robotsTxt() {
   return `User-agent: *\nAllow: /\n\nSitemap: ${SITE.domain}/sitemap.xml\n`
 }
 
+function llmsTxt() {
+  const svcLines = SERVICES.map((s) => `- [${s.name}](${SITE.domain}/${s.slug}/): ${s.short}`).join('\n')
+  const areaLines = AREAS.map((a) => `- [${a.name}, ${a.state}](${SITE.domain}/${a.slug}/)`).join('\n')
+  return `# ${SITE.name}
+
+> Veteran-owned drainage contractor serving southeastern Virginia and northeastern North Carolina. French drains, yard grading, downspout extensions, sump pumps, and related drainage and excavation services. NDS Certified Professional Drainage Contractor, licensed and insured in Virginia (${SITE.license}). ${SITE.rating}★ rating from ${SITE.reviewCountDisplay} reviews.
+
+Phone: ${SITE.phone}
+Email: ${SITE.email}
+
+## Pages
+- [Home](${SITE.domain}/)
+- [About Us](${SITE.domain}/about-us-1/)
+- [All Services](${SITE.domain}/services-1/)
+- [Service Areas](${SITE.domain}/service-areas/)
+- [Past Projects](${SITE.domain}/past-projects/)
+- [FAQ](${SITE.domain}/faq/)
+- [Contact](${SITE.domain}/contact-1/)
+
+## Services
+${svcLines}
+
+## Service Areas
+${areaLines}
+`
+}
+
 // ---------- run ----------
 function main() {
   rmSync(DIST, { recursive: true, force: true })
@@ -553,6 +581,7 @@ function main() {
   }
   writeFileSync(join(DIST, 'sitemap.xml'), sitemapXml())
   writeFileSync(join(DIST, 'robots.txt'), robotsTxt())
+  writeFileSync(join(DIST, 'llms.txt'), llmsTxt())
 
   console.log('Built site to /public')
 }

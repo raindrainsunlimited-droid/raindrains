@@ -2,5 +2,9 @@
   "buildCommand": "node scripts/build.js",
   "outputDirectory": "public",
   "cleanUrls": true,
-  "trailingSlash": true
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/carrolton", "destination": "/carrollton/", "permanent": true },
+    { "source": "/carrolton/", "destination": "/carrollton/", "permanent": true }
+  ]
 }

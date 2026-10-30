@@ -923,10 +923,10 @@ export const AREAS = [
     ...clayRidgeStormwaterTemplate('Smithfield', ['Historic Downtown', 'Cypress Creek', 'Gatling Pointe', 'Moonefield', 'Pagan River Corridor']),
   },
   {
-    slug: 'carrolton',
+    slug: 'carrollton',
     name: 'Carrollton',
     state: 'VA',
-    image: { src: '/img/areas/carrolton.jpg', alt: 'Mini excavator installing a culvert pipe on a Carrollton property' },
+    image: { src: '/img/areas/carrollton.jpg', alt: 'Mini excavator installing a culvert pipe on a Carrollton property' },
     ...clayRidgeStormwaterTemplate('Carrollton', ['Eagle Harbor', 'Founders Pointe', 'Nike Park Corridor', 'Marsh Road Acreage Tracts']),
   },
   {
