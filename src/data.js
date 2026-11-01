@@ -47,7 +47,7 @@ export const SERVICES = [
       'A soggy lawn, muddy paws, and standing water against your foundation aren’t just frustrating — they’re active threats to your home’s structural integrity. Across the Hampton Roads region and northeastern North Carolina, our unique coastal climate, heavy seasonal downpours, and challenging soil types make proper subsurface water management absolutely critical.',
       'If you have areas of your yard that stay wet for days after a storm, a custom-designed French drain system is the most reliable, permanent solution to redirect groundwater safely off your property.',
     ],
-    bullets: ['Custom-sized for your soil and water volume', 'ADS-rated piping, 100-year lifespan', 'Lawn restored after installation'],
+    bullets: ['Custom-sized for your soil and water volume', 'Smooth-wall piping designed to last a lifetime', 'Lawn restored after installation'],
     challenges: {
       heading: 'Why Standard Yards Flood in Our Region',
       intro: 'Many homeowners assume their pooling water is just a grading issue, but the subsurface reality in our service areas requires a deeper approach. Traditional French drains fail around here if the contractor doesn’t account for local soil conditions:',
@@ -103,7 +103,7 @@ export const SERVICES = [
         },
         {
           title: 'Buried Downspout Extensions: Moving Roof Water Away',
-          intro: 'A single inch of rain on a 2,000-square-foot roof produces nearly 1,200 gallons of water. If your gutters simply dump that volume out of standard elbows at the corners of your home, you are actively washing away your foundation’s soil and flooding your crawlspace or basement. We permanently solve this by tying your downspouts directly into clean, smooth-wall rigid PVC or heavy-duty smooth-interior or corrugated ADS pipe buried underground.',
+          intro: 'A single inch of rain on a 2,000-square-foot roof produces nearly 1,200 gallons of water. If your gutters simply dump that volume out of standard elbows at the corners of your home, you are actively washing away your foundation’s soil and flooding your crawlspace or basement. We permanently solve this by tying your downspouts directly into clean, smooth-wall rigid PVC or heavy-duty dual-wall corrugated pipe buried underground, designed to last a lifetime.',
           bullets: [
             'Pipe Clogs — We avoid cheap, thin corrugated piping that traps debris, collapses under the weight of lawnmowers, and rots out. We use rigid and smooth-interior piping that maximizes water velocity and lasts for decades. Ask about our downspout filters for an even cleaner drainage system.',
             'Safe Discharge — We route your roof runoff 20, 50, or 100+ feet away from your home, daylighting the lines into a localized drainage ditch or a clean pop-up emitter near the property line — a critical defense for high-risk foundation zones like the older historic homes in Norfolk and Portsmouth, or rapidly developing lots in Virginia Beach, Chesapeake, Moyock, and Camden County.',
@@ -146,17 +146,17 @@ export const SERVICES = [
     image: { src: '/img/commercial-drainage.jpg', alt: 'Rain Drains technician installing commercial stormwater drainage pipe at a brick commercial building' },
     body: [
       'Managing commercial properties, multi-family complexes, and HOA communities across Hampton Roads requires a fast, reliable, and specialized civil contracting partner. Whether you are dealing with flooded retention pond access roads, failing parking lot catch basins, or unmanaged surface runoff destroying common areas, you don’t need a heavy municipal highway contractor to get the job done right.',
-      'We specialize in commercial-grade PVC and HDPE (ADS N-12) stormwater networks, serving as a true one-stop shop for HOA board members, property management firms, and commercial facility managers. From diagnostic site surveys to final surface restoration, we handle every stage of your community’s drainage infrastructure under a single, fully accountable roof.',
+      'We specialize in commercial-grade PVC and dual-wall corrugated HDPE stormwater networks, serving as a true one-stop shop for HOA board members, property management firms, and commercial facility managers. From diagnostic site surveys to final surface restoration, we handle every stage of your community’s drainage infrastructure under a single, fully accountable roof.',
       'Instead of juggling separate utility operators, excavation crews, and hardscape contractors, we streamline commercial stormwater management into a single, cohesive workflow.',
     ],
     bullets: ['Scoped for property managers, HOAs & GCs', 'Permits handled for you', 'Scheduled around business operations', 'Fully insured crews'],
     challenges: {
       eyebrow: 'Materials',
-      heading: 'Heavy-Duty Commercial Piping Standards: Why PVC & N-12?',
-      intro: 'While massive municipal highway jobs require heavy concrete (RCP) pipe, modern commercial footprints, apartment networks, and residential HOAs run far more efficiently on heavy-duty SDR-35 / Schedule 40 PVC and dual-wall corrugated HDPE (ADS N-12) systems.',
+      heading: 'Heavy-Duty Commercial Piping Standards: Why PVC & HDPE?',
+      intro: 'While massive municipal highway jobs require heavy concrete (RCP) pipe, modern commercial footprints, apartment networks, and residential HOAs run far more efficiently on heavy-duty SDR-35 / Schedule 40 PVC and dual-wall corrugated HDPE systems designed to last a lifetime.',
       items: [
-        { title: 'Superior Hydraulic Efficiency', text: 'Smooth-wall interior PVC and N-12 conduits feature extremely low friction coefficients. Water moves significantly faster through these lines than rough concrete, flushing silt, sand, and organic debris out of your community’s grid before it can settle and clog.' },
-        { title: 'Watertight, Root-Proof Joints', text: 'Concrete pipe joints easily separate over time under regional soil shifting, allowing tree roots to penetrate and destroy the line. Our heavy-duty PVC and dual-wall N-12 pipes utilize high-grade precision-fit gasket connections that resist root intrusion and structural soil movement.' },
+        { title: 'Superior Hydraulic Efficiency', text: 'Smooth-wall interior PVC and dual-wall HDPE conduits feature extremely low friction coefficients. Water moves significantly faster through these lines than rough concrete, flushing silt, sand, and organic debris out of your community’s grid before it can settle and clog.' },
+        { title: 'Watertight, Root-Proof Joints', text: 'Concrete pipe joints easily separate over time under regional soil shifting, allowing tree roots to penetrate and destroy the line. Our heavy-duty PVC and dual-wall HDPE pipes utilize high-grade precision-fit gasket connections that resist root intrusion and structural soil movement.' },
         { title: 'Rapid Installation with Minimal Community Disruption', text: 'Heavy RCP requires massive cranes and broad site shut-downs that block HOA roads and parking stalls for weeks. Our targeted rubber-track excavation fleets allow us to install large-diameter commercial lines quickly, safely, and with minimal impact on resident traffic and parking spaces.' },
       ],
     },
@@ -167,14 +167,14 @@ export const SERVICES = [
       items: [
         { title: 'HOA Common Area & Swale Grading', text: 'Eliminating standing water in community parks, dog runs, and shared green spaces using precision laser transit mapping and heavy-duty turf restructuring.' },
         { title: 'Commercial Parking Lot & Catch Basin Networks', text: 'Installing high-load catch basins, curb inlet connections, and trench channel drains designed to keep parking aprons, garage entrances, and drive lanes completely dry.' },
-        { title: 'Retention Pond Outfall & Overflow Pipes', text: 'Replacing failed or crushed corrugated metal outfalls with smooth-wall N-12 or solid PVC lines to keep your storm ponds discharging at legal, properly sized capacities.' },
+        { title: 'Retention Pond Outfall & Overflow Pipes', text: 'Replacing failed or crushed corrugated metal outfalls with smooth-wall HDPE or solid PVC lines to keep your storm ponds discharging at legal, properly sized capacities.' },
         { title: 'Underground Roof Runoff Mains', text: 'Linking multi-building downspout networks into centralized subterranean storm mains to keep foundation zones bone dry across commercial strips and condo units.' },
         { title: 'Turnkey Site Restoration', text: 'We don’t leave open trenches or ruined grounds. We complete the job with full asphalt patching, concrete curb restoration, and multi-lift soil compaction.' },
       ],
     },
     faqHeading: 'Commercial Property & HOA Management Q&A',
     faqs: [
-      { q: 'Why should our HOA choose PVC or N-12 over traditional concrete (RCP) pipe?', a: 'For residential HOAs, commercial strips, and private multi-family sites, dual-wall HDPE (ADS N-12) and solid SDR-35 PVC offer equal or superior load-bearing strength at a fraction of the installation time and cost. Concrete pipe is prone to joint separation and internal erosion in acidic coastal soils. N-12 and PVC feature smooth, chemically inert interiors that maximize water velocity and structural longevity without requiring heavy crane equipment that destroys community roads.' },
+      { q: 'Why should our HOA choose PVC or HDPE over traditional concrete (RCP) pipe?', a: 'For residential HOAs, commercial strips, and private multi-family sites, dual-wall HDPE and solid SDR-35 PVC offer equal or superior load-bearing strength at a fraction of the installation time and cost. Concrete pipe is prone to joint separation and internal erosion in acidic coastal soils. HDPE and PVC feature smooth, chemically inert interiors that maximize water velocity and structural longevity without requiring heavy crane equipment that destroys community roads.' },
       { q: 'How do you handle work around active residents and business traffic?', a: 'We prioritize site safety and property access. We utilize compact, high-flotation rubber-track machinery that leaves minimal turf disturbance, and we stage all work to maintain continuous vehicular access for residents, emergency vehicles, and delivery trucks. Work areas are securely barricaded at the end of every shift.' },
       { q: 'Can you handle both the excavation and the asphalt/concrete repair?', a: 'Yes. That is the core of our one-stop shop commitment. Property managers don’t have to hire a utility contractor to lay the pipe and a separate paving contractor to fix the driveway or curb. We handle the site excavation, pipe installation, aggregate base compaction, and final asphalt/concrete surface restoration in-house.' },
     ],
@@ -988,7 +988,7 @@ export const FAQS = [
   { q: 'How long will the installation take?', a: 'A typical drainage system installation consisting of 200 linear feet or less of piping will take about half a day. That timeline can vary greatly based on the complexity and size of the system. However, we expect to complete most residential drainage work in one business day.' },
   { q: 'Will my utilities be damaged?', a: 'We always aim to never disturb utilities and have an excellent track record of keeping them safe. On occasion, some utilities can get damaged. Have no fear — our installers are trained to call 811 right away to get the utility repaired or replaced as soon as possible. This will come at no expense to the owner. We cover any damage to utilities and are fully insured.' },
   { q: 'Will my lawn be okay?', a: 'Yes, we can preserve the integrity of your lawn. We use techniques designed to restore the appearance and functionality of your lawn during installation. Be sure to ask about this during your consultation to ensure your lawn meets the criteria.' },
-  { q: 'How long will my drainage system last?', a: 'We only use the highest quality materials. Our ADS piping has a rated lifetime of 100 years. It’s likely your drainage system will outlive your home. To ensure you get the longest life and greatest functionality from your system, schedule an annual hydrojet cleanout.' },
+  { q: 'How long will my drainage system last?', a: 'We only use the highest quality materials. Our smooth-wall pipe is designed to last a lifetime, with most of what we install carrying a 100-year material rating. It’s likely your drainage system will outlive your home. To ensure you get the longest life and greatest functionality from your system, schedule an annual hydrojet cleanout.' },
   { q: 'How do I maintain my drainage system?', a: `Our drainage systems are designed to be inherently low maintenance. However, a little maintenance goes a long way. All installations come with a <a class="inline-link" href="${CARE_GUIDE_URL}" download>Care Guide</a> that will instruct you on how to care for your system.` },
 ]
 
