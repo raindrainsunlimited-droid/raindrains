@@ -5,6 +5,8 @@
   "trailingSlash": true,
   "redirects": [
     { "source": "/carrolton", "destination": "/carrollton/", "permanent": true },
-    { "source": "/carrolton/", "destination": "/carrollton/", "permanent": true }
+    { "source": "/carrolton/", "destination": "/carrollton/", "permanent": true },
+    { "source": "/review", "destination": "https://share.google/X7ZOL8DGKSsuZ2Xfe", "permanent": false },
+    { "source": "/review/", "destination": "https://share.google/X7ZOL8DGKSsuZ2Xfe", "permanent": false }
   ]
 }
