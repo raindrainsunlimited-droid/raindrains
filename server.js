@@ -8,7 +8,7 @@ const PUBLIC_DIR = join(__dirname, 'public')
 const app = express()
 
 app.get(['/carrolton', '/carrolton/'], (req, res) => res.redirect(301, '/carrollton/'))
-app.get(['/review', '/review/'], (req, res) => res.redirect(302, 'https://share.google/X7ZOL8DGKSsuZ2Xfe'))
+app.get(['/review', '/review/'], (req, res) => res.redirect(302, 'https://g.page/r/CfFriXdNrUAYEAE/review'))
 
 app.use(express.static(PUBLIC_DIR, { extensions: ['html'] }))
 

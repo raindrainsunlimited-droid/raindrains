@@ -85,7 +85,7 @@ function reviewsSection(heading = 'What our neighbors say') {
     <div class="grid-3">${revHtml}</div>
     <div style="text-align:center;margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
       <a class="btn btn-ghost" style="color:var(--navy);border-color:var(--border)" href="${SITE.googleReviewsUrl}" target="_blank" rel="noopener">Read all our reviews on Google →</a>
-      <a class="btn btn-green" href="${SITE.googleReviewsUrl}" target="_blank" rel="noopener">Leave Us a Review →</a>
+      <a class="btn btn-green" href="${SITE.googleWriteReviewUrl}" target="_blank" rel="noopener">Leave Us a Review →</a>
     </div>
   </div>
 </section>
