@@ -468,19 +468,28 @@ ${ctaSection('Want your property to look this good?', 'Free on-site estimate. No
 
 // ---------- FAQ ----------
 function faqPage() {
-  const faqHtml = FAQS.map((f, i) => `
-  <div class="faq-item${i === 0 ? ' open' : ''}">
-    <button class="faq-q" type="button">${f.q}<span class="ic">+</span></button>
-    <div class="faq-a"><p>${f.a}</p></div>
-  </div>`).join('')
+  let lastCat = null
+  let globalIdx = 0
+  const faqHtml = FAQS.map((f) => {
+    const catHtml = f.cat !== lastCat ? `<h2 class="faq-cat${lastCat === null ? '' : ' faq-cat-mt'}">${f.cat}</h2>` : ''
+    lastCat = f.cat
+    const isFirst = globalIdx === 0
+    const id = `faq-${globalIdx}`
+    globalIdx++
+    return `${catHtml}
+  <div class="faq-item${isFirst ? ' open' : ''}">
+    <h3 class="faq-q-h"><button class="faq-q" type="button" aria-expanded="${isFirst ? 'true' : 'false'}" aria-controls="${id}">${f.q}<span class="ic">+</span></button></h3>
+    <div class="faq-a" id="${id}"><p>${f.a}</p></div>
+  </div>`
+  }).join('')
   const content = `
-${pageHero({ eyebrow: 'FAQ', title: 'Frequently asked questions', lead: "Got questions about your drainage? We've got answers." })}
+${pageHero({ eyebrow: 'FAQ', title: 'Frequently Asked Questions About Drainage & Grading', lead: "Pricing, scheduling, crawlspace water, licensing and more — straight answers from Rain Drains, Hampton Roads' drainage specialists." })}
 <section class="section"><div class="wrap" style="max-width:880px">${faqHtml}
   <p style="text-align:center;margin-top:26px;color:var(--text-muted)">Didn't find what you're looking for? <a href="/contact-1/" style="color:var(--blue);font-weight:800">Get in touch</a></p>
 </div></section>
 ${ctaSection()}
 `
-  page('faq', layout({ title: 'FAQ | Rain Drains', description: 'Answers to common questions about drainage pricing, financing, scheduling, permits, warranties and more from Rain Drains.', path: '/faq/', content, jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'FAQ', path: '/faq/' }]), faqJsonLd(FAQS)] }))
+  page('faq', layout({ title: 'Drainage FAQ: Pricing, Process & Warranty | Rain Drains', description: 'Answers to common questions about drainage pricing, financing, scheduling, crawlspace flooding, permits and warranties from Rain Drains — Hampton Roads.', path: '/faq/', content, jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'FAQ', path: '/faq/' }]), faqJsonLd(FAQS)] }))
 }
 
 // ---------- Contact ----------
