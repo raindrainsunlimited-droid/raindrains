@@ -129,6 +129,12 @@ export const SERVICES = [
         { title: 'Inline Cleanouts & Basins: Component Integration', text: 'We install integrated inline cleanout ports (when selected) and structural catch basins, making the entire network fully accessible and easy to maintain for decades to come.' },
       ],
     },
+    faqHeading: 'Surface Drainage & Catch Basin Q&A',
+    faqs: [
+      { q: 'What’s the difference between a catch basin and a French drain?', a: 'A catch basin collects water at a specific low point on the surface and routes it away through a pipe — ideal for a localized spot where water visibly pools. A French drain intercepts water moving underground across a wider area. Many properties need both: catch basins for visible surface pooling, and a French drain for groundwater you can’t see. We diagnose which one (or both) your yard needs during your free estimate.' },
+      { q: 'My AC unit keeps creating a muddy patch in my yard — can you fix that?', a: 'Yes. Your HVAC system’s condensate line can dump a steady trickle of water right next to your foundation for months at a time, keeping that spot permanently muddy even when it hasn’t rained. We tie your condensate line into a catch basin or your main drainage grid so that water gets routed away instead of pooling in one spot.' },
+      { q: 'Will a surface drainage system interfere with mowing or landscaping?', a: 'No. Catch basins sit flush with your grass or hardscape, and buried downspout and condensate lines are routed underground, so there’s nothing above ground to mow around once the job is done and your lawn is restored.' },
+    ],
     areaList: {
       heading: 'Localized Service Area Footprint',
       intro: 'Custom surface drainage grids for lawns across the Tidewater and northeastern North Carolina corridor.',
@@ -429,7 +435,7 @@ export const SERVICES = [
       'We provide commercial-grade culvert pipe installation, replacement, and structural rebuilding designed to handle heavy coastal runoff and withstand heavy vehicle traffic for decades.',
     ],
     bullets: ['Sized to handle ditch & storm flow', 'Permits researched and obtained', 'Prevents driveway washouts', 'Durable, code-compliant pipe'],
-    sectionOrder: ['challenges', 'features', 'process', 'note', 'areaList'],
+    sectionOrder: ['challenges', 'features', 'process', 'note', 'faqs', 'areaList'],
     challenges: {
       heading: 'Why Culvert Installations Fail in Our Coastal Districts',
       intro: 'Culvert installation requires precise planning. Because of our unique local geography and high water tables, simple DIY approaches or cut-corner installations fail rapidly due to three primary regional factors:',
@@ -465,6 +471,12 @@ export const SERVICES = [
       heading: 'Navigating Municipal Codes & Drainage Permits',
       text: 'Installing a driveway culvert isn’t just about moving dirt — it frequently requires navigating strict municipal guidelines, utility location clearances, and right-of-way permitting. Whether you are dealing with VDOT requirements in Hampton, Yorktown, and Smithfield, city building specs in Chesapeake and Suffolk, or county drainage board codes down in Moyock and Currituck, we ensure your installation meets or exceeds all local structural codes.',
     },
+    faqHeading: 'Driveway Culvert Installation Q&A',
+    faqs: [
+      { q: 'How do I know if my driveway culvert needs to be replaced?', a: 'The clearest signs are water backing up and pooling in your front yard during storms, a sagging or visibly crushed pipe at the ditch line, or soil eroding and sinking around the ends of the pipe. Any of these mean the culvert is undersized, failing structurally, or both — and it will only get worse with the next heavy storm.' },
+      { q: 'Do I need a permit to replace a driveway culvert?', a: 'In most cases, yes — driveway culverts typically fall under VDOT right-of-way rules or local municipal drainage codes, depending on your city or county. We handle this research and permitting for you as part of every installation.' },
+      { q: 'What size culvert pipe do I need?', a: 'It depends on how much water your roadside ditch carries during a heavy storm, which is driven by the size of the drainage area upstream of your driveway — not just the width of your current pipe. Installing an undersized pipe is one of the most common causes of culvert failure, so we calculate the correct size for your specific ditch rather than just matching what’s already there.' },
+    ],
     areaList: {
       heading: 'Serving All Local Districts & Crossings',
       areas: ['Virginia Beach', 'Chesapeake', 'Suffolk', 'Norfolk', 'Portsmouth', 'Smithfield', 'Carrollton', 'Hampton', 'Yorktown', 'Moyock', 'Currituck County', 'Camden County'],
