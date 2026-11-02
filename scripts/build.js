@@ -480,7 +480,7 @@ ${pageHero({ eyebrow: 'FAQ', title: 'Frequently asked questions', lead: "Got que
 </div></section>
 ${ctaSection()}
 `
-  page('faq', layout({ title: 'FAQ | Rain Drains', description: 'Answers to common questions about permits, timelines, utility safety, lawn restoration and drainage system lifespan.', path: '/faq/', content, jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'FAQ', path: '/faq/' }]), faqJsonLd(FAQS)] }))
+  page('faq', layout({ title: 'FAQ | Rain Drains', description: 'Answers to common questions about drainage pricing, financing, scheduling, permits, warranties and more from Rain Drains.', path: '/faq/', content, jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'FAQ', path: '/faq/' }]), faqJsonLd(FAQS)] }))
 }
 
 // ---------- Contact ----------
