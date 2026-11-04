@@ -164,7 +164,7 @@ ${ctaSection()}
   page('', `<!doctype html>
 <html lang="en">
 <head>
-${head({ title: "Rain Drains | Hampton Roads' Premier Drainage Contractor — Chesapeake & Virginia Beach", description: `@ Professional French drains, yard grading and drainage installation across Chesapeake, Virginia Beach, Norfolk and northeastern NC. Veteran owned. Free estimates. 5.0★ from ${SITE.reviewCountDisplay} reviews.`, path: '/' })}
+${head({ title: "Rain Drains - Outdoor & French Drainage Installation Experts, Yard & Land Grading Services Virginia Beach & Chesapeake, Serving Southeastern VA & Northeastern NC", description: `@ Professional French drains, yard grading and drainage installation across Chesapeake, Virginia Beach, Norfolk and northeastern NC. Veteran owned. Free estimates. 5.0★ from ${SITE.reviewCountDisplay} reviews.`, path: '/' })}
 ${jsonLd()}
 </head>
 <body>
@@ -207,7 +207,7 @@ ${pageHero({ eyebrow: 'About Us', title: 'A humble company born out of service t
 </section>
 ${ctaSection()}
 `
-  page('about-us-1', layout({ title: 'About Us | Rain Drains — Veteran Owned Drainage Contractor', description: "Meet Bryson Goforth, Navy Veteran, ODU Engineering graduate and founder of Rain Drains — Hampton Roads' NDS Certified drainage contractor.", path: '/about-us-1/', content, image: '/img/bryson.jpg', jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'About', path: '/about-us-1/' }])] }))
+  page('about-us-1', layout({ title: 'About Rain Drains - Veteran Owned Drainage Contractor Virginia Beach, Chesapeake, Virginia & North Carolina', description: "Meet Bryson Goforth, Navy Veteran, ODU Engineering graduate and founder of Rain Drains — Hampton Roads' NDS Certified drainage contractor.", path: '/about-us-1/', content, image: '/img/bryson.jpg', jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'About', path: '/about-us-1/' }])] }))
 }
 
 // ---------- Services index ----------
@@ -463,7 +463,7 @@ ${ctaSection('Want your property to look this good?', 'Free on-site estimate. No
   <button type="button" class="lb-nav lb-next" id="lbNext" aria-label="Next photo">&#8250;</button>
 </div>
 `
-  page('past-projects', layout({ title: 'Our Work | Rain Drains Past Projects', description: 'Browse completed French drain, grading and drainage installation projects by Rain Drains across Hampton Roads and northeastern NC.', path: '/past-projects/', content, jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Our Work', path: '/past-projects/' }])] }))
+  page('past-projects', layout({ title: 'Rain Drains Portfolio - Past Drainage Projects', description: 'Browse completed French drain, grading and drainage installation projects by Rain Drains across Hampton Roads and northeastern NC.', path: '/past-projects/', content, jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Our Work', path: '/past-projects/' }])] }))
 }
 
 // ---------- FAQ ----------
@@ -489,7 +489,7 @@ ${pageHero({ eyebrow: 'FAQ', title: 'Frequently Asked Questions About Drainage &
 </div></section>
 ${ctaSection()}
 `
-  page('faq', layout({ title: 'Drainage FAQ: Pricing, Process & Warranty | Rain Drains', description: 'Answers to common questions about drainage pricing, financing, scheduling, crawlspace flooding, permits and warranties from Rain Drains — Hampton Roads.', path: '/faq/', content, jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'FAQ', path: '/faq/' }]), faqJsonLd(FAQS)] }))
+  page('faq', layout({ title: 'Rain Drains - Drainage FAQ: Pricing, Process & Warranty', description: 'Answers to common questions about drainage pricing, financing, scheduling, crawlspace flooding, permits and warranties from Rain Drains — Hampton Roads.', path: '/faq/', content, jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'FAQ', path: '/faq/' }]), faqJsonLd(FAQS)] }))
 }
 
 // ---------- Contact ----------
@@ -511,7 +511,7 @@ ${pageHero({ eyebrow: 'Contact', title: 'Get Your Free Estimate', lead: 'Tell us
   </div>
 </section>
 `
-  page('contact-1', layout({ title: 'Contact Us | Rain Drains — Free Drainage Estimate', description: 'Request your free on-site drainage estimate from Rain Drains. Call 757-807-0080 or send us your details — we usually reply the same day.', path: '/contact-1/', content, jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Contact', path: '/contact-1/' }])] }))
+  page('contact-1', layout({ title: 'Contact Rain Drains - Drainage Services Virginia Beach, Chesapeake, Virginia & North Carolina', description: 'Request your free on-site drainage estimate from Rain Drains. Call 757-807-0080 or send us your details — we usually reply the same day.', path: '/contact-1/', content, jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Contact', path: '/contact-1/' }])] }))
 }
 
 // ---------- Sitemap & robots ----------
