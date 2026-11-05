@@ -164,7 +164,7 @@ ${ctaSection()}
   page('', `<!doctype html>
 <html lang="en">
 <head>
-${head({ title: "Rain Drains - Outdoor & French Drainage Installation Experts, Yard & Land Grading Services Virginia Beach & Chesapeake, Serving Southeastern VA & Northeastern NC", description: `@ Professional French drains, yard grading and drainage installation across Chesapeake, Virginia Beach, Norfolk and northeastern NC. Veteran owned. Free estimates. 5.0★ from ${SITE.reviewCountDisplay} reviews.`, path: '/' })}
+${head({ title: "Rain Drains - Outdoor & French Drainage Installation Experts, Yard & Land Grading Services Virginia Beach & Chesapeake, Serving Southeastern VA & Northeastern NC", description: `Professional French drains, yard grading and drainage installation across Chesapeake, Virginia Beach, Norfolk and northeastern NC. Veteran owned. Free estimates. 5.0★ from ${SITE.reviewCountDisplay} reviews.`, path: '/' })}
 ${jsonLd()}
 </head>
 <body>
