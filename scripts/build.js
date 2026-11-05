@@ -346,7 +346,7 @@ function renderContentSections(entry, defaultOrder) {
   </div>
 </section>` : ''
 
-  const sections = { subServices: subServicesHtml, challenges: challengesHtml, features: featuresHtml, process: processHtml, faqs: faqHtml, areaList: areaListHtml, note: noteHtml }
+  const sections = { subServices: subServicesHtml, challenges: challengesHtml, features: featuresHtml, process: processHtml, contentCol: contentColHtml, faqs: faqHtml, areaList: areaListHtml, note: noteHtml }
   return (entry.sectionOrder || defaultOrder).map((key) => sections[key]).join('')
 }
 
