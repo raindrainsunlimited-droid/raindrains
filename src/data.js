@@ -1105,12 +1105,6 @@ export const AREA_SERVICES = [
         { title: 'Final Site Review & Restoration', text: 'We check completed flow dynamics and restore disturbed turf and soil so your lawn recovers quickly.' }
       ]
     },
-    benefits: [
-      'Controlled subsurface path for excess groundwater rather than letting moisture sit',
-      'Elimination of persistent soggy sections and standing yard water',
-      'Long-term moisture management around building footings and foundations',
-      'Reduced soil erosion and protection for turf and exterior landscaping investments'
-    ],
  note: {
       heading: 'Benefits of Installing a French Drain',
       text: 'A properly planned French drain provides a controlled path for excess groundwater instead of allowing moisture to remain in unwanted areas. Benefits can include improved yard drainage, reduced standing water, better management of saturated soil, and less water accumulation near the home. <br /><br />French drains can also support long-term landscape management by directing water away from areas where repeated saturation may contribute to erosion or muddy conditions.',
@@ -1164,10 +1158,9 @@ export const AREA_SERVICES = [
     seoTitle: 'Pool Liner Repair & Floating Solutions in Virginia Beach, VA | Rain Drains',
     metaDescription: 'Permanent groundwater solutions for floating, wrinkled, or damaged vinyl pool liners in Virginia Beach, VA. Relieve hydrostatic pressure with Linerlock pool drainage.',
     lead: 'Pool liner repair, replacement & floating solutions addressing groundwater hydrostatic pressure in Virginia Beach, VA.',
-    introHeading: 'Permanent Fixes for Floating & Damaged Vinyl Pool Liners',
+    introHeading: '',
     intro: [
-      'Rain Drains LLC helps Virginia Beach pool owners address floating, damaged, loose, and deteriorating liners by identifying the water conditions contributing to the problem and providing practical drainage and repair solutions. Our approach focuses on protecting the liner, addressing underlying groundwater concerns, and helping maintain a dependable pool structure.',
-      'A vinyl pool liner floats when groundwater accumulates beneath the pool floor and walls, creating upward hydrostatic pressure. In Virginia Beach’s low-lying coastal terrain, heavy rainfall and a high water table cause this pressure to exceed the weight of the water inside the pool, causing the liner to bubble, stretch, or pull away from its track.'
+      'Rain Drains LLC helps Virginia Beach pool owners address floating, damaged, loose, and deteriorating liners by identifying the water conditions contributing to the problem and providing practical drainage and repair solutions. Our approach focuses on protecting the liner, addressing underlying groundwater concerns, and helping maintain a dependable pool structure.'
     ],
     features: {
       heading: 'Common Pool Liner Problems We Address',
@@ -1189,12 +1182,16 @@ export const AREA_SERVICES = [
         { title: 'Corrective Installation', text: 'We install dedicated perimeter collection lines and sump assemblies to continuously relieve hydrostatic pressure.' }
       ]
     },
-    benefits: [
-      'Permanently relieves hydrostatic pressure beneath the vinyl liner',
-      'Prevents repeated reset fees, wrinkling, and costly premature liner replacement',
-      'Protects pool floors and sand/vermiculite bases from erosion washouts',
-      'Linerlock perimeter drainage retrofit works with both existing and new in-ground pools'
-    ],
+    note: {
+      heading: 'Signs You Need Pool Liner Repair',
+      text: 'Visible wrinkles, loose sections, unexplained water loss, fading, tears, punctures, and a liner pulling away from the pool surface can indicate a developing problem. Early attention may prevent minor liner concerns from becoming more extensive.',
+    },
+     contentCol: {
+      items: [
+        { title: 'Causes Pool Liner Damage in Virginia Beach', text: 'Pool liner damage can result from age, groundwater pressure, improper water balance, sharp objects, storm-related conditions, and normal material deterioration. Persistent groundwater is especially important to investigate when a liner repeatedly floats after rainfall.' },
+        { title: 'Choose Rain Drains for Pool Liner Problems', text: 'Rain Drains LLC looks beyond visible liner movement to identify drainage conditions that may be contributing to recurring problems. A properly designed floating pool liner protection solution can help manage groundwater pressure while supporting longer-term liner performance.<br /><br />If your pool liner is floating, wrinkled, leaking, or showing signs of damage in Virginia Beach, VA, contact Rain Drains LLC today to discuss the problem and determine the right repair, replacement, or drainage solution for your pool.' }
+      ]
+    },
     faqs: [
       {
         q: 'Do you provide pool liner repair services in Virginia Beach, VA?',
@@ -1273,12 +1270,16 @@ export const AREA_SERVICES = [
         { title: 'Final Review & Dressing', text: 'We inspect the completed area to verify grade angles before dressing the soil for sod or seed.' }
       ]
     },
-    benefits: [
-      'Establishes code-compliant positive slope away from structural foundations',
-      'Eliminates surface pooling, ruts, and standing puddles in your lawn',
-      'Prepares a smooth, even surface for seeding, sodding, or outdoor living projects',
-      'Pairs seamlessly with French drains and downspout extensions for complete drainage'
-    ],
+     note: {
+      heading: 'Why Choose Rain Drains for Grading in Virginia Beach?',
+      text: 'Virginia Beach properties can experience drainage challenges due to heavy rainfall, flat terrain, and site-specific elevation conditions. Rain Drains LLC approaches every grading project with careful attention to how water moves across the property and where improvements are needed.<br /><br /> If standing water, erosion, or uneven ground is affecting your Virginia Beach, VA property, contact Rain Drains LLC today to discuss professional grading solutions and schedule an assessment.',
+    },
+     contentCol: {
+      items: [
+        { title: 'Complete Land & Yard Grading Solutions', text: 'Our grading solutions are based on the specific conditions of each property. Land leveling can correct uneven areas and establish a more consistent surface, while grading adjusts elevations and slopes to encourage controlled water movement.<br /><br />Professional property grading may also support future landscaping or drainage work by creating a properly prepared surface for the next stage of the project.' },
+        { title: 'Signs Your Property Needs Grading', text: 'A property may require grading when puddles remain long after rainfall, water repeatedly moves toward the building, soil washes away, or sections of the yard remain noticeably uneven. Changes to landscaping or previous excavation can also alter drainage patterns and create new low spots.' }
+      ]
+    },
     faqs: [
       {
         q: 'What are grading services used for in Virginia Beach, VA?',
