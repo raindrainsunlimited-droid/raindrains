@@ -2,7 +2,7 @@ import { mkdirSync, writeFileSync, rmSync, cpSync, existsSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { SITE, SERVICES, AREAS, REVIEWS, FAQS, PROCESS_STEPS, PAST_PROJECTS, CARE_GUIDE_URL } from '../src/data.js'
+import { SITE, SERVICES, AREAS, REVIEWS, FAQS, PROCESS_STEPS, PAST_PROJECTS, CARE_GUIDE_URL, AREA_SERVICES } from '../src/data.js'
 import { layout, quoteForm, footer, header, pageScripts, ctaSection, pageHero, jsonLd, head, gtmNoscript, faqJsonLd, serviceJsonLd, breadcrumbJsonLd } from '../src/partials.js'
 import { icon, iconFilled } from '../src/icons.js'
 
