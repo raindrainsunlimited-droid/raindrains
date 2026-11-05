@@ -375,7 +375,7 @@ ${ctaSection(s.cta?.heading || `Ready to solve your ${s.name.toLowerCase()} prob
     const svcPath = `/${s.slug}/`
     const svcJsonLdExtra = [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Services', path: '/services-1/' }, { name: s.name, path: svcPath }]), serviceJsonLd(s, svcPath)]
     if (s.faqs && s.faqs.length) svcJsonLdExtra.push(faqJsonLd(s.faqs))
-    page(s.slug, layout({ title: `${s.name} | Rain Drains — Hampton Roads`, description: `${s.short} Serving Chesapeake, Virginia Beach, Norfolk & Hampton Roads. Free estimates, ${SITE.rating}★ rated.`, path: svcPath, content, image: s.image?.src, jsonLdExtra: svcJsonLdExtra }))
+    page(s.slug, layout({ title: s.seoTitle || `${s.name} | Rain Drains — Hampton Roads`, description: `${s.short} Serving Chesapeake, Virginia Beach, Norfolk & Hampton Roads. Free estimates, ${SITE.rating}★ rated.`, path: svcPath, content, image: s.image?.src, jsonLdExtra: svcJsonLdExtra }))
   }
 }
 
@@ -439,7 +439,7 @@ ${ctaSection(a.cta?.heading || `Ready to fix your drainage in ${a.name}?`, a.cta
     const areaPath = `/${a.slug}/`
     const areaJsonLdExtra = [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Service Areas', path: '/service-areas/' }, { name: a.name, path: areaPath }])]
     if (a.faqs && a.faqs.length) areaJsonLdExtra.push(faqJsonLd(a.faqs))
-    page(a.slug, layout({ title: `Drainage Contractor in ${a.name}, ${a.state} | Rain Drains`, description: `Professional French drains, grading and drainage installation in ${a.name}, ${a.state}. Veteran owned, NDS Certified, free estimates.`, path: areaPath, content, image: a.image?.src, jsonLdExtra: areaJsonLdExtra }))
+    page(a.slug, layout({ title: a.seoTitle || `Drainage Contractor in ${a.name}, ${a.state} | Rain Drains`, description: `Professional French drains, grading and drainage installation in ${a.name}, ${a.state}. Veteran owned, NDS Certified, free estimates.`, path: areaPath, content, image: a.image?.src, jsonLdExtra: areaJsonLdExtra }))
   }
 }
 
