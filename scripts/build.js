@@ -444,96 +444,45 @@ ${ctaSection(a.cta?.heading || `Ready to fix your drainage in ${a.name}?`, a.cta
 }
 
 // ---------- Service pages nested under service areas ----------
+// At the top of scripts/build.js, make sure AREA_SERVICES is imported:
+// import { SITE, SERVICES, AREAS, REVIEWS, FAQS, PROCESS_STEPS, PAST_PROJECTS, CARE_GUIDE_URL, AREA_SERVICES } from '../src/data.js'
+
 function areaServicePages() {
-  const area = AREAS.find((a) => a.slug === 'virginia-beach')
+  if (!AREA_SERVICES || !AREA_SERVICES.length) return
 
-  if (!area) return
+  for (const p of AREA_SERVICES) {
+    const area = AREAS.find((a) => a.slug === p.areaSlug)
+    if (!area) continue
 
-  const pages = [
-    {
-      slug: 'french-drains',
-      name: 'French Drain Installation',
-      title: 'French Drain Installation in Virginia Beach, VA | Rain Drains',
-      description: 'Need a French drain in Virginia Beach, VA? Rain Drains designs and installs drainage systems to manage groundwater, standing water and property flooding.',
-      lead: 'Professional French drain design and installation for Virginia Beach homes and properties.',
-      paragraphs: [
-        'Rain Drains provides professional French drain installation in Virginia Beach, VA. Our drainage systems are designed to collect and redirect groundwater away from foundations, lawns and other problem areas.',
-        'Virginia Beach properties can experience drainage challenges due to sandy coastal soils, low-lying terrain and a high water table. We evaluate your property conditions and design a drainage solution based on its elevation, soil and water movement.',
-        'Our installation process uses drainage stone, geotextile fabric and properly selected piping to help maintain effective water flow and reduce the risk of clogging.',
-        'Whether you are dealing with standing water, a saturated yard or water collecting near your foundation, Rain Drains can evaluate your property and recommend an appropriate French drain solution.'
-      ],
-      bullets: [
-        'Custom French drain design and installation',
-        'Groundwater and standing-water management',
-        'Drainage solutions for foundations and lawns',
-        'Free on-site estimates in Virginia Beach',
-        'Veteran-owned and NDS Certified'
-      ]
-    },
-    {
-      slug: 'pool-liner-repair',
-      name: 'Pool Liner Repair',
-      title: 'Pool Liner Repair in Virginia Beach, VA | Rain Drains',
-      description: 'Experiencing a floating or wrinkled pool liner in Virginia Beach? Rain Drains provides drainage solutions to help manage groundwater pressure around swimming pools.',
-      lead: 'Protect your swimming pool from groundwater pressure with professionally designed pool drainage solutions.',
-      paragraphs: [
-        'Groundwater pressure can cause vinyl swimming pool liners to float, stretch or wrinkle. This can happen when water accumulates beneath the pool liner and creates upward pressure against the pool structure.',
-        'Rain Drains helps Virginia Beach property owners address the drainage conditions that contribute to floating pool liners. Our approach focuses on managing groundwater around the pool rather than simply treating the visible liner problem.',
-        'Our Linerlock Pool Drainage System is designed to collect groundwater around the pool and direct it toward an appropriate discharge point. The system can include drainage stone, collection piping and a sump station, depending on the property requirements.',
-        'If your pool liner is floating or repeatedly developing wrinkles, contact Rain Drains for an on-site assessment of the surrounding drainage conditions.'
-      ],
-      bullets: [
-        'Groundwater management around swimming pools',
-        'Solutions for floating and wrinkled vinyl liners',
-        'Custom pool drainage system design',
-        'Linerlock Pool Drainage System',
-        'Free on-site estimates in Virginia Beach'
-      ]
-    },
-    {
-      slug: 'land-grading',
-      name: 'Land Grading',
-      title: 'Land Grading Services in Virginia Beach, VA | Rain Drains',
-      description: 'Looking for land grading in Virginia Beach, VA? Rain Drains provides professional yard grading and drainage solutions to direct surface water away from your property.',
-      lead: 'Professional land grading to improve drainage and help protect your Virginia Beach property.',
-      paragraphs: [
-        'Proper land grading helps direct rainwater away from your home, foundation and other structures. When a property has low spots or incorrect slopes, water can collect in the yard and create ongoing drainage problems.',
-        'Rain Drains provides land grading services throughout Virginia Beach. We evaluate existing elevations and identify areas where water collects or flows toward structures.',
-        'Using precision elevation measurements and appropriate grading equipment, our team reshapes the ground to encourage better surface-water runoff. Where necessary, grading can be combined with French drains or other drainage systems.',
-        'Whether you need to correct a soggy lawn, improve surface drainage or address water collecting near your foundation, Rain Drains can assess your property and recommend a grading solution.'
-      ],
-      bullets: [
-        'Residential yard and land grading',
-        'Surface-water drainage improvements',
-        'Correction of low spots and uneven areas',
-        'Precision elevation assessment',
-        'Free on-site estimates in Virginia Beach'
-      ]
-    }
-  ]
+    const path = `/${p.areaSlug}/${p.slug}/`
 
-  for (const p of pages) {
-    const path = `/${area.slug}/${p.slug}/`
+    // Siblings in the same area for sidebar navigation
+    const siblings = AREA_SERVICES.filter((x) => x.areaSlug === p.areaSlug && x.slug !== p.slug)
+    const sidebarLinks = siblings.map((s) => `<a href="/${s.areaSlug}/${s.slug}/">${s.name}</a>`).join('')
+
+    const introHtml = p.intro.map((para) => `<p>${para}</p>`).join('')
+    const benefitsHtml = p.benefits ? `
+      <h3 style="margin-top:24px">Benefits</h3>
+      <ul class="detail-bullets">
+        ${p.benefits.map((b) => `<li>${icon('check', 18)} ${b}</li>`).join('')}
+      </ul>` : ''
 
     const content = `
-${pageHero({ eyebrow: 'Virginia Beach Drainage Services', title: p.name + ' in Virginia Beach, VA', lead: p.lead, tight: true })}
+${pageHero({ eyebrow: `${p.areaName} Drainage Services`, title: p.name + ` in ${p.areaName}, ${area.state}`, lead: p.lead, tight: true })}
 
 <section class="section">
   <div class="wrap detail-grid">
     <div class="detail-body">
-      ${p.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join('')}
-      <ul class="detail-bullets">
-        ${p.bullets.map((b) => `<li>${icon('check', 18)} ${b}</li>`).join('')}
-      </ul>
+      <h2>${p.introHeading}</h2>
+      ${introHtml}
+      ${benefitsHtml}
     </div>
 
     <aside class="sidebar-card">
-      <h3>Virginia Beach Drainage Services</h3>
+      <h3>${p.areaName} Drainage Services</h3>
       <div class="sidebar-list">
-        ${pages.filter((x) => x.slug !== p.slug).map((x) =>
-          `<a href="/${area.slug}/${x.slug}/">${x.name}</a>`
-        ).join('')}
-        <a href="/${area.slug}/">All Virginia Beach Services</a>
+        ${sidebarLinks}
+        <a href="/${area.slug}/">All ${p.areaName} Services</a>
       </div>
       <a class="btn btn-green btn-block" href="/contact-1/" style="margin-top:18px">
         Get a Free Estimate
@@ -542,8 +491,11 @@ ${pageHero({ eyebrow: 'Virginia Beach Drainage Services', title: p.name + ' in V
   </div>
 </section>
 
-${ctaSection(`Need ${p.name.toLowerCase()} in Virginia Beach?`, 'Contact Rain Drains for a free on-site estimate.')}
+${renderContentSections(p, ['features', 'process', 'faqs'])}
+
+${ctaSection(`Need ${p.name.toLowerCase()} in ${p.areaName}?`, 'Contact Rain Drains LLC for a free on-site estimate.')}
 `
+
     const jsonLdExtra = [
       breadcrumbJsonLd([
         { name: 'Home', path: '/' },
@@ -552,8 +504,17 @@ ${ctaSection(`Need ${p.name.toLowerCase()} in Virginia Beach?`, 'Contact Rain Dr
         { name: p.name, path }
       ])
     ]
+    if (p.faqs && p.faqs.length) {
+      jsonLdExtra.push(faqJsonLd(p.faqs))
+    }
 
-    page( `${area.slug}/${p.slug}`, layout({ title: p.title, description: p.description, path, content, jsonLdExtra }) )
+    page(`${p.areaSlug}/${p.slug}`, layout({
+      title: p.seoTitle,
+      description: p.metaDescription,
+      path,
+      content,
+      jsonLdExtra
+    }))
   }
 }
 
