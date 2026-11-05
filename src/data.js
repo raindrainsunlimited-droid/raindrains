@@ -1111,6 +1111,10 @@ export const AREA_SERVICES = [
       'Long-term moisture management around building footings and foundations',
       'Reduced soil erosion and protection for turf and exterior landscaping investments'
     ],
+ note: {
+      heading: 'Benefits of Installing a French Drain',
+      text: 'A properly planned French drain provides a controlled path for excess groundwater instead of allowing moisture to remain in unwanted areas. Benefits can include improved yard drainage, reduced standing water, better management of saturated soil, and less water accumulation near the home. <br /><br />French drains can also support long-term landscape management by directing water away from areas where repeated saturation may contribute to erosion or muddy conditions.',
+    },
     faqs: [
       {
         q: 'Do you install French drains in Virginia Beach, VA?',

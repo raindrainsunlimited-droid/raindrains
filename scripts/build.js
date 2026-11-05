@@ -491,7 +491,7 @@ ${pageHero({ eyebrow: `${p.areaName} Drainage Services`, title: p.name + ` in ${
   </div>
 </section>
 
-${renderContentSections(p, ['features', 'process', 'faqs'])}
+${renderContentSections(p, ['features', 'process', 'note', 'faqs'])}
 
 ${ctaSection(`Need ${p.name.toLowerCase()} in ${p.areaName}?`, 'Contact Rain Drains LLC for a free on-site estimate.')}
 `
