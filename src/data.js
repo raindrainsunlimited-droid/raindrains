@@ -1115,6 +1115,13 @@ export const AREA_SERVICES = [
       heading: 'Benefits of Installing a French Drain',
       text: 'A properly planned French drain provides a controlled path for excess groundwater instead of allowing moisture to remain in unwanted areas. Benefits can include improved yard drainage, reduced standing water, better management of saturated soil, and less water accumulation near the home. <br /><br />French drains can also support long-term landscape management by directing water away from areas where repeated saturation may contribute to erosion or muddy conditions.',
     },
+     contentCol: {
+      items: [
+        { title: 'Types of French Drain Solutions We Install', text: 'We identify problem areas, existing drainage patterns, elevations, and practical discharge points.' },
+        { title: 'Drainage Planning', text: 'Drainage problems vary from property to property, so the system should match the source and location of unwanted water. We install yard drainage solutions for low-lying and consistently wet areas. A foundation french drain may also be considered when groundwater needs to be managed around the perimeter of a home&cute;s foundation.', 'System placement depends on factors such as soil conditions, property grade, runoff patterns, and available drainage routes.' },
+        { title: 'Choose Rain Drains for French Drain Installation', text: 'Rain Drains LLC approaches every project with careful attention to the property&cute;s actual drainage conditions. We focus on identifying where water originates, understanding how it travels across the site, and installing a practical solution designed to manage it effectively.', 'If standing water, saturated soil, or poor drainage is affecting your property in Virginia Beach, VA, contact Rain Drains LLC today to discuss your drainage concerns and schedule an assessment.' }
+      ]
+    },
     faqs: [
       {
         q: 'Do you install French drains in Virginia Beach, VA?',

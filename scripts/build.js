@@ -294,6 +294,15 @@ function renderContentSections(entry, defaultOrder) {
   </div>
 </section>` : ''
 
+  const contentColHtml = entry.contentCol ? `
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+    </div>
+    ${infoGrid(entry.contentCol.items)}
+  </div>
+</section>` : ''
+
   const faqHtml = entry.faqs ? `
 <section class="section bg-surface">
   <div class="wrap" style="max-width:880px">
@@ -491,7 +500,7 @@ ${pageHero({ eyebrow: `${p.areaName} Drainage Services`, title: p.name + ` in ${
   </div>
 </section>
 
-${renderContentSections(p, ['features', 'process', 'note', 'faqs'])}
+${renderContentSections(p, ['features', 'process', 'note', 'contentCol', 'faqs'])}
 
 ${ctaSection(`Need ${p.name.toLowerCase()} in ${p.areaName}?`, 'Contact Rain Drains LLC for a free on-site estimate.')}
 `
