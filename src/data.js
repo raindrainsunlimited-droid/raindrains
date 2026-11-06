@@ -1020,8 +1020,8 @@ export const BLOG_POSTS = [
       <h2>Why this is where corners get cut</h2>
       <p>Every inch of extra width and depth means more digging, more stone, more labor — and on a bid, that shows up as a bigger number. It's genuinely easier to quote (and install) a 6-inch-wide, 12-inch-deep trench than to do it right. The problem only shows up later, when the "drain" that looked fine on installation day is clogged, waterlogged, or simply not moving water anymore — usually right around the time the original installer is hard to get back on the phone.</p>
 
-      <img src="/img/blog/open-trench-install.jpg" alt="An open trench during a Rain Drains drainage installation, before backfill" style="width:100%;border-radius:12px;margin:24px 0">
-      <p style="color:var(--text-muted);font-size:13.5px;margin-top:-12px">An open trench on an actual Rain Drains job, before backfill. If a contractor won't show you this, ask why.</p>
+      <img src="/img/blog/open-trench-footing.jpg" alt="An open trench dug down to the foundation footing on an actual Rain Drains job, before backfill" style="width:100%;border-radius:12px;margin:24px 0">
+      <p style="color:var(--text-muted);font-size:13.5px;margin-top:-12px">An open trench dug down to the footing on an actual Rain Drains job, before backfill. If a contractor won't show you this, ask why.</p>
 
       <p>A French drain is underground. Once it's backfilled, you can't see whether it was actually built to these specs — so the only real way to know is to ask your contractor for the dimensions and slope before the trench gets covered, not after.</p>
     `,
