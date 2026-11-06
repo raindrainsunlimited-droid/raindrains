@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 520" font-family="Inter, Arial, sans-serif">
+  <defs>
+    <pattern id="stonePattern" width="18" height="18" patternUnits="userSpaceOnUse">
+      <rect width="18" height="18" fill="#dbe4ec"/>
+      <circle cx="4" cy="4" r="2.4" fill="#aebdcc"/>
+      <circle cx="13" cy="9" r="2.2" fill="#c3d0dc"/>
+      <circle cx="6" cy="14" r="2.3" fill="#b7c5d2"/>
+      <circle cx="15" cy="16" r="1.8" fill="#aebdcc"/>
+    </pattern>
+    <marker id="arrowEnd" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#1c6fd6"/>
+    </marker>
+    <marker id="arrowStart" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#1c6fd6"/>
+    </marker>
+  </defs>
+
+  <rect width="700" height="520" fill="#ffffff"/>
+
+  <!-- excavated soil mounds -->
+  <path d="M0,110 Q90,55 180,100 L180,0 L0,0 Z" fill="#e9ddc6"/>
+  <path d="M700,110 Q610,55 520,100 L520,0 L700,0 Z" fill="#e9ddc6"/>
+
+  <!-- ground surface -->
+  <line x1="0" y1="100" x2="700" y2="100" stroke="#0b2b4a" stroke-width="2.5"/>
+  <text x="18" y="88" fill="#0b2b4a" font-size="15" font-weight="700">Ground level</text>
+
+  <!-- trench soil walls -->
+  <rect x="150" y="100" width="400" height="330" fill="#f3ead9"/>
+
+  <!-- stone-filled trench cavity -->
+  <rect x="190" y="110" width="320" height="300" fill="url(#stonePattern)" stroke="#0b2b4a" stroke-width="1.5"/>
+
+  <!-- non-woven filter fabric wrap (dashed) -->
+  <rect x="190" y="110" width="320" height="300" fill="none" stroke="#1c6fd6" stroke-width="2.5" stroke-dasharray="7 6"/>
+  <text x="520" y="135" fill="#1c6fd6" font-size="14" font-weight="700">Non-woven filter fabric</text>
+  <text x="520" y="153" fill="#5c6b7a" font-size="12.5">wraps the full stone envelope</text>
+
+  <!-- pipe -->
+  <circle cx="350" cy="370" r="42" fill="#ffffff" stroke="#0b2b4a" stroke-width="3"/>
+  <g stroke="#0b2b4a" stroke-width="3" stroke-linecap="round">
+    <line x1="322" y1="396" x2="318" y2="406"/>
+    <line x1="338" y1="404" x2="335" y2="415"/>
+    <line x1="356" y1="406" x2="356" y2="417"/>
+    <line x1="374" y1="402" x2="377" y2="413"/>
+  </g>
+  <text x="195" y="420" fill="#0b2b4a" font-size="14" font-weight="700">Perforated pipe</text>
+  <text x="195" y="438" fill="#5c6b7a" font-size="12.5">holes face down</text>
+
+  <!-- width dimension -->
+  <line x1="190" y1="70" x2="510" y2="70" stroke="#1c6fd6" stroke-width="2.5" marker-start="url(#arrowStart)" marker-end="url(#arrowEnd)"/>
+  <text x="350" y="56" fill="#0b2b4a" font-size="16" font-weight="800" text-anchor="middle">12" minimum width</text>
+
+  <!-- depth dimension -->
+  <line x1="110" y1="110" x2="110" y2="410" stroke="#1c6fd6" stroke-width="2.5" marker-start="url(#arrowStart)" marker-end="url(#arrowEnd)"/>
+  <text x="95" y="260" fill="#0b2b4a" font-size="16" font-weight="800" text-anchor="middle" transform="rotate(-90 95 260)">18" minimum depth</text>
+
+  <!-- slope inset -->
+  <g transform="translate(540,330)">
+    <rect x="-10" y="-10" width="170" height="130" rx="10" fill="#f6f8fa" stroke="#e4e9ef" stroke-width="1.5"/>
+    <text x="75" y="14" fill="#0b2b4a" font-size="13.5" font-weight="700" text-anchor="middle">Slope</text>
+    <line x1="5" y1="35" x2="140" y2="55" stroke="#0b2b4a" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowEnd)"/>
+    <text x="75" y="95" fill="#5c6b7a" font-size="12.5" text-anchor="middle">~1" drop per</text>
+    <text x="75" y="111" fill="#5c6b7a" font-size="12.5" text-anchor="middle">10 ft of run</text>
+  </g>
+
+  <!-- bottom caption -->
+  <text x="350" y="500" fill="#5c6b7a" font-size="13" text-anchor="middle">Rain Drains — standard French drain cross-section</text>
+</svg>

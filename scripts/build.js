@@ -2,8 +2,8 @@ import { mkdirSync, writeFileSync, rmSync, cpSync, existsSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { SITE, SERVICES, AREAS, REVIEWS, FAQS, PROCESS_STEPS, PAST_PROJECTS, CARE_GUIDE_URL } from '../src/data.js'
-import { layout, quoteForm, footer, header, pageScripts, ctaSection, pageHero, jsonLd, head, gtmNoscript, faqJsonLd, serviceJsonLd, breadcrumbJsonLd } from '../src/partials.js'
+import { SITE, SERVICES, AREAS, REVIEWS, FAQS, PROCESS_STEPS, PAST_PROJECTS, CARE_GUIDE_URL, BLOG_POSTS } from '../src/data.js'
+import { layout, quoteForm, footer, header, pageScripts, ctaSection, pageHero, jsonLd, head, gtmNoscript, faqJsonLd, serviceJsonLd, breadcrumbJsonLd, articleJsonLd } from '../src/partials.js'
 import { icon, iconFilled } from '../src/icons.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -466,6 +466,61 @@ ${ctaSection('Want your property to look this good?', 'Free on-site estimate. No
   page('past-projects', layout({ title: 'Our Work | Rain Drains Past Projects', description: 'Browse completed French drain, grading and drainage installation projects by Rain Drains across Hampton Roads and northeastern NC.', path: '/past-projects/', content, jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Our Work', path: '/past-projects/' }])] }))
 }
 
+// ---------- Blog ----------
+function formatBlogDate(iso) {
+  const [y, m, d] = iso.split('-').map(Number)
+  return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })
+}
+
+function blogIndexPage() {
+  const sorted = [...BLOG_POSTS].sort((a, b) => (a.date < b.date ? 1 : -1))
+  const cards = sorted.map((p) => `
+  <a class="blog-card" href="/blog/${p.slug}/">
+    <div class="blog-card-img"><img src="${p.image.src}" alt="${p.image.alt}" loading="lazy" width="400" height="260"></div>
+    <div class="blog-card-body">
+      <span class="blog-card-date">${formatBlogDate(p.date)}</span>
+      <h3>${p.title}</h3>
+      <p>${p.excerpt}</p>
+      <span class="svc-link">Read more →</span>
+    </div>
+  </a>`).join('')
+  const content = `
+${pageHero({ eyebrow: 'Blog', title: 'Drainage & Foundation Tips from Rain Drains', lead: 'Straight answers on drainage, grading and foundation protection for homeowners across Hampton Roads and northeastern NC.' })}
+<section class="section"><div class="wrap"><div class="grid-3">${cards}</div></div></section>
+${ctaSection()}
+`
+  page('blog', layout({ title: 'Blog | Rain Drains', description: 'Drainage, grading and foundation protection tips from Rain Drains — Hampton Roads’ veteran-owned drainage contractor.', path: '/blog/', content, jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Blog', path: '/blog/' }])] }))
+}
+
+function blogPostPages() {
+  BLOG_POSTS.forEach((p) => {
+    const postPath = `/blog/${p.slug}/`
+    const content = `
+<section class="section" style="padding-bottom:0">
+  <div class="wrap" style="max-width:760px">
+    <span class="eyebrow">Blog</span>
+    <h1 style="margin:16px 0 10px">${p.title}</h1>
+    <p style="color:var(--text-muted);font-weight:600;margin-bottom:28px">${formatBlogDate(p.date)}</p>
+    <img src="${p.image.src}" alt="${p.image.alt}" style="width:100%;border-radius:14px;margin-bottom:8px" width="900" height="600">
+  </div>
+</section>
+<section class="section" style="padding-top:28px">
+  <div class="wrap blog-article" style="max-width:760px">
+    ${p.body}
+  </div>
+</section>
+`
+    page(`blog/${p.slug}`, layout({
+      title: `${p.title} | Rain Drains Blog`,
+      description: p.excerpt,
+      path: postPath,
+      content,
+      image: p.image.src,
+      jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Blog', path: '/blog/' }, { name: p.title, path: postPath }]), articleJsonLd(p, postPath)],
+    }))
+  })
+}
+
 // ---------- FAQ ----------
 function faqPage() {
   let lastCat = null
@@ -516,7 +571,7 @@ ${pageHero({ eyebrow: 'Contact', title: 'Get Your Free Estimate', lead: 'Tell us
 
 // ---------- Sitemap & robots ----------
 function allPageSlugs() {
-  const staticSlugs = ['', 'about-us-1', 'services-1', 'service-areas', 'past-projects', 'faq', 'contact-1']
+  const staticSlugs = ['', 'about-us-1', 'services-1', 'service-areas', 'past-projects', 'faq', 'blog', 'contact-1']
   return [...staticSlugs, ...SERVICES.map((s) => s.slug), ...AREAS.map((a) => a.slug)]
 }
 
@@ -524,8 +579,9 @@ function sitemapXml() {
   const urls = allPageSlugs().map((slug) => {
     const path = slug === '' ? '/' : `/${slug}/`
     return `  <url><loc>${SITE.domain}${path}</loc></url>`
-  }).join('\n')
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`
+  })
+  const blogUrls = BLOG_POSTS.map((p) => `  <url><loc>${SITE.domain}/blog/${p.slug}/</loc></url>`)
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...urls, ...blogUrls].join('\n')}\n</urlset>\n`
 }
 
 function robotsTxt() {
@@ -556,6 +612,9 @@ ${svcLines}
 
 ## Service Areas
 ${areaLines}
+
+## Blog
+${BLOG_POSTS.map((p) => `- [${p.title}](${SITE.domain}/blog/${p.slug}/): ${p.excerpt}`).join('\n')}
 `
 }
 
@@ -571,6 +630,8 @@ function main() {
   serviceAreasIndexPage()
   areaPages()
   pastProjectsPage()
+  blogIndexPage()
+  blogPostPages()
   faqPage()
   contactPage()
 

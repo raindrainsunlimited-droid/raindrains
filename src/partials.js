@@ -99,6 +99,21 @@ export function faqJsonLd(faqs) {
   }
 }
 
+export function articleJsonLd(post, path) {
+  return {
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    image: SITE.domain + post.image.src,
+    datePublished: post.date,
+    dateModified: post.date,
+    url: SITE.domain + path,
+    author: { '@type': 'Organization', name: SITE.name, url: SITE.domain + '/' },
+    publisher: { '@id': SITE.domain + '/#business' },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': SITE.domain + path },
+  }
+}
+
 export function serviceJsonLd(s, path) {
   return {
     '@type': 'Service',

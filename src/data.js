@@ -34,6 +34,7 @@ export const NAV = [
   { href: '/past-projects/', label: 'Our Work' },
   { href: '/service-areas/', label: 'Service Areas' },
   { href: '/faq/', label: 'FAQ' },
+  { href: '/blog/', label: 'Blog' },
   { href: '/contact-1/', label: 'Contact' },
 ]
 
@@ -994,6 +995,33 @@ export const REVIEWS = [
   { name: 'James LaZar', when: '1 month ago', text: 'Bryson is the true deal! He came out next day and got me situated. The workers that came out were honestly hands down the best. Communication and Execution just top notch!' },
   { name: 'Amber Morgan', when: '4 weeks ago', text: 'Bryson listened to our problem and set up an appointment. We received an extremely reasonable quote and a work date. The crew arrived on time and finished the job in one day. They were efficient and respectful of my property. I HIGHLY recommend their services.' },
   { name: 'Tony Cannady', when: '4 weeks ago', text: 'Rain Drains was amazing. Bryson the owner was awesome. He actually took the time to come out and work with us face-to-face, and they were able to complete an install in one day very professionally. I would recommend them to anyone.' },
+]
+
+export const BLOG_POSTS = [
+  {
+    slug: 'how-deep-should-a-french-drain-be',
+    title: 'How Deep (and Wide) Should a French Drain Really Be?',
+    excerpt: 'A lot of "French drains" get installed shallow, narrow, and fast, because that’s cheaper to dig. Here’s what a properly built one actually requires.',
+    date: '2026-11-06',
+    image: { src: '/img/french-drain.jpg', alt: 'Finished French drain with washed stone running along a home’s foundation' },
+    body: `
+      <p>If you've gotten more than one quote for a French drain, you've probably noticed the numbers don't match — and neither does the pipe in the ground. That's because a lot of "French drains" get installed shallow, narrow, and fast, because shallow and narrow is cheaper to dig. The problem is, undersized French drains don't fail eventually. They fail almost immediately.</p>
+
+      <h2>The minimums that actually matter</h2>
+      <p>A properly built French drain should be at least <strong>12 inches wide</strong>. Narrower than that, and there isn't enough room for the stone envelope around the pipe to actually do its job — which is to let water in while keeping soil and silt out.</p>
+      <p>Depth matters even more. A French drain should run <strong>at least 18 inches deep, or to the base of the nearest foundation footing — whichever is deeper</strong>. Go shallower than that and you're not actually intercepting the water causing your problem; you're just moving a puddle a few feet to the side.</p>
+
+      <img src="/img/blog/french-drain-cross-section.svg" alt="Labeled cross-section diagram of a properly built French drain showing 12 inch minimum width, 18 inch minimum depth, non-woven filter fabric wrap, and a perforated pipe with holes facing down" style="width:100%;max-width:700px;display:block;margin:28px auto;border-radius:12px;border:1px solid var(--border)">
+
+      <h2>Slope is non-negotiable</h2>
+      <p>Width and depth don't mean much without the right pitch. A French drain needs a consistent downward slope of about <strong>1 inch of drop for every 10 feet of run</strong>. Without that slope, water sits in the pipe instead of moving through it — and standing water in a drain line is exactly the condition that leads to sediment buildup and eventual clogging.</p>
+      <p>Where the terrain won't allow that slope to be maintained for the full run, the fix isn't to install the pipe flat and hope — it's to add a <a class="inline-link" href="/outdoor-sump-pumps-1/">sump pump and basin</a> at the low point, so water is mechanically moved out instead of relying on gravity that isn't there.</p>
+
+      <h2>Why this is where corners get cut</h2>
+      <p>Every inch of extra width and depth means more digging, more stone, more labor — and on a bid, that shows up as a bigger number. It's genuinely easier to quote (and install) a 6-inch-wide, 12-inch-deep trench than to do it right. The problem only shows up later, when the "drain" that looked fine on installation day is clogged, waterlogged, or simply not moving water anymore — usually right around the time the original installer is hard to get back on the phone.</p>
+      <p>A French drain is underground. Once it's backfilled, you can't see whether it was actually built to these specs — so the only real way to know is to ask your contractor for the dimensions and slope before the trench gets covered, not after.</p>
+    `,
+  },
 ]
 
 export const FAQS = [
