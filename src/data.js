@@ -41,6 +41,7 @@ export const NAV = [
 export const SERVICES = [
   {
     slug: 'french-drain',
+    seoTitle: 'French Drain Installation, Yard & Foundation Drainage Virginia Beach, Chesapeake, Virginia & North Carolina - Rain Drains',
     name: 'French Drain Installation',
     short: 'Standing water and foundation protection — a custom-designed French drain redirects groundwater safely off your property, permanently.',
     icon: 'drop',
@@ -83,6 +84,7 @@ export const SERVICES = [
   },
   {
     slug: 'lawn-drainage-1',
+    seoTitle: 'Yard & Lawn Drainage Services Virginia Beach, Chesapeake, Virginia & North Carolina - Rain Drains',
     name: 'Residential Drainage Solutions',
     short: 'Catch basins, buried downspout extensions and condensate drainage networks that intercept surface water before it saturates your lawn.',
     icon: 'home',
@@ -193,6 +195,7 @@ export const SERVICES = [
   },
   {
     slug: 'downspout-extensions-1',
+    seoTitle: 'Downspout Extensions & Underground Drainage Solutions Virginia Beach, Chesapeake, Virginia & North Carolina - Rain Drains',
     name: 'Downspout Extensions',
     short: 'Commercial-grade, smooth-wall underground downspout systems that carry roof runoff hundreds of feet from your foundation — not just a few inches.',
     icon: 'downspout',
@@ -225,6 +228,7 @@ export const SERVICES = [
   },
   {
     slug: 'concrete-drains-1',
+    seoTitle: 'Concrete Drain Services Virginia Beach, Chesapeake, Virginia & North Carolina - Rain Drains',
     name: 'Concrete Drains',
     short: 'Continuous concrete channel drains and heavy-duty surface interceptor grates that catch sheet-flow across driveways, patios and parking lots before it reaches your structures.',
     icon: 'trench',
@@ -271,6 +275,7 @@ export const SERVICES = [
   {
     slug: 'grading-services',
     name: 'Grading Services',
+    seoTitle: 'Land & Yard Grading Services Virginia Beach, Chesapeake, Virginia & North Carolina - Rain Drains',
     short: 'Commercial-grade earth-moving and precision leveling that permanently corrects pitch issues so heavy coastal runoff flows safely away from your property.',
     icon: 'grade',
     image: { src: '/img/grading-services.jpg', alt: 'Freshly graded and leveled backyard ready for sod, pitched to carry water away from the home' },
@@ -344,6 +349,7 @@ export const SERVICES = [
   },
   {
     slug: 'outdoor-sump-pumps-1',
+    seoTitle: 'Outdoor Sump Pump Systems Virginia Beach, Chesapeake, Virginia & North Carolina - Rain Drains',
     name: 'Outdoor Sump Pumps',
     short: 'Commercial-grade outdoor sump pump systems that mechanically lift rising groundwater off flat, low-lying coastal properties where gravity alone can’t drain.',
     icon: 'pump',
@@ -380,6 +386,7 @@ export const SERVICES = [
   },
   {
     slug: 'exterior-waterproofing',
+    seoTitle: 'Exterior Waterproofing & Foundation Shielding Virginia Beach, Chesapeake, Virginia & North Carolina - Rain Drains',
     name: 'Exterior Waterproofing',
     short: 'Commercial-grade exterior waterproofing — a multi-layer membrane, drainage mat and footing drain system that stops groundwater before it ever reaches your foundation walls.',
     icon: 'shield',
@@ -426,6 +433,7 @@ export const SERVICES = [
   },
   {
     slug: 'culvert-pipe-installation-1',
+    seoTitle: 'Culvert Pipe Installation Virginia Beach, Chesapeake, Virginia & North Carolina - Rain Drains',
     name: 'Culvert Pipe Installation',
     short: 'Commercial-grade culvert pipe installation and structural rebuilding built to handle heavy coastal runoff and withstand heavy vehicle traffic for decades.',
     icon: 'pipe',
@@ -489,6 +497,7 @@ export const SERVICES = [
   },
   {
     slug: 'gravel-driveways',
+    seoTitle: 'Gravel Driveway Grading & Resurfacing Virginia Beach, Chesapeake, Virginia & North Carolina - Rain Drains',
     name: 'Gravel Driveways',
     short: 'Commercial-grade gravel driveway construction with multi-layer stone bases, laser-guided slopes and heavy compaction so your driveway stays solid instead of rutting or washing out.',
     icon: 'gravel',
@@ -525,6 +534,7 @@ export const SERVICES = [
   },
   {
     slug: 'trenching-service',
+    seoTitle: 'Utility Trenching & Subcontracting Services Virginia Beach, Chesapeake, Virginia & North Carolina - Rain Drains',
     name: 'Trenching Service',
     short: 'Professional mechanical utility trenching for electrical, water, gas and fiber lines — installed to municipal depth codes with minimal disruption to your property.',
     icon: 'dig',
@@ -569,6 +579,7 @@ export const SERVICES = [
   },
   {
     slug: 'landscape-excavation',
+    seoTitle: 'Landscape Excavation, Site Clearing, And Structural Dirt Work Services Virginia Beach, Chesapeake, Virginia & North Carolina - Rain Drains',
     name: 'Landscape Excavation',
     short: 'Commercial-grade landscape excavation, site clearing and structural dirt work with laser-guided accuracy — built to handle both weight and water.',
     icon: 'excavate',
@@ -622,6 +633,7 @@ export const SERVICES = [
   },
   {
     slug: 'pool-liner-protection-1',
+    seoTitle: 'Pool Liner Protection, Repair & Replacement Cost, Permanent Fix For Pool Liner Floating Virginia Beach, Chesapeake, Virginia & North Carolina - Rain Drains',
     name: 'Pool Liner Protection',
     short: 'Linerlock subsurface hydrostatic relief systems that intercept rising groundwater before it can float, stretch or tear your vinyl pool liner.',
     icon: 'pool',
@@ -669,6 +681,7 @@ export const SERVICES = [
   },
   {
     slug: 'hydrojet-cleanout-1',
+    seoTitle: 'Hydrojet Drainage System Cleanout Services Virginia Beach, Chesapeake, Virginia & North Carolina - Rain Drains',
     name: 'Hydrojet Cleanout',
     short: 'Commercial-grade hydrojetting that blasts away compacted silt, sand and invasive roots to restore clogged drainage lines to 100% capacity.',
     icon: 'jet',
@@ -882,6 +895,7 @@ function urbanCoreStormwaterTemplate(cityName, neighborhoods) {
 export const AREAS = [
   {
     slug: 'virginia-beach',
+    seoTitle: 'Virginia Beach French Drain Installation, Land & Yard Grading & Drainage Services, Pool Liner Repair & Replacement Cost - Rain Drains',
     name: 'Virginia Beach',
     state: 'VA',
     image: { src: '/img/areas/virginia-beach.jpg', alt: 'Rain Drains crew installing residential drainage in a Virginia Beach neighborhood' },
@@ -889,6 +903,7 @@ export const AREAS = [
   },
   {
     slug: 'chesapeake',
+    seoTitle: 'Drainage Services & Water Management Solutions Chesapeake VA - Rain Drains',
     name: 'Chesapeake',
     state: 'VA',
     image: { src: '/img/areas/chesapeake.jpg', alt: 'French drain trench installed along a Chesapeake home\'s foundation' },
@@ -896,6 +911,7 @@ export const AREAS = [
   },
   {
     slug: 'norfolk',
+    seoTitle: 'Stormwater Management & Drainage Services Norfolk VA - Rain Drains',
     name: 'Norfolk',
     state: 'VA',
     image: { src: '/img/areas/norfolk.jpg', alt: 'Compacted gravel parking pad installed at a Norfolk property' },
@@ -903,6 +919,7 @@ export const AREAS = [
   },
   {
     slug: 'portsmouth',
+    seoTitle: 'Drainage Solutions, Land Grading & Stormwater Management Services Portsmouth VA - Rain Drains',
     name: 'Portsmouth',
     state: 'VA',
     image: { src: '/img/areas/portsmouth.jpg', alt: 'Concrete channel drain installed along a Portsmouth driveway' },
@@ -910,6 +927,7 @@ export const AREAS = [
   },
   {
     slug: 'suffolk',
+    seoTitle: 'Residential & Commercial Drainage Services Suffolk VA - Rain Drains',
     name: 'Suffolk',
     state: 'VA',
     image: { src: '/img/areas/suffolk.jpg', alt: 'Rip-rap lined drainage channel on a wooded Suffolk property' },
@@ -917,6 +935,7 @@ export const AREAS = [
   },
   {
     slug: 'hampton',
+    seoTitle: 'Drainage Solutions & Stormwater Management Services Hampton VA - Rain Drains',
     name: 'Hampton',
     state: 'VA',
     image: { src: '/img/areas/hampton.jpg', alt: 'Drainage piping installed around HVAC units at a Hampton home' },
@@ -924,6 +943,7 @@ export const AREAS = [
   },
   {
     slug: 'newport-news',
+    seoTitle: 'Lawn Drainage, Yard Grading & Stormwater Solutions Newport News VA - Rain Drains',
     name: 'Newport News',
     state: 'VA',
     image: { src: '/img/areas/newport-news.jpg', alt: 'Utility trench with pipe laid along a Newport News backyard' },
@@ -931,6 +951,7 @@ export const AREAS = [
   },
   {
     slug: 'smithfield',
+    seoTitle: 'Stormwater & Yard Drainage Services Smithfield VA - Rain Drains',
     name: 'Smithfield',
     state: 'VA',
     image: { src: '/img/areas/smithfield.jpg', alt: 'Finished gravel driveway through a wooded Smithfield property' },
@@ -938,6 +959,7 @@ export const AREAS = [
   },
   {
     slug: 'carrollton',
+    seoTitle: 'Stormwater Management & Drainage Contractor Carrollton VA - Rain Drains',
     name: 'Carrollton',
     state: 'VA',
     image: { src: '/img/areas/carrollton.jpg', alt: 'Mini excavator installing a culvert pipe on a Carrollton property' },
@@ -945,6 +967,7 @@ export const AREAS = [
   },
   {
     slug: 'currituck-county',
+    seoTitle: 'Drainage Contractor & Stormwater Management Currituck County NC - Rain Drains',
     name: 'Currituck County',
     state: 'NC',
     image: { src: '/img/areas/currituck-county.jpg', alt: 'Graded backyard on a wooded Currituck County property' },
@@ -957,6 +980,7 @@ export const AREAS = [
   },
   {
     slug: 'camden-county',
+    seoTitle: 'Drainage & Water Management Services Camden County NC - Rain Drains',
     name: 'Camden County',
     state: 'NC',
     image: { src: '/img/areas/camden-county.jpg', alt: 'Drainage swale with rip-rap outlet on a Camden County property' },
@@ -1067,4 +1091,264 @@ export const PROCESS_STEPS = [
   { n: '02', title: 'Custom System Design', text: 'We design a system sized for your soil, slope and water volume — then handle any permits the city requires.' },
   { n: '03', title: 'One-Day Installation', text: 'Most residential installations are completed in a single business day, with your lawn restored before we leave.' },
   { n: '04', title: 'Care Guide & Support', text: `You get a <a class="inline-link" href="${CARE_GUIDE_URL}" download>Care Guide</a> for your system, and a team that answers the phone afterwards.` },
+]
+
+// ============================================================================
+// Area-Specific Sub-Services (e.g., /virginia-beach/french-drains/)
+// ============================================================================
+
+export const AREA_SERVICES = [
+  {
+    areaSlug: 'virginia-beach',
+    areaName: 'Virginia Beach',
+    slug: 'french-drains',
+    name: 'French Drain Installation',
+    seoTitle: 'French Drain Installation in Virginia Beach, VA | Rain Drains',
+    metaDescription: 'Professional French drain installation in Virginia Beach, VA. Solve standing water, saturated lawns, and foundation moisture with custom subsurface drainage systems.',
+    lead: 'Professional residential yard and foundation French drain installation in Virginia Beach, VA.',
+    introHeading: 'French Drain Services in Virginia Beach',
+    intro: [
+      "Rain Drains LLC provides professional drainage solutions designed to redirect unwanted water away from yards, foundations, and other vulnerable areas of residential properties. Our residential yard french drain installation services in Virginia Beach help homeowners address recurring standing water, oversaturated soil, and drainage problems with a system designed around the property's conditions.",
+      "A French drain is a subsurface drainage system that typically uses a perforated pipe surrounded by drainage material to collect and redirect excess groundwater. As an experienced french drain contractor, we evaluate where water accumulates, how the property slopes, and where collected water can be appropriately directed before recommending a solution."
+    ],
+    features: {
+      heading: 'When Does Your Virginia Beach Property Need a French Drain?',
+      intro: 'A French drain may be appropriate when water repeatedly collects in low areas or remains near the home after rainfall. Common warning signs include:',
+      items: [
+        { title: 'Persistent Puddles', text: 'Persistent puddles or soggy sections of the yard that fail to absorb days after a storm.' },
+        { title: 'Soil Erosion', text: 'Noticeable soil displacement or erosion caused by uncontrolled surface runoff.' },
+        { title: 'Foundation Proximity', text: 'Water collecting or standing close to the perimeter of your home’s foundation.' },
+        { title: 'Oversaturated Landscaping', text: 'Landscape planting beds and garden areas that remain excessively wet and waterlogged.' },
+        { title: 'Recurring Storm Drainage Issues', text: 'Persistent drainage backflow or oversaturation following regional coastal rainfall.' }
+      ]
+    },
+    process: {
+      heading: 'Our French Drain Installation Process',
+      intro: 'We follow a clear, engineered process based on the drainage needs and physical layout of each property:',
+      items: [
+        { title: 'Property Assessment', text: 'We identify problem areas, existing drainage patterns, elevations, and practical discharge points.' },
+        { title: 'Drainage Planning', text: 'We determine the appropriate route, depth, slope, and placement for the drainage system.' },
+        { title: 'Trench Excavation', text: 'We excavate the planned drainage path cleanly and prepare it for required geotextile filtration and aggregate.' },
+        { title: 'System Placement', text: 'Perforated drainage pipe and washed aggregate are installed to efficiently collect and transport excess water.' },
+        { title: 'Final Site Review & Restoration', text: 'We check completed flow dynamics and restore disturbed turf and soil so your lawn recovers quickly.' }
+      ]
+    },
+ note: {
+      heading: 'Benefits of Installing a French Drain',
+      text: 'A properly planned French drain provides a controlled path for excess groundwater instead of allowing moisture to remain in unwanted areas. Benefits can include improved yard drainage, reduced standing water, better management of saturated soil, and less water accumulation near the home. <br /><br />French drains can also support long-term landscape management by directing water away from areas where repeated saturation may contribute to erosion or muddy conditions.',
+    },
+     contentCol: {
+      items: [
+        { title: 'Types of French Drain Solutions We Install', text: 'Drainage problems vary from property to property, so the system should match the source and location of unwanted water. We install yard drainage solutions for low-lying and consistently wet areas. A foundation french drain may also be considered when groundwater needs to be managed around the perimeter of a home\'s foundation. <br /><br />System placement depends on factors such as soil conditions, property grade, runoff patterns, and available drainage routes.' },
+        { title: 'Choose Rain Drains for French Drain Installation', text: 'Rain Drains LLC approaches every project with careful attention to the property\'s actual drainage conditions. We focus on identifying where water originates, understanding how it travels across the site, and installing a practical solution designed to manage it effectively.<br /><br />If standing water, saturated soil, or poor drainage is affecting your property in Virginia Beach, VA, contact Rain Drains LLC today to discuss your drainage concerns and schedule an assessment.' }
+      ]
+    },
+    faqs: [
+      {
+        q: 'Do you install French drains in Virginia Beach, VA?',
+        a: 'Yes. Rain Drains provides professional French drain installation in Virginia Beach, VA, for residential and commercial properties experiencing standing water, poor drainage, groundwater, or water accumulation near foundations.'
+      },
+      {
+        q: 'How much does French drain installation cost in Virginia Beach?',
+        a: 'The cost of French drain installation depends on factors such as system length and depth, soil conditions, excavation requirements, drainage materials, and the property layout. Rain Drains evaluates each property individually and provides a project-specific estimate.'
+      },
+      {
+        q: 'Can Rain Drains install a French drain for a wet or soggy yard?',
+        a: 'Yes. Rain Drains designs French drain systems to help manage excess groundwater and persistent wet areas. Depending on the cause of the drainage problem, the team may also recommend grading, catch basins, buried downspouts, or another drainage solution.'
+      },
+      {
+        q: 'Can a French drain help protect my foundation from water?',
+        a: 'A properly designed French drain can collect and redirect groundwater away from areas around your foundation. Rain Drains evaluates water flow and site conditions to determine the appropriate drainage system for your property.'
+      },
+      {
+        q: 'What type of French drain is best for a Virginia Beach property?',
+        a: 'There is no single French drain design that works for every property. Rain Drains considers factors such as elevation, soil composition, water table depth, water volume, and practical discharge options when designing a drainage system.'
+      },
+      {
+        q: 'How long does French drain installation take?',
+        a: 'Installation time varies depending on the size and complexity of the project, site conditions, excavation requirements, and drainage design. Rain Drains can provide a more accurate project timeline after evaluating your property.'
+      },
+      {
+        q: 'Does Rain Drains provide French drain services beyond Virginia Beach?',
+        a: 'Yes. Rain Drains serves Virginia Beach as well as communities throughout southeastern Virginia and northeastern North Carolina, including Chesapeake, Suffolk, Norfolk, Portsmouth, Hampton, Yorktown, Moyock, Currituck County, and Camden County.'
+      },
+      {
+        q: 'How can I get a French drain estimate in Virginia Beach?',
+        a: 'You can contact Rain Drains to schedule an on-site evaluation and discuss your property drainage concerns. The team can assess the site and recommend a customized drainage solution based on your site conditions.'
+      }
+    ]
+  },
+  {
+    areaSlug: 'virginia-beach',
+    areaName: 'Virginia Beach',
+    slug: 'pool-liner-repair',
+    name: 'Pool Liner Repair & Floating Solutions',
+    seoTitle: 'Pool Liner Repair & Floating Solutions in Virginia Beach, VA | Rain Drains',
+    metaDescription: 'Permanent groundwater solutions for floating, wrinkled, or damaged vinyl pool liners in Virginia Beach, VA. Relieve hydrostatic pressure with Linerlock pool drainage.',
+    lead: 'Pool liner repair, replacement & floating solutions addressing groundwater hydrostatic pressure in Virginia Beach, VA.',
+    introHeading: '',
+    intro: [
+      'Rain Drains LLC helps Virginia Beach pool owners address floating, damaged, loose, and deteriorating liners by identifying the water conditions contributing to the problem and providing practical drainage and repair solutions. Our approach focuses on protecting the liner, addressing underlying groundwater concerns, and helping maintain a dependable pool structure.'
+    ],
+    features: {
+      heading: 'Common Pool Liner Problems We Address',
+      intro: 'Subsurface moisture and pressure manifest in several critical ways:',
+      items: [
+        { title: 'Liners Lifting or Floating', text: 'Vinyl lifting away from floor contours, slopes, or pool wall corners after heavy rainfall.' },
+        { title: 'Wrinkling & Shifting', text: 'Deep wrinkles, bunching, uneven stretching, or slipped beads along the coping.' },
+        { title: 'Tears & Structural Deterioration', text: 'Tears, punctures, leaks, and material brittleness caused by repeated movement and groundwater pressure.' },
+        { title: 'Repeat Movement After Storms', text: 'Liners that repeatedly bubble or lift whenever the local groundwater table spikes.' }
+      ]
+    },
+    process: {
+      heading: 'Our Pool Liner Drainage & Repair Process',
+      intro: 'Rather than continually resetting a liner only to have it float again, we treat the source:',
+      items: [
+        { title: 'Pool Assessment', text: 'We inspect the liner condition and verify evidence of groundwater-related movement or damage.' },
+        { title: 'Problem Identification', text: 'We determine the factors and runoff avenues contributing to water accumulation around or beneath the pool.' },
+        { title: 'Solution Planning', text: 'We recommend drainage systems, dewatering pumps, liner repair, or full replacement based on pool condition.' },
+        { title: 'Corrective Installation', text: 'We install dedicated perimeter collection lines and sump assemblies to continuously relieve hydrostatic pressure.' }
+      ]
+    },
+    note: {
+      heading: 'Signs You Need Pool Liner Repair',
+      text: 'Visible wrinkles, loose sections, unexplained water loss, fading, tears, punctures, and a liner pulling away from the pool surface can indicate a developing problem. Early attention may prevent minor liner concerns from becoming more extensive.',
+    },
+     contentCol: {
+      items: [
+        { title: 'Causes Pool Liner Damage in Virginia Beach', text: 'Pool liner damage can result from age, groundwater pressure, improper water balance, sharp objects, storm-related conditions, and normal material deterioration. Persistent groundwater is especially important to investigate when a liner repeatedly floats after rainfall.' },
+        { title: 'Choose Rain Drains for Pool Liner Problems', text: 'Rain Drains LLC looks beyond visible liner movement to identify drainage conditions that may be contributing to recurring problems. A properly designed floating pool liner protection solution can help manage groundwater pressure while supporting longer-term liner performance.<br /><br />If your pool liner is floating, wrinkled, leaking, or showing signs of damage in Virginia Beach, VA, contact Rain Drains LLC today to discuss the problem and determine the right repair, replacement, or drainage solution for your pool.' }
+      ]
+    },
+    faqs: [
+      {
+        q: 'Do you provide pool liner repair services in Virginia Beach, VA?',
+        a: 'Rain Drains provides pool liner drainage and repair solutions in Virginia Beach for vinyl liners affected by groundwater, hydrostatic pressure, and recurring water buildup. The team evaluates the pool and surrounding property to determine the appropriate solution.'
+      },
+      {
+        q: 'Why is my pool liner floating after heavy rain in Virginia Beach?',
+        a: 'A pool liner floats when groundwater rises around or beneath the pool and creates hydrostatic pressure against the vinyl liner. Heavy rainfall, saturated soil, and Virginia Beach’s coastal water-table conditions can contribute directly to this problem.'
+      },
+      {
+        q: 'What is the best solution for a floating pool liner?',
+        a: 'The long-term solution is to address the water causing pressure beneath the liner. Rain Drains designs Linerlock pool drainage systems that collect groundwater around the pool and route it to a designated discharge point, eliminating the pressure that causes liners to lift.'
+      },
+      {
+        q: 'Can you repair a floating pool liner without replacing it?',
+        a: 'It depends on the condition of the liner and the extent of the movement or damage. If the liner is still serviceable, addressing the underlying drainage and groundwater problem may allow it to be reset; severely stretched or brittle liners may require replacement.'
+      },
+      {
+        q: 'How much does pool liner repair cost in Virginia Beach?',
+        a: 'Pool liner repair costs vary based on the liner condition, the cause of the problem, site conditions, and whether a dedicated drainage or sump system is required. Rain Drains evaluates the property to provide a project-specific estimate.'
+      },
+      {
+        q: 'Can Rain Drains install pool drainage around an existing pool?',
+        a: 'Yes. Rain Drains can retrofit a pool drainage system around an existing pool experiencing recurring liner-floating problems using perimeter collection lines connected to an outdoor sump-pump station.'
+      },
+      {
+        q: 'How can I prevent my pool liner from floating again?',
+        a: 'Preventing recurring floating requires controlling groundwater and hydrostatic pressure around the pool structure. Rain Drains’ Linerlock system collects rising groundwater around the pool and discharges it through a dedicated pumping setup.'
+      },
+      {
+        q: 'Does poor drainage around my pool cause liner problems?',
+        a: 'Yes, poor surface or subsurface drainage can contribute to water accumulating around a pool structure. Rain Drains evaluates grading, groundwater, runoff, and downspouts to identify how water is affecting the pool liner.'
+      },
+      {
+        q: 'How long does pool liner drainage installation take?',
+        a: 'The installation timeline depends on the pool size, surrounding landscape, soil conditions, access, and system complexity. Rain Drains provides a project schedule after an on-site assessment.'
+      },
+      {
+        q: 'Does Rain Drains serve areas near Virginia Beach for pool liner repair and drainage?',
+        a: 'Rain Drains serves Virginia Beach and surrounding communities throughout southeastern Virginia and northeastern North Carolina, including Chesapeake, Norfolk, Suffolk, Portsmouth, Hampton, Yorktown, Moyock, Currituck County, and Camden County.'
+      }
+    ]
+  },
+  {
+    areaSlug: 'virginia-beach',
+    areaName: 'Virginia Beach',
+    slug: 'land-grading',
+    name: 'Land & Yard Grading Services',
+    seoTitle: 'Land & Yard Grading Services in Virginia Beach, VA | Rain Drains',
+    metaDescription: 'Professional land grading, yard leveling, and slope correction in Virginia Beach, VA. Direct surface water safely away from foundations and eliminate low spots.',
+    lead: 'Land and yard grading services in Virginia Beach, VA to eliminate standing water and protect foundations.',
+    introHeading: 'Improve Drainage and Protect Your Property with Expert Grading',
+    intro: [
+      'Rain Drains LLC provides professional land and yard grading services in Virginia Beach, creating more functional outdoor areas and helping protect structures and landscaping from water-related problems. Proper grading establishes the right ground slope so rainwater moves away from foundations and low-lying areas instead of collecting where it can cause damage.',
+      'Effective grading directs surface water toward appropriate drainage areas. As an experienced grading contractor, we assess existing elevations, drainage patterns, low spots, and surrounding property conditions before determining how the land should be shaped. Correcting the slope around a home can reduce standing water, limit soil erosion, and help prevent moisture from accumulating near foundations.'
+    ],
+    features: {
+      heading: 'Common Problems Caused by Poor Yard Grading',
+      intro: 'Improperly sloped ground allows water to pool or run toward foundation footings. Watch for these warning signs:',
+      items: [
+        { title: 'Standing Water After Rainfall', text: 'Puddles and standing surface water remaining for extended periods after rain storms.' },
+        { title: 'Landscape Soil Erosion', text: 'Topsoil and mulch washing away along pathways, driveways, or garden perimeters.' },
+        { title: 'Foundation Water Accumulation', text: 'Water draining back toward crawlspaces, footings, or slab foundations.' },
+        { title: 'Muddy, Usable Turf Zones', text: 'Sections of the yard remaining perpetually soft, muddy, and unusable.' },
+        { title: 'Uneven Surface Contours', text: 'Hollows, dips, and uneven ground that make property maintenance and mowing difficult.' }
+      ]
+    },
+    process: {
+      heading: 'Our Professional Grading Process',
+      intro: 'We reshape the ground with laser-measured slopes to secure proper positive drainage:',
+      items: [
+        { title: 'Property Assessment', text: 'We evaluate existing slopes, elevations, low areas, and visible drainage bottlenecks.' },
+        { title: 'Grading Plan', text: 'We calculate positive slope lines and volume adjustments to ensure water flows to dedicated exit paths.' },
+        { title: 'Site Preparation', text: 'The work area is prepped, cleared of debris, and marked for clean equipment operation.' },
+        { title: 'Ground Reshaping', text: 'Soil is methodically cut, filled, and compacted to establish uniform positive elevations.' },
+        { title: 'Final Review & Dressing', text: 'We inspect the completed area to verify grade angles before dressing the soil for sod or seed.' }
+      ]
+    },
+     note: {
+      heading: 'Why Choose Rain Drains for Grading in Virginia Beach?',
+      text: 'Virginia Beach properties can experience drainage challenges due to heavy rainfall, flat terrain, and site-specific elevation conditions. Rain Drains LLC approaches every grading project with careful attention to how water moves across the property and where improvements are needed.<br /><br /> If standing water, erosion, or uneven ground is affecting your Virginia Beach, VA property, contact Rain Drains LLC today to discuss professional grading solutions and schedule an assessment.',
+    },
+     contentCol: {
+      items: [
+        { title: 'Complete Land & Yard Grading Solutions', text: 'Our grading solutions are based on the specific conditions of each property. Land leveling can correct uneven areas and establish a more consistent surface, while grading adjusts elevations and slopes to encourage controlled water movement.<br /><br />Professional property grading may also support future landscaping or drainage work by creating a properly prepared surface for the next stage of the project.' },
+        { title: 'Signs Your Property Needs Grading', text: 'A property may require grading when puddles remain long after rainfall, water repeatedly moves toward the building, soil washes away, or sections of the yard remain noticeably uneven. Changes to landscaping or previous excavation can also alter drainage patterns and create new low spots.' }
+      ]
+    },
+    faqs: [
+      {
+        q: 'What are grading services used for in Virginia Beach, VA?',
+        a: 'Grading services help reshape the slope and elevation of a property to improve surface-water flow. Proper grading reduces standing water, corrects drainage problems, and directs runoff away from homes and structures.'
+      },
+      {
+        q: 'Does Rain Drains provide land grading services in Virginia Beach?',
+        a: 'Yes, Rain Drains provides land grading services to address drainage and water-flow problems on residential and commercial properties throughout Virginia Beach.'
+      },
+      {
+        q: 'How do I know if my yard needs grading?',
+        a: 'Standing water, soggy areas, recurring puddles, soil erosion, uneven ground, or water flowing toward your foundation indicate improper grading that requires re-sloping.'
+      },
+      {
+        q: 'Can grading fix standing water in my yard?',
+        a: 'Grading resolves standing water caused by improper surface slopes or low spots. If groundwater or concentrated roof runoff also contributes to the issue, Rain Drains may recommend combining grading with French drains or catch basins.'
+      },
+      {
+        q: 'How much does land grading cost in Virginia Beach?',
+        a: 'Land grading costs vary depending on property size, existing elevations, soil conditions, equipment access, earthwork volume, and project complexity. Rain Drains provides transparent, customized project estimates.'
+      },
+      {
+        q: 'Can yard grading help protect my home’s foundation?',
+        a: 'Yes. Proper yard grading directs surface water away from the foundation perimeter, drastically reducing moisture accumulation, hydrostatic pressure, and crawlspace moisture problems.'
+      },
+      {
+        q: 'What is the difference between land grading and yard grading?',
+        a: 'Land grading generally involves reshaping larger tracts of property or commercial acreage, while yard grading focuses on residential lawns, perimeter slopes, and outdoor spaces around a home.'
+      },
+      {
+        q: 'Is grading enough to solve every drainage problem?',
+        a: 'Not always. High water tables or heavy roof runoff may require subsurface pipe systems. Rain Drains frequently pairs grading with French drains, catch basins, or sump pumps when site conditions require both.'
+      },
+      {
+        q: 'Can grading be combined with French drain installation?',
+        a: 'Yes. Grading manages surface runoff, while French drains manage subsurface groundwater. Rain Drains often installs both together for comprehensive property drainage.'
+      },
+      {
+        q: 'Does Rain Drains provide grading services in areas near Virginia Beach?',
+        a: 'Rain Drains serves Virginia Beach and surrounding communities throughout southeastern Virginia and northeastern North Carolina. Contact us to verify service availability for your property.'
+      }
+    ]
+  }
 ]

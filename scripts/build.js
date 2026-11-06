@@ -2,7 +2,7 @@ import { mkdirSync, writeFileSync, rmSync, cpSync, existsSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { SITE, SERVICES, AREAS, REVIEWS, FAQS, PROCESS_STEPS, PAST_PROJECTS, CARE_GUIDE_URL, BLOG_POSTS } from '../src/data.js'
+import { SITE, SERVICES, AREAS, REVIEWS, FAQS, PROCESS_STEPS, PAST_PROJECTS, CARE_GUIDE_URL, BLOG_POSTS, AREA_SERVICES } from '../src/data.js'
 import { layout, quoteForm, footer, header, pageScripts, ctaSection, pageHero, jsonLd, head, gtmNoscript, faqJsonLd, serviceJsonLd, breadcrumbJsonLd, articleJsonLd } from '../src/partials.js'
 import { icon, iconFilled } from '../src/icons.js'
 
@@ -164,7 +164,7 @@ ${ctaSection()}
   page('', `<!doctype html>
 <html lang="en">
 <head>
-${head({ title: "Rain Drains | Hampton Roads' Premier Drainage Contractor — Chesapeake & Virginia Beach", description: `Professional French drains, yard grading and drainage installation across Chesapeake, Virginia Beach, Norfolk and northeastern NC. Veteran owned. Free estimates. 5.0★ from ${SITE.reviewCountDisplay} reviews.`, path: '/' })}
+${head({ title: "Rain Drains - Outdoor & French Drainage Installation Experts, Yard & Land Grading Services Virginia Beach & Chesapeake, Serving Southeastern VA & Northeastern NC", description: `Professional French drains, yard grading and drainage installation across Chesapeake, Virginia Beach, Norfolk and northeastern NC. Veteran owned. Free estimates. 5.0★ from ${SITE.reviewCountDisplay} reviews.`, path: '/' })}
 ${jsonLd()}
 </head>
 <body>
@@ -207,7 +207,7 @@ ${pageHero({ eyebrow: 'About Us', title: 'A humble company born out of service t
 </section>
 ${ctaSection()}
 `
-  page('about-us-1', layout({ title: 'About Us | Rain Drains — Veteran Owned Drainage Contractor', description: "Meet Bryson Goforth, Navy Veteran, ODU Engineering graduate and founder of Rain Drains — Hampton Roads' NDS Certified drainage contractor.", path: '/about-us-1/', content, image: '/img/bryson.jpg', jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'About', path: '/about-us-1/' }])] }))
+  page('about-us-1', layout({ title: 'About Rain Drains - Veteran Owned Drainage Contractor Virginia Beach, Chesapeake, Virginia & North Carolina', description: "Meet Bryson Goforth, Navy Veteran, ODU Engineering graduate and founder of Rain Drains — Hampton Roads' NDS Certified drainage contractor.", path: '/about-us-1/', content, image: '/img/bryson.jpg', jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'About', path: '/about-us-1/' }])] }))
 }
 
 // ---------- Services index ----------
@@ -294,6 +294,15 @@ function renderContentSections(entry, defaultOrder) {
   </div>
 </section>` : ''
 
+  const contentColHtml = entry.contentCol ? `
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+    </div>
+    ${infoGrid(entry.contentCol.items)}
+  </div>
+</section>` : ''
+
   const faqHtml = entry.faqs ? `
 <section class="section bg-surface">
   <div class="wrap" style="max-width:880px">
@@ -337,7 +346,7 @@ function renderContentSections(entry, defaultOrder) {
   </div>
 </section>` : ''
 
-  const sections = { subServices: subServicesHtml, challenges: challengesHtml, features: featuresHtml, process: processHtml, faqs: faqHtml, areaList: areaListHtml, note: noteHtml }
+  const sections = { subServices: subServicesHtml, challenges: challengesHtml, features: featuresHtml, process: processHtml, contentCol: contentColHtml, faqs: faqHtml, areaList: areaListHtml, note: noteHtml }
   return (entry.sectionOrder || defaultOrder).map((key) => sections[key]).join('')
 }
 
@@ -375,7 +384,7 @@ ${ctaSection(s.cta?.heading || `Ready to solve your ${s.name.toLowerCase()} prob
     const svcPath = `/${s.slug}/`
     const svcJsonLdExtra = [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Services', path: '/services-1/' }, { name: s.name, path: svcPath }]), serviceJsonLd(s, svcPath)]
     if (s.faqs && s.faqs.length) svcJsonLdExtra.push(faqJsonLd(s.faqs))
-    page(s.slug, layout({ title: `${s.name} | Rain Drains — Hampton Roads`, description: `${s.short} Serving Chesapeake, Virginia Beach, Norfolk & Hampton Roads. Free estimates, ${SITE.rating}★ rated.`, path: svcPath, content, image: s.image?.src, jsonLdExtra: svcJsonLdExtra }))
+    page(s.slug, layout({ title: s.seoTitle || `${s.name} | Rain Drains — Hampton Roads`, description: `${s.short} Serving Chesapeake, Virginia Beach, Norfolk & Hampton Roads. Free estimates, ${SITE.rating}★ rated.`, path: svcPath, content, image: s.image?.src, jsonLdExtra: svcJsonLdExtra }))
   }
 }
 
@@ -439,7 +448,82 @@ ${ctaSection(a.cta?.heading || `Ready to fix your drainage in ${a.name}?`, a.cta
     const areaPath = `/${a.slug}/`
     const areaJsonLdExtra = [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Service Areas', path: '/service-areas/' }, { name: a.name, path: areaPath }])]
     if (a.faqs && a.faqs.length) areaJsonLdExtra.push(faqJsonLd(a.faqs))
-    page(a.slug, layout({ title: `Drainage Contractor in ${a.name}, ${a.state} | Rain Drains`, description: `Professional French drains, grading and drainage installation in ${a.name}, ${a.state}. Veteran owned, NDS Certified, free estimates.`, path: areaPath, content, image: a.image?.src, jsonLdExtra: areaJsonLdExtra }))
+    page(a.slug, layout({ title: a.seoTitle || `Drainage Contractor in ${a.name}, ${a.state} | Rain Drains`, description: `Professional French drains, grading and drainage installation in ${a.name}, ${a.state}. Veteran owned, NDS Certified, free estimates.`, path: areaPath, content, image: a.image?.src, jsonLdExtra: areaJsonLdExtra }))
+  }
+}
+
+// ---------- Service pages nested under service areas ----------
+// At the top of scripts/build.js, make sure AREA_SERVICES is imported:
+// import { SITE, SERVICES, AREAS, REVIEWS, FAQS, PROCESS_STEPS, PAST_PROJECTS, CARE_GUIDE_URL, AREA_SERVICES } from '../src/data.js'
+
+function areaServicePages() {
+  if (!AREA_SERVICES || !AREA_SERVICES.length) return
+
+  for (const p of AREA_SERVICES) {
+    const area = AREAS.find((a) => a.slug === p.areaSlug)
+    if (!area) continue
+
+    const path = `/${p.areaSlug}/${p.slug}/`
+
+    // Siblings in the same area for sidebar navigation
+    const siblings = AREA_SERVICES.filter((x) => x.areaSlug === p.areaSlug && x.slug !== p.slug)
+    const sidebarLinks = siblings.map((s) => `<a href="/${s.areaSlug}/${s.slug}/">${s.name}</a>`).join('')
+
+    const introHtml = p.intro.map((para) => `<p>${para}</p>`).join('')
+    const benefitsHtml = p.benefits ? `
+      <h3 style="margin-top:24px">Benefits</h3>
+      <ul class="detail-bullets">
+        ${p.benefits.map((b) => `<li>${icon('check', 18)} ${b}</li>`).join('')}
+      </ul>` : ''
+
+    const content = `
+${pageHero({ eyebrow: `${p.areaName} Drainage Services`, title: p.name + ` in ${p.areaName}, ${area.state}`, lead: p.lead, tight: true })}
+
+<section class="section">
+  <div class="wrap detail-grid">
+    <div class="detail-body">
+      <h2>${p.introHeading}</h2>
+      ${introHtml}
+      ${benefitsHtml}
+    </div>
+
+    <aside class="sidebar-card">
+      <h3>${p.areaName} Drainage Services</h3>
+      <div class="sidebar-list">
+        ${sidebarLinks}
+        <a href="/${area.slug}/">All ${p.areaName} Services</a>
+      </div>
+      <a class="btn btn-green btn-block" href="/contact-1/" style="margin-top:18px">
+        Get a Free Estimate
+      </a>
+    </aside>
+  </div>
+</section>
+
+${renderContentSections(p, ['features', 'process', 'note', 'contentCol', 'faqs'])}
+
+${ctaSection(`Need ${p.name.toLowerCase()} in ${p.areaName}?`, 'Contact Rain Drains LLC for a free on-site estimate.')}
+`
+
+    const jsonLdExtra = [
+      breadcrumbJsonLd([
+        { name: 'Home', path: '/' },
+        { name: 'Service Areas', path: '/service-areas/' },
+        { name: area.name, path: `/${area.slug}/` },
+        { name: p.name, path }
+      ])
+    ]
+    if (p.faqs && p.faqs.length) {
+      jsonLdExtra.push(faqJsonLd(p.faqs))
+    }
+
+    page(`${p.areaSlug}/${p.slug}`, layout({
+      title: p.seoTitle,
+      description: p.metaDescription,
+      path,
+      content,
+      jsonLdExtra
+    }))
   }
 }
 
@@ -463,7 +547,7 @@ ${ctaSection('Want your property to look this good?', 'Free on-site estimate. No
   <button type="button" class="lb-nav lb-next" id="lbNext" aria-label="Next photo">&#8250;</button>
 </div>
 `
-  page('past-projects', layout({ title: 'Our Work | Rain Drains Past Projects', description: 'Browse completed French drain, grading and drainage installation projects by Rain Drains across Hampton Roads and northeastern NC.', path: '/past-projects/', content, jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Our Work', path: '/past-projects/' }])] }))
+  page('past-projects', layout({ title: 'Rain Drains Portfolio - Past Drainage Projects', description: 'Browse completed French drain, grading and drainage installation projects by Rain Drains across Hampton Roads and northeastern NC.', path: '/past-projects/', content, jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Our Work', path: '/past-projects/' }])] }))
 }
 
 // ---------- Blog ----------
@@ -544,7 +628,7 @@ ${pageHero({ eyebrow: 'FAQ', title: 'Frequently Asked Questions About Drainage &
 </div></section>
 ${ctaSection()}
 `
-  page('faq', layout({ title: 'Drainage FAQ: Pricing, Process & Warranty | Rain Drains', description: 'Answers to common questions about drainage pricing, financing, scheduling, crawlspace flooding, permits and warranties from Rain Drains — Hampton Roads.', path: '/faq/', content, jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'FAQ', path: '/faq/' }]), faqJsonLd(FAQS)] }))
+  page('faq', layout({ title: 'Rain Drains - Drainage FAQ: Pricing, Process & Warranty', description: 'Answers to common questions about drainage pricing, financing, scheduling, crawlspace flooding, permits and warranties from Rain Drains — Hampton Roads.', path: '/faq/', content, jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'FAQ', path: '/faq/' }]), faqJsonLd(FAQS)] }))
 }
 
 // ---------- Contact ----------
@@ -566,13 +650,14 @@ ${pageHero({ eyebrow: 'Contact', title: 'Get Your Free Estimate', lead: 'Tell us
   </div>
 </section>
 `
-  page('contact-1', layout({ title: 'Contact Us | Rain Drains — Free Drainage Estimate', description: 'Request your free on-site drainage estimate from Rain Drains. Call 757-807-0080 or send us your details — we usually reply the same day.', path: '/contact-1/', content, jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Contact', path: '/contact-1/' }])] }))
+  page('contact-1', layout({ title: 'Contact Rain Drains - Drainage Services Virginia Beach, Chesapeake, Virginia & North Carolina', description: 'Request your free on-site drainage estimate from Rain Drains. Call 757-807-0080 or send us your details — we usually reply the same day.', path: '/contact-1/', content, jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Contact', path: '/contact-1/' }])] }))
 }
 
 // ---------- Sitemap & robots ----------
 function allPageSlugs() {
   const staticSlugs = ['', 'about-us-1', 'services-1', 'service-areas', 'past-projects', 'faq', 'blog', 'contact-1']
-  return [...staticSlugs, ...SERVICES.map((s) => s.slug), ...AREAS.map((a) => a.slug)]
+  const areaServiceSlugs = (AREA_SERVICES || []).map((p) => `${p.areaSlug}/${p.slug}`)
+  return [...staticSlugs, ...SERVICES.map((s) => s.slug), ...AREAS.map((a) => a.slug), ...areaServiceSlugs]
 }
 
 function sitemapXml() {
@@ -629,6 +714,7 @@ function main() {
   servicePages()
   serviceAreasIndexPage()
   areaPages()
+  areaServicePages()
   pastProjectsPage()
   blogIndexPage()
   blogPostPages()
