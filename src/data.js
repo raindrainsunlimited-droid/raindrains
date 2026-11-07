@@ -316,7 +316,7 @@ export const SERVICES = [
     },
     faqHeading: 'Frequently Asked Grading Questions',
     faqs: [
-      { q: 'How much does yard grading cost?', a: 'Most residential grading projects, including our drainage grading services, range from $1,000–$6,500, depending on soil conditions, yard size, and the amount of earthmoving required.' },
+      { q: 'How much does yard grading cost?', a: 'For most properties under an acre, yard grading typically runs $1,800 to $4,000, depending on the size of the area, how much material needs to be moved, and the complexity of the regrade.' },
       { q: 'Do you handle grading for new construction?', a: 'Yes — we provide rough and final grading for new builds throughout Chesapeake, including land leveling Chesapeake services to ensure your property is perfectly graded.' },
       { q: 'Can you fix drainage problems from poor grading?', a: 'Absolutely. We specialize in correcting negative slope, pooling water, and soggy areas caused by improper grading, including effective erosion control solutions.' },
       { q: 'How long does the process take?', a: 'Most grading projects are completed in 1–3 days, depending on scope and weather.' },
