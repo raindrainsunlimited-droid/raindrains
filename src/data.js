@@ -452,19 +452,19 @@ export const SERVICES = [
       intro: 'We do not use flimsy, single-wall residential pipes that warp or split over time. We install long-lasting, heavy-duty drainage materials specified to meet local municipal standards and handle heavy-axle vehicle traffic:',
       items: [
         { title: 'Dual-Wall High-Density Polyethylene (HDPE)', text: 'These pipes feature a corrugated exterior shell for massive structural load-bearing strength and a smooth interior lining that maximizes water velocity, preventing silt and debris from settling and clogging the line.' },
-        { title: 'Reinforced Concrete Pipe (RCP)', text: 'The ultimate permanent standard for heavy commercial crossings, large-scale rural ditches, and areas requiring minimal soil cover over the pipe.' },
+        { title: 'Reinforced Concrete Pipe (RCP)', text: 'A proven, heavy-duty standard for heavy commercial crossings, large-scale rural ditches, and areas requiring minimal soil cover over the pipe.' },
       ],
     },
     process: {
       heading: 'Our Laser-Guided Culvert Installation Process',
-      intro: 'Every culvert crossing we build follows a strict structural blueprint to guarantee it maintains perfect flow alignment and never shifts under heavy pressure.',
+      intro: 'Every culvert crossing we build follows a strict structural blueprint designed to maintain flow alignment and resist shifting under heavy pressure.',
       items: [
-        { title: 'Laser-Transit Grade Setting', text: 'We calculate the exact upstream and downstream elevations of your roadside ditch using laser transits. We ensure the new pipe perfectly matches the natural flow line of the channel so water never idles or backs up.' },
-        { title: 'Ditch Clearing & Trenching: Excavation', text: 'We excavate the existing failed pipe, clearing out accumulated silt, invasive roots, and collapsed dirt to completely restore the original design width of the water channel.' },
+        { title: 'Laser-Transit Grade Setting', text: 'We calculate the exact upstream and downstream elevations of your roadside ditch using laser transits. We match the new pipe to the natural flow line of the channel so water flows through instead of idling or backing up.' },
+        { title: 'Ditch Clearing & Trenching: Excavation', text: 'We excavate the existing failed pipe, clearing out accumulated silt, invasive roots, and collapsed dirt to restore the original design width of the water channel.' },
         { title: 'Crushed Stone Aggregates: Foundational Bedding', text: 'We lay a foundational bedding of washed #57 drainage stone or dense-grade aggregate. This solid bed prevents the pipe from settling unevenly over time and shifting out of pitch.' },
         { title: 'Pipe Placement & Mechanical Fitting: Setting the Line', text: 'The heavy-duty culvert pipe is mechanically set onto the stone bed. We double-check the downward pitch with digital levels before locking it into its permanent position.' },
         { title: 'Lifts of Compacted Aggregate Backfill: Structural Integrity', text: 'We backfill around the sides and top of the pipe in tight, 6-inch layers ("lifts"). Each lift is mechanically compacted with heavy tamping equipment to create a bridge that absorbs vehicle wheel loads.' },
-        { title: 'Erosion Control & Headwall Armor: Flank Protection', text: 'To prevent future scouring, we secure both ends of the culvert with heavy rip-rap stone stabilization to permanently lock the soil in place.' },
+        { title: 'Erosion Control & Headwall Armor: Flank Protection', text: 'To prevent future scouring, we secure both ends of the culvert with heavy rip-rap stone stabilization to lock the soil in place.' },
       ],
     },
     note: {
