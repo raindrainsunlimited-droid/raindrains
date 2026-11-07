@@ -136,7 +136,7 @@ function homePage() {
       <div class="hero-whatwedo">
         <span class="eyebrow eyebrow-onnavy">What We Do</span>
         <h2>Drainage solutions for every kind of property</h2>
-        <p class="lead">Excess water isn't just a nuisance — it's a threat to the integrity, safety and value of your property. We design and install systems that move it somewhere else, permanently.</p>
+        <p class="lead">Excess water isn't just a nuisance — it's a threat to the integrity, safety and value of your property. We design and install systems that move it somewhere else.</p>
         <div class="grid-4">${miniGridShort}</div>
         <a class="hero-whatwedo-link" href="/services-1/">View all 14 services →</a>
       </div>
