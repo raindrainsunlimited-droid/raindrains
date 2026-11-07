@@ -173,8 +173,8 @@ export const SERVICES = [
       heading: 'Commercial & HOA Infrastructure Services',
       intro: 'We handle every component of your property’s exterior water management system:',
       items: [
-        { title: 'HOA Common Area & Swale Grading', text: 'Eliminating standing water in community parks, dog runs, and shared green spaces using precision laser transit mapping and heavy-duty turf restructuring.' },
-        { title: 'Commercial Parking Lot & Catch Basin Networks', text: 'Installing high-load catch basins, curb inlet connections, and trench channel drains designed to keep parking aprons, garage entrances, and drive lanes completely dry.' },
+        { title: 'HOA Common Area & Swale Grading', text: 'Managing standing water in community parks, dog runs, and shared green spaces using precision laser transit mapping and heavy-duty turf restructuring.' },
+        { title: 'Commercial Parking Lot & Catch Basin Networks', text: 'Installing high-load catch basins, curb inlet connections, and trench channel drains designed to keep parking aprons, garage entrances, and drive lanes dry.' },
         { title: 'Retention Pond Outfall & Overflow Pipes', text: 'Replacing failed or crushed corrugated metal outfalls with smooth-wall HDPE or solid PVC lines to keep your storm ponds discharging at legal, properly sized capacities.' },
         { title: 'Underground Roof Runoff Mains', text: 'Linking multi-building downspout networks into centralized subterranean storm mains to keep foundation zones bone dry across commercial strips and condo units.' },
         { title: 'Turnkey Site Restoration', text: 'We don’t leave open trenches or ruined grounds. We complete the job with full asphalt patching, concrete curb restoration, and multi-lift soil compaction.' },
