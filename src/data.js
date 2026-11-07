@@ -753,7 +753,7 @@ function regionalStormwaterTemplate(cityName, neighborhoods) {
     },
     challenges: {
       heading: 'The Reality of Coastal Soil & Water: Why Your Property Floods',
-      intro: 'Properties in the Chesapeake, Virginia Beach, and Northeast North Carolina footprints face strict environmental factors that demand specialized expertise:',
+      intro: `Properties in the ${cityName} footprint face strict environmental factors that demand specialized expertise:`,
       items: [
         { title: 'The Tidal High Water Table', text: 'In low-lying and ocean-facing districts, the natural water table sits just a few feet below your turf. During prolonged downpours or high-tide cycles, the ground completely saturates from beneath, leaving rainwater with absolutely nowhere to soak into.' },
         { title: 'Sandy Soil Infiltration & Cave-Ins', text: 'While sand allows water to pass through initially, loose coastal sand is highly volatile. Heavy storms wash fine sand straight into unsealed drainage pipe joints, packing lines solid like cement and choking off water flow.' },
@@ -796,7 +796,7 @@ function clayRidgeStormwaterTemplate(cityName, neighborhoods) {
     },
     challenges: {
       heading: 'The Reality of Western Ridge Earth: Why Your Property Floods',
-      intro: 'Properties in the Suffolk, Smithfield, and Carrollton footprints face rigid environmental factors that demand heavy-duty construction standards:',
+      intro: `Properties in the ${cityName} footprint face rigid environmental factors that demand heavy-duty construction standards:`,
       items: [
         { title: 'The Unyielding Clay Barrier', text: 'The native soil here is packed solid with heavy, compact clay. Clay acts like a dense rubber sheet underneath your lawn — it absorbs water incredibly slowly and swells up when wet. Rainwater traps right on the surface, turning your yard into a muddy swamp that can take days or weeks to dry out.' },
         { title: 'The Clay Bathtub Effect', text: 'When your home was built, the earth directly surrounding your foundation block or crawlspace was dug up and loosened. Rainwater naturally rushes into this loose soil first, creating an underground "bathtub" of trapped water held tightly against your masonry by the surrounding unbroken native clay.' },
@@ -855,7 +855,7 @@ function urbanCoreStormwaterTemplate(cityName, neighborhoods) {
     },
     challenges: {
       heading: 'The Reality of the Urban Core: Why Your Property Floods',
-      intro: 'Properties in the Norfolk, Portsmouth, Hampton, and Newport News footprints face rigid environmental and structural factors that demand specialized construction standards:',
+      intro: `Properties in the ${cityName} footprint face rigid environmental and structural factors that demand specialized construction standards:`,
       items: [
         { title: 'The Tidal & Storm Sewer Backup', text: 'When a heavy rain event coincides with a high tide or storm surge, the local municipal storm drain pipes fill to maximum capacity with river and bay water. Instead of your yard drainage flowing out into the city system, the city’s water pushes backward into your yard, flooding low points and driveway aprons.' },
         { title: 'High Percentage of Impervious Surfaces', text: 'Dense urban developments mean roofs, asphalt driveways, concrete patios, and city streets cover a huge percentage of the ground. Rainwater cannot soak into concrete, creating massive volumes of rapid surface sheet-flow that quickly overwhelm standard flowerbeds and grass lines.' },
