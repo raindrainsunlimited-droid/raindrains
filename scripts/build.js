@@ -328,7 +328,8 @@ function renderContentSections(entry, defaultOrder) {
       <div class="rule"></div>
     </div>
     <div class="area-chips">${entry.areaList.areas.map((name) => {
-      const match = AREAS.find((a) => a.name === name)
+      const AREA_NAME_ALIASES = { Moyock: 'currituck-county' }
+      const match = AREAS.find((a) => a.name === name) || (AREA_NAME_ALIASES[name] ? AREAS.find((a) => a.slug === AREA_NAME_ALIASES[name]) : null)
       return match ? `<a class="area-chip" href="/${match.slug}/">${name}</a>` : `<span class="area-chip">${name}</span>`
     }).join('')}</div>
   </div>

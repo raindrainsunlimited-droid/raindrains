@@ -316,7 +316,7 @@ export const SERVICES = [
     },
     faqHeading: 'Frequently Asked Grading Questions',
     faqs: [
-      { q: 'How much does yard grading cost?', a: 'For most properties under an acre, yard grading typically runs $1,800 to $4,000, depending on the size of the area, how much material needs to be moved, and the complexity of the regrade.' },
+      { q: 'How much does yard grading cost?', a: 'For most properties under an acre, yard grading typically runs $1,800 to $6,500, depending on the size of the area, how much material needs to be moved, and the complexity of the regrade.' },
       { q: 'Do you handle grading for new construction?', a: 'Yes — we provide rough and final grading for new builds throughout Chesapeake, including land leveling Chesapeake services to ensure your property is perfectly graded.' },
       { q: 'Can you fix drainage problems from poor grading?', a: 'Absolutely. We specialize in correcting negative slope, pooling water, and soggy areas caused by improper grading, including effective erosion control solutions.' },
       { q: 'How long does the process take?', a: 'Most grading projects are completed in 1–3 days, depending on scope and weather.' },
@@ -1031,7 +1031,7 @@ export const BLOG_POSTS = [
 export const FAQS = [
   { cat: 'Pricing & Payment', q: 'How much does a French drain cost?', a: `Standard <a class="inline-link" href="/french-drain/">French drain</a> installations start at $1,600 and go up from there, depending on the length, depth, and complexity of your drainage needs. Every property is different, so the most accurate number comes from a free, no-obligation on-site estimate.` },
   { cat: 'Pricing & Payment', q: 'How much do downspout extensions cost?', a: `Buried <a class="inline-link" href="/downspout-extensions-1/">downspout extension</a> systems start at $1,800 and up, depending on how many downspouts need to be tied in and how far the water needs to travel underground to reach a safe discharge point.` },
-  { cat: 'Pricing & Payment', q: 'How much does yard grading cost?', a: `For most properties under an acre, <a class="inline-link" href="/grading-services/">yard grading</a> typically runs $1,800 to $4,000, depending on the size of the area, how much material needs to be moved, and the complexity of the regrade.` },
+  { cat: 'Pricing & Payment', q: 'How much does yard grading cost?', a: `For most properties under an acre, <a class="inline-link" href="/grading-services/">yard grading</a> typically runs $1,800 to $6,500, depending on the size of the area, how much material needs to be moved, and the complexity of the regrade.` },
   { cat: 'Pricing & Payment', q: 'What affects the final price of my drainage project?', a: 'Four things mainly drive the price: material selection, soil type, obstacles on your property (roots, utilities, hardscape), and the number of features your system needs — catch basins, pop-up emitters, grates, and similar components. We walk through all of this during your free estimate so there are no surprises.' },
   { cat: 'Pricing & Payment', q: 'Do I need to pay the full amount upfront?', a: 'No. We require 50% down to begin your project, with the remaining 50% due at completion.' },
   { cat: 'Pricing & Payment', q: 'What payment methods do you accept?', a: 'We accept check, card, and cash, in addition to financing.' },
@@ -1052,7 +1052,7 @@ export const FAQS = [
   { cat: 'Maintenance & Care', q: 'Will you clean up after the job is done?', a: 'Yes. We restore the work area when we’re finished, and every installation comes with a Care Guide covering how to care for new grass seed or sod while it establishes.' },
   { cat: 'Maintenance & Care', q: 'Do you offer maintenance after my system is installed?', a: `Yes. We recommend an annual hydrojet cleanout to keep your system running at full capacity, and we offer <a class="inline-link" href="/hydrojet-cleanout-1/">hydrojet cleaning</a> as a standalone service for existing systems — including ones we didn’t originally install.` },
   { cat: 'Guarantee, Licensing & Coverage', q: 'What is your satisfaction guarantee?', a: 'We stand behind every system we design and install. If something about your project doesn’t sit right with you, we want to know about it — our team will work with you to make it right, because your satisfaction is what keeps our business growing. We’re a local, veteran-owned company, and our reputation in this community matters to us.' },
-  { cat: 'Guarantee, Licensing & Coverage', q: 'What areas do you serve?', a: `We serve Virginia Beach, Chesapeake, Norfolk, Portsmouth, Suffolk, Hampton, Newport News, Smithfield, and Carrollton in Virginia, plus Currituck County and Camden County in northeastern North Carolina. See our full <a class="inline-link" href="/service-areas/">service area list</a>.` },
+  { cat: 'Guarantee, Licensing & Coverage', q: 'What areas do you serve?', a: `We serve Virginia Beach, Chesapeake, Norfolk, Portsmouth, Suffolk, Hampton, Newport News, Smithfield, Carrollton, and Yorktown in Virginia, plus Currituck County (including Moyock) and Camden County in northeastern North Carolina. See our full <a class="inline-link" href="/service-areas/">service area list</a>.` },
   { cat: 'Guarantee, Licensing & Coverage', q: 'Is Rain Drains licensed and insured?', a: 'Yes. We’re a DPOR Licensed Landscape Service Contractor in Virginia (License No. 2705198697), an NDS Certified Professional Drainage Contractor, and fully insured.' },
 ]
 
@@ -1307,7 +1307,7 @@ export const AREA_SERVICES = [
       },
       {
         q: 'How much does land grading cost in Virginia Beach?',
-        a: 'For most Virginia Beach properties under an acre, yard grading typically runs $1,800 to $4,000, depending on the size of the area, how much material needs to be moved, and the complexity of the regrade. See our <a class="inline-link" href="/faq/">full pricing FAQ</a> for more, or request a free on-site estimate for an exact number.'
+        a: 'For most Virginia Beach properties under an acre, yard grading typically runs $1,800 to $6,500, depending on the size of the area, how much material needs to be moved, and the complexity of the regrade. See our <a class="inline-link" href="/faq/">full pricing FAQ</a> for more, or request a free on-site estimate for an exact number.'
       },
       {
         q: 'Can yard grading help protect my home’s foundation?',
