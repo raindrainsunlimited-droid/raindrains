@@ -96,7 +96,7 @@ export const SERVICES = [
       heading: 'Catch Basins, Downspout Extensions & Condensate Networks',
       items: [
         {
-          title: 'Catch Basins: Eliminating Low-Spot Standing Water',
+          title: 'Catch Basins: Managing Low-Spot Standing Water',
           intro: 'If you have a clear low point in your lawn where water naturally pools after a downpour, a catch basin is the standard solution. A catch basin sits flush with your grass or hardscape, acting as a direct drain for localized pooling.',
           bullets: [
             'Debris Trapping — As water pours through the grate, sediment and leaves settle to the bottom of the basin instead of rushing into your underground lines, preventing clogs deep inside your discharge pipes.',
@@ -105,7 +105,7 @@ export const SERVICES = [
         },
         {
           title: 'Buried Downspout Extensions: Moving Roof Water Away',
-          intro: 'A single inch of rain on a 2,000-square-foot roof produces nearly 1,200 gallons of water. If your gutters simply dump that volume out of standard elbows at the corners of your home, you are actively washing away your foundation’s soil and flooding your crawlspace or basement. We permanently solve this by tying your downspouts directly into clean, smooth-wall rigid PVC or heavy-duty dual-wall corrugated pipe buried underground, designed to last a lifetime.',
+          intro: 'A single inch of rain on a 2,000-square-foot roof produces nearly 1,200 gallons of water. If your gutters simply dump that volume out of standard elbows at the corners of your home, you are actively washing away your foundation’s soil and flooding your crawlspace or basement. We solve this by tying your downspouts directly into clean, smooth-wall rigid PVC or heavy-duty dual-wall corrugated pipe buried underground, designed to last a lifetime.',
           bullets: [
             'Pipe Clogs — We avoid cheap, thin corrugated piping that traps debris, collapses under the weight of lawnmowers, and rots out. We use rigid and smooth-interior piping that maximizes water velocity and lasts for decades. Ask about our downspout filters for an even cleaner drainage system.',
             'Safe Discharge — We route your roof runoff 20, 50, or 100+ feet away from your home, daylighting the lines into a localized drainage ditch or a clean pop-up emitter near the property line — a critical defense for high-risk foundation zones like the older historic homes in Norfolk and Portsmouth, or rapidly developing lots in Virginia Beach, Chesapeake, Moyock, and Camden County.',
@@ -125,7 +125,7 @@ export const SERVICES = [
       heading: 'Designed to Outperform Local Climate Pressures',
       intro: 'Our drainage networks are custom-built to match the exact topography and soil dynamics of your specific community:',
       items: [
-        { title: 'Laser-Guided Pitch Analysis: Elevation Targeting', text: 'We calculate the exact slope from your home’s foundation to your property’s natural exit point, ensuring all underground lines maintain a strict downward pitch so water can never back up.' },
+        { title: 'Laser-Guided Pitch Analysis: Elevation Targeting', text: 'We calculate the exact slope from your home’s foundation to your property’s natural exit point, ensuring all underground lines maintain a strict downward pitch so water flows away instead of backing up.' },
         { title: 'Smooth-Wall Trenching & Piping: Excavation', text: 'We trench clean lines and lay heavy-duty, smooth-interior rigid piping. Smooth pipes prevent debris accumulation and maintain maximum flow rate even during torrential downpours.' },
         { title: 'Inline Cleanouts & Basins: Component Integration', text: 'We install integrated inline cleanout ports (when selected) and structural catch basins, making the entire network fully accessible and easy to maintain for decades to come.' },
       ],
