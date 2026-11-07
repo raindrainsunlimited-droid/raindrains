@@ -242,7 +242,7 @@ export const SERVICES = [
       items: [
         { title: 'Driveway Slopes & Garage Entryways', text: 'Driveways that pitch downward toward a garage or home create an immediate flood hazard. A heavy-duty channel drain cut directly across the driveway in front of the garage door acts as a structural barrier, catching 100% of the downhill runoff before it breaches the threshold.' },
         { title: 'Pool Decks & Patio Enclosures', text: 'Flat concrete pool surrounds and hardscape patios frequently trap water against home foundations or back up into pool water during torrential downpours. Slotted channel drains installed flush with the concrete flush away deck water while keeping deck surfaces slip-free.' },
-        { title: 'Retaining Wall Bases & Walkway Traps', text: 'Retaining walls and concrete walkways can act like dams, trapping surface water behind them. Interceptor channels collect this trapped water instantly, relieving hydraulic pressure and preventing structural cracking.' },
+        { title: 'Retaining Wall Bases & Walkway Traps', text: 'Retaining walls and concrete walkways can act like dams, trapping surface water behind them. Interceptor channels collect this trapped water quickly, relieving hydraulic pressure and preventing structural cracking.' },
         { title: 'Commercial Parking & Loading Bays', text: 'Heavy equipment and vehicles require high-load-class trench systems (Class C or D) that can withstand thousands of pounds of wheel pressure while rapidly draining massive paved footprints.' },
       ],
     },
