@@ -930,6 +930,13 @@ export const AREAS = [
     ...urbanCoreStormwaterTemplate('Newport News', ['Hilton Village', 'Denbigh', 'Oyster Point', 'Port Warwick', 'Riverside']),
   },
   {
+    slug: 'yorktown',
+    name: 'Yorktown',
+    state: 'VA',
+    image: { src: '/img/french-drain.jpg', alt: 'French drain with washed stone installed along a home\'s foundation in Yorktown, VA' },
+    ...urbanCoreStormwaterTemplate('Yorktown', ['Historic Yorktown', 'Grafton', 'Tabb', 'Seaford', 'Queens Lake']),
+  },
+  {
     slug: 'smithfield',
     name: 'Smithfield',
     state: 'VA',
