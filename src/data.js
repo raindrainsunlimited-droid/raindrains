@@ -271,12 +271,12 @@ export const SERVICES = [
   {
     slug: 'grading-services',
     name: 'Grading Services',
-    short: 'Commercial-grade earth-moving and precision leveling that permanently corrects pitch issues so heavy coastal runoff flows safely away from your property.',
+    short: 'Commercial-grade earth-moving and precision leveling that corrects pitch issues so heavy coastal runoff flows safely away from your property.',
     icon: 'grade',
     image: { src: '/img/grading-services.jpg', alt: 'Freshly graded and leveled backyard ready for sod, pitched to carry water away from the home' },
     body: [
       'If your lawn has uneven ruts, a bumpy terrain, or slopes that direct rainwater straight toward your home’s foundation, standard landscaping fixes won’t solve the problem. Proper yard grading and precision leveling form the literal foundation of all successful stormwater management.',
-      'We provide commercial-grade earth-moving, land leveling, and structural re-grading services designed to permanently correct pitch issues, stabilize your topsoil, and guarantee that heavy coastal runoff flows safely away from your investment.',
+      'We provide commercial-grade earth-moving, land leveling, and structural re-grading services designed to correct pitch issues, stabilize your topsoil, and help heavy coastal runoff flow safely away from your investment.',
     ],
     bullets: ['Corrects negative slope toward the home', 'Often paired with French drains', 'Restores lawn after grading', 'Prevents erosion and pooling'],
     sectionOrder: ['subServices', 'challenges', 'features', 'faqs', 'process', 'areaList'],
@@ -302,7 +302,7 @@ export const SERVICES = [
       intro: 'Many property owners use these terms interchangeably, but they serve completely different, vital roles in protecting your property:',
       items: [
         { title: 'Rough & Final Grading (Water Direction)', text: 'This process reshapes the slope of your land. The goal isn’t to make the ground perfectly flat; it’s to create a calculated, intentional pitch (ideally a 1% minimum drop away from foundation walls) so gravity can safely shed water toward natural drainage ditches, swales, or municipal storm mains.' },
-        { title: 'Precision Leveling (Surface Uniformity)', text: 'Once the correct slope is structurally established, leveling smooths out the surface. We eliminate dangerous holes, ankle-twisting ruts, and low depressions where standing water would otherwise pool and oversaturate your lawn’s root systems.' },
+        { title: 'Precision Leveling (Surface Uniformity)', text: 'Once the correct slope is structurally established, leveling smooths out the surface. We remove dangerous holes, ankle-twisting ruts, and low depressions where standing water would otherwise pool and oversaturate your lawn’s root systems.' },
       ],
     },
     features: {
@@ -317,7 +317,7 @@ export const SERVICES = [
     faqHeading: 'Frequently Asked Grading Questions',
     faqs: [
       { q: 'How much does yard grading cost?', a: 'For most properties under an acre, yard grading typically runs $1,800 to $6,500, depending on the size of the area, how much material needs to be moved, and the complexity of the regrade.' },
-      { q: 'Do you handle grading for new construction?', a: 'Yes — we provide rough and final grading for new builds throughout Chesapeake, including land leveling Chesapeake services to ensure your property is perfectly graded.' },
+      { q: 'Do you handle grading for new construction?', a: 'Yes — we provide rough and final grading for new construction throughout Chesapeake, including land leveling to properly prepare your property.' },
       { q: 'Can you fix drainage problems from poor grading?', a: 'Absolutely. We specialize in correcting negative slope, pooling water, and soggy areas caused by improper grading, including effective erosion control solutions.' },
       { q: 'How long does the process take?', a: 'Most grading projects are completed in 1–3 days, depending on scope and weather.' },
     ],
@@ -326,9 +326,9 @@ export const SERVICES = [
       intro: 'We don’t eyeball slopes or guess pitches. We utilize commercial grade mini skid steers, compact excavators and advanced laser-transit leveling equipment to move dirt with surgical precision.',
       items: [
         { title: 'Laser-Transit Topographic Mapping: Site Audit', text: 'We utilize precision laser levels to shoot elevations across your property, locating the exact high points, low points, and structural obstacles to plan a flawless exit route for surface water.' },
-        { title: 'Rough Grading & Cut-and-Fill: Earth Moving', text: 'Using specialized turf-friendly machinery, we mechanically cut down high ridges and fill in deep depressions, structurally re-sculpting the sub-base dirt to establish a permanent positive slope away from all structures.' },
+        { title: 'Rough Grading & Cut-and-Fill: Earth Moving', text: 'Using specialized turf-friendly machinery, we mechanically cut down high ridges and fill in deep depressions, structurally re-sculpting the sub-base dirt to establish a positive slope away from all structures.' },
         { title: 'Topsoil Conditioning & Tilling: Soil Preparation', text: 'We scarify and break up compacted clay layers with specialized machinery, and upon request can import premium organic topsoil or sand blends tailored to your specific regional soil needs, ensuring a healthy foundation for new turf growth.' },
-        { title: 'Final Precision Leveling & Smoothing: The Clean Finish', text: 'Using specialized leveling rakes and commercial soil conditioners, we smooth the surface to a clean, uniform finish, completely eliminating all minor ruts, bumps, and localized micro-depressions.' },
+        { title: 'Final Precision Leveling & Smoothing: The Clean Finish', text: 'Using specialized leveling rakes and commercial soil conditioners, we smooth the surface to a clean, uniform finish, removing minor ruts, bumps, and localized micro-depressions.' },
         { title: 'Stabilization & Seed Prep: Erosion Shielding', text: 'To protect your newly graded slopes from washing away during the next heavy coastal storm, we compact the soil to optimal densities and prepare it for immediate sod installation or hydroseeding.' },
       ],
     },
