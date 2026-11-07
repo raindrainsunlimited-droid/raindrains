@@ -199,17 +199,17 @@ export const SERVICES = [
     image: { src: '/img/downspout-extensions.jpg', alt: 'Downspout extended underground into a catch basin to carry roof runoff away from a home' },
     body: [
       'Your roof is the single largest water-collection surface on your entire property. During a typical coastal storm, thousands of gallons of rainwater pour off your shingles in a matter of minutes. If your downspouts simply dump that water right at the base of your foundation or into cheap, flexible plastic tubes, you are actively inviting foundation settlement, crawlspace flooding, and severe yard erosion.',
-      'A splash block or standard garden extension only pushes water a few inches away from your walls — allowing it to sink straight down into the loose fill soil around your home. Underground downspout extension networks capture roof water instantly at the gutter line and transport it hundreds of feet away to a safe, legal discharge point.',
-      'We design and install commercial-grade, smooth-wall subterranean downspout systems across Southside Virginia and Northeast North Carolina to keep your foundation bone dry and your lawn completely free of standing water.',
+      'A splash block or standard garden extension only pushes water a few inches away from your walls — allowing it to sink straight down into the loose fill soil around your home. Underground downspout extension networks capture roof water right at the gutter line and transport it hundreds of feet away to a safe, legal discharge point.',
+      'We design and install commercial-grade, smooth-wall subterranean downspout systems across Southside Virginia and Northeast North Carolina to keep your foundation dry and your lawn free of standing water.',
     ],
     bullets: ['Buried, solid-pipe extensions', 'Protects foundations, siding & concrete', 'Ties into existing gutters', 'Clean, mulched-over finish'],
     features: {
       heading: 'Key Design Features of Our Downspout Networks',
       items: [
-        { title: 'Ultra-Thick Smooth-Wall Pipe', text: 'We offer thick, rigid, smooth-wall PVC or HDPE pipe. The glass-smooth interior maximizes water velocity, allowing leaves, silt, and shingle grit to flush completely out of the pipe without stopping.' },
+        { title: 'Ultra-Thick Smooth-Wall Pipe', text: 'We offer thick, rigid, smooth-wall PVC or HDPE pipe. The glass-smooth interior maximizes water velocity, allowing leaves, silt, and shingle grit to flush out of the pipe without stopping.' },
         { title: 'Integrated Cleanout & Leaf Adapter Ports', text: 'We offer custom leaf-diverters or cleanout adapters directly below your gutter transitions. This acts as a primary defense line, preventing large debris from ever getting into your subterranean pipes while giving you an easy access point to flush the lines if needed.' },
-        { title: 'Industrial Stainless Steel Hardware', text: 'All cleanouts, transition fittings, and adaptors are mechanically secured using high-grade stainless steel fasteners or glued joints that will never rust, corrode, or rot underground.' },
-        { title: 'Dynamic Termination Emitters', text: 'At the discharge point, we install heavy-duty pop-up emitters or curb hole cuts. When the downspout fills with rushing water, the lid pops up to release flow onto your curb. When the flow stops, the lid snaps shut tightly. Our curb hole cuts are perfect 4-inch outlets for our solid pipe.' },
+        { title: 'Industrial Stainless Steel Hardware', text: 'All cleanouts, transition fittings, and adaptors are mechanically secured using high-grade stainless steel fasteners or glued joints that resist rust and corrosion underground.' },
+        { title: 'Dynamic Termination Emitters', text: 'At the discharge point, we install heavy-duty pop-up emitters or curb hole cuts. When the downspout fills with rushing water, the lid pops up to release flow onto your curb. When the flow stops, the lid snaps shut tightly. Our curb hole cuts are 4-inch outlets for our solid pipe.' },
       ],
     },
     faqHeading: 'Subterranean Downspout & Roof Runoff Q&A',
@@ -220,7 +220,7 @@ export const SERVICES = [
     ],
     cta: {
       heading: 'Stop losing your landscaping to roof runoff',
-      sub: 'Is overflowing roof water washing away your landscaping or flooding your foundation? Don’t settle for collapsing corrugated tubes — contact us today to schedule an on-site evaluation and get a permanent, commercial-grade downspout network installed.',
+      sub: 'Is overflowing roof water washing away your landscaping or flooding your foundation? Don’t settle for collapsing corrugated tubes — contact us today to schedule an on-site evaluation and get a commercial-grade downspout network installed.',
     },
   },
   {
