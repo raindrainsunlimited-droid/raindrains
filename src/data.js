@@ -42,12 +42,12 @@ export const SERVICES = [
   {
     slug: 'french-drain',
     name: 'French Drain Installation',
-    short: 'Standing water and foundation protection — a custom-designed French drain redirects groundwater safely off your property, permanently.',
+    short: 'Standing water and foundation protection — a custom-designed French drain redirects groundwater safely off your property.',
     icon: 'drop',
     image: { src: '/img/french-drain.jpg', alt: 'French drain pipe and gravel trench installed along a home foundation' },
     body: [
       'A soggy lawn, muddy paws, and standing water against your foundation aren’t just frustrating — they’re active threats to your home’s structural integrity. Across the Hampton Roads region and northeastern North Carolina, our unique coastal climate, heavy seasonal downpours, and challenging soil types make proper subsurface water management absolutely critical.',
-      'If you have areas of your yard that stay wet for days after a storm, a custom-designed French drain system is the most reliable, permanent solution to redirect groundwater safely off your property.',
+      'If you have areas of your yard that stay wet for days after a storm, a custom-designed French drain system is one of the most reliable, long-term solutions to redirect groundwater safely off your property.',
     ],
     bullets: ['Custom-sized for your soil and water volume', 'Smooth-wall piping designed to last a lifetime', 'Lawn restored after installation'],
     challenges: {
@@ -64,16 +64,16 @@ export const SERVICES = [
       intro: 'We don’t cut corners with pre-wrapped, cheap retail DIY products that collapse under the pressure of coastal soils. Our heavy-duty subsurface systems are built to withstand hydrostatic pressure — the force exerted by standing groundwater — and keep flowing clear for decades.',
       items: [
         { title: 'Precision Trenching & Slope Calibration: Excavation Phase', text: 'Using specialized turf-friendly trenching machinery, we excavate a dedicated channel with a strict downward pitch toward a safe discharge point (such as a ditch, storm main, or pop-up emitter).' },
-        { title: 'Non-Woven Geotextile Fabric Lining: Silt Protection', text: 'We line the raw dirt trench with premium, commercial-grade non-woven filter fabric. This allows groundwater to seep in freely while permanently locking out fine silt, sand, and clay particles that clog inferior systems.' },
+        { title: 'Non-Woven Geotextile Fabric Lining: Silt Protection', text: 'We line the raw dirt trench with premium, commercial-grade non-woven filter fabric. This allows groundwater to seep in freely while effectively keeping out fine silt, sand, and clay particles that clog inferior systems.' },
         { title: 'Solid Aggregate Bedding & Perforated Pipe: The Water Highway', text: 'We lay a foundational bed of washed #57 drainage gravel, then install heavy-duty, smooth-interior perforated pipe (or custom heavy-wall manifold piping depending on your specific volume needs) with the drill holes facing downward to scoop rising groundwater from below.' },
         { title: 'Deep Aggregate Backfill & Encapsulation: Maximizing Void Space', text: 'The entire trench is filled to the top with #57 gravel, completely surrounding the pipe. We fold the geotextile fabric over the top of the gravel like a burrito, totally encapsulating the drainage stone.' },
         { title: 'Structural Re-Grading & Finish Work: Restoration', text: 'We backfill the top few inches with clean topsoil or stone and execute a precise fine-grade so your lawn can heal beautifully, leaving no trace of the heavy work beneath.' },
       ],
     },
     faqs: [
-      { q: 'Why is a French drain better than a surface catch basin for my yard?', a: 'A catch basin only grabs surface water that pools directly on top of the grate. If your yard feels like a wet sponge or stays muddy for days, your problem may be subsurface saturation. A French drain acts like an underground sponge, constantly collecting and drawing down groundwater from the entire surrounding root zone, drying the soil completely out.' },
+      { q: 'Why is a French drain better than a surface catch basin for my yard?', a: 'A catch basin only grabs surface water that pools directly on top of the grate. If your yard feels like a wet sponge or stays muddy for days, your problem may be subsurface saturation. A French drain acts like an underground sponge, constantly collecting and drawing down groundwater from the entire surrounding root zone, drawing excess moisture out of the surrounding soil.' },
       { q: 'Where does the collected water actually go?', a: 'Every drainage system requires a viable exit strategy. Depending on local municipal building codes and your property layout, we route the water to a legal gravity discharge point — such as a roadside drainage swale, an existing storm sewer tie-in, a sump pump tank, or a heavy-duty pop-up emitter set up near the property line away from neighboring structures.' },
-      { q: 'Will a French drain wash away my coastal sand or clog with clay?', a: 'Not when it’s built right. This is why we use non-woven geotextile encapsulation. In sandy coastal soils (common in Virginia Beach and Currituck), unlined pipes fill with sand immediately. In heavy clay soils (Chesapeake and Suffolk), fine clay silt can blind a system. Our premium fabric shielding acts as a permanent barrier that only allows clean water through.' },
+      { q: 'Will a French drain wash away my coastal sand or clog with clay?', a: 'Not when it’s built right. This is why we use non-woven geotextile encapsulation. In sandy coastal soils (common in Virginia Beach and Currituck), unlined pipes fill with sand immediately. In heavy clay soils (Chesapeake and Suffolk), fine clay silt can blind a system. Our premium fabric shielding is designed to keep sediment out while letting clean water through.' },
     ],
     areaList: {
       heading: 'Serving the Entire Tidewater & NE North Carolina Corridors',
