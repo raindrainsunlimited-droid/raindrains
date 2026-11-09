@@ -40,7 +40,9 @@ export function head({ title, description, path = '/', image }) {
 <!-- End Google Tag Manager -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-31GB9Q4P2G"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-31GB9Q4P2G');</script>`
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-31GB9Q4P2G');</script>
+<!-- CrazyEgg Tracking -->
+<script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0022/1041.js" async="async"></script>`
 }
 
 export function gtmNoscript() {
