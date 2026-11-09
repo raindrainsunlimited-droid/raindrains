@@ -210,6 +210,67 @@ ${ctaSection()}
   page('about-us-1', layout({ title: 'About Us | Rain Drains — Veteran Owned Drainage Contractor', description: "Meet Bryson Goforth, Navy Veteran, ODU Engineering graduate and founder of Rain Drains — Hampton Roads' NDS Certified drainage contractor.", path: '/about-us-1/', content, image: '/img/bryson.jpg', jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'About', path: '/about-us-1/' }])] }))
 }
 
+// ---------- Sitemap ----------
+function sitemapPage() {
+  const content = `
+${pageHero({ eyebrow: 'sitemap', title: 'A humble company born out of service to others', lead: 'Meet the veteran-owned team keeping Hampton Roads properties dry.' })}
+<section class="section">
+  <div class="wrap detail-grid">
+    <div class="detail-body">
+    <p><a href="https://raindrainsva.com/"><b>Home</b></a></p>
+<ul class="detail-bullets">
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/about-us-1/">About Us</a></li>
+<li>${icon('check', 18)}Services
+<ul>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/french-drain/">French Drain</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/lawn-drainage-1/">Lawn Drainage</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/downspout-extensions-1/">Downspout Extensions</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/concrete-drains-1/">Concrete Drains</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/grading-services/">Grading Services</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/outdoor-sump-pumps-1/">Outdoor Sump Pumps</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/exterior-waterproofing/">Exterior Waterproofing</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/culvert-pipe-installation-1/">Culvert Pipe Installation</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/gravel-driveways/">Gravel Driveways</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/trenching-service/">Trenching Service</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/landscape-excavation/">Landscape Excavation</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/pool-liner-protection-1/">Pool Liner Protection</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/hydrojet-cleanout-1/">Hydrojet Cleanout</a></li>
+</ul>
+</li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/past-projects/">Past Projects</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/contact-1/">Contact</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/faq/">FAQ</a></li>
+<li>${icon('check', 18)}Service Areas
+<ul>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/virginia-beach/">Virginia Beach</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/chesapeake/">Chesapeake</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/norfolk/">Norfolk</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/portsmouth/">Portsmouth</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/hampton/">Hampton</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/newport-news/">Newport News</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/currituck-county/">Currituck County</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/camden-county/">Camden County</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/suffolk/">Suffolk</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/carrolton/">Carrolton</a></li>
+<li>${icon('check', 18)}<a href="https://raindrainsva.com/smithfield/">Smithfield</a></li>
+</ul>
+</li>
+</ul>
+    </div>
+    <aside class="sidebar-card">
+      <img src="/img/bryson.jpg" alt="Bryson Goforth, owner of Rain Drains" loading="lazy" style="border-radius:var(--r-md);width:100%;height:auto;display:block;margin-bottom:18px" width="768" height="1364">
+      <h3>Talk to Bryson</h3>
+      <p style="color:var(--text-muted);font-size:14px;margin-bottom:16px">Free on-site estimates, no obligation.</p>
+      <a class="btn btn-green btn-block" href="/contact-1/" style="margin-bottom:10px">Get a Free Estimate</a>
+      <a class="btn btn-ghost btn-block" style="color:var(--navy);border-color:var(--border)" href="tel:${SITE.phoneTel}">Call ${SITE.phone}</a>
+    </aside>
+  </div>
+</section>
+${ctaSection()}
+`
+  page('sitemap', layout({ title: 'Sitemap | Rain Drains — Veteran Owned Drainage Contractor', description: "Meet Bryson Goforth, Navy Veteran, ODU Engineering graduate and founder of Rain Drains — Hampton Roads' NDS Certified drainage contractor.", path: '/about-us-1/', content, image: '/img/bryson.jpg', jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'About', path: '/about-us-1/' }])] }))
+}
+
 // ---------- Services index ----------
 function servicesIndexPage() {
   const cards = SERVICES.map((s) => `
