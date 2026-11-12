@@ -1,0 +1,17 @@
+{
+  "name": "raindrains-crm",
+  "private": true,
+  "type": "module",
+  "description": "Rain Drains field-service CRM: leads, customers, estimates, jobs, scheduling, invoicing, payments and reports.",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch server.js",
+    "seed": "node --disable-warning=ExperimentalWarning scripts/seed.js",
+    "seed:demo": "node --disable-warning=ExperimentalWarning scripts/seed.js --demo",
+    "test": "node --disable-warning=ExperimentalWarning --test test/*.test.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

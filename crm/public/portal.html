@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Rain Drains</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+  :root{--navy:#0b2b4a;--blue:#1c6fd6;--green:#189653;--red:#d64545;--ink:#122234;--muted:#5c6b7a;--border:#e2e8ef;--surface:#f4f7fa}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--surface);line-height:1.5;font-size:15px}
+  .wrap{max-width:820px;margin:0 auto;padding:24px 16px 80px}
+  .doc{background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:0 4px 20px rgba(11,43,74,.07);overflow:hidden}
+  .hd{background:var(--navy);color:#fff;padding:24px 28px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .hd h1{margin:0;font-size:22px}
+  .hd p{margin:2px 0;color:#cfe0f3;font-size:14px}
+  .hd .num{text-align:right}
+  .hd .num b{font-size:20px;display:block;color:#fff}
+  .sec{padding:22px 28px;border-bottom:1px solid var(--border)}
+  .meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px}
+  .meta small{display:block;color:var(--muted);font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+  h2{font-size:18px;margin:0 0 4px;color:var(--navy)}
+  table{width:100%;border-collapse:collapse}
+  th{text-align:left;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;padding:8px 6px;border-bottom:2px solid var(--border)}
+  td{padding:12px 6px;border-bottom:1px solid var(--border);vertical-align:top}
+  td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+  td small{display:block;color:var(--muted);white-space:pre-wrap}
+  tr.opt td{background:#fbf9f2}
+  tr.opt.off td{opacity:.6}
+  .optlabel{display:inline-flex;gap:8px;align-items:center;font-weight:700;color:#8a5a00;font-size:13px;margin-top:6px;cursor:pointer}
+  .optlabel input{width:18px;height:18px;accent-color:var(--green)}
+  .totals{margin-left:auto;width:300px;max-width:100%;margin-top:14px}
+  .totals div{display:flex;justify-content:space-between;padding:5px 0}
+  .totals .g{font-size:20px;font-weight:800;color:var(--navy);border-top:2px solid var(--navy);margin-top:6px;padding-top:10px}
+  .pre{white-space:pre-wrap;color:var(--muted);font-size:14px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 24px;border-radius:12px;border:1px solid var(--border);background:#fff;font:inherit;font-weight:700;cursor:pointer}
+  .btn-green{background:var(--green);border-color:var(--green);color:#fff}
+  .btn-link{border:0;background:none;color:var(--muted);text-decoration:underline;height:auto;padding:8px}
+  .approve{padding:24px 28px;background:#f6fbf8}
+  .approve label{display:block;font-weight:700;font-size:13px;color:var(--muted);margin:12px 0 6px}
+  .approve input[type=text],textarea{width:100%;height:46px;border:1px solid var(--border);border-radius:10px;padding:0 12px;font:inherit;background:#fff}
+  textarea{height:90px;padding:10px 12px}
+  canvas{width:100%;height:150px;border:1px dashed #9fb3c8;border-radius:10px;background:#fff;touch-action:none;display:block}
+  .banner{padding:16px 28px;font-weight:700}
+  .ok{background:#e6f5ec;color:var(--green)} .bad{background:#fdecec;color:var(--red)} .info{background:#e8f1fc;color:var(--blue)}
+  .foot{text-align:center;color:var(--muted);font-size:13px;margin-top:20px}
+  .center{text-align:center;padding:80px 16px;color:var(--muted)}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:16px}
+  .toolbar{display:flex;justify-content:flex-end;margin-bottom:12px;gap:8px}
+  .toolbar .btn{height:38px;font-size:14px;padding:0 14px}
+  @media (max-width:560px){.hd,.sec,.approve{padding:18px}.hd .num{text-align:left}th.hm,td.hm{display:none}}
+  @media print{body{background:#fff}.wrap{padding:0}.toolbar,.approve,.noprint{display:none!important}.doc{border:0;box-shadow:none}.hd{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<div class="wrap" id="root"><div class="center">Loading…</div></div>
+<script>
+(function () {
+  var m = location.pathname.match(/^\/p\/(estimate|invoice)\/([a-f0-9]+)/)
+  var root = document.getElementById('root')
+  if (!m) { root.innerHTML = '<div class="center">Not found</div>'; return }
+  var kind = m[1], token = m[2], qs = new URLSearchParams(location.search), preview = qs.get('preview')
+  var api = '/api/portal/' + kind + '/' + token
+  var data, selected = {}
+
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c] }) }
+  function money(c) { return ((Number(c) || 0) / 100).toLocaleString('en-US', { style: 'currency', currency: 'USD' }) }
+  function date(s) { if (!s) return ''; var d = /^\d{4}-\d{2}-\d{2}$/.test(s) ? new Date(s + 'T12:00') : new Date(s.replace(' ', 'T') + 'Z'); return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) }
+
+  function totals() {
+    var sub = 0, taxable = 0, d = data.doc
+    data.items.forEach(function (li) {
+      var amt = Math.round(li.qty * li.price_cents)
+      if (li.optional && !selected[li.id]) return
+      sub += amt; if (li.taxable) taxable += amt
+    })
+    var disc = Math.min(d.discount_cents || 0, sub)
+    var tax = Math.round((sub ? taxable - Math.round(disc * taxable / sub) : 0) * (d.tax_rate || 0) / 100)
+    return { sub: sub, disc: disc, tax: tax, total: sub - disc + tax }
+  }
+
+  function render() {
+    var d = data.doc, c = data.company, isEst = kind === 'estimate'
+    var canApprove = isEst && ['sent', 'viewed'].indexOf(d.status) >= 0 && !preview
+    var expired = isEst && d.expiry_date && d.expiry_date < new Date().toISOString().slice(0, 10)
+    var t = totals()
+    document.title = (isEst ? 'Estimate ' : 'Invoice ') + d.number + ' — ' + c.name
+    var banner = ''
+    if (preview) banner = '<div class="banner info">Preview — this is exactly what your customer sees.</div>'
+    if (isEst && d.status === 'approved') banner = '<div class="banner ok">✅ Approved ' + esc(date(d.approved_at)) + (d.signature_name ? ' by ' + esc(d.signature_name) : '') + '. Thank you! We\'ll be in touch to schedule.</div>'
+    if (isEst && d.status === 'declined') banner = '<div class="banner bad">This estimate was declined. Changed your mind? Call us at ' + esc(c.phone) + '.</div>'
+    if (!isEst && d.status === 'paid') banner = '<div class="banner ok">✅ Paid in full — thank you!</div>'
+    if (!isEst && d.status === 'overdue') banner = '<div class="banner bad">This invoice is past due.</div>'
+    if (canApprove && expired) banner = '<div class="banner bad">This estimate expired on ' + esc(date(d.expiry_date)) + '. Please call us for an updated quote.</div>'
+
+    var rows = data.items.map(function (li) {
+      var on = !li.optional || selected[li.id]
+      return '<tr class="' + (li.optional ? 'opt' + (on ? '' : ' off') : '') + '"><td><b>' + esc(li.name) + '</b>' + (li.description ? '<small>' + esc(li.description) + '</small>' : '') +
+        (li.optional ? (canApprove && !expired ? '<label class="optlabel"><input type="checkbox" data-opt="' + li.id + '"' + (on ? ' checked' : '') + '> Optional — add this to my project</label>' : '<small><b>' + (on ? 'Optional — included' : 'Optional — not included') + '</b></small>') : '') +
+        '</td><td class="n hm">' + (+li.qty) + ' ' + esc(li.unit) + '</td><td class="n hm">' + money(li.price_cents) + '</td><td class="n"><b>' + money(Math.round(li.qty * li.price_cents)) + '</b></td></tr>'
+    }).join('')
+
+    root.innerHTML =
+      '<div class="toolbar noprint"><button class="btn" onclick="print()">Print / Save PDF</button></div>' +
+      '<div class="doc">' +
+      '<div class="hd"><div><h1>' + esc(c.name) + '</h1><p>' + esc(c.phone) + ' · ' + esc(c.email) + '</p><p>' + esc(c.address) + (c.license ? ' · ' + esc(c.license) : '') + '</p></div>' +
+      '<div class="num"><p>' + (isEst ? 'ESTIMATE' : 'INVOICE') + '</p><b>' + esc(d.number) + '</b></div></div>' + banner +
+      '<div class="sec meta"><div><small>Prepared for</small><b>' + esc(d.customer_name) + '</b><br>' + esc(d.address) + '</div>' +
+      '<div><small>' + (isEst ? 'Date' : 'Invoice date') + '</small>' + esc(date(d.issue_date)) + '</div>' +
+      (isEst ? '<div><small>Valid until</small>' + esc(date(d.expiry_date)) + '</div>' : '<div><small>Due</small>' + esc(date(d.due_date) || 'Upon receipt') + '</div>') + '</div>' +
+      '<div class="sec">' + (d.title ? '<h2>' + esc(d.title) + '</h2>' : '') +
+      '<table><thead><tr><th>Description</th><th class="n hm">Qty</th><th class="n hm">Rate</th><th class="n">Amount</th></tr></thead><tbody>' + rows + '</tbody></table>' +
+      '<div class="totals"><div><span>Subtotal</span><span>' + money(t.sub) + '</span></div>' +
+      (t.disc ? '<div><span>Discount</span><span>−' + money(t.disc) + '</span></div>' : '') +
+      (t.tax ? '<div><span>Tax (' + d.tax_rate + '%)</span><span>' + money(t.tax) + '</span></div>' : '') +
+      '<div class="g"><span>Total</span><span>' + money(t.total) + '</span></div>' +
+      (isEst && d.deposit_pct ? '<div><span>Deposit due at approval (' + d.deposit_pct + '%)</span><b>' + money(Math.round(t.total * d.deposit_pct / 100)) + '</b></div>' : '') +
+      (!isEst ? '<div><span>Paid</span><span>' + money(d.paid_cents) + '</span></div><div style="font-weight:800;font-size:17px"><span>Balance due</span><span>' + money(d.balance_cents) + '</span></div>' : '') +
+      '</div></div>' +
+      (d.notes ? '<div class="sec"><h2>Notes</h2><div class="pre">' + esc(d.notes) + '</div></div>' : '') +
+      (!isEst && data.payments.length ? '<div class="sec"><h2>Payments received</h2>' + data.payments.map(function (p) { return '<div style="display:flex;justify-content:space-between;padding:4px 0"><span>' + esc(date(p.paid_at)) + ' · ' + esc(p.method) + '</span><b>' + money(p.amount_cents) + '</b></div>' }).join('') + '</div>' : '') +
+      (!isEst && d.balance_cents > 0 && c.payment_instructions ? '<div class="sec"><h2>How to pay</h2><div class="pre">' + esc(c.payment_instructions) + '</div></div>' : '') +
+      (d.terms ? '<div class="sec"><h2>Terms</h2><div class="pre">' + esc(d.terms) + '</div></div>' : '') +
+      (isEst && d.status === 'approved' && d.signature_data ? '<div class="sec"><small style="color:var(--muted)">Signed</small><br><img src="' + esc(d.signature_data) + '" alt="Signature" style="max-height:80px"><br><b>' + esc(d.signature_name) + '</b> · ' + esc(date(d.approved_at)) + '</div>' : '') +
+      (canApprove && !expired ?
+        '<div class="approve" id="approve"><h2>Approve this estimate</h2><p style="color:var(--muted);margin:0">By signing you accept the scope and terms above for <b id="apTotal">' + money(t.total) + '</b>.</p>' +
+        '<label for="sigName">Your full name</label><input type="text" id="sigName" autocomplete="name" value="' + esc(d.customer_name) + '">' +
+        '<label>Sign below (finger or mouse)</label><canvas id="sig"></canvas><button class="btn-link btn" id="clr" type="button">Clear signature</button>' +
+        '<div class="row"><button class="btn btn-green" id="approveBtn">✓ Approve & sign</button><button class="btn-link btn" id="declineBtn">No thanks, decline</button></div></div>' : '') +
+      '</div>' +
+      '<p class="foot">Questions? Call or text <a href="tel:' + esc(c.phone.replace(/[^\d+]/g, '')) + '">' + esc(c.phone) + '</a> · <a href="' + esc(c.website) + '">' + esc(c.website.replace(/^https?:\/\//, '')) + '</a></p>'
+
+    root.querySelectorAll('[data-opt]').forEach(function (cb) { cb.onchange = function () { selected[cb.dataset.opt] = cb.checked; render(); var a = document.getElementById('approve'); if (a) a.scrollIntoView({ block: 'nearest' }) } })
+    if (canApprove && !expired) bindApprove()
+    if (qs.get('print')) setTimeout(print, 300)
+  }
+
+  var hasInk = false
+  function bindApprove() {
+    var cv = document.getElementById('sig'), ctx = cv.getContext('2d'), drawing = false, last
+    function size() { var r = cv.getBoundingClientRect(), s = window.devicePixelRatio || 1; cv.width = r.width * s; cv.height = r.height * s; ctx.scale(s, s); ctx.lineWidth = 2.4; ctx.lineCap = 'round'; ctx.strokeStyle = '#0b2b4a'; hasInk = false }
+    size()
+    function pt(e) { var r = cv.getBoundingClientRect(); return { x: e.clientX - r.left, y: e.clientY - r.top } }
+    cv.addEventListener('pointerdown', function (e) { drawing = true; last = pt(e); cv.setPointerCapture(e.pointerId) })
+    cv.addEventListener('pointermove', function (e) { if (!drawing) return; var p = pt(e); ctx.beginPath(); ctx.moveTo(last.x, last.y); ctx.lineTo(p.x, p.y); ctx.stroke(); last = p; hasInk = true })
+    cv.addEventListener('pointerup', function () { drawing = false })
+    document.getElementById('clr').onclick = function () { ctx.clearRect(0, 0, cv.width, cv.height); hasInk = false }
+    document.getElementById('approveBtn').onclick = function () {
+      var name = document.getElementById('sigName').value.trim()
+      if (!name) return alert('Please type your full name.')
+      if (!hasInk) return alert('Please sign in the box above.')
+      var btn = this; btn.disabled = true; btn.textContent = 'Submitting…'
+      var sel = Object.keys(selected).filter(function (k) { return selected[k] }).map(Number)
+      fetch(api + '/approve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: name, signature: cv.toDataURL('image/png'), selected: sel }) })
+        .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.error); }) })
+        .then(load).catch(function (e) { alert(e.message || 'Something went wrong'); btn.disabled = false; btn.textContent = '✓ Approve & sign' })
+    }
+    document.getElementById('declineBtn').onclick = function () {
+      var reason = prompt('Sorry to hear that! Mind telling us why? (optional)')
+      if (reason === null) return
+      fetch(api + '/decline', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ reason: reason }) }).then(load)
+    }
+  }
+
+  function load() {
+    fetch(api + (preview ? '?preview=1' : '')).then(function (r) { if (!r.ok) throw new Error('nf'); return r.json() }).then(function (j) {
+      data = j; selected = {}
+      data.items.forEach(function (li) { if (li.optional) selected[li.id] = !!li.selected })
+      render()
+    }).catch(function () { root.innerHTML = '<div class="center"><h2>We couldn’t find that ' + kind + '.</h2><p>The link may have changed — please contact us.</p></div>' })
+  }
+  load()
+})()
+</script>
+</body>
+</html>
