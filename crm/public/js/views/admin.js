@@ -178,6 +178,20 @@ async function settings(el) {
       ${field('Flag unanswered estimates after (days)', 'estimate_follow_up_days', s.estimate_follow_up_days, { type: 'number' })}
       ${field('Google review link', 'review_url', s.review_url, { span: 2 })}
     </div></div>
+    <div class="card"><div class="card-head"><h3>${raw(icon('dollar'))} Online payments — PayPal</h3>${s.paypal_enabled === '1' && s.paypal_secret_set ? html`<span class="pill pill-green">On</span>` : html`<span class="pill pill-gray">Off</span>`}</div><div class="card-body form-grid">
+      <p class="muted span-2">Adds a <b>Pay now</b> button (card, PayPal, Venmo) to invoices, and a <b>Pay deposit</b> button after a customer signs an estimate that has a deposit %. Payments are recorded in the CRM automatically.
+        Get your keys at <a href="https://developer.paypal.com/dashboard/applications/live" target="_blank" rel="noopener">developer.paypal.com</a> → log in with your business account → Apps &amp; Credentials → <b>Live</b> → Create App.</p>
+      ${select('Online payments', 'paypal_enabled', s.paypal_enabled, [['0', 'Off'], ['1', 'On']])}
+      ${select('Mode', 'paypal_env', s.paypal_env, [['live', 'Live (real money)'], ['sandbox', 'Sandbox (testing)']])}
+      ${field('Client ID', 'paypal_client_id', s.paypal_client_id, { span: 2, attrs: 'autocomplete="off"' })}
+      ${field('Secret', 'paypal_secret', '', { type: 'password', span: 2, placeholder: s.paypal_secret_set ? '•••••••• saved — leave blank to keep' : 'Paste your secret', attrs: 'autocomplete="new-password"' })}
+      <div class="span-2"><button type="button" class="btn btn-sm" data-pp-test>Test connection</button> <small class="muted">Save first, then test.</small></div>
+    </div></div>
+    <div class="card"><div class="card-head"><h3>Customer financing — Wisetack</h3>${s.wisetack_url ? html`<span class="pill pill-green">On</span>` : html`<span class="pill pill-gray">Off</span>`}</div><div class="card-body form-grid">
+      <p class="muted span-2">Shows a <b>See financing options</b> button on estimates and invoices. Paste your application link from your Wisetack merchant dashboard (the link Wisetack gives you to send customers). When a customer clicks it, it's logged on their timeline so you know to follow up. When Wisetack funds a job, use <b>Record payment → Wisetack financing</b> on the invoice.</p>
+      ${field('Your Wisetack link', 'wisetack_url', s.wisetack_url, { span: 2, placeholder: 'https://…  (copied from Wisetack)' })}
+      ${field('Only show for jobs over ($)', 'wisetack_min', s.wisetack_min, { type: 'number' })}
+    </div></div>
     <div class="card"><div class="card-head"><h3>Website lead form</h3></div><div class="card-body form-grid">
       ${field('Allowed website origins', 'allowed_origins', s.allowed_origins, { span: 2, help: 'Comma-separated. Only these sites can post leads from the browser.' })}
       <div class="span-2"><p class="muted" style="margin-bottom:8px">Paste this on raindrainsva.com in place of the Markate widget. Leads land on your Leads board instantly, tagged with the page and ad campaign they came from.</p>
@@ -200,9 +214,13 @@ async function settings(el) {
     e.preventDefault()
     const body = {}
     for (const i of e.target.elements) if (i.name) body[i.name] = i.value
-    try { state.settings = await PUT('/settings', body); toast('Settings saved') } catch (err) { fail(err) }
+    if (body.wisetack_url && !/^https:\/\//.test(body.wisetack_url)) return toast('Wisetack link must start with https://', 'err')
+    try { state.settings = await PUT('/settings', body); toast('Settings saved'); settings(el) } catch (err) { fail(err) }
   }
   el.querySelector('[data-copy-embed]').onclick = () => copy(embed)
+  el.querySelector('[data-pp-test]').onclick = async () => {
+    try { const r = await POST('/settings/paypal-test'); toast(`PayPal connected (${r.env}) ✅`) } catch (err) { fail(err) }
+  }
   el.querySelector('[data-import]').onchange = async (e) => {
     const f = e.target.files[0]; if (!f) return
     const csv = await f.text()

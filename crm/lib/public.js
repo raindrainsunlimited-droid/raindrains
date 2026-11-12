@@ -2,6 +2,8 @@
 import express from 'express'
 import { all, get, run, insert, getSettings, logActivity } from './db.js'
 import { lineItems, computeTotals, refreshTotal, decorateInvoice, PAID_SQL } from './docs.js'
+import { paypalConfig, createOrder, captureOrder } from './paypal.js'
+import { createInvoiceFromEstimate } from './api.js'
 
 export const pub = express.Router()
 
@@ -64,6 +66,22 @@ function companyInfo() {
   return { name: s.company_name, phone: s.company_phone, email: s.company_email, address: s.company_address, website: s.company_website, license: s.license, payment_instructions: s.payment_instructions }
 }
 
+function payOptions(total_cents) {
+  const s = getSettings(), pp = paypalConfig()
+  return {
+    paypal: pp.enabled ? { clientId: pp.clientId } : null,
+    wisetack: s.wisetack_url && /^https:\/\//.test(s.wisetack_url) && total_cents >= (Number(s.wisetack_min) || 0) * 100 ? s.wisetack_url : null,
+  }
+}
+
+/** Deposit still owed on an approved estimate (0 if none required or already paid). */
+function depositDue(e) {
+  if (e.status !== 'approved' || !e.deposit_pct) return 0
+  const want = Math.round(e.total_cents * e.deposit_pct / 100)
+  const paid = get(`SELECT COALESCE(SUM(p.amount_cents),0) v FROM payments p JOIN invoices i ON i.id = p.invoice_id WHERE i.estimate_id = ? AND i.status != 'void'`, e.id).v
+  return Math.max(0, want - paid)
+}
+
 const CN = `TRIM(CASE WHEN c.type = 'commercial' AND c.company != '' THEN c.company ELSE c.first_name || ' ' || c.last_name END)`
 const PUBLIC_ITEM = (li) => ({ id: li.id, name: li.name, description: li.description, qty: li.qty, unit: li.unit, price_cents: li.price_cents, taxable: li.taxable, optional: li.optional, selected: li.selected })
 
@@ -82,6 +100,7 @@ pub.get('/api/portal/estimate/:token', (req, res) => {
       tax_rate: e.tax_rate, discount_cents: e.discount_cents, deposit_pct: e.deposit_pct, customer_name: e.customer_name, customer_email: e.customer_email, customer_phone: e.customer_phone,
       approved_at: e.approved_at, signature_name: e.signature_name, signature_data: e.signature_data, declined_at: e.declined_at },
     items: items.map(PUBLIC_ITEM), totals: computeTotals(items, e.tax_rate, e.discount_cents),
+    deposit_due_cents: depositDue(e), pay: payOptions(e.total_cents),
   })
 })
 
@@ -129,5 +148,63 @@ pub.get('/api/portal/invoice/:token', (req, res) => {
       tax_rate: inv.tax_rate, discount_cents: inv.discount_cents, customer_name: inv.customer_name, paid_cents: inv.paid_cents, balance_cents: inv.balance_cents },
     items: items.map(PUBLIC_ITEM), totals: computeTotals(items, inv.tax_rate, inv.discount_cents),
     payments: all('SELECT amount_cents, method, paid_at FROM payments WHERE invoice_id = ? ORDER BY paid_at', inv.id),
+    pay: payOptions(inv.balance_cents),
   })
+})
+
+// ---------- Online payments (PayPal) ----------
+function lookup(kind, token) {
+  if (kind === 'invoice') {
+    const inv = decorateInvoice(get(`SELECT i.*, ${PAID_SQL} AS paid_cents FROM invoices i WHERE i.token = ?`, token))
+    if (!inv || inv.status === 'draft' || inv.status === 'void') return null
+    return { ref: `inv:${inv.id}`, cents: inv.balance_cents, description: `Invoice ${inv.number}`, inv }
+  }
+  if (kind !== 'estimate') return null
+  const e = get('SELECT * FROM estimates WHERE token = ?', token)
+  if (!e) return null
+  return { ref: `est:${e.id}`, cents: depositDue(e), description: `Deposit for estimate ${e.number}`, est: e }
+}
+
+pub.post('/api/portal/:kind/:token/paypal/order', express.json(), async (req, res) => {
+  try {
+    const t = lookup(req.params.kind, req.params.token)
+    if (!t) return res.status(404).json({ error: 'Not found' })
+    if (t.cents <= 0) return res.status(400).json({ error: 'Nothing is due right now' })
+    res.json({ id: await createOrder({ cents: t.cents, ref: t.ref, description: t.description }) })
+  } catch (e) { res.status(400).json({ error: e.message }) }
+})
+
+pub.post('/api/portal/:kind/:token/paypal/capture', express.json(), async (req, res) => {
+  try {
+    const t = lookup(req.params.kind, req.params.token)
+    if (!t) return res.status(404).json({ error: 'Not found' })
+    const cap = await captureOrder(req.body.orderID, t.ref)
+    if (get("SELECT id FROM payments WHERE method = 'paypal' AND reference = ?", cap.captureId)) return res.json({ ok: true })
+    let invoice = t.inv
+    if (!invoice) {
+      // Deposit on an estimate: goes on the project's single invoice, created now if needed, with no due date yet.
+      const existed = get("SELECT id FROM invoices WHERE estimate_id = ? AND status != 'void'", t.est.id)
+      const id = createInvoiceFromEstimate(t.est, null, {})
+      if (!existed) run("UPDATE invoices SET due_date = '', status = 'sent' WHERE id = ?", id)
+      invoice = get('SELECT * FROM invoices WHERE id = ?', id)
+    }
+    run(`INSERT INTO payments (invoice_id, amount_cents, method, reference, note, paid_at) VALUES (?,?,?,?,?,date('now','localtime'))`,
+      invoice.id, cap.cents, 'paypal', cap.captureId, cap.pending ? 'PayPal says this payment is pending review' : (t.est ? 'Deposit paid online' : 'Paid online'))
+    if (invoice.status === 'draft') run("UPDATE invoices SET status = 'sent' WHERE id = ?", invoice.id)
+    logActivity({ entity_type: 'invoice', entity_id: invoice.id, customer_id: invoice.customer_id,
+      text: `💳 Customer paid $${(cap.cents / 100).toFixed(2)} online via PayPal${t.est ? ' (deposit)' : ''} on ${invoice.number}${cap.pending ? ' — pending' : ''}` })
+    res.json({ ok: true })
+  } catch (e) { res.status(400).json({ error: e.message }) }
+})
+
+// Let the office know when a customer looks at financing, so they can follow up.
+const financeSeen = new Map()
+pub.post('/api/portal/:kind/:token/financing', (req, res) => {
+  const table = { estimate: 'estimates', invoice: 'invoices' }[req.params.kind]
+  const d = table && get(`SELECT id, number, customer_id FROM ${table} WHERE token = ?`, req.params.token)
+  if (d && Date.now() - (financeSeen.get(table + d.id) || 0) > 3600e3) {
+    financeSeen.set(table + d.id, Date.now())
+    logActivity({ entity_type: req.params.kind, entity_id: d.id, customer_id: d.customer_id, text: `Customer opened Wisetack financing from ${d.number} — check Wisetack and follow up` })
+  }
+  res.sendStatus(204)
 })

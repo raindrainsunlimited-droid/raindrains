@@ -233,6 +233,12 @@ export const DEFAULT_SETTINGS = {
   next_invoice_number: '1001',
   next_job_number: '1001',
   lead_intake_key: '',
+  paypal_enabled: '0',
+  paypal_env: 'live',
+  paypal_client_id: '',
+  paypal_secret: '',
+  wisetack_url: '',
+  wisetack_min: '500',
   allowed_origins: 'https://raindrainsva.com,https://www.raindrainsva.com',
 }
 

@@ -44,6 +44,14 @@
   canvas{width:100%;height:150px;border:1px dashed #9fb3c8;border-radius:10px;background:#fff;touch-action:none;display:block}
   .banner{padding:16px 28px;font-weight:700}
   .ok{background:#e6f5ec;color:var(--green)} .bad{background:#fdecec;color:var(--red)} .info{background:#e8f1fc;color:var(--blue)}
+  .pay{padding:24px 28px;background:#f5f9ff;border-bottom:1px solid var(--border)}
+  .pay h2{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+  .pay .due{font-size:22px;color:var(--navy)}
+  #pp{margin-top:14px;max-width:420px}
+  .fin{display:flex;gap:14px;align-items:center;flex-wrap:wrap;padding:18px 28px;border-bottom:1px solid var(--border)}
+  .fin p{flex:1;min-width:220px;margin:0;color:var(--muted);font-size:14px}
+  .fin p b{color:var(--ink);display:block;font-size:15px}
+  .btn-fin{background:#fff;border:2px solid var(--blue);color:var(--blue);text-decoration:none}
   .foot{text-align:center;color:var(--muted);font-size:13px;margin-top:20px}
   .center{text-align:center;padding:80px 16px;color:var(--muted)}
   .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:16px}
@@ -85,6 +93,14 @@
     var canApprove = isEst && ['sent', 'viewed'].indexOf(d.status) >= 0 && !preview
     var expired = isEst && d.expiry_date && d.expiry_date < new Date().toISOString().slice(0, 10)
     var t = totals()
+    var pay = data.pay || {}
+    var payDue = isEst ? (data.deposit_due_cents || 0) : (d.balance_cents || 0)
+    var showPay = pay.paypal && payDue > 0 && !preview && (isEst ? d.status === 'approved' : true)
+    var showFin = pay.wisetack && !(isEst && d.status === 'declined') && (isEst ? true : d.balance_cents > 0)
+    var paySec = showPay ? '<div class="pay" id="paySec"><h2><span>' + (isEst ? 'Pay your deposit' : 'Pay online') + '</span><span class="due">' + money(payDue) + '</span></h2>' +
+      '<p style="color:var(--muted);margin:0">Pay securely by card, PayPal, or Venmo. You\'ll get a receipt right away.</p><div id="pp"></div><p id="ppMsg" style="margin-top:8px;font-weight:700"></p></div>' : ''
+    var finSec = showFin ? '<div class="fin noprint"><p><b>Prefer to pay over time?</b>Monthly payment plans are available through our financing partner, Wisetack.</p>' +
+      '<a class="btn btn-fin" id="finBtn" href="' + esc(pay.wisetack) + '" target="_blank" rel="noopener">See financing options</a></div>' : ''
     document.title = (isEst ? 'Estimate ' : 'Invoice ') + d.number + ' — ' + c.name
     var banner = ''
     if (preview) banner = '<div class="banner info">Preview — this is exactly what your customer sees.</div>'
@@ -118,6 +134,7 @@
       (isEst && d.deposit_pct ? '<div><span>Deposit due at approval (' + d.deposit_pct + '%)</span><b>' + money(Math.round(t.total * d.deposit_pct / 100)) + '</b></div>' : '') +
       (!isEst ? '<div><span>Paid</span><span>' + money(d.paid_cents) + '</span></div><div style="font-weight:800;font-size:17px"><span>Balance due</span><span>' + money(d.balance_cents) + '</span></div>' : '') +
       '</div></div>' +
+      paySec + finSec +
       (d.notes ? '<div class="sec"><h2>Notes</h2><div class="pre">' + esc(d.notes) + '</div></div>' : '') +
       (!isEst && data.payments.length ? '<div class="sec"><h2>Payments received</h2>' + data.payments.map(function (p) { return '<div style="display:flex;justify-content:space-between;padding:4px 0"><span>' + esc(date(p.paid_at)) + ' · ' + esc(p.method) + '</span><b>' + money(p.amount_cents) + '</b></div>' }).join('') + '</div>' : '') +
       (!isEst && d.balance_cents > 0 && c.payment_instructions ? '<div class="sec"><h2>How to pay</h2><div class="pre">' + esc(c.payment_instructions) + '</div></div>' : '') +
@@ -133,7 +150,38 @@
 
     root.querySelectorAll('[data-opt]').forEach(function (cb) { cb.onchange = function () { selected[cb.dataset.opt] = cb.checked; render(); var a = document.getElementById('approve'); if (a) a.scrollIntoView({ block: 'nearest' }) } })
     if (canApprove && !expired) bindApprove()
+    if (showPay) renderPayPal(pay.paypal.clientId)
+    var fb = document.getElementById('finBtn')
+    if (fb && !preview) fb.addEventListener('click', function () { fetch(api + '/financing', { method: 'POST' }) })
     if (qs.get('print')) setTimeout(print, 300)
+  }
+
+  var sdkPromise
+  function renderPayPal(clientId) {
+    var msg = document.getElementById('ppMsg')
+    sdkPromise = sdkPromise || new Promise(function (resolve, reject) {
+      var sc = document.createElement('script')
+      sc.src = 'https://www.paypal.com/sdk/js?client-id=' + encodeURIComponent(clientId) + '&currency=USD&intent=capture&enable-funding=venmo&components=buttons'
+      sc.onload = resolve; sc.onerror = reject
+      document.head.appendChild(sc)
+    })
+    sdkPromise.then(function () {
+      if (!document.getElementById('pp')) return
+      window.paypal.Buttons({
+        style: { layout: 'vertical', shape: 'rect', label: 'pay' },
+        createOrder: function () {
+          return fetch(api + '/paypal/order', { method: 'POST' }).then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.error); return j.id }) })
+        },
+        onApprove: function (d) {
+          msg.textContent = 'Processing your payment…'
+          return fetch(api + '/paypal/capture', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ orderID: d.orderID }) })
+            .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.error) }) })
+            .then(function () { msg.style.color = 'var(--green)'; msg.textContent = '✅ Payment received — thank you!'; setTimeout(load, 1200) })
+            .catch(function (e) { msg.style.color = 'var(--red)'; msg.textContent = (e.message || 'Payment failed') + ' — please call us at ' + data.company.phone })
+        },
+        onError: function () { msg.style.color = 'var(--red)'; msg.textContent = 'PayPal had a problem. Please try again or call us.' },
+      }).render('#pp')
+    }).catch(function () { msg.textContent = 'Online payment is unavailable right now — please call us.' })
   }
 
   var hasInk = false

@@ -376,7 +376,7 @@ export async function paymentDialog(doc) {
   const r = await formModal(`Record payment — ${doc.number}`, html`<div class="form-grid">
     ${field('Amount ($)', 'amount', fromCents(doc.balance_cents), { type: 'number', required: true, attrs: 'step="0.01" min="0.01"' })}
     ${field('Date', 'paid_at', today(), { type: 'date', required: true })}
-    ${select('Method', 'method', 'check', [['check', 'Check'], ['cash', 'Cash'], ['card', 'Card'], ['zelle', 'Zelle'], ['venmo', 'Venmo'], ['ach', 'ACH / bank transfer'], ['financing', 'Financing'], ['other', 'Other']])}
+    ${select('Method', 'method', 'check', [['check', 'Check'], ['cash', 'Cash'], ['card', 'Card'], ['zelle', 'Zelle'], ['paypal', 'PayPal'], ['venmo', 'Venmo'], ['ach', 'ACH / bank transfer'], ['wisetack', 'Wisetack financing'], ['financing', 'Other financing'], ['other', 'Other']])}
     ${field('Reference', 'reference', '', { placeholder: 'Check #, last 4, etc.' })}
     ${field('Note', 'note', '', { span: 2 })}
   </div>`, { submit: 'Record payment' })

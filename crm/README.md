@@ -37,6 +37,12 @@ Requires Node 22.13+. The database is built-in SQLite, stored in `crm/data/` (se
 3. **Price book:** Edit the seeded items (Price Book) to your real prices and costs.
 4. **Website form:** Settings → *Website lead form* gives you a snippet to replace the Markate widget on raindrainsva.com (`src/partials.js` → `quoteForm()`). Set *Allowed website origins* to your site's domain first.
 
+## Getting paid online
+
+**PayPal** (Settings → Online payments): customers get a *Pay now* button on invoices (card, PayPal, Venmo), and a *Pay deposit* button right after they sign an estimate that has a deposit %. The amount is always set by the server, each payment is checked against the document it was made for, and it's recorded on the invoice automatically. A deposit and the final balance land on the same invoice, so nothing is billed twice. You need a PayPal Business account, plus a Live app's Client ID and Secret from developer.paypal.com. You can also set `PAYPAL_CLIENT_ID` / `PAYPAL_CLIENT_SECRET` as environment variables instead of saving them in Settings.
+
+**Wisetack** (Settings → Customer financing): paste the application link from your Wisetack merchant account. Estimates and invoices over your minimum show *See financing options*, and each click is logged on the customer's timeline. Wisetack only offers an API to approved software partners, so record funded loans with *Record payment → Wisetack financing*.
+
 ## Deploying
 
 The CRM needs a server with a **persistent disk**, so it can't run on Netlify/Vercel like the marketing site. Good options are Render, Railway, or Fly.io (all about $5–10 a month):

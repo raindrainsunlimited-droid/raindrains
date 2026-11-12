@@ -6,6 +6,7 @@ import { all, get, run, insert, update, tx, getSettings, setSetting, nextNumber,
 import { requireAuth, requireRole, hashPassword, verifyPassword, createSession, destroySession, currentUser, token } from './auth.js'
 import { lineItems, saveLineItems, refreshTotal, computeTotals, today, addDays, PAID_SQL, decorateInvoice, invoiceStatus } from './docs.js'
 import { parseCSV, toCSV } from './csv.js'
+import { testConnection } from './paypal.js'
 
 export const api = express.Router()
 const office = requireRole('owner', 'office')
@@ -101,15 +102,26 @@ api.put('/users/:id', owner, ah((req, res) => {
 // ======================================================================
 // Settings
 // ======================================================================
-api.get('/settings', ah((req) => {
+function publicSettings(user) {
   const s = getSettings()
-  if (req.user.role !== 'owner') delete s.lead_intake_key
+  // Never send the PayPal secret back to the browser.
+  s.paypal_secret_set = s.paypal_secret || process.env.PAYPAL_CLIENT_SECRET ? '1' : ''
+  delete s.paypal_secret
+  if (user.role !== 'owner') { delete s.lead_intake_key; delete s.paypal_client_id }
   return s
-}))
+}
+api.get('/settings', ah((req) => publicSettings(req.user)))
 api.put('/settings', owner, ah((req) => {
-  for (const k of Object.keys(DEFAULT_SETTINGS)) if (k in req.body) setSetting(k, req.body[k])
-  return getSettings()
+  for (const k of Object.keys(DEFAULT_SETTINGS)) {
+    if (!(k in req.body)) continue
+    if (k === 'paypal_secret' && !req.body[k]) continue // blank = keep existing secret
+    setSetting(k, String(req.body[k]).trim())
+  }
+  return publicSettings(req.user)
 }))
+api.post('/settings/paypal-test', owner, async (req, res) => {
+  try { res.json(await testConnection()) } catch (e) { res.status(400).json({ error: e.message }) }
+})
 
 // ======================================================================
 // Customers
@@ -466,6 +478,13 @@ function createInvoice(data, req) {
 }
 
 function createInvoiceFromEstimate(e, job_id, req) {
+  const existing = get("SELECT * FROM invoices WHERE estimate_id = ? AND status != 'void' ORDER BY id LIMIT 1", e.id)
+  if (existing) {
+    const s = getSettings()
+    if (job_id && !existing.job_id) run('UPDATE invoices SET job_id = ? WHERE id = ?', job_id, existing.id)
+    if (!existing.due_date) run('UPDATE invoices SET due_date = ? WHERE id = ?', addDays(today(), parseInt(s.invoice_due_days, 10) || 0), existing.id)
+    return existing.id
+  }
   const items = lineItems('estimate', e.id).filter((li) => !li.optional || li.selected).map((li) => ({ ...li, optional: 0, selected: 1 }))
   return createInvoice({ customer_id: e.customer_id, job_id, estimate_id: e.id, title: e.title, address: e.address, tax_rate: e.tax_rate, discount_cents: e.discount_cents, notes: e.notes, items }, req)
 }
@@ -783,4 +802,4 @@ api.get('/export/:what', office, ah((req, res) => {
 }))
 
 // Keep invoiceStatus exported for potential reuse
-export { invoiceStatus }
+export { invoiceStatus, createInvoiceFromEstimate }
