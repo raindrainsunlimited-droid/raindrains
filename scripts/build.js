@@ -213,11 +213,11 @@ ${ctaSection()}
 // ---------- Sitemap ----------
 function sitemapPage() {
   const content = `
-${pageHero({ eyebrow: 'sitemap', title: 'A humble company born out of service to others', lead: 'Meet the veteran-owned team keeping Hampton Roads properties dry.' })}
+${pageHero({ eyebrow: 'sitemap', title: 'Sitemap | Rain Drains', lead: 'Explore the Rain Drains sitemap to find drainage services, service areas, and resources from Bryson Goforth, Hampton Roads\' NDS Certified drainage contractor.' })}
 <section class="section">
   <div class="wrap detail-grid">
     <div class="detail-body">
-    <p><a href="https://raindrainsva.com/"><b>Home</b></a></p>
+    <p><a href="https://raindrainsva.com/"><strong>Home</b></strong></p>
 <ul class="detail-bullets">
 <li>${icon('check', 18)}<a href="https://raindrainsva.com/about-us-1/">About Us</a></li>
 <li>${icon('check', 18)}Services
@@ -268,7 +268,7 @@ ${pageHero({ eyebrow: 'sitemap', title: 'A humble company born out of service to
 </section>
 ${ctaSection()}
 `
-  page('sitemap', layout({ title: 'Sitemap | Rain Drains — Veteran Owned Drainage Contractor', description: "Meet Bryson Goforth, Navy Veteran, ODU Engineering graduate and founder of Rain Drains — Hampton Roads' NDS Certified drainage contractor.", path: '/about-us-1/', content, image: '/img/bryson.jpg', jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'About', path: '/about-us-1/' }])] }))
+  page('sitemap', layout({ title: 'Sitemap | Rain Drains — Veteran Owned Drainage Contractor', description: "Explore the Rain Drains sitemap to find drainage services, service areas, and resources from Bryson Goforth, Hampton Roads\' NDS Certified drainage contractor.", path: '/sitemap/', content, image: '/img/bryson.jpg', jsonLdExtra: [breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Sitemap', path: '/sitemap/' }])] }))
 }
 
 // ---------- Services index ----------
@@ -772,6 +772,7 @@ function main() {
 
   homePage()
   aboutPage()
+  sitemapPage() // Add this line
   servicesIndexPage()
   servicePages()
   serviceAreasIndexPage()
