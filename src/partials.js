@@ -220,7 +220,7 @@ export function footer() {
     </div>
     <div class="foot-bottom">
       <div>© ${SITE.year} ${SITE.name}. All rights reserved.</div>
-      <div class="lic"><span>VA Contractors License 2705198697</span><span>NDS Certified</span><span>Fully Insured</span></div>
+      <div class="lic"><span>VA Contractors License 2705198697</span><span>NDS Certified</span><span>Fully Insured</span><span><a href="/sitemap/" style="margin:0;padding:0;">Sitemap</a></span></div>
     </div>
   </div>
 </footer>
