@@ -350,6 +350,7 @@ export const SERVICES = [
   {
     slug: 'outdoor-sump-pumps-1',
     name: 'Outdoor Sump Pumps',
+    seoTitle: 'Outdoor Sump Pump Systems Virginia Beach, Chesapeake, Virginia & North Carolina - Rain Drains',
     short: 'Commercial-grade outdoor sump pump systems that mechanically lift rising groundwater off flat, low-lying coastal properties where gravity alone can’t drain.',
     icon: 'pump',
     image: { src: '/img/outdoor-sump-pumps.jpg', alt: 'Outdoor sump pump discharge basin installed beside a home entrance' },
@@ -386,6 +387,7 @@ export const SERVICES = [
   {
     slug: 'exterior-waterproofing',
     name: 'Exterior Waterproofing',
+    seoTitle: 'Exterior Waterproofing & Foundation Shielding Virginia Beach, Chesapeake, Virginia & North Carolina - Rain Drains',
     short: 'Commercial-grade exterior waterproofing — a multi-layer membrane, drainage mat and footing drain system that stops groundwater before it ever reaches your foundation walls.',
     icon: 'shield',
     image: { src: '/img/exterior-waterproofing.jpg', alt: 'Excavation along a home foundation wall to install an exterior waterproofing and footing drain system' },
