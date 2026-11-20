@@ -907,7 +907,7 @@ export const AREAS = [
     state: 'VA',
     seoTitle: 'Drainage Services & Water Management Solutions Chesapeake VA - Rain Drains',
     image: { src: '/img/areas/chesapeake.jpg', alt: 'French drain trench installed along a Chesapeake home\'s foundation' },
-    ...regionalStormwaterTemplate('Chesapeake', ['Great Bridge', 'Hickory', 'Greenbrier', 'Western Branch', 'Deep Creek', 'South Norfolk', 'Edinburgh Corridor']),
+    ...clayRidgeStormwaterTemplate('Chesapeake', ['Great Bridge', 'Hickory', 'Greenbrier', 'Western Branch', 'Deep Creek', 'South Norfolk', 'Edinburgh Corridor']),
   },
   {
     slug: 'norfolk',

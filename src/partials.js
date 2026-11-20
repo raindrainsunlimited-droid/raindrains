@@ -12,16 +12,22 @@ export function logoImg(height = 40, onDark = false) {
   return `<img src="${src}" alt="Rain Drains" width="${width}" height="${height}" style="height:${height}px;width:auto">`
 }
 
+function escapeAttr(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+}
+
 export function head({ title, description, path = '/', image }) {
   const url = SITE.domain + path
   const imgUrl = image ? (image.startsWith('http') ? image : SITE.domain + image) : SITE.domain + '/img/hero-lawn.jpg'
+  const safeTitle = escapeAttr(title)
+  const safeDescription = escapeAttr(description)
   return `<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${title}</title>
-<meta name="description" content="${description}">
+<title>${safeTitle}</title>
+<meta name="description" content="${safeDescription}">
 <link rel="canonical" href="${url}">
-<meta property="og:title" content="${title}">
-<meta property="og:description" content="${description}">
+<meta property="og:title" content="${safeTitle}">
+<meta property="og:description" content="${safeDescription}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="${url}">
 <meta property="og:site_name" content="${SITE.name}">
