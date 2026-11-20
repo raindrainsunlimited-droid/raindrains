@@ -1057,6 +1057,34 @@ export const BLOG_POSTS = [
       <p>A French drain is underground. Once it's backfilled, you can't see whether it was actually built to these specs — so the only real way to know is to ask your contractor for the dimensions and slope before the trench gets covered, not after.</p>
     `,
   },
+  {
+    slug: 'why-your-foundation-settles-when-soil-wont-drain',
+    title: 'The Floating Foundation: Why Your House Settles When the Soil Around It Doesn’t Drain',
+    excerpt: 'Foundations rarely sink evenly. They move because the soil holding them up is wet in some spots and dry in others — and that difference traces back to drainage almost every time.',
+    date: '2026-11-20',
+    image: { src: '/img/blog/foundation-footing-trench-groundwater.jpg', alt: 'Open foundation trench on a Rain Drains job with groundwater actively seeping in and pooling at the base, right against the footing' },
+    body: `
+      <p>"Floating foundation" sounds like it should mean the house is buoyant — bobbing on rising water like the vinyl pool liner problem we've written about before. It doesn't. In foundation settlement, "floating" describes something closer to the opposite: the ground underneath isn't holding the structure evenly anymore, so parts of it drift out of level, independent of each other, like they're no longer anchored to the same solid base.</p>
+
+      <h2>Soil holds your foundation up — but not all soil behaves the same when it's wet</h2>
+      <p>A foundation footing doesn't rest on "the ground" as a single uniform material. It rests on soil, and soil's ability to bear weight changes with how much water is in it. Clay-heavy soil, common throughout our region, expands when it's saturated and shrinks as it dries. Sandier soil loses bearing capacity when it's waterlogged, becoming looser and more compressible under load. Either way, the result is the same: a footing sitting on soil that changes volume or firmness is a footing that doesn't stay level.</p>
+      <p>This becomes a real structural issue specifically when it happens <em>unevenly</em>. If the entire house settled downward by the same half-inch everywhere, you likely wouldn't notice. The actual problem is differential settlement — one corner or one wall section sinking or shifting while the rest of the foundation doesn't, because the soil under that one section is staying wet while the soil everywhere else isn't.</p>
+
+      <h2>Why it's almost always a drainage problem wearing a structural costume</h2>
+      <p>The most common reason one section of soil around a foundation stays consistently wetter than the rest isn't a mystery — it's usually a downspout dumping water at that exact corner, a grade that pitches toward the house instead of away from it, or a high water table that never gets intercepted before it reaches the footing. Water finds the path of least resistance, and against an un-drained foundation, that path is usually one specific stretch of wall, repeatedly, every time it rains.</p>
+      <p>Over months and years, that one section of soil cycles through saturation and drying far more than the soil elsewhere on the property. That repeated cycling is what drives the uneven settlement — not a single flood event, but the same spot getting soaked and drying out, over and over, while thirty feet away the soil barely changes.</p>
+
+      <img src="/img/blog/foundation-footing-trench-groundwater.jpg" alt="Open foundation trench with groundwater seeping in and pooling at the base, right against the footing" style="width:100%;border-radius:12px;margin:24px 0">
+      <p style="color:var(--text-muted);font-size:13.5px;margin-top:-12px">Groundwater actively seeping into an open trench on a Rain Drains job, pooling right at the footing depth. This is the water a foundation sits on when nothing is routing it away — not an occasional puddle, but a standing presence at the exact depth that matters.</p>
+
+      <h2>What it looks like from inside the house</h2>
+      <p>Differential settlement rarely announces itself as "the foundation is failing." It shows up as a door that used to close fine and now catches on the frame. A crack that opens along a drywall seam at an angle, not straight up and down. A section of floor with a noticeable slope when you set a ball on it. Homeowners usually treat these as separate, unrelated annoyances for years before anyone connects them back to the same cause — water sitting against one part of the foundation that never gets the chance to drain.</p>
+
+      <h2>The fix isn't the foundation. It's the water.</h2>
+      <p>In most residential cases, the structural member isn't what's actually failing — the soil condition underneath it is what changed. That means the fix isn't necessarily foundation repair; it's removing the water that's driving the soil's behavior in the first place. A properly <a class="inline-link" href="/french-drain/">installed French drain</a> at the correct depth, <a class="inline-link" href="/grading-services/">regrading</a> so surface water pitches away from the house instead of toward it, and downspouts that discharge well clear of the foundation all address the actual cause rather than the symptom showing up inside.</p>
+      <p>If you're already seeing sticking doors, diagonal cracks, or an uneven floor near an exterior wall, that's worth a conversation — not because every case needs an engineer, but because catching it while it's still a drainage problem is a very different project than catching it after it's become a structural one.</p>
+    `,
+  },
 ]
 
 export const FAQS = [
