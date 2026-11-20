@@ -954,7 +954,27 @@ export const AREAS = [
     name: 'Yorktown',
     state: 'VA',
     image: { src: '/img/french-drain.jpg', alt: 'French drain with washed stone installed along a home\'s foundation in Yorktown, VA' },
-    ...urbanCoreStormwaterTemplate('Yorktown', ['Historic Yorktown', 'Grafton', 'Tabb', 'Seaford', 'Queens Lake']),
+    ...regionalStormwaterTemplate('Yorktown', ['Historic Yorktown', 'Grafton', 'Tabb', 'Seaford', 'Queens Lake']),
+    short: 'Holistic stormwater management designed for Yorktown’s mixed clay-and-sandy soil and historic waterfront terrain — from roof runoff to rising groundwater to pool protection.',
+    body: [
+      'If you own a home, commercial property, or historic estate in Yorktown, your land doesn’t sit on one uniform soil type. Much of the area holds dense, slow-draining clay just beneath the topsoil, with pockets of sandier ground closer to the York River waterfront — a mixed condition similar to what we see in Virginia Beach, without the dense urban footprint found closer to Hampton Roads’ city centers.',
+      'When heavy downpours, seasonal hurricanes, or coastal Nor’easters hit this corridor, water doesn’t just pool on top of the grass — it saturates the earth from the bottom up. True property protection requires holistic stormwater management — a coordinated approach that treats your roof runoff, surface sheet-flow, rising subsurface groundwater, and pool structures as a single, unified ecosystem.',
+      'We provide commercial-grade, comprehensive drainage infrastructures built to handle both heavy clay and sandy soil conditions. We build our integrated systems using thick, septic-grade components and industrial stainless steel fasteners so they stay locked, clear, and fully operational for decades.',
+    ],
+    bullets: ['Free on-site estimates in Yorktown', 'Designed for mixed clay and sandy soil', 'Holistic roof-to-groundwater system design'],
+    note: {
+      heading: 'Stormwater Architecture for Mixed Soil',
+      text: 'An effective water management strategy has to account for both soil types at once. A system designed only for sand will fail on a clay lot, and a system designed only for clay will fail where the ground is sandier near the water. Yorktown properties need a design that’s diagnosed on-site, not assumed.',
+    },
+    challenges: {
+      heading: 'The Reality of Yorktown’s Soil & Water: Why Your Property Floods',
+      intro: 'Properties in Yorktown face a genuine mix of soil conditions that demand a flexible approach, not a one-size-fits-all system:',
+      items: [
+        { title: 'The Clay-and-Sand Patchwork', text: 'Yorktown doesn’t sit on one uniform soil type. Many lots hold dense, slow-draining clay just beneath the topsoil, while others, especially closer to the York River, have looser, sandier ground. A drainage system designed for only one of these conditions tends to fail on a property with the other.' },
+        { title: 'The Tidal High Water Table', text: 'In low-lying and river-facing districts, the natural water table sits just a few feet below your turf. During prolonged downpours or high-tide cycles, the ground saturates from beneath, leaving rainwater with nowhere to soak into.' },
+        { title: 'Historic Foundations in Shifting Soil', text: 'Many older homes near Historic Yorktown were built before modern grading standards, on whatever soil happened to be there. When clay and sandy pockets sit side by side under the same foundation, uneven settling and drainage problems are common.' },
+      ],
+    },
   },
   {
     slug: 'smithfield',
