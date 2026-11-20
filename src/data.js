@@ -1034,7 +1034,7 @@ export const BLOG_POSTS = [
     title: 'How Deep (and Wide) Should a French Drain Really Be?',
     excerpt: 'A lot of "French drains" get installed shallow, narrow, and fast, because that’s cheaper to dig. Here’s what a properly built one actually requires.',
     date: '2026-11-06',
-    image: { src: '/img/french-drain.jpg', alt: 'Finished French drain with washed stone running along a home’s foundation' },
+    image: { src: '/img/french-drain.jpg', alt: 'Finished French drain with washed stone running along a home’s foundation, an actual Rain Drains job in Yorktown, Virginia' },
     body: `
       <p>If you've gotten more than one quote for a French drain, you've probably noticed the numbers don't match — and neither does the pipe in the ground. That's because a lot of "French drains" get installed shallow, narrow, and fast, because shallow and narrow is cheaper to dig. The problem is, undersized French drains don't fail eventually. They fail almost immediately.</p>
 
@@ -1051,8 +1051,8 @@ export const BLOG_POSTS = [
       <h2>Why this is where corners get cut</h2>
       <p>Every inch of extra width and depth means more digging, more stone, more labor — and on a bid, that shows up as a bigger number. It's genuinely easier to quote (and install) a 6-inch-wide, 12-inch-deep trench than to do it right. The problem only shows up later, when the "drain" that looked fine on installation day is clogged, waterlogged, or simply not moving water anymore — usually right around the time the original installer is hard to get back on the phone.</p>
 
-      <img src="/img/blog/open-trench-footing.jpg" alt="An open trench dug down to the foundation footing on an actual Rain Drains job, before backfill" style="width:100%;border-radius:12px;margin:24px 0">
-      <p style="color:var(--text-muted);font-size:13.5px;margin-top:-12px">An open trench dug down to the footing on an actual Rain Drains job, before backfill. If a contractor won't show you this, ask why.</p>
+      <img src="/img/blog/open-trench-footing.jpg" alt="An open trench dug down to the foundation footing for a foundation drain in Virginia Beach, before backfill" style="width:100%;border-radius:12px;margin:24px 0">
+      <p style="color:var(--text-muted);font-size:13.5px;margin-top:-12px">An open trench dug down to the footing for a foundation drain in Virginia Beach, before backfill. If a contractor won't show you this, ask why.</p>
 
       <p>A French drain is underground. Once it's backfilled, you can't see whether it was actually built to these specs — so the only real way to know is to ask your contractor for the dimensions and slope before the trench gets covered, not after.</p>
     `,
