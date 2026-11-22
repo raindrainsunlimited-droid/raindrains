@@ -273,8 +273,12 @@ def stats(names, secs):
         img = darken(vid(k), 0.72, 0.85).convert('RGBA')
         layer = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(layer)
         a0 = ease(t / 0.4)
-        hd = 'WHY HOMEOWNERS CHOOSE RAIN DRAINS'; hf = font('Bold', 32)
-        d.text(((W - d.textlength(hd, font=hf)) / 2, 300), hd, font=hf, fill=(94, 201, 138, int(255 * a0)))
+        hd = 'WHY HOMEOWNERS CHOOSE RAIN DRAINS'; hf = font('Black', 64)
+        hx = (W - d.textlength(hd, font=hf)) / 2
+        d.text((hx + 3, 223), hd, font=hf, fill=(0, 0, 0, int(160 * a0)))   # soft shadow for contrast
+        d.text((hx, 220), hd, font=hf, fill=WHITE + (int(255 * a0),))
+        g = 200 * a0
+        d.rectangle((W / 2 - g, 315, W / 2 + g, 321), fill=GREEN + (int(255 * a0),))
         cw = W // 4
         for i, (b, s) in enumerate(cells):
             a = ease((t - 0.25 - i * 0.18) / 0.45)
