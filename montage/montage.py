@@ -2,7 +2,9 @@ import glob, subprocess, sys, math
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 REPO = '/home/user/raindrains/src/img'
-W, H, FPS = 1080, 1920, 30
+# Vertical 9:16 by default; pass --wide for 16:9 (1920x1080)
+WIDE = '--wide' in sys.argv
+W, H, FPS = (1920, 1080, 30) if WIDE else (1080, 1920, 30)
 PHOTO_S, XFADE_S, CARD_S = 1.9, 0.4, 2.6
 NAVY, GREEN, WHITE = (11, 43, 74), (24, 150, 83), (255, 255, 255)
 F = '/usr/share/fonts/opentype/inter/'
@@ -22,7 +24,8 @@ def card(lines, sub=None):
     d = ImageDraw.Draw(img)
     lw = 860
     lg = logo.resize((lw, int(logo.height * lw / logo.width)), Image.LANCZOS)
-    y = 640
+    block = lg.height + 80 + 70 + sum(f.size + 30 for _, f, _ in lines) - 30
+    y = (H - block) // 2
     img.paste(lg, ((W - lw) // 2, y), lg)
     y += lg.height + 80
     d.rectangle(((W - 140) // 2, y, (W + 140) // 2, y + 8), fill=GREEN)
@@ -42,14 +45,15 @@ def prep(path):
     src = Image.open(path).convert('RGB')
     # Cover-fill source at 1.12x so Ken Burns has room to move
     s = max(W / src.width, H / src.height) * 1.12
-    if src.width > src.height:
-        # Landscape: blurred cover background + full-width photo on top
+    if abs(math.log((src.width / src.height) / (W / H))) > 0.15:
+        # Photo shape differs from the frame: blurred cover background + whole photo on top
         bg = src.resize((int(src.width * s * 1.3), int(src.height * s * 1.3)))
         bg = bg.crop(((bg.width - W) // 2, (bg.height - H) // 2,
                       (bg.width + W) // 2, (bg.height + H) // 2))
         bg = Image.blend(bg.filter(ImageFilter.GaussianBlur(40)), Image.new('RGB', (W, H), NAVY), 0.45)
-        fg = src.resize((W, int(src.height * W / src.width)), Image.LANCZOS)
-        bg.paste(fg, (0, (H - fg.height) // 2))
+        f = min(W / src.width, H / src.height)
+        fg = src.resize((int(src.width * f), int(src.height * f)), Image.LANCZOS)
+        bg.paste(fg, ((W - fg.width) // 2, (H - fg.height) // 2))
         src, s = bg, 1.12
     return src.resize((int(src.width * s), int(src.height * s)), Image.LANCZOS)
 
@@ -73,7 +77,7 @@ BAND = Image.new('RGBA', (W, 240), (0, 0, 0, 0))
 for y in range(240):
     ImageDraw.Draw(BAND).line([(0, y), (W, y)], fill=(0, 0, 0, int(140 * (1 - y / 240))))
 if __name__ == '__main__':
-    OUT = sys.argv[1]
+    OUT = [a for a in sys.argv[1:] if not a.startswith('--')][0]
     photos = sorted(glob.glob(f'{REPO}/gallery/large/*.jpg'))
 
     ff = subprocess.Popen(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24',
