@@ -16,7 +16,7 @@ ORIG = 'src/img-originals/'
 LEFT = 'src/img-originals/service-photo-leftovers/'
 FOOTAGE = 'montage/crew-loop.mp4'   # caption-free crew footage, 720x1280
 
-logo = Image.open('src/img/logo-transparent.png').convert('RGBA')
+logo = Image.open('montage/logo-hires.png').convert('RGBA')  # clean cutout from make_logo.py
 
 def ease(t):
     t = min(max(t, 0), 1)
@@ -110,19 +110,19 @@ def duotone(a, mix=0.3):
     lo, hi = np.array((4, 18, 36), np.float32), np.array((196, 232, 252), np.float32)
     return (lo + (hi - lo) * lum ** 1.1) * (1 - mix) + a * mix
 
-def opener(names, secs):
+def opener(names, secs, lines, logo_w=1100, logo_cy=.33):
+    """Rain over graded sliding panels, logo wipe with a light sweep, then lines that track in.
+    lines: (text, font, color, delay, spacing_from, spacing_to, gap_above)"""
     n = int(secs * FPS)
     clips = [load_shot(s, TILE_W, H) for s in names]
     rng = np.random.default_rng(7)
     drops = [(rng.uniform(-200, W), rng.uniform(0, H), rng.uniform(28, 52), rng.uniform(30, 90), rng.uniform(.25, .7))
              for _ in range(260)]   # x, y0, speed px/frame, length, alpha
     ripples = [(rng.uniform(80, W - 80), rng.uniform(H * .72, H - 30), rng.uniform(0, secs)) for _ in range(26)]
-    lg = scaled_logo(1100)
+    lg = scaled_logo(logo_w)
     la = np.asarray(lg.getchannel('A'), np.float32) / 255
     xs = np.arange(lg.width, dtype=np.float32)[None, :]
     ys = np.arange(lg.height, dtype=np.float32)[:, None]
-    tag, tf = 'DRAINAGE DONE RIGHT.', font('Black', 54)
-    sub, sf = 'HAMPTON ROADS  ·  NORTHEAST NORTH CAROLINA', font('Bold', 24)
 
     def tracked(d, text, f, y, spacing, color):
         widths = [d.textlength(c, font=f) for c in text]
@@ -174,18 +174,19 @@ def opener(names, secs):
         logo_rgba = np.asarray(lg, np.float32).copy()
         logo_rgba[..., :3] += band[..., None] * 200
         logo_rgba[..., 3] = la * mask * 255
-        ly = int(H * .33 - lg.height / 2 + 18 * (1 - ease((t - .9) / 1.0)))
+        ly = int(H * logo_cy - lg.height / 2 + 18 * (1 - ease((t - .9) / 1.0)))
         img.alpha_composite(Image.fromarray(logo_rgba.clip(0, 255).astype(np.uint8)), ((W - lg.width) // 2, ly))
 
-        # green rule grows out from the center, tagline tracks in from wide letterspacing
+        # green rule grows out from the center, then each line tracks in from wide letterspacing
         layer = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(layer)
         g = ease((t - 1.6) / 0.6) * 260
-        ry = ly + lg.height + 40
-        d.rectangle((W / 2 - g, ry, W / 2 + g, ry + 5), fill=GREEN + (255,))
-        a = ease((t - 1.9) / 0.9)
-        tracked(d, tag, tf, ry + 40, 70 - 58 * a, WHITE + (int(255 * a),))
-        b = ease((t - 2.5) / 0.7)
-        tracked(d, sub, sf, ry + 125, 9, SKY + (int(255 * b),))
+        y = ly + lg.height + 40
+        d.rectangle((W / 2 - g, y, W / 2 + g, y + 5), fill=GREEN + (255,))
+        for text, f, color, delay, sp0, sp1, gap in lines:
+            a = ease((t - delay) / 0.9)
+            y += gap
+            tracked(d, text, f, y, sp0 + (sp1 - sp0) * a, color + (int(255 * a),))
+            y += f.size
         img.alpha_composite(layer)
         return img.convert('RGB')
     return frame, n
@@ -233,7 +234,7 @@ def kb_crop(big, w, h, t, seed):
     dy = (big.height - ch) * 0.5
     return big.resize((w, h), Image.BILINEAR, box=(dx, dy, dx + cw, dy + ch))
 
-def service(idx, name, desc, photos, secs=4.0):
+def service(idx, name, desc, photos, secs=10.0):
     n = int(secs * FPS)
     bigs = [load_photo(p, PW, H) for p in photos]
     bg = load_photo(photos[0], W, H, 1.0)
@@ -285,31 +286,11 @@ def stats(names, secs):
         return img.convert('RGB')
     return frame, n
 
-def outro(secs):
-    n = int(secs * FPS); lg = scaled_logo(900)
-    lines = [('Call today for a free estimate', font('Medium', 46), SKY, 0.35),
-             ('757-807-0080', font('Black', 128), WHITE, 0.55),
-             ('raindrainsva.com', font('Bold', 44), (94, 201, 138), 0.75),
-             ('Serving Hampton Roads & Northeast North Carolina', font('Medium', 32), SKY, 0.95)]
-    def frame(k):
-        t = k / FPS
-        img = Image.new('RGBA', (W, H), NAVY + (255,))
-        d = ImageDraw.Draw(img)
-        a = ease(t / 0.5)
-        l2 = lg.copy(); l2.putalpha(l2.getchannel('A').point(lambda v: int(v * a)))
-        img.alpha_composite(l2, ((W - lg.width) // 2, 170 + int(20 * (1 - a))))
-        d.rectangle(((W - 160) // 2, 400, (W + 160) // 2, 408), fill=GREEN + (int(255 * a),))
-        y = 450
-        for text, f, color, delay in lines:
-            b = ease((t - delay) / 0.45)
-            d.text(((W - d.textlength(text, font=f)) / 2, y + 20 * (1 - b)), text, font=f, fill=color + (int(255 * b),))
-            y += int(f.size * 1.3)
-        return img.convert('RGB')
-    return frame, n
-
 # ---------- timeline ----------
 def timeline():
-    yield opener(['digging', 'ditchwitch_lawn', 'loading_pipe'], 5.0)
+    yield opener(['digging', 'ditchwitch_lawn', 'loading_pipe'], 5.0, [
+        ('DRAINAGE DONE RIGHT.', font('Black', 54), WHITE, 1.9, 70, 12, 40),
+        ('HAMPTON ROADS  ·  NORTHEAST NORTH CAROLINA', font('Bold', 24), SKY, 2.5, 9, 9, 31)])
     yield footage_title(['ex_woods', 'cut_pipe', 'level_fence'], 3.0, [
         ('COMPLETE DRAINAGE & EXCAVATION SOLUTIONS', font('Black', 58), WHITE, 0.1),
         ('Residential · Commercial · HOA', font('Medium', 40), SKY, 0.4)])
@@ -323,7 +304,12 @@ def timeline():
             names, line = breaks[g]
             yield footage_title(names, 2.6, [(line, font('Black', 58), WHITE, 0.15)])
     yield stats(['grade_level', 'mini_ex', 'dump_truck'], 4.0)
-    yield outro(5.0)
+    yield opener(['ex_woods', 'ditchwitch_land', 'check_grade'], 6.5, [
+        ('CALL TODAY FOR A FREE ESTIMATE', font('Bold', 34), SKY, 1.8, 30, 8, 40),
+        ('757-807-0080', font('Black', 124), WHITE, 2.1, 60, 6, 22),
+        ('RAINDRAINSVA.COM', font('Black', 40), (94, 201, 138), 2.6, 34, 10, 26),
+        ('HAMPTON ROADS  ·  NORTHEAST NORTH CAROLINA', font('Bold', 24), SKY, 3.0, 9, 9, 30)],
+        logo_w=900, logo_cy=.22)
 
 ff = subprocess.Popen(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}',
                        '-r', str(FPS), '-i', '-', '-an', '-c:v', 'libx264', '-preset', 'slow', '-crf', '23',
