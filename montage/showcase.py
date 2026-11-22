@@ -241,7 +241,7 @@ def service(idx, name, desc, photos, secs=10.0):
     bg = bg.crop(((bg.width - W) // 2, (bg.height - H) // 2, (bg.width + W) // 2, (bg.height + H) // 2))
     bg = Image.blend(bg.filter(ImageFilter.GaussianBlur(30)), Image.new('RGB', (W, H), NAVY), 0.72)
     lg = scaled_logo(260)
-    items = [(f'{idx:02d}  /  WHAT WE DO', font('Bold', 26), (94, 201, 138), 18),
+    items = [('WHAT WE DO', font('Bold', 26), (94, 201, 138), 18),
              (name, font('Black', 76), WHITE, 26),
              (desc, font('Medium', 34), (207, 224, 245), 0)]
     half = n // 2
