@@ -44,6 +44,38 @@ export function head({ title, description, path = '/', image }) {
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T3F957HQ');</script>
 <!-- End Google Tag Manager -->
+<style>.social-links.lg {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px; /* Adjust spacing between icons */
+}
+
+.social-links.lg a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;  /* Creates a clean, clickable touch target */
+  height: 36px;
+  border-radius: 50%; /* Optional: remove if you don't want circular hover backgrounds */
+  color: inherit; /* Inherits text color from header/footer */
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.social-links.lg a:hover,
+.social-links.lg a:focus-visible {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
+.social-links.lg svg {
+  display: block; /* Removes extra bottom baseline whitespace */
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0; /* Prevents icons from squishing on narrow screens */
+}
+</style>
 <!-- CrazyEgg Tracking -->
 <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0022/1041.js" async="async"></script>`
 }
